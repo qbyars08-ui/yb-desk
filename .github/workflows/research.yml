@@ -1,0 +1,93 @@
+name: research agent
+
+on:
+  issues:
+    types: [opened, labeled]
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: 'ticker to research, like NVDA'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: tape-writes
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (
+        startsWith(github.event.issue.title, 'research:') &&
+        (
+          contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association) ||
+          contains(github.event.issue.labels.*.name, 'approved')
+        )
+      )
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: parse ticker
+        id: parse
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DISPATCH_TICKER: ${{ inputs.ticker }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            RAW="$DISPATCH_TICKER"
+          else
+            RAW="${ISSUE_TITLE#research:}"
+          fi
+          T=$(printf '%s' "$RAW" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]')
+          if printf '%s' "$T" | grep -Eq '^[A-Z][A-Z0-9.-]{0,11}$'; then
+            echo "ticker=$T" >> "$GITHUB_OUTPUT"
+          else
+            if [ -n "$ISSUE_NUMBER" ]; then
+              gh issue comment "$ISSUE_NUMBER" --body "couldn't parse a ticker from the title, use: research: NVDA"
+            fi
+            echo "could not parse a valid ticker" >&2
+            exit 1
+          fi
+
+      - name: run the research agent
+        env:
+          TICKER: ${{ steps.parse.outputs.ticker }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node agents/research-agent.mjs > report.md
+
+      - name: post the report on the issue
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --body-file report.md
+
+      - name: commit the report
+        env:
+          TICKER: ${{ steps.parse.outputs.ticker }}
+        run: |
+          git config user.name "yb-desk-agent"
+          git config user.email "yb-desk-agent@users.noreply.github.com"
+          git add data
+          if [ -d docs/data ]; then git add docs/data; fi
+          if git diff --cached --quiet; then
+            echo "no report changes, nothing to commit"
+          else
+            git commit -m "research: $TICKER"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push
+          fi
