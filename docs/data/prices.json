@@ -1,0 +1,101 @@
+{
+  "updated": "2026-07-06T23:57:35.119Z",
+  "quotes": {
+    "ALMU": {
+      "price": 18.91,
+      "changePct": 0.3183
+    },
+    "ANET": {
+      "price": 173.28,
+      "changePct": 8.3068
+    },
+    "ARM": {
+      "price": 322.24,
+      "changePct": 2.2076
+    },
+    "ASTS": {
+      "price": 80.64,
+      "changePct": -5.2743
+    },
+    "BRUN": {
+      "price": 32.31,
+      "changePct": 1.7317
+    },
+    "CIFR": {
+      "price": 21.73,
+      "changePct": 8.4331
+    },
+    "CRDO": {
+      "price": 265.55,
+      "changePct": 9.7722
+    },
+    "EUV": {
+      "price": 27.32,
+      "changePct": 4.0762
+    },
+    "LPKFF": {
+      "price": 21.86,
+      "changePct": 0.7373
+    },
+    "LUMN": {
+      "price": 6.48,
+      "changePct": 0.7776
+    },
+    "MU": {
+      "price": 984.75,
+      "changePct": 0.942
+    },
+    "NBIS": {
+      "price": 213.02,
+      "changePct": -1.2058
+    },
+    "NOK": {
+      "price": 12.51,
+      "changePct": 3.6454
+    },
+    "OSS": {
+      "price": 15.56,
+      "changePct": -0.8286
+    },
+    "OUST": {
+      "price": 49.83,
+      "changePct": -0.0201
+    },
+    "PENG": {
+      "price": 67.71,
+      "changePct": 10.1513
+    },
+    "RAAQ": {
+      "price": 13.42,
+      "changePct": 0
+    },
+    "RKLB": {
+      "price": 93.09,
+      "changePct": -7.3363
+    },
+    "SILC": {
+      "price": 43.57,
+      "changePct": 2.301
+    },
+    "SMH": {
+      "price": 604.3,
+      "changePct": 2.0277
+    },
+    "TEM": {
+      "price": 60.7,
+      "changePct": 0.7135
+    },
+    "WYFI": {
+      "price": 35.54,
+      "changePct": 13.0407
+    },
+    "WYY": {
+      "price": 15.24,
+      "changePct": -4.2714
+    },
+    "XNDU": {
+      "price": 11.78,
+      "changePct": 1.3769
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "updated": "2026-07-06T23:57:35.124Z",
+  "agents": [
+    {
+      "id": "price-agent",
+      "name": "Price Agent",
+      "role": "Pulls live quotes for the book and watchlist",
+      "lastRun": "2026-07-06T23:57:35.124Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "desk-report",
+      "name": "Desk Report",
+      "role": "Writes the deterministic daily desk report",
+      "lastRun": "2026-07-06T23:57:03.358Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "watchdog",
+      "name": "Watchdog",
+      "role": "Flags book tickers moving 5 percent or more",
+      "lastRun": "2026-07-06T23:57:03.395Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "research-agent",
+      "name": "Research Agent",
+      "role": "Runs on-demand ticker research briefs",
+      "lastRun": null,
+      "lastStatus": null
+    }
+  ]
+}
