@@ -143,6 +143,13 @@
       <h2>&#9612; Your Alerts</h2>
       <span class="note" id="alerts-note"></span>
     </div>
+    <div id="alert-optin" class="signin-box" style="margin-bottom:14px">
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+        <input type="checkbox" id="alert-email-toggle" style="margin-top:4px">
+        <span>Email me when one of my names moves more than <span class="mono" id="alert-threshold">5</span>% in a day. One email a day at most, sent after the close, and only when something actually moved. Quiet days send nothing.</span>
+      </label>
+      <span class="hint" id="alert-optin-msg" style="display:block;margin-top:6px"></span>
+    </div>
     <div id="alerts-wrap"><div class="loading">Loading your alerts...</div></div>
   </section>
 

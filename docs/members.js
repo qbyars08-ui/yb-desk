@@ -320,6 +320,7 @@
       loadBrief();
       wireGenerateBrief();
       loadAlerts();
+      loadAlertOptin();
     } else {
       document.getElementById("locked-section").hidden = false;
     }
@@ -592,6 +593,44 @@
       try { return JSON.stringify(a.payload); } catch (e) { /* fall through */ }
     }
     return a.payload ? String(a.payload) : "";
+  }
+
+  // ---- Email alert opt-in: one toggle over /api/me/email-preferences.
+  // Enabling also clears unsubscribed_all, since flipping this on is an
+  // explicit ask for exactly this email.
+  function loadAlertOptin() {
+    var toggle = document.getElementById("alert-email-toggle");
+    var msg = document.getElementById("alert-optin-msg");
+    if (!toggle) return;
+    memberFetch("/api/me/email-preferences").then(function (j) {
+      var p = j.preferences || j.row || j;
+      toggle.checked = !!(p && p.price_drop_alerts && !p.unsubscribed_all);
+      var th = p && Number(p.price_drop_alert_threshold);
+      if (isFinite(th) && th >= 1) document.getElementById("alert-threshold").textContent = String(th);
+      toggle.disabled = false;
+    }).catch(function () {
+      msg.textContent = "Could not load your alert preference right now.";
+    });
+    toggle.addEventListener("change", function () {
+      toggle.disabled = true;
+      msg.textContent = "Saving...";
+      var body = toggle.checked
+        ? { price_drop_alerts: true, unsubscribed_all: false }
+        : { price_drop_alerts: false };
+      memberFetch("/api/me/email-preferences", {
+        method: "POST",
+        body: JSON.stringify(body)
+      }).then(function () {
+        toggle.disabled = false;
+        msg.textContent = toggle.checked
+          ? "On. The desk emails you after the close when one of your names moves, from quinn@youngbullinvests.com."
+          : "Off. No more move emails.";
+      }).catch(function (e) {
+        toggle.disabled = false;
+        toggle.checked = !toggle.checked;
+        msg.textContent = "Could not save: " + e.message;
+      });
+    });
   }
 
   function loadAlerts() {

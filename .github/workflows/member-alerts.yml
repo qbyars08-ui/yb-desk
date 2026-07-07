@@ -1,0 +1,23 @@
+name: member alerts
+
+on:
+  schedule:
+    # 6:11pm ET weekdays, after the desk report. Offset minute on purpose:
+    # GitHub throttles herd-minute crons hard.
+    - cron: '11 22 * * 1-5'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run the member alert mailer
+        env:
+          CRON_ALERTS_TOKEN: ${{ secrets.CRON_ALERTS_TOKEN }}
+        run: |
+          out=$(curl -s -X POST "https://youngbullinvests.com/api/member-alerts-run" \
+            -H "x-cron-token: ${CRON_ALERTS_TOKEN}")
+          echo "$out"
+          echo "$out" | grep -q '"ok":true' || { echo "alert run failed"; exit 1; }
