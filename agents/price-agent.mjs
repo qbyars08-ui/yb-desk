@@ -26,7 +26,9 @@ const TIMEOUT_MS = 8000;
 const FALLBACK_TIMEOUT_MS = 10000;
 
 function buildUniverse(book, watch) {
-  const tickers = new Set();
+  // SPY is always priced: the vs-SPY performance charts and the desk report
+  // depend on it, and history.json only stays fresh for tickers on the tape.
+  const tickers = new Set(['SPY']);
   for (const pos of book?.positions ?? []) {
     if (pos?.t) tickers.add(String(pos.t).toUpperCase());
   }

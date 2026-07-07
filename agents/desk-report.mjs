@@ -75,6 +75,66 @@ function effectiveChanges(positions, quotes) {
     .filter((row) => row.ticker && typeof row.change === 'number' && Number.isFinite(row.change));
 }
 
+// Short narrative lead, deterministic. Every sentence is computed from the
+// tape, no LLM, so the "No AI wrote this" line at the bottom stays true.
+// Voice: short, plain, no hype, no em dashes.
+function whatMovedSection(positions, quotes) {
+  const lines = ['## What moved', ''];
+  const rows = effectiveChanges(positions, quotes);
+  if (!rows.length) {
+    lines.push('No fresh tape today. Nothing to report.');
+    return lines;
+  }
+
+  // Weighted book day move, current weights held constant.
+  let acc = 0;
+  let totalWeight = 0;
+  for (const pos of positions) {
+    const w = typeof pos.weightPct === 'number' && Number.isFinite(pos.weightPct) ? pos.weightPct : 0;
+    const q = quotes[String(pos.t || '').toUpperCase()];
+    if (w > 0 && typeof q?.changePct === 'number' && Number.isFinite(q.changePct)) {
+      acc += w * q.changePct;
+      totalWeight += w;
+    }
+  }
+  const bookDay = totalWeight > 0 ? acc / totalWeight : null;
+  const spyDay = typeof quotes.SPY?.changePct === 'number' ? quotes.SPY.changePct : null;
+
+  const sentences = [];
+  if (bookDay !== null) {
+    sentences.push(`The book moved ${fmtPct(bookDay)} today, weighted by current position sizes.`);
+    if (spyDay !== null) {
+      const gap = bookDay - spyDay;
+      const vs =
+        gap >= 0.5 ? 'The book beat the index.'
+        : gap <= -0.5 ? 'The index won the day.'
+        : 'Book and index moved together.';
+      sentences.push(`SPY did ${fmtPct(spyDay)}. ${vs}`);
+    }
+  }
+
+  const sorted = rows.slice().sort((a, b) => b.change - a.change);
+  const lead = sorted[0];
+  const lag = sorted[sorted.length - 1];
+  const weightOf = (ticker) => {
+    const pos = positions.find((p) => String(p.t || '').toUpperCase() === ticker);
+    return typeof pos?.weightPct === 'number' ? ` on a ${pos.weightPct.toFixed(1)}% weight` : '';
+  };
+  if (lead && lead.change > 0) sentences.push(`${lead.ticker} led, ${fmtPct(lead.change)}${weightOf(lead.ticker)}.`);
+  if (lag && lag.change < 0 && lag.ticker !== lead?.ticker) {
+    sentences.push(`${lag.ticker} was the drag, ${fmtPct(lag.change)}.`);
+  }
+
+  if (bookDay !== null) {
+    if (Math.abs(bookDay) >= 3) sentences.push('Days like this are why the rules are written down in advance.');
+    else if (Math.abs(bookDay) >= 1) sentences.push('A normal day for a book built like this.');
+    else sentences.push('Quiet tape.');
+  }
+
+  lines.push(sentences.join(' '));
+  return lines;
+}
+
 function moversSection(rows) {
   const up = rows.filter((r) => r.change > 0).sort((a, b) => b.change - a.change).slice(0, 3);
   const down = rows.filter((r) => r.change < 0).sort((a, b) => a.change - b.change).slice(0, 3);
@@ -128,6 +188,8 @@ async function main() {
   const milestones = milestoneSection(positions);
   const body = [
     `# Desk Report ${date}`,
+    '',
+    ...whatMovedSection(positions, prices.quotes ?? {}),
     '',
     ...movers.lines,
     '',

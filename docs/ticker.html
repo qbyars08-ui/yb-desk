@@ -1,0 +1,331 @@
+<title>yb-desk, Ticker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Per-ticker view on the yb-desk. Live quote, thesis if it is in Quinn's book, price history, next earnings, and the latest research brief.">
+<link rel="stylesheet" href="desk.css">
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">YB-DESK</span>
+      <span class="sub">Ticker</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Desk</a>
+      <a href="research.html">Research</a>
+      <a href="reports.html">Reports</a>
+      <a href="members.html">Members</a>
+      <a href="about.html">How it works</a>
+      <a href="https://github.com/qbyars08-ui/yb-desk" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="ticker-hero">
+  <div class="wrap" id="ticker-hero-wrap">
+    <div class="loading">Loading...</div>
+  </div>
+</section>
+
+<main class="wrap" id="ticker-main" hidden>
+
+  <!-- THESIS -->
+  <section class="section" id="thesis-section">
+    <div class="section-head">
+      <h2>&#9612; Thesis</h2>
+    </div>
+    <div id="thesis-wrap"></div>
+  </section>
+
+  <!-- PRICE HISTORY -->
+  <section class="section" id="history-section">
+    <div class="section-head">
+      <h2>&#9612; Price History, 1 Year</h2>
+    </div>
+    <div id="history-wrap"></div>
+  </section>
+
+  <!-- NEXT EARNINGS -->
+  <section class="section" id="earnings-section">
+    <div class="section-head">
+      <h2>&#9612; Next Earnings</h2>
+    </div>
+    <div id="earnings-wrap"></div>
+  </section>
+
+  <!-- LATEST RESEARCH BRIEF -->
+  <section class="section" id="brief-section">
+    <div class="section-head">
+      <h2>&#9612; Latest Research Brief</h2>
+    </div>
+    <div id="brief-wrap">
+      <div class="loading">Loading...</div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wrap" id="ticker-empty" hidden>
+  <div class="empty">No ticker given. Open any name from the <a href="index.html">Desk</a>.</div>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="desk.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.Desk;
+  var TICKER_RE = /^[A-Z][A-Z0-9.\-]{0,11}$/;
+  var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
+  var EARNINGS_API = "https://youngbullinvests.com/api/earnings-calendar?tickers=";
+
+  D.mountFooter(document.getElementById("site-footer"));
+
+  function getParam(name) {
+    var q = window.location.search || "";
+    var m = q.match(new RegExp("[?&]" + name + "=([^&]*)"));
+    return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+  }
+
+  var rawTicker = getParam("t");
+  var ticker = String(rawTicker || "").trim().toUpperCase();
+  var validTicker = TICKER_RE.test(ticker);
+
+  if (!validTicker) {
+    document.getElementById("ticker-empty").hidden = false;
+    document.getElementById("ticker-hero").hidden = true;
+    document.getElementById("ticker-main").hidden = true;
+  } else {
+    document.title = "yb-desk, " + ticker;
+    document.getElementById("ticker-main").hidden = false;
+    boot();
+  }
+
+  // ============ HERO ============
+  function renderHero(book, prices) {
+    var wrap = document.getElementById("ticker-hero-wrap");
+    var positions = (book && Array.isArray(book.positions)) ? book.positions : [];
+    var pos = null;
+    for (var i = 0; i < positions.length; i++) {
+      if (positions[i] && String(positions[i].t || "").toUpperCase() === ticker) { pos = positions[i]; break; }
+    }
+
+    var quote = null;
+    var pQuotes = (prices && prices.quotes) ? prices.quotes : {};
+    if (pQuotes[ticker] && typeof pQuotes[ticker].price === "number") {
+      quote = pQuotes[ticker];
+    }
+
+    var pills = "";
+    if (pos) {
+      pills = (pos.sleeve ? '<span class="pill">' + D.esc(pos.sleeve) + '</span> ' : "") +
+        (pos.layer ? '<span class="pill layer">' + D.esc(pos.layer) + '</span>' : "");
+    }
+
+    var quoteLine = quoteLineHtml(quote);
+
+    wrap.innerHTML =
+      '<p class="lead"><strong style="font-family:var(--mono);font-size:1.6rem;color:var(--text)">' +
+      D.esc(ticker) + '</strong></p>' +
+      '<p class="lead" id="hero-quote-line">' + quoteLine + '</p>' +
+      (pills ? '<p class="lead">' + pills + '</p>' : "");
+
+    if (!quote) {
+      fetchLiveQuote();
+    }
+  }
+
+  function quoteLineHtml(quote) {
+    if (quote && typeof quote.price === "number") {
+      var pctCls = D.pctClass(quote.changePct);
+      var pctTxt = (typeof quote.changePct === "number") ? D.fmtPct(quote.changePct) : "-";
+      return '<span class="mono">' + D.esc(D.fmtPrice(quote.price)) + '</span> ' +
+        '<span class="mono ' + pctCls + '">' + D.esc(pctTxt) + '</span>';
+    }
+    return '<span class="faint">-</span>';
+  }
+
+  function fetchLiveQuote() {
+    var el = document.getElementById("hero-quote-line");
+    fetch(QUOTES_API + encodeURIComponent(ticker)).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    }).then(function (data) {
+      var q = data && data.ok && data.quotes ? data.quotes[ticker] : null;
+      if (el) el.innerHTML = quoteLineHtml(q);
+    }).catch(function () {
+      if (el) el.innerHTML = '<span class="faint">-</span>';
+    });
+  }
+
+  // ============ THESIS ============
+  function renderThesis(book) {
+    var wrap = document.getElementById("thesis-wrap");
+    var positions = (book && Array.isArray(book.positions)) ? book.positions : [];
+    var pos = null;
+    for (var i = 0; i < positions.length; i++) {
+      if (positions[i] && String(positions[i].t || "").toUpperCase() === ticker) { pos = positions[i]; break; }
+    }
+
+    if (!pos) {
+      wrap.innerHTML = '<div class="empty">Not in Quinn\'s book. No thesis on file.</div>';
+      return;
+    }
+
+    var blocks = [];
+    if (pos.thesis) {
+      blocks.push('<div class="detail-block"><div class="lab">Thesis</div><div class="body">' + D.esc(pos.thesis) + '</div></div>');
+    }
+    if (pos.variantPerception) {
+      blocks.push('<div class="detail-block"><div class="lab">Variant perception</div><div class="body">' + D.esc(pos.variantPerception) + '</div></div>');
+    }
+    var kv = Array.isArray(pos.killVectors) ? pos.killVectors : [];
+    if (kv.length) {
+      var items = kv.map(function (k) {
+        if (typeof k === "string") return '<li>' + D.esc(k) + '</li>';
+        var title = k && k.title ? '<b>' + D.esc(k.title) + ':</b> ' : '';
+        var body = k && k.body ? D.esc(k.body) : '';
+        return '<li>' + title + body + '</li>';
+      }).join("");
+      blocks.push('<div class="detail-block"><div class="lab">Kill vectors</div><ul class="kill-list">' + items + '</ul></div>');
+    }
+    if (pos.note) {
+      blocks.push('<div class="detail-block"><div class="lab">Note</div><div class="body">' + D.esc(pos.note) + '</div></div>');
+    }
+    if (!blocks.length) {
+      blocks.push('<div class="detail-block"><div class="body dim">No thesis detail on file for this position.</div></div>');
+    }
+    wrap.innerHTML = '<div class="detail-inner">' + blocks.join("") + '</div>';
+  }
+
+  // ============ PRICE HISTORY ============
+  function renderHistory(history) {
+    var wrap = document.getElementById("history-wrap");
+    var series = (history && history.series) ? history.series : {};
+    if (!series[ticker] || !Array.isArray(series[ticker]) || !series[ticker].length) {
+      wrap.innerHTML = '<div class="empty">No price history on file for this name. History covers Quinn\'s book names.</div>';
+      return;
+    }
+
+    var list = [{ points: D.normalizePct(series[ticker]), cls: "primary", label: ticker }];
+    if (Array.isArray(series.SPY) && series.SPY.length) {
+      list.push({ points: D.normalizePct(series.SPY), cls: "muted", label: "SPY" });
+    }
+
+    wrap.innerHTML = '<div id="history-chart"></div>' +
+      '<p class="spark-note">Daily closes, indexed to the start of the window.</p>';
+    document.getElementById("history-chart").innerHTML = D.sparkSVG(list, { unit: "%" });
+  }
+
+  // ============ NEXT EARNINGS ============
+  function renderEarnings() {
+    var wrap = document.getElementById("earnings-wrap");
+    wrap.innerHTML = '<div class="loading">Loading...</div>';
+    fetch(EARNINGS_API + encodeURIComponent(ticker)).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    }).then(function (data) {
+      var entry = (data && data.ok && data.earnings) ? data.earnings[ticker] : null;
+      var dateStr = entry && entry.reportDate ? entry.reportDate : null;
+      if (!dateStr) {
+        wrap.innerHTML = '<div class="empty">No scheduled report date on file.</div>';
+        return;
+      }
+      var d = new Date(dateStr + "T00:00:00");
+      if (isNaN(d.getTime())) {
+        wrap.innerHTML = '<div class="empty">No scheduled report date on file.</div>';
+        return;
+      }
+      var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      var label = monthNames[d.getMonth()] + " " + d.getDate();
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var msPerDay = 24 * 60 * 60 * 1000;
+      var daysAway = Math.round((d.getTime() - today.getTime()) / msPerDay);
+      wrap.innerHTML = '<p class="mono">Reports ' + D.esc(label) + ' (in ' + D.esc(String(daysAway)) + 'd)</p>';
+    }).catch(function () {
+      wrap.innerHTML = '<div class="empty">No scheduled report date on file.</div>';
+    });
+  }
+
+  // ============ LATEST RESEARCH BRIEF ============
+  function isResearch(r) {
+    if (r.type === "research") return true;
+    var f = r.file || r.path || "";
+    return /(^|\/)research-/.test(String(f));
+  }
+
+  function matchesTicker(r) {
+    if (r.ticker && String(r.ticker).toUpperCase() === ticker) return true;
+    var f = String(r.file || r.path || "");
+    var re = new RegExp("(^|[^A-Z0-9])" + ticker + "([^A-Z0-9]|$)");
+    return re.test(f);
+  }
+
+  function briefPath(r) {
+    if (r.file) return "data/" + String(r.file).replace(/^\/+/, "");
+    if (r.path) return r.path;
+    return "data/reports/" + r.date + ".md";
+  }
+
+  function renderBrief(index) {
+    var wrap = document.getElementById("brief-wrap");
+    var all = (index && Array.isArray(index.reports)) ? index.reports : [];
+    var matches = all.filter(isResearch).filter(matchesTicker);
+
+    if (!matches.length) {
+      wrap.innerHTML = '<div class="empty">No brief on file yet for this name. ' +
+        '<a href="research.html">Task the desk</a> and one lands here in about 15 minutes.</div>';
+      return;
+    }
+
+    matches.sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+    var latest = matches[0];
+    var path = briefPath(latest);
+
+    wrap.innerHTML = '<div class="loading">Loading brief...</div>';
+    fetch(path, { cache: "no-store" }).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.text();
+    }).then(function (md) {
+      wrap.innerHTML = '<div class="report-view">' + D.mdToHtml(md) + '</div>';
+    }).catch(function () {
+      wrap.innerHTML = '<div class="empty">No brief on file yet for this name. ' +
+        '<a href="research.html">Task the desk</a> and one lands here in about 15 minutes.</div>';
+    });
+  }
+
+  // ============ BOOT ============
+  function boot() {
+    var bookP = D.loadJSON("data/book.json").catch(function () { return null; });
+    var pricesP = D.loadJSON("data/prices.json").catch(function () { return null; });
+    var historyP = D.loadJSON("data/history.json").catch(function () { return null; });
+    var reportsP = D.loadJSON("data/reports-index.json").catch(function () { return null; });
+
+    Promise.all([bookP, pricesP]).then(function (results) {
+      renderHero(results[0], results[1]);
+      renderThesis(results[0]);
+    }).catch(function () {
+      document.getElementById("ticker-hero-wrap").innerHTML = '<div class="empty">Could not load book data.</div>';
+      document.getElementById("thesis-wrap").innerHTML = '<div class="empty">Could not load book data.</div>';
+    });
+
+    historyP.then(function (history) {
+      renderHistory(history);
+    }).catch(function () {
+      document.getElementById("history-wrap").innerHTML = '<div class="empty">No price history on file for this name. History covers Quinn\'s book names.</div>';
+    });
+
+    renderEarnings();
+
+    reportsP.then(function (index) {
+      renderBrief(index);
+    }).catch(function () {
+      document.getElementById("brief-wrap").innerHTML = '<div class="empty">No brief on file yet for this name. ' +
+        '<a href="research.html">Task the desk</a> and one lands here in about 15 minutes.</div>';
+    });
+  }
+
+})();
+</script>

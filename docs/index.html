@@ -272,6 +272,7 @@
     if (!blocks.length) {
       blocks.push('<div class="detail-block"><div class="body dim">No thesis on file yet for this position.</div></div>');
     }
+    blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(p.t) + '">Open the ' + D.esc(p.t) + ' page: chart, next earnings, latest brief</a></div></div>');
     return '<tr class="detail-row" hidden><td colspan="' + colspan + '"><div class="detail-inner">' +
       blocks.join("") + '</div></td></tr>';
   }
@@ -398,7 +399,7 @@
         dayHtml = '<span class="wt-day faint">-</span>';
       }
       return '<span class="watch-chip">' +
-        '<span class="wt-ticker">' + D.esc(t) + '</span>' +
+        '<a class="wt-ticker" href="ticker.html?t=' + encodeURIComponent(t) + '">' + D.esc(t) + '</a>' +
         priceHtml + dayHtml +
         '<button type="button" class="wt-remove" data-watch-remove="' + idx + '" title="Remove">&times;</button>' +
         '</span>';
@@ -565,7 +566,7 @@
     var rows = arr.map(function (r, idx) {
       var q = priceFor(r.ticker);
       var inBook = state.bookTickers[r.ticker];
-      var tickerCell = '<span class="ticker">' + D.esc(r.ticker) + '</span>' +
+      var tickerCell = '<a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a>' +
         (inBook ? ' <span class="badge-book">In the book</span>' : '');
 
       var lastCell, dayCell, mvCell, plCell, plPctCell;
@@ -672,7 +673,7 @@
       var label = d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
       var soon = days >= 0 && days <= 7;
       return '<span class="watch-chip">' +
-        '<span class="wt-ticker">' + D.esc(x.t) + '</span>' +
+        '<a class="wt-ticker" href="ticker.html?t=' + encodeURIComponent(x.t) + '">' + D.esc(x.t) + '</a>' +
         '<span class="wt-price">' + D.esc(label) + '</span>' +
         '<span class="wt-day ' + (soon ? "loss" : "faint") + '">' + (days >= 0 ? "in " + days + "d" : "today") + '</span>' +
         '</span>';
@@ -1070,7 +1071,7 @@
           lastCell = dayCell = mvCell = plCell = plPctCell = '<span class="faint">-</span>';
         }
         return '<tr>' +
-          '<td class="l"><span class="ticker">' + D.esc(r.ticker) + '</span></td>' +
+          '<td class="l"><a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
           '<td>' + D.fmtPrice(r.shares) + '</td>' +
           '<td>' + D.fmtPrice(r.costBasis) + '</td>' +
           '<td>' + lastCell + '</td>' +
