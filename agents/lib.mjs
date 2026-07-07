@@ -70,6 +70,7 @@ const OFFICE_AGENTS = [
   { id: 'desk-report', name: 'Desk Report', role: 'Writes the deterministic daily desk report' },
   { id: 'watchdog', name: 'Watchdog', role: 'Flags book tickers moving 5 percent or more' },
   { id: 'research-agent', name: 'Research Agent', role: 'Runs on-demand ticker research briefs' },
+  { id: 'member-alerts', name: 'Member Alerts', role: 'Emails opted-in members when their names move past their threshold' },
 ];
 
 export function officeSeed() {

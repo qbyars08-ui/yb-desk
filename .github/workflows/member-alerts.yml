@@ -7,17 +7,45 @@ on:
     - cron: '11 22 * * 1-5'
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  contents: write
+
+concurrency:
+  group: tape-writes
+  cancel-in-progress: false
 
 jobs:
   alerts:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: run the member alert mailer
+        id: mailer
         env:
           CRON_ALERTS_TOKEN: ${{ secrets.CRON_ALERTS_TOKEN }}
         run: |
           out=$(curl -s -X POST "https://youngbullinvests.com/api/member-alerts-run" \
             -H "x-cron-token: ${CRON_ALERTS_TOKEN}")
           echo "$out"
-          echo "$out" | grep -q '"ok":true' || { echo "alert run failed"; exit 1; }
+          echo "$out" | grep -q '"ok":true' || { echo "status=error" >> "$GITHUB_OUTPUT"; echo "alert run failed"; exit 1; }
+          echo "status=ok" >> "$GITHUB_OUTPUT"
+
+      - name: stamp the office
+        if: always()
+        run: |
+          node -e "
+            import('./agents/lib.mjs').then(function (lib) {
+              return lib.updateOffice('member-alerts', '${{ steps.mailer.outputs.status || 'error' }}');
+            }).then(function () { console.log('office stamped'); });
+          "
+          git config user.name "yb-desk-agent"
+          git config user.email "yb-desk-agent@users.noreply.github.com"
+          git add data docs/data
+          if git diff --cached --quiet; then
+            echo "office unchanged"
+          else
+            git commit -m "office: member-alerts run"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push
+          fi
