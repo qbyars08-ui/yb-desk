@@ -2,7 +2,10 @@ name: research queue
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # Every 15 minutes, on offset minutes. GitHub heavily throttles crons on
+    # herd minutes (:00/:15/:30/:45 and */N patterns): observed slippage was
+    # 2-3 HOURS between runs. Uncommon minutes get picked up more reliably.
+    - cron: '4,19,34,49 * * * *'
   workflow_dispatch:
 
 permissions:

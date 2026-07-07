@@ -2,8 +2,10 @@ name: desk report
 
 on:
   schedule:
-    # 5:30pm ET after the close, weekdays (UTC)
-    - cron: '30 21 * * 1-5'
+    # 5:43pm ET after the close, weekdays (UTC). Offset minute on purpose:
+    # GitHub throttles herd-minute crons, and the close numbers can wait 13
+    # extra minutes but not 2 hours.
+    - cron: '43 21 * * 1-5'
   workflow_dispatch:
 
 permissions:

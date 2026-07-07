@@ -2,12 +2,15 @@ name: price agent
 
 on:
   schedule:
-    # every 30 minutes, US market hours plus the close, weekdays (UTC)
-    - cron: '*/30 13-21 * * 1-5'
+    # Every 30 minutes, US market hours plus the close, weekdays (UTC).
+    # Offset minutes: GitHub throttles herd-minute crons (:00/:30, */N)
+    # hard, observed slippage was 2+ hours. Odd minutes fire more reliably.
+    - cron: '7,37 13-21 * * 1-5'
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: tape-writes
@@ -42,3 +45,12 @@ jobs:
             git pull --rebase origin "$GITHUB_REF_NAME"
             git push
           fi
+
+      # GitHub delays scheduled crons unpredictably, so every price run also
+      # kicks the research queue. Worst-case brief latency then tracks the
+      # tape cadence instead of the queue's own slipping schedule. Best
+      # effort: a failed dispatch never fails the price run.
+      - name: kick the research queue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run research-queue.yml --repo "$GITHUB_REPOSITORY" || echo "queue kick skipped"
