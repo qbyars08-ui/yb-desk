@@ -12,10 +12,56 @@ import {
   todayISO,
   updateOffice,
   updateReportsIndex,
+  writeJsonBoth,
   writeTextBoth,
 } from './lib.mjs';
 
 const AGENT_ID = 'desk-report';
+const HISTORY_MAX_POINTS = 380;
+const HISTORY_CLOSE_DECIMALS = 4;
+
+// Append today's close to history.json for every ticker with a live quote,
+// deduping the same-date entry (replace), adding new tickers automatically,
+// keeping the MAX cap, and pruning tickers that are in neither the book nor
+// prices and have grown past the cap. Never throws: any failure is logged and
+// swallowed so the daily report is never blocked by history maintenance.
+async function appendHistory(positions, quotes, date) {
+  try {
+    const history = await readJson('history.json', { updated: null, series: {} });
+    const series = { ...(history.series ?? {}) };
+
+    const bookTickers = new Set(
+      positions.map((pos) => String(pos.t || '').toUpperCase()).filter(Boolean),
+    );
+    const priceTickers = new Set(Object.keys(quotes).map((t) => t.toUpperCase()));
+
+    let appended = 0;
+    for (const rawTicker of priceTickers) {
+      const ticker = rawTicker.toUpperCase();
+      const price = quotes[rawTicker]?.price;
+      if (typeof price !== 'number' || !Number.isFinite(price)) continue;
+      const existing = Array.isArray(series[ticker]) ? series[ticker] : [];
+      const deduped = existing.filter((pair) => pair[0] !== date);
+      deduped.push([date, round(price, HISTORY_CLOSE_DECIMALS)]);
+      deduped.sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+      series[ticker] = deduped.slice(-HISTORY_MAX_POINTS);
+      appended += 1;
+    }
+
+    // Prune tickers absent from both book and prices once they exceed the cap.
+    for (const ticker of Object.keys(series)) {
+      const kept = bookTickers.has(ticker) || priceTickers.has(ticker) || ticker === 'SPY';
+      if (!kept && series[ticker].length > HISTORY_MAX_POINTS) {
+        delete series[ticker];
+      }
+    }
+
+    await writeJsonBoth('history.json', { updated: new Date().toISOString(), series });
+    console.log(`desk-report: history append touched ${appended} tickers`);
+  } catch (err) {
+    console.error(`desk-report: history append skipped (${err.message})`);
+  }
+}
 
 function effectiveChanges(positions, quotes) {
   return positions
@@ -98,6 +144,7 @@ async function main() {
   const file = `reports/${date}.md`;
   await writeTextBoth(file, body);
   await updateReportsIndex({ file, date, title: `Desk Report ${date}`, type: 'desk' });
+  await appendHistory(positions, prices.quotes ?? {}, date);
   await updateOffice(AGENT_ID, 'ok');
   console.log(
     `desk-report: wrote ${file} (${movers.upCount} up, ${movers.downCount} down, ${milestones.count} milestones)`,

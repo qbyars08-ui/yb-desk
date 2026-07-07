@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-07T04:19:51.183Z",
+  "updated": "2026-07-07T04:59:25.481Z",
   "reports": [
+    {
+      "file": "reports/2026-07-07.md",
+      "date": "2026-07-07",
+      "title": "Desk Report 2026-07-07",
+      "type": "desk"
+    },
     {
       "file": "reports/research-ZZTEST-2026-07-07.md",
       "date": "2026-07-07",
@@ -22,12 +28,6 @@
       "type": "research",
       "ticker": "MU",
       "issue": 1
-    },
-    {
-      "file": "reports/2026-07-07.md",
-      "date": "2026-07-07",
-      "title": "Desk Report 2026-07-07",
-      "type": "desk"
     },
     {
       "file": "reports/2026-07-06.md",

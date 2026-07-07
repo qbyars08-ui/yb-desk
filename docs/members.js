@@ -21,7 +21,8 @@
     holdings: [],
     liveQuotes: {},
     quotesTried: {},
-    book: null           // Quinn's book (data/book.json), for sleeve/layer lookups
+    book: null,          // Quinn's book (data/book.json), for sleeve/layer lookups
+    history: null        // data/history.json, for the performance chart
   };
 
   D.mountFooter(document.getElementById("site-footer"));
@@ -30,6 +31,18 @@
     state.book = book;
     renderHoldings();
   }).catch(function () { /* analytics falls back to "outside the book" for all names */ });
+
+  D.loadJSON("data/history.json").then(function (history) {
+    state.history = history;
+    renderHoldings();
+  }).catch(function () { /* performance chart shows the fallback line */ });
+
+  function renderMyPerf() {
+    var analyticsRows = (Array.isArray(state.holdings) ? state.holdings : []).map(function (r) {
+      return { ticker: String(r.ticker).toUpperCase(), shares: Number(r.shares) };
+    });
+    D.renderYourPerformance(document.getElementById("m-your-perf"), analyticsRows, state.history);
+  }
 
   // ============ SESSION STORAGE ============
   function loadSession() {
@@ -375,6 +388,7 @@
       tableScroll.style.display = "none";
       emptyEl.innerHTML = '<div class="empty">No synced holdings yet. Add one above, or import your local desk.</div>';
       D.renderAnalytics(document.getElementById("m-analytics"), analyticsRows, priceFor, state.book);
+      renderMyPerf();
       return;
     }
     tableScroll.style.display = "";
@@ -430,6 +444,7 @@
     }
 
     D.renderAnalytics(document.getElementById("m-analytics"), analyticsRows, priceFor, state.book);
+    renderMyPerf();
 
     body.querySelectorAll("button[data-h-remove]").forEach(function (btn) {
       btn.addEventListener("click", function () {

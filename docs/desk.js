@@ -246,6 +246,159 @@
       '</div>';
   }
 
+  // --- price history helpers (pure, no DOM) ---
+
+  // seriesToValue(positions, series, opts):
+  // positions: [{ticker, shares}]. series: { TICKER: [[date, close], ...] } ascending.
+  // Assumes the CURRENT positions were held across the whole window (a documented
+  // limitation stated in the UI). For each date on the union of held tickers' dates,
+  // sum shares * close, carrying forward each ticker's last known close; before a
+  // ticker's earliest close, use that earliest close so early dates still value it.
+  function seriesToValue(positions, series, opts) {
+    var rows = (Array.isArray(positions) ? positions : []).filter(function (p) {
+      var t = p && p.ticker ? String(p.ticker).toUpperCase() : "";
+      return t && series && Array.isArray(series[t]) && series[t].length > 0 && Number(p.shares) > 0;
+    }).map(function (p) {
+      var t = String(p.ticker).toUpperCase();
+      return { ticker: t, shares: Number(p.shares), pts: series[t] };
+    });
+    if (!rows.length) return [];
+
+    var dateSet = {};
+    rows.forEach(function (r) { r.pts.forEach(function (pt) { dateSet[pt[0]] = true; }); });
+    var dates = Object.keys(dateSet).sort();
+
+    rows.forEach(function (r) {
+      r.byDate = {};
+      r.pts.forEach(function (pt) { r.byDate[pt[0]] = pt[1]; });
+      r.earliest = r.pts[0][1];
+    });
+
+    var out = [];
+    var last = {};
+    rows.forEach(function (r) { last[r.ticker] = r.earliest; });
+    for (var i = 0; i < dates.length; i++) {
+      var date = dates[i];
+      var value = 0;
+      for (var j = 0; j < rows.length; j++) {
+        var r2 = rows[j];
+        if (Object.prototype.hasOwnProperty.call(r2.byDate, date)) last[r2.ticker] = r2.byDate[date];
+        value += r2.shares * last[r2.ticker];
+      }
+      out.push([date, Math.round(value * 10000) / 10000]);
+    }
+    return out;
+  }
+
+  // normalizePct(series): rebase [[date, value]] to percent change from the first value.
+  function normalizePct(series) {
+    var list = Array.isArray(series) ? series : [];
+    if (!list.length) return [];
+    var base = list[0][1];
+    if (typeof base !== "number" || !isFinite(base) || base === 0) {
+      return list.map(function (pt) { return [pt[0], 0]; });
+    }
+    return list.map(function (pt) {
+      var pct = ((pt[1] - base) / base) * 100;
+      return [pt[0], Math.round(pct * 10000) / 10000];
+    });
+  }
+
+  // sparkSVG(seriesList, opts): responsive multi-series line chart as an HTML string.
+  // seriesList: [{ points: [[date, y], ...], cls, label }]. cls "primary" => gold,
+  // anything else => muted gray. Handles empty / single-point series gracefully.
+  function sparkSVG(seriesList, opts) {
+    var o = opts || {};
+    var W = o.width || 640, H = o.height || 180, PAD = 28;
+    var series = (Array.isArray(seriesList) ? seriesList : []).filter(function (s) {
+      return s && Array.isArray(s.points) && s.points.length > 0;
+    });
+    if (!series.length) {
+      return '<svg class="spark" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="no data">' +
+        '<text x="' + (W / 2) + '" y="' + (H / 2) + '" text-anchor="middle" class="spark-empty">No history to chart yet.</text></svg>';
+    }
+    var all = [];
+    series.forEach(function (s) { s.points.forEach(function (p) { all.push(p[1]); }); });
+    var lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
+    if (lo === hi) { lo -= 1; hi += 1; }
+    var xOf = function (i, n) { return PAD + (n <= 1 ? 0 : (i / (n - 1)) * (W - 2 * PAD)); };
+    var yOf = function (v) { return PAD + (1 - (v - lo) / (hi - lo)) * (H - 2 * PAD); };
+    var fmt = function (v) { return (Math.round(v * 100) / 100).toLocaleString("en-US"); };
+
+    var paths = "", labels = "";
+    series.forEach(function (s) {
+      var isPrimary = s.cls === "primary";
+      var stroke = isPrimary ? "var(--spark-primary, #d4af37)" : "var(--spark-muted, #8a8f98)";
+      var pts = s.points, n = pts.length, d = "";
+      for (var i = 0; i < n; i++) {
+        var x = n <= 1 ? W / 2 : xOf(i, n);
+        var y = yOf(pts[i][1]);
+        d += (i === 0 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1) + " ";
+      }
+      if (n === 1) {
+        paths += '<circle cx="' + (W / 2).toFixed(1) + '" cy="' + yOf(pts[0][1]).toFixed(1) +
+          '" r="3" fill="' + stroke + '"/>';
+      } else {
+        paths += '<path d="' + d.trim() + '" fill="none" stroke="' + stroke +
+          '" stroke-width="' + (isPrimary ? 2.2 : 1.6) + '" stroke-linejoin="round" stroke-linecap="round"/>';
+      }
+      var lastPt = pts[n - 1], ly = yOf(lastPt[1]);
+      labels += '<text x="' + (W - PAD + 3) + '" y="' + (ly + 3).toFixed(1) +
+        '" class="spark-last" fill="' + stroke + '">' + esc(fmt(lastPt[1])) + (o.unit || "") + '</text>';
+    });
+
+    var minLabel = '<text x="2" y="' + (H - 6) + '" class="spark-axis">' + esc(fmt(lo)) + (o.unit || "") + '</text>';
+    var maxLabel = '<text x="2" y="' + (PAD - 6) + '" class="spark-axis">' + esc(fmt(hi)) + (o.unit || "") + '</text>';
+    var legend = series.map(function (s) {
+      var cls = s.cls === "primary" ? "spark-leg-primary" : "spark-leg-muted";
+      return s.label ? '<span class="spark-leg ' + cls + '">' + esc(s.label) + "</span>" : "";
+    }).join("");
+
+    return '<div class="spark-wrap">' +
+      '<svg class="spark" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="performance chart">' +
+      paths + minLabel + maxLabel + labels + '</svg>' +
+      (legend ? '<div class="spark-legend">' + legend + "</div>" : "") + "</div>";
+  }
+
+  // renderYourPerformance(containerEl, positions, history, opts):
+  // Shared "YOUR PERFORMANCE, 1 YEAR" renderer for index + members. Charts the
+  // visitor's positions (current shares held throughout) vs SPY, both normalized
+  // to percent. Hidden when the desk is empty or none of their tickers exist in
+  // history.json; shows a fallback line when tickers are outside the book universe.
+  function renderYourPerformance(containerEl, positions, history, opts) {
+    if (!containerEl) return;
+    var o = opts || {};
+    var rows = Array.isArray(positions) ? positions : [];
+    var series = (history && history.series) ? history.series : {};
+    if (!rows.length) { containerEl.hidden = true; containerEl.innerHTML = ""; return; }
+
+    var covered = rows.filter(function (r) {
+      var t = r && r.ticker ? String(r.ticker).toUpperCase() : "";
+      return t && Array.isArray(series[t]) && series[t].length > 0 && Number(r.shares) > 0;
+    });
+    if (!covered.length) {
+      containerEl.hidden = false;
+      containerEl.innerHTML =
+        '<h3 class="analytics-h">Your performance, 1 year</h3>' +
+        '<p class="spark-note">History covers the book universe plus SPY for now. ' +
+        'Your tickers outside it chart when the office adds them.</p>';
+      return;
+    }
+
+    var valueSeries = seriesToValue(covered, series);
+    var youPct = normalizePct(valueSeries);
+    var spy = Array.isArray(series.SPY) ? normalizePct(series.SPY) : [];
+    var list = [{ points: youPct, cls: "primary", label: "Your desk" }];
+    if (spy.length) list.push({ points: spy, cls: "muted", label: "SPY" });
+
+    containerEl.hidden = false;
+    containerEl.innerHTML =
+      '<h3 class="analytics-h">Your performance, 1 year</h3>' +
+      sparkSVG(list, { unit: "%", width: o.width || 640, height: o.height || 180 }) +
+      '<p class="spark-note">Current positions held constant across the window. ' +
+      'Directionally right, not an audited return series.</p>';
+  }
+
   // --- footer disclaimer injection (consistent across pages) ---
   function mountFooter(el) {
     if (!el) return;
@@ -271,6 +424,10 @@
     mdToHtml: mdToHtml,
     mountFooter: mountFooter,
     computeAnalytics: computeAnalytics,
-    renderAnalytics: renderAnalytics
+    renderAnalytics: renderAnalytics,
+    seriesToValue: seriesToValue,
+    normalizePct: normalizePct,
+    sparkSVG: sparkSVG,
+    renderYourPerformance: renderYourPerformance
   };
 })(window);

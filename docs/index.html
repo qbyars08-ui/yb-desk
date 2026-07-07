@@ -57,6 +57,14 @@
       </table>
     </div>
     <p class="hint" style="margin-top:8px">Click any row to open the thesis, variant perception, and kill vectors.</p>
+
+    <div class="perf-block" style="margin-top:24px">
+      <div class="section-head" style="margin:0 0 10px">
+        <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Performance, 1 year</h2>
+        <span class="note">Book weighting vs SPY</span>
+      </div>
+      <div id="book-perf"></div>
+    </div>
   </section>
 
   <!-- SECTION B: YOUR DESK -->
@@ -134,6 +142,7 @@
       <span class="note">Computed from the table above, in this browser</span>
     </div>
     <div id="analytics" hidden></div>
+    <div id="your-perf" class="perf-block" style="margin-top:24px" hidden></div>
   </section>
 
   <!-- SECTION C: THE OFFICE -->
@@ -181,6 +190,7 @@
   var state = {
     book: null,
     prices: null,
+    history: null,      // { updated, series: { TICKER: [[date, close], ...] } }
     bookTickers: {},    // set of tickers in the book
     liveQuotes: {},     // any-ticker quotes fetched from the live tape API
     quotesTried: {},    // tickers we already asked the live tape for (loop guard)
@@ -498,6 +508,7 @@
       tableScroll.style.display = "none";
       emptyEl.innerHTML = '<div class="empty">No positions yet. Add one above, or import a CSV. Everything stays in this browser.</div>';
       D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
+      renderYourPerf();
       return;
     }
     tableScroll.style.display = "";
@@ -584,6 +595,7 @@
     fetchMissingQuotes(arr.map(function (r) { return r.ticker; }).concat(loadWatchlist()));
 
     D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
+    renderYourPerf();
   }
 
   function wireAddForm() {
@@ -978,6 +990,63 @@
     renderSharedReadOnlyDesk(decoded);
   }
 
+  // ============ PERFORMANCE CHARTS ============
+  // Book vs SPY, 1 year. No public shares, so we proxy the book as a weighted
+  // average of each ticker's normalized pct change, using weightPct as fixed
+  // weights held constant across the window.
+  function renderBookPerf() {
+    var el = document.getElementById("book-perf");
+    if (!el) return;
+    var hist = state.history;
+    var series = (hist && hist.series) ? hist.series : null;
+    var positions = (state.book && Array.isArray(state.book.positions)) ? state.book.positions : [];
+    if (!series || !positions.length) {
+      el.innerHTML = '<p class="spark-note">History is loading, or is not available yet.</p>';
+      return;
+    }
+    // Build per-ticker normalized pct series over the union of dates, weighting.
+    var weighted = [];
+    var totalWeight = 0;
+    positions.forEach(function (p) {
+      var t = p && p.t ? String(p.t).toUpperCase() : "";
+      var w = (typeof p.weightPct === "number" && isFinite(p.weightPct)) ? p.weightPct : 0;
+      if (t && w > 0 && Array.isArray(series[t]) && series[t].length > 0) {
+        weighted.push({ ticker: t, weight: w, pct: D.normalizePct(series[t]) });
+        totalWeight += w;
+      }
+    });
+    if (!weighted.length || totalWeight <= 0) {
+      el.innerHTML = '<p class="spark-note">No book names have chartable history yet.</p>';
+      return;
+    }
+    // Union of dates, then weighted mean of per-ticker pct (carry forward last known).
+    var dateSet = {};
+    weighted.forEach(function (w) { w.pct.forEach(function (pt) { dateSet[pt[0]] = true; }); });
+    var dates = Object.keys(dateSet).sort();
+    weighted.forEach(function (w) {
+      w.byDate = {}; w.pct.forEach(function (pt) { w.byDate[pt[0]] = pt[1]; });
+      w.last = 0;
+    });
+    var bookPct = dates.map(function (date) {
+      var acc = 0;
+      weighted.forEach(function (w) {
+        if (Object.prototype.hasOwnProperty.call(w.byDate, date)) w.last = w.byDate[date];
+        acc += (w.weight / totalWeight) * w.last;
+      });
+      return [date, Math.round(acc * 10000) / 10000];
+    });
+    var list = [{ points: bookPct, cls: "primary", label: "Book" }];
+    if (Array.isArray(series.SPY)) list.push({ points: D.normalizePct(series.SPY), cls: "muted", label: "SPY" });
+    el.innerHTML = D.sparkSVG(list, { unit: "%" }) +
+      '<p class="spark-note">Weighted by current book weights held constant. ' +
+      'Directionally right, not an audited return series.</p>';
+  }
+
+  function renderYourPerf() {
+    var arr = state.sharedView ? [] : loadPortfolio();
+    D.renderYourPerformance(document.getElementById("your-perf"), arr, state.history);
+  }
+
   // ============ BOOT ============
   wireAddForm();
   wireCSV();
@@ -990,6 +1059,7 @@
     state.book = book;
     renderCanonical(book);
     renderBook(book);
+    if (state.history) renderBookPerf();
   }).catch(function (e) {
     document.getElementById("book-body").innerHTML =
       '<tr><td class="l" colspan="7"><span class="empty">Could not load the book. ' + D.esc(e.message) + '</span></td></tr>';
@@ -1003,6 +1073,16 @@
   }).catch(function () {
     document.getElementById("prices-asof").textContent = "prices unavailable";
     renderDesk();
+  });
+
+  // Price history powers both performance charts. Never blocks the rest of the page.
+  D.loadJSON("data/history.json").then(function (history) {
+    state.history = history;
+    renderBookPerf();
+    renderYourPerf();
+  }).catch(function () {
+    var bp = document.getElementById("book-perf");
+    if (bp) bp.innerHTML = '<p class="spark-note">Price history is not available right now.</p>';
   });
 
   // Render desk + watchlist immediately (works even before prices arrive)
