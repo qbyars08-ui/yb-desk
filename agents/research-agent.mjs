@@ -72,6 +72,8 @@ function buildPrompt(ticker, pos, quote) {
     'Voice: direct, punchy, peer to peer, like a sharp friend talking. Short sentences. No hype, no filler.',
     'Never use em dashes. Use commas and periods instead.',
     'Be honest about risk. If the setup is weak, say so plainly.',
+    'DESCRIPTIVE ONLY, never prescriptive: no buy, sell, hold, trim, add, or position sizing instructions of any kind. The Desk verdict section describes what the data shows and what would change the picture. It never tells the reader what to do.',
+    'Do not write "for internal use only" or similar. This is a public report.',
     'Keep it under 900 words.',
   ].join('\n');
 }
