@@ -66,6 +66,7 @@
       <button type="button" class="btn ghost" id="csv-import-btn">Import CSV</button>
       <button type="button" class="btn ghost" id="csv-export-btn">Export CSV</button>
       <button type="button" class="btn ghost" id="share-desk-btn">Share desk</button>
+      <button type="button" class="btn ghost" id="share-card-btn">Share card</button>
       <input type="file" id="csv-file" accept=".csv,text/csv" class="file-hidden">
       <span class="hint">CSV header must be exactly <code>ticker,shares,cost_basis</code></span>
       <span class="asof" id="prices-asof" style="margin-left:auto"></span>
@@ -1007,6 +1008,137 @@
     });
   }
 
+  // ---- Share card: a downloadable image of the desk vs the book ----
+  // Percentages only. Dollar values never leave the browser, and the card
+  // is built to be posted publicly, so it carries the flex, not the size.
+  function shareCardData() {
+    var arr = loadPortfolio();
+    if (!arr.length) return null;
+    var totValue = 0, totCost = 0, totDay = 0, priced = 0;
+    var rows = [];
+    var overlap = 0;
+    arr.forEach(function (r) {
+      var q = priceFor(r.ticker);
+      if (state.bookTickers[r.ticker]) overlap += 1;
+      if (!q) return;
+      priced += 1;
+      var mv = r.shares * q.price;
+      var cost = r.shares * r.costBasis;
+      totValue += mv; totCost += cost;
+      totDay += mv * (q.changePct / 100);
+      rows.push({ ticker: r.ticker, mv: mv });
+    });
+    if (!priced || totValue <= 0) return null;
+    rows.sort(function (a, b) { return b.mv - a.mv; });
+    var top = rows.slice(0, 3).map(function (r) {
+      return { ticker: r.ticker, weight: (r.mv / totValue) * 100 };
+    });
+    var totPl = totCost > 0 ? ((totValue - totCost) / totCost) * 100 : 0;
+    var dayPct = (totValue - totDay) > 0 ? (totDay / (totValue - totDay)) * 100 : 0;
+    return {
+      dayPct: dayPct,
+      plPct: totPl,
+      bookDayPct: computeTapeDayPct(state.book),
+      names: arr.length,
+      overlap: overlap,
+      top: top
+    };
+  }
+
+  function cardPct(n) {
+    if (typeof n !== "number" || !isFinite(n)) return { txt: "-", color: "#9a988f" };
+    var txt = (n > 0 ? "+" : "") + n.toFixed(2) + "%";
+    var color = n > 0 ? "#4caf7d" : n < 0 ? "#d15b5b" : "#9a988f";
+    return { txt: txt, color: color };
+  }
+
+  function shareCardSVG(d) {
+    var mono = "ui-monospace, Menlo, Consolas, monospace";
+    var day = cardPct(d.dayPct);
+    var pl = cardPct(d.plPct);
+    var book = cardPct(d.bookDayPct);
+    var dateStr = new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+    var bars = "";
+    var maxW = Math.max.apply(null, d.top.map(function (t) { return t.weight; }).concat([1]));
+    d.top.forEach(function (t, i) {
+      var y = 420 + i * 46;
+      var w = Math.max(8, Math.round((t.weight / maxW) * 420));
+      bars +=
+        '<text x="80" y="' + (y + 16) + '" font-family="' + mono + '" font-size="20" fill="#d4a843" font-weight="700">' + D.esc(t.ticker) + '</text>' +
+        '<rect x="200" y="' + y + '" width="440" height="22" fill="#2b2b2b"/>' +
+        '<rect x="200" y="' + y + '" width="' + w + '" height="22" fill="#d4a843"/>' +
+        '<text x="656" y="' + (y + 17) + '" font-family="' + mono + '" font-size="18" fill="#e8e6e0">' + t.weight.toFixed(1) + '%</text>';
+    });
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">' +
+      '<rect width="1200" height="630" fill="#1a1a1a"/>' +
+      '<rect x="24" y="24" width="1152" height="582" fill="none" stroke="#333333" stroke-width="2"/>' +
+      '<rect x="24" y="24" width="6" height="582" fill="#d4a843"/>' +
+      '<text x="80" y="110" font-family="' + mono + '" font-size="40" font-weight="800" letter-spacing="4" fill="#d4a843">YB-DESK</text>' +
+      '<text x="80" y="160" font-family="' + mono + '" font-size="24" letter-spacing="3" fill="#9a988f">MY DESK VS THE YOUNG BULL BOOK</text>' +
+      '<text x="1120" y="110" text-anchor="end" font-family="' + mono + '" font-size="20" fill="#6a6862">' + D.esc(dateStr) + '</text>' +
+      '<text x="80" y="235" font-family="' + mono + '" font-size="18" letter-spacing="2" fill="#6a6862">MY DAY</text>' +
+      '<text x="80" y="300" font-family="' + mono + '" font-size="58" font-weight="700" fill="' + day.color + '">' + day.txt + '</text>' +
+      '<text x="440" y="235" font-family="' + mono + '" font-size="18" letter-spacing="2" fill="#6a6862">MY TOTAL P&amp;L</text>' +
+      '<text x="440" y="300" font-family="' + mono + '" font-size="58" font-weight="700" fill="' + pl.color + '">' + pl.txt + '</text>' +
+      '<text x="820" y="235" font-family="' + mono + '" font-size="18" letter-spacing="2" fill="#6a6862">QUINN\'S BOOK TODAY</text>' +
+      '<text x="820" y="300" font-family="' + mono + '" font-size="58" font-weight="700" fill="' + book.color + '">' + book.txt + '</text>' +
+      '<text x="80" y="380" font-family="' + mono + '" font-size="20" fill="#e8e6e0">' + d.names + ' name' + (d.names === 1 ? '' : 's') + ' on my desk, ' + d.overlap + ' overlap with the book</text>' +
+      bars +
+      '<text x="80" y="585" font-family="' + mono + '" font-size="19" fill="#d4a843">qbyars08-ui.github.io/yb-desk, build yours in 60 seconds</text>' +
+      '<text x="1120" y="585" text-anchor="end" font-family="' + mono + '" font-size="15" fill="#6a6862">Percentages only, dollars stay private. Not investment advice.</text>' +
+      '</svg>';
+  }
+
+  function downloadShareCard() {
+    var data = shareCardData();
+    if (!data) {
+      showMsg("Add at least one priced position first, then the card has something to show.", "err");
+      return;
+    }
+    var svg = shareCardSVG(data);
+    var blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var img = new Image();
+    img.onload = function () {
+      try {
+        var canvas = document.createElement("canvas");
+        canvas.width = 1200; canvas.height = 630;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, 1200, 630);
+        canvas.toBlob(function (png) {
+          if (!png) { downloadBlob(blob, "yb-desk-card.svg"); URL.revokeObjectURL(url); return; }
+          downloadBlob(png, "yb-desk-card.png");
+          URL.revokeObjectURL(url);
+          showMsg("Share card downloaded. Percentages only, your dollars never left this browser.", "ok");
+        }, "image/png");
+      } catch (e) {
+        downloadBlob(blob, "yb-desk-card.svg");
+        URL.revokeObjectURL(url);
+      }
+    };
+    img.onerror = function () {
+      downloadBlob(blob, "yb-desk-card.svg");
+      URL.revokeObjectURL(url);
+    };
+    img.src = url;
+  }
+
+  function downloadBlob(blob, name) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function wireShareCard() {
+    var btn = document.getElementById("share-card-btn");
+    if (btn) btn.addEventListener("click", downloadShareCard);
+  }
+
   // ---- Read-only shared-desk view ----
   function renderSharedBanner() {
     var el = document.getElementById("shared-banner");
@@ -1189,6 +1321,7 @@
   wireCSV();
   wireWatchForm();
   wireShareButton();
+  wireShareCard();
   checkForSharedLink();
 
   // Hero CTA: land the visitor in the add-position form, cursor ready.
