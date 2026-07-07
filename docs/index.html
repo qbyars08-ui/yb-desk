@@ -119,7 +119,7 @@
       <h2>&#9612; Quinn's Book</h2>
       <span class="note" id="book-note"></span>
     </div>
-    <p class="hint" style="margin:0 0 12px">The live demo. This is Quinn's real money, updated by the same agents that price your desk.</p>
+    <p class="hint" style="margin:0 0 12px">The live demo. This is Quinn's real money, updated by the same agents that price your desk. <span id="book-asof"></span></p>
     <div class="stat-grid" id="canonical" style="margin-bottom:14px"></div>
     <div class="table-scroll">
       <table class="grid" id="book-table">
@@ -208,12 +208,28 @@
   D.mountFooter(document.getElementById("site-footer"));
 
   // ============ SECTION A: QUINN'S BOOK ============
+  // Weighted-average day move from the live tape, weights held constant.
+  // Fresher than book.json's baked day_pct, which only updates at daily sync.
+  function computeTapeDayPct(book) {
+    if (!state.prices || !state.prices.quotes) return null;
+    var positions = (book && Array.isArray(book.positions)) ? book.positions : [];
+    var acc = 0, tw = 0;
+    positions.forEach(function (p) {
+      var w = (typeof p.weightPct === "number" && isFinite(p.weightPct)) ? p.weightPct : 0;
+      var q = state.prices.quotes[String(p.t || "").toUpperCase()];
+      if (w > 0 && q && typeof q.changePct === "number") { acc += w * q.changePct; tw += w; }
+    });
+    return tw > 0 ? acc / tw : null;
+  }
+
   function renderCanonical(book) {
     var c = (book && book.canonical) || {};
     var el = document.getElementById("canonical");
+    var dayVal = computeTapeDayPct(book);
+    if (dayVal === null && typeof c.day_pct === "number") dayVal = c.day_pct;
     var items = [
       { k: "Account value", v: D.fmtMoney(c.account_value) },
-      { k: "Day", v: D.fmtPct(c.day_pct), cls: D.pctClass(c.day_pct) },
+      { k: "Day", v: D.fmtPct(dayVal), cls: D.pctClass(dayVal) },
       { k: "Unrealized", v: D.fmtPct(c.unrealized_pct), cls: D.pctClass(c.unrealized_pct) },
       { k: "Lifetime (3yr)", v: D.fmtPct(c.lifetime_pct), cls: D.pctClass(c.lifetime_pct) },
       { k: "Names", v: (typeof c.names === "number" ? String(c.names) : "-") }
@@ -273,12 +289,14 @@
     var rows = positions.map(function (p) {
       var sleeve = p.sleeve ? '<span class="pill">' + D.esc(p.sleeve) + '</span>' : '<span class="faint">-</span>';
       var layer = p.layer ? '<span class="pill layer">' + D.esc(p.layer) + '</span>' : '<span class="faint">-</span>';
-      // Prefer the book's own last/day; fall back to the live tape (prices.json)
-      // for names the book has not backfilled yet (e.g. just-added positions).
+      // Prefer the live tape (prices.json, 30-min cron) over the book's own
+      // last/day, which is only baked in at the daily book-sync. The tape is
+      // what keeps this table honest if the daily sync ever goes stale.
       var tape = priceFor(String(p.t || "").toUpperCase());
-      var lastVal = (typeof p.last === "number") ? p.last : (tape ? tape.price : null);
-      var dayVal = (typeof p.dayChangePct === "number") ? p.dayChangePct
-        : (tape && typeof tape.changePct === "number") ? tape.changePct : null;
+      var lastVal = (tape && typeof tape.price === "number") ? tape.price
+        : (typeof p.last === "number") ? p.last : null;
+      var dayVal = (tape && typeof tape.changePct === "number") ? tape.changePct
+        : (typeof p.dayChangePct === "number") ? p.dayChangePct : null;
       var last = (typeof lastVal === "number") ? D.fmtPrice(lastVal) : '<span class="faint">-</span>';
       var day = (typeof dayVal === "number")
         ? '<span class="' + D.pctClass(dayVal) + '">' + D.fmtPct(dayVal) + '</span>'
@@ -1107,6 +1125,14 @@
     renderCanonical(book);
     renderBook(book);
     if (state.history) renderBookPerf();
+    // Desk analytics label positions by book sleeve/layer and overlap, so a
+    // desk rendered before the book arrived needs one more pass.
+    renderDesk();
+    var asOfEl = document.getElementById("book-asof");
+    if (asOfEl && book && book.generated_at) {
+      asOfEl.textContent = "Account value and weights from the daily sync, " +
+        D.fmtAsOf(book.generated_at) + ". Prices and day moves follow the live tape.";
+    }
   }).catch(function (e) {
     document.getElementById("book-body").innerHTML =
       '<tr><td class="l" colspan="7"><span class="empty">Could not load the book. ' + D.esc(e.message) + '</span></td></tr>';
@@ -1117,6 +1143,9 @@
     var el = document.getElementById("prices-asof");
     if (prices && prices.updated) el.textContent = "desk tape + live quotes, as of " + D.fmtAsOf(prices.updated);
     renderDesk();
+    // Book table and headline stats prefer the tape; re-render them now
+    // that it has arrived (book.json usually loads first).
+    if (state.book) { renderCanonical(state.book); renderBook(state.book); }
   }).catch(function () {
     document.getElementById("prices-asof").textContent = "prices unavailable";
     renderDesk();
