@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-06T23:57:03.357Z",
+  "updated": "2026-07-07T00:07:02.189Z",
   "reports": [
+    {
+      "file": "reports/2026-07-07.md",
+      "date": "2026-07-07",
+      "title": "Desk Report 2026-07-07",
+      "type": "desk"
+    },
     {
       "file": "reports/2026-07-06.md",
       "date": "2026-07-06",
