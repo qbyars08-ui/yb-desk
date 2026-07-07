@@ -105,6 +105,14 @@
     </form>
     <div id="watch-chips" class="watch-chips"></div>
 
+    <div id="earnings-block" hidden>
+      <div class="section-head" style="margin:24px 0 10px">
+        <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Earnings Ahead</h2>
+        <span class="note">Scheduled report dates on your names</span>
+      </div>
+      <div id="earnings-strip"></div>
+    </div>
+
     <div class="section-head" style="margin:24px 0 10px">
       <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Desk Analytics</h2>
       <span class="note">Computed from the table above, in this browser</span>
@@ -410,6 +418,7 @@
 
     // Price anything the committed tape doesn't cover.
     fetchMissingQuotes(list);
+    renderEarnings(loadPortfolio().map(function (r) { return r.ticker; }).concat(list));
   }
 
   function wireWatchForm() {
@@ -544,6 +553,7 @@
       setShareProminence(false);
       D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
       renderYourPerf();
+      renderEarnings(loadWatchlist());
       return;
     }
     tableScroll.style.display = "";
@@ -632,6 +642,75 @@
 
     D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
     renderYourPerf();
+    renderEarnings(arr.map(function (r) { return r.ticker; }).concat(loadWatchlist()));
+  }
+
+  // ---- Earnings ahead: next scheduled report date per desk/watchlist name.
+  // One fetch per distinct ticker set per session (12h cache matches the
+  // API's edge cache). Dates only, no estimates: dates are facts.
+  var EARNINGS_API = "https://youngbullinvests.com/api/earnings-calendar?tickers=";
+  var EARNINGS_CACHE_KEY = "ybdesk.earnings.v1";
+  var EARNINGS_TTL_MS = 12 * 60 * 60 * 1000;
+  var earningsLastKey = null;
+
+  function renderEarningsChips(tickers, earnings) {
+    var block = document.getElementById("earnings-block");
+    var strip = document.getElementById("earnings-strip");
+    var upcoming = tickers
+      .map(function (t) { return { t: t, e: earnings[t] }; })
+      .filter(function (x) { return x.e && x.e.reportDate; })
+      .sort(function (a, b) { return String(a.e.reportDate).localeCompare(String(b.e.reportDate)); });
+    if (!upcoming.length) {
+      strip.innerHTML = '<div class="watch-empty">No scheduled earnings on your names in the next few months.</div>';
+      block.hidden = false;
+      return;
+    }
+    var today = new Date();
+    strip.innerHTML = '<div class="watch-chips" style="margin-top:0">' + upcoming.map(function (x) {
+      var d = new Date(x.e.reportDate + "T12:00:00");
+      var days = Math.round((d - today) / (24 * 60 * 60 * 1000));
+      var label = d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      var soon = days >= 0 && days <= 7;
+      return '<span class="watch-chip">' +
+        '<span class="wt-ticker">' + D.esc(x.t) + '</span>' +
+        '<span class="wt-price">' + D.esc(label) + '</span>' +
+        '<span class="wt-day ' + (soon ? "loss" : "faint") + '">' + (days >= 0 ? "in " + days + "d" : "today") + '</span>' +
+        '</span>';
+    }).join("") + '</div>';
+    block.hidden = false;
+  }
+
+  function renderEarnings(tickers) {
+    var block = document.getElementById("earnings-block");
+    var clean = [];
+    tickers.forEach(function (t) {
+      var u = String(t || "").toUpperCase();
+      if (TICKER_RE.test(u) && clean.indexOf(u) === -1) clean.push(u);
+    });
+    clean = clean.slice(0, 25).sort();
+    if (!clean.length) { block.hidden = true; return; }
+    var key = clean.join(",");
+    if (key === earningsLastKey) return;
+    earningsLastKey = key;
+
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(EARNINGS_CACHE_KEY) || "null");
+      if (cached && cached.key === key && (Date.now() - cached.ts) < EARNINGS_TTL_MS && cached.earnings) {
+        renderEarningsChips(clean, cached.earnings);
+        return;
+      }
+    } catch (e) { /* bad cache, refetch */ }
+
+    fetch(EARNINGS_API + encodeURIComponent(key))
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        if (!data || !data.ok || !data.earnings) return;
+        try {
+          sessionStorage.setItem(EARNINGS_CACHE_KEY, JSON.stringify({ key: key, ts: Date.now(), earnings: data.earnings }));
+        } catch (e) { /* storage full or blocked, fine */ }
+        renderEarningsChips(clean, data.earnings);
+      })
+      .catch(function () { /* offline or API down: section stays hidden, no crash */ });
   }
 
   // Sample desk: three book tickers so the committed tape prices them with
@@ -1030,6 +1109,7 @@
     }
 
     fetchMissingQuotes(positions.map(function (r) { return r.ticker; }).concat(shared.watchlist));
+    renderEarnings(positions.map(function (r) { return r.ticker; }).concat(shared.watchlist));
   }
 
   function checkForSharedLink() {
