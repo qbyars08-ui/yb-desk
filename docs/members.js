@@ -228,10 +228,10 @@
       '<div class="signin-box">' +
         '<div class="step-label">Step 2 of 2</div>' +
         '<div id="signin-msg"></div>' +
-        '<p class="hint">Check your email for a 6 digit code. Sent to <b>' + D.esc(email) + '</b>.</p>' +
+        '<p class="hint">Check your email for a sign-in code. Sent to <b>' + D.esc(email) + '</b>.</p>' +
         '<form id="code-form" autocomplete="off">' +
-          '<div class="field"><label for="si-code">6 digit code</label>' +
-          '<input id="si-code" name="code" inputmode="numeric" maxlength="6" placeholder="123456" required></div>' +
+          '<div class="field"><label for="si-code">Sign-in code</label>' +
+          '<input id="si-code" name="code" inputmode="numeric" maxlength="10" placeholder="12345678" required></div>' +
           '<button type="submit" class="btn">Verify</button>' +
         '</form>' +
         '<button type="button" class="btn ghost" id="resend-btn" style="margin-top:8px">Use a different email</button>' +
@@ -299,6 +299,7 @@
       document.getElementById("alerts-section").hidden = false;
       loadHoldings();
       loadBrief();
+      wireGenerateBrief();
       loadAlerts();
     } else {
       document.getElementById("locked-section").hidden = false;
@@ -519,18 +520,40 @@
   }
 
   // ============ YOUR WEEKLY BRIEF ============
+  function renderBrief(wrap, brief) {
+    var meta = brief.generated_at ? '<div class="brief-meta">generated ' + D.esc(D.fmtAsOf(brief.generated_at)) + '</div>' : "";
+    wrap.innerHTML = meta + '<div class="brief-body">' + D.mdToHtml(brief.content_md || "") + '</div>';
+  }
+
   function loadBrief() {
     var wrap = document.getElementById("brief-wrap");
     memberFetch("/api/me/premium-brief").then(function (j) {
       var brief = j.brief;
       if (!brief) {
-        wrap.innerHTML = '<div class="empty">Your first brief lands on the next weekly cycle.</div>';
+        wrap.innerHTML = '<div class="empty">No brief yet. Hit the button above and the desk writes one from your positions right now.</div>';
         return;
       }
-      var meta = brief.generated_at ? '<div class="brief-meta">generated ' + D.esc(D.fmtAsOf(brief.generated_at)) + '</div>' : "";
-      wrap.innerHTML = meta + '<div class="brief-body">' + D.mdToHtml(brief.content_md || "") + '</div>';
+      renderBrief(wrap, brief);
     }).catch(function (e) {
       wrap.innerHTML = '<div class="empty">' + D.esc(e.message) + '</div>';
+    });
+  }
+
+  function wireGenerateBrief() {
+    var btn = document.getElementById("brief-generate-btn");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var wrap = document.getElementById("brief-wrap");
+      btn.disabled = true;
+      btn.textContent = "The desk is working...";
+      memberFetch("/api/me/generate-brief", { method: "POST" }).then(function (j) {
+        if (j.brief) renderBrief(wrap, j.brief);
+      }).catch(function (e) {
+        wrap.innerHTML = '<div class="empty">' + D.esc(e.message) + '</div>' + wrap.innerHTML;
+      }).then(function () {
+        btn.disabled = false;
+        btn.textContent = "Generate my brief now";
+      });
     });
   }
 
