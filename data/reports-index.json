@@ -1,18 +1,18 @@
 {
-  "updated": "2026-07-07T19:45:06.739Z",
+  "updated": "2026-07-07T22:43:58.879Z",
   "reports": [
+    {
+      "file": "reports/2026-07-07.md",
+      "date": "2026-07-07",
+      "title": "Desk Report 2026-07-07",
+      "type": "desk"
+    },
     {
       "file": "reports/research-ANET-2026-07-07.md",
       "date": "2026-07-07",
       "title": "Research Brief ANET 2026-07-07",
       "type": "research",
       "ticker": "ANET"
-    },
-    {
-      "file": "reports/2026-07-07.md",
-      "date": "2026-07-07",
-      "title": "Desk Report 2026-07-07",
-      "type": "desk"
     },
     {
       "file": "reports/research-MU-2026-07-07.md",
