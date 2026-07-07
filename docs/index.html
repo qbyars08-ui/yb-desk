@@ -1,0 +1,633 @@
+<title>yb-desk, The Desk</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A portfolio desk and agent office that runs free on GitHub. Young Bull.">
+<link rel="stylesheet" href="desk.css">
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">YB-DESK</span>
+      <span class="sub">The Desk</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Desk</a>
+      <a href="about.html">How it works</a>
+      <a href="https://github.com/qbyars08-ui/yb-desk" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="lead">A <strong>portfolio desk</strong> and <strong>agent office</strong> that runs entirely free on GitHub. Quinn's real book up top. Build your own desk below. Your numbers never leave your browser.</p>
+    <div class="stat-grid" id="canonical"></div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- SECTION A: QUINN'S BOOK -->
+  <section class="section" id="book">
+    <div class="section-head">
+      <h2>&#9612; Quinn's Book</h2>
+      <span class="note" id="book-note"></span>
+    </div>
+    <div class="table-scroll">
+      <table class="grid" id="book-table">
+        <thead>
+          <tr>
+            <th class="l">Ticker</th>
+            <th class="l">Sleeve</th>
+            <th class="l">Layer</th>
+            <th>Last</th>
+            <th>Day %</th>
+            <th>Gain %</th>
+            <th>Weight %</th>
+          </tr>
+        </thead>
+        <tbody id="book-body">
+          <tr><td class="l" colspan="7"><span class="loading">Loading the book...</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint" style="margin-top:8px">Click any row to open the thesis, variant perception, and kill vectors.</p>
+  </section>
+
+  <!-- SECTION B: YOUR DESK -->
+  <section class="section" id="desk">
+    <div class="section-head">
+      <h2>&#9612; Your Desk</h2>
+      <span class="note">Your positions, stored only in this browser</span>
+    </div>
+
+    <div id="desk-msg"></div>
+
+    <form id="add-form" class="desk-tools" autocomplete="off">
+      <div class="field tkf">
+        <label for="f-ticker">Ticker</label>
+        <input class="tk" id="f-ticker" name="ticker" maxlength="12" placeholder="MU" required>
+      </div>
+      <div class="field">
+        <label for="f-shares">Shares</label>
+        <input id="f-shares" name="shares" inputmode="decimal" placeholder="10" required>
+      </div>
+      <div class="field">
+        <label for="f-cost">Cost basis / sh</label>
+        <input id="f-cost" name="cost" inputmode="decimal" placeholder="120.00" required>
+      </div>
+      <button type="submit" class="btn">Add</button>
+    </form>
+
+    <div class="aux-bar">
+      <button type="button" class="btn ghost" id="csv-import-btn">Import CSV</button>
+      <button type="button" class="btn ghost" id="csv-export-btn">Export CSV</button>
+      <input type="file" id="csv-file" accept=".csv,text/csv" class="file-hidden">
+      <span class="hint">CSV header must be exactly <code>ticker,shares,cost_basis</code></span>
+      <span class="asof" id="prices-asof" style="margin-left:auto"></span>
+    </div>
+
+    <div class="table-scroll">
+      <table class="grid" id="desk-table">
+        <thead>
+          <tr>
+            <th class="l">Ticker</th>
+            <th>Shares</th>
+            <th>Cost / sh</th>
+            <th>Last</th>
+            <th>Day %</th>
+            <th>Mkt value</th>
+            <th>Unrl. P&amp;L</th>
+            <th>P&amp;L %</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="desk-body"></tbody>
+        <tfoot id="desk-foot"></tfoot>
+      </table>
+    </div>
+    <div id="desk-empty"></div>
+  </section>
+
+  <!-- SECTION C: THE OFFICE -->
+  <section class="section" id="office">
+    <div class="section-head">
+      <h2>&#9612; The Office</h2>
+      <span class="note" id="office-note"></span>
+    </div>
+    <div class="office-grid" id="office-grid">
+      <div class="loading">Loading the office...</div>
+    </div>
+
+    <div class="cta">
+      <h3>Task an agent</h3>
+      <p>Want the research agent to dig into a name? Open a GitHub issue titled <code>research: TICKER</code> and the agent replies right in the thread when Actions are live.</p>
+      <a class="btn" id="task-agent-link" href="https://github.com/qbyars08-ui/yb-desk/issues/new?title=research%3A%20TICKER&body=Ticker%3A%20%0AWhat%20I%20want%20to%20know%3A%20" target="_blank" rel="noopener">Open a research issue</a>
+    </div>
+  </section>
+
+  <!-- DESK REPORTS -->
+  <section class="section" id="reports">
+    <div class="section-head">
+      <h2>&#9612; Desk Reports</h2>
+      <span class="note">Written by the desk-report agent</span>
+    </div>
+    <div id="reports-wrap">
+      <div class="loading">Loading reports...</div>
+    </div>
+    <div id="report-view"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="desk.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.Desk;
+  var LS_KEY = "ybdesk.portfolio.v1";
+  var TICKER_RE = /^[A-Z][A-Z0-9.\-]{0,11}$/;
+
+  var state = {
+    book: null,
+    prices: null,
+    bookTickers: {}     // set of tickers in the book
+  };
+
+  D.mountFooter(document.getElementById("site-footer"));
+
+  // ============ SECTION A: QUINN'S BOOK ============
+  function renderCanonical(book) {
+    var c = (book && book.canonical) || {};
+    var el = document.getElementById("canonical");
+    var items = [
+      { k: "Account value", v: D.fmtMoney(c.account_value) },
+      { k: "Day", v: D.fmtPct(c.day_pct), cls: D.pctClass(c.day_pct) },
+      { k: "Unrealized", v: D.fmtPct(c.unrealized_pct), cls: D.pctClass(c.unrealized_pct) },
+      { k: "Lifetime (3yr)", v: D.fmtPct(c.lifetime_pct), cls: D.pctClass(c.lifetime_pct) },
+      { k: "Names", v: (typeof c.names === "number" ? String(c.names) : "-") }
+    ];
+    el.innerHTML = items.map(function (it) {
+      return '<div class="stat"><div class="k">' + D.esc(it.k) + '</div>' +
+        '<div class="v ' + (it.cls || "") + '">' + D.esc(it.v) + '</div></div>';
+    }).join("");
+  }
+
+  function detailRowHtml(p, colspan) {
+    var blocks = [];
+    if (p.thesis) {
+      blocks.push('<div class="detail-block"><div class="lab">Thesis</div><div class="body">' + D.esc(p.thesis) + '</div></div>');
+    }
+    if (p.variantPerception) {
+      blocks.push('<div class="detail-block"><div class="lab">Variant perception</div><div class="body">' + D.esc(p.variantPerception) + '</div></div>');
+    }
+    var kv = Array.isArray(p.killVectors) ? p.killVectors : [];
+    if (kv.length) {
+      var items = kv.map(function (k) {
+        if (typeof k === "string") return '<li>' + D.esc(k) + '</li>';
+        var title = k && k.title ? '<b>' + D.esc(k.title) + ':</b> ' : '';
+        var body = k && k.body ? D.esc(k.body) : '';
+        return '<li>' + title + body + '</li>';
+      }).join("");
+      blocks.push('<div class="detail-block"><div class="lab">Kill vectors</div><ul class="kill-list">' + items + '</ul></div>');
+    }
+    if (p.note) {
+      blocks.push('<div class="detail-block"><div class="lab">Note</div><div class="body">' + D.esc(p.note) + '</div></div>');
+    }
+    if (!blocks.length) {
+      blocks.push('<div class="detail-block"><div class="body dim">No thesis on file yet for this position.</div></div>');
+    }
+    return '<tr class="detail-row" hidden><td colspan="' + colspan + '"><div class="detail-inner">' +
+      blocks.join("") + '</div></td></tr>';
+  }
+
+  function renderBook(book) {
+    var positions = (book && Array.isArray(book.positions)) ? book.positions.slice() : [];
+    // build book ticker set for overlap badges
+    positions.forEach(function (p) { if (p.t) state.bookTickers[String(p.t).toUpperCase()] = true; });
+
+    // sort by weight desc; nulls to bottom
+    positions.sort(function (a, b) {
+      var wa = (typeof a.weightPct === "number") ? a.weightPct : -1;
+      var wb = (typeof b.weightPct === "number") ? b.weightPct : -1;
+      return wb - wa;
+    });
+
+    var body = document.getElementById("book-body");
+    if (!positions.length) {
+      body.innerHTML = '<tr><td class="l" colspan="7"><span class="empty">No positions in the book.</span></td></tr>';
+      return;
+    }
+
+    var rows = positions.map(function (p) {
+      var sleeve = p.sleeve ? '<span class="pill">' + D.esc(p.sleeve) + '</span>' : '<span class="faint">-</span>';
+      var layer = p.layer ? '<span class="pill layer">' + D.esc(p.layer) + '</span>' : '<span class="faint">-</span>';
+      var last = (typeof p.last === "number") ? D.fmtPrice(p.last) : '<span class="faint">-</span>';
+      var day = (typeof p.dayChangePct === "number")
+        ? '<span class="' + D.pctClass(p.dayChangePct) + '">' + D.fmtPct(p.dayChangePct) + '</span>'
+        : '<span class="faint">-</span>';
+      var gain = (typeof p.gainPctAtBase === "number")
+        ? '<span class="' + D.pctClass(p.gainPctAtBase) + '">' + D.fmtPct(p.gainPctAtBase) + '</span>'
+        : '<span class="faint">-</span>';
+      var weight = (typeof p.weightPct === "number") ? D.fmtPct(p.weightPct).replace("+", "") : '<span class="faint">-</span>';
+
+      var main = '<tr class="book-row">' +
+        '<td class="l"><span class="caret">&#9656;</span> <span class="ticker">' + D.esc(p.t) + '</span></td>' +
+        '<td class="l">' + sleeve + '</td>' +
+        '<td class="l">' + layer + '</td>' +
+        '<td>' + last + '</td>' +
+        '<td>' + day + '</td>' +
+        '<td>' + gain + '</td>' +
+        '<td>' + weight + '</td>' +
+        '</tr>';
+      return main + detailRowHtml(p, 7);
+    }).join("");
+
+    body.innerHTML = rows;
+
+    // wire expand/collapse
+    var bookRows = body.querySelectorAll("tr.book-row");
+    bookRows.forEach(function (row) {
+      row.addEventListener("click", function () {
+        var detail = row.nextElementSibling;
+        if (!detail || !detail.classList.contains("detail-row")) return;
+        var isOpen = row.classList.toggle("open");
+        detail.hidden = !isOpen;
+      });
+    });
+
+    var note = document.getElementById("book-note");
+    note.textContent = positions.length + " names, sorted by weight";
+  }
+
+  // ============ SECTION B: YOUR DESK ============
+  function loadPortfolio() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (!raw) return [];
+      var arr = JSON.parse(raw);
+      if (!Array.isArray(arr)) return [];
+      return arr.filter(function (r) {
+        return r && typeof r.ticker === "string" && typeof r.shares === "number" && typeof r.costBasis === "number";
+      });
+    } catch (e) {
+      return [];
+    }
+  }
+  function savePortfolio(arr) {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(arr)); }
+    catch (e) { showMsg("Could not save to this browser. Storage may be full or blocked.", "err"); }
+  }
+
+  function showMsg(html, kind) {
+    var el = document.getElementById("desk-msg");
+    if (!html) { el.innerHTML = ""; return; }
+    el.innerHTML = '<div class="msg ' + (kind === "err" ? "err" : "ok") + '">' + html + '</div>';
+  }
+
+  function priceFor(ticker) {
+    if (!state.prices || !state.prices.quotes) return null;
+    var q = state.prices.quotes[ticker];
+    return (q && typeof q.price === "number") ? q : null;
+  }
+
+  function validatePosition(ticker, shares, cost) {
+    var t = String(ticker || "").trim().toUpperCase();
+    if (!TICKER_RE.test(t)) return { error: "Ticker \"" + D.esc(t || ticker) + "\" is not valid." };
+    var sh = Number(shares);
+    if (!isFinite(sh) || sh <= 0) return { error: "Shares must be a number greater than 0." };
+    var cb = Number(cost);
+    if (!isFinite(cb) || cb < 0) return { error: "Cost basis must be a number of 0 or more." };
+    return { position: { ticker: t, shares: sh, costBasis: cb } };
+  }
+
+  function renderDesk() {
+    var arr = loadPortfolio();
+    var body = document.getElementById("desk-body");
+    var foot = document.getElementById("desk-foot");
+    var emptyEl = document.getElementById("desk-empty");
+    var tableScroll = document.querySelector("#desk .table-scroll");
+
+    if (!arr.length) {
+      body.innerHTML = "";
+      foot.innerHTML = "";
+      tableScroll.style.display = "none";
+      emptyEl.innerHTML = '<div class="empty">No positions yet. Add one above, or import a CSV. Everything stays in this browser.</div>';
+      return;
+    }
+    tableScroll.style.display = "";
+    emptyEl.innerHTML = "";
+
+    var totValue = 0, totCost = 0, totDay = 0, haveAnyPrice = false;
+
+    var rows = arr.map(function (r, idx) {
+      var q = priceFor(r.ticker);
+      var inBook = state.bookTickers[r.ticker];
+      var tickerCell = '<span class="ticker">' + D.esc(r.ticker) + '</span>' +
+        (inBook ? ' <span class="badge-book">In the book</span>' : '');
+
+      var lastCell, dayCell, mvCell, plCell, plPctCell;
+      if (q) {
+        haveAnyPrice = true;
+        var mv = r.shares * q.price;
+        var cost = r.shares * r.costBasis;
+        var pl = mv - cost;
+        var plPct = cost > 0 ? (pl / cost) * 100 : 0;
+        var dayDollars = mv * (q.changePct / 100);
+        totValue += mv; totCost += cost; totDay += dayDollars;
+
+        lastCell = D.fmtPrice(q.price);
+        dayCell = '<span class="' + D.pctClass(q.changePct) + '">' + D.fmtPct(q.changePct) + '</span>';
+        mvCell = D.fmtMoney(mv);
+        plCell = '<span class="' + D.pctClass(pl) + '">' + D.fmtMoney(pl) + '</span>';
+        plPctCell = '<span class="' + D.pctClass(plPct) + '">' + D.fmtPct(plPct) + '</span>';
+      } else {
+        lastCell = '<span class="faint">-</span>';
+        dayCell = '<span class="faint">-</span>';
+        mvCell = '<span class="faint">-</span>';
+        plCell = '<span class="faint">-</span>';
+        plPctCell = '<span class="faint">-</span>';
+      }
+
+      return '<tr>' +
+        '<td class="l">' + tickerCell + '</td>' +
+        '<td>' + D.fmtPrice(r.shares) + '</td>' +
+        '<td>' + D.fmtPrice(r.costBasis) + '</td>' +
+        '<td>' + lastCell + '</td>' +
+        '<td>' + dayCell + '</td>' +
+        '<td>' + mvCell + '</td>' +
+        '<td>' + plCell + '</td>' +
+        '<td>' + plPctCell + '</td>' +
+        '<td><button type="button" class="btn danger" data-remove="' + idx + '" title="Remove">&times;</button></td>' +
+        '</tr>';
+    }).join("");
+
+    body.innerHTML = rows;
+
+    if (haveAnyPrice) {
+      var totPl = totValue - totCost;
+      var totPlPct = totCost > 0 ? (totPl / totCost) * 100 : 0;
+      var totDayPct = (totValue - totDay) > 0 ? (totDay / (totValue - totDay)) * 100 : 0;
+      foot.innerHTML = '<tr class="tot">' +
+        '<td class="l">Total</td>' +
+        '<td></td><td></td><td></td>' +
+        '<td><span class="' + D.pctClass(totDayPct) + '">' + D.fmtPct(totDayPct) + '</span></td>' +
+        '<td>' + D.fmtMoney(totValue) + '</td>' +
+        '<td><span class="' + D.pctClass(totPl) + '">' + D.fmtMoney(totPl) + '</span></td>' +
+        '<td><span class="' + D.pctClass(totPlPct) + '">' + D.fmtPct(totPlPct) + '</span></td>' +
+        '<td></td>' +
+        '</tr>';
+    } else {
+      foot.innerHTML = "";
+    }
+
+    // wire remove buttons
+    body.querySelectorAll("button[data-remove]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var i = parseInt(btn.getAttribute("data-remove"), 10);
+        var cur = loadPortfolio();
+        if (i >= 0 && i < cur.length) {
+          var next = cur.slice(0, i).concat(cur.slice(i + 1));
+          savePortfolio(next);
+          renderDesk();
+        }
+      });
+    });
+  }
+
+  function wireAddForm() {
+    var form = document.getElementById("add-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      showMsg("");
+      var v = validatePosition(
+        document.getElementById("f-ticker").value,
+        document.getElementById("f-shares").value,
+        document.getElementById("f-cost").value
+      );
+      if (v.error) { showMsg(v.error, "err"); return; }
+      var arr = loadPortfolio();
+      arr = arr.concat([v.position]);
+      savePortfolio(arr);
+      form.reset();
+      document.getElementById("f-ticker").focus();
+      renderDesk();
+    });
+  }
+
+  // ---- CSV import / export ----
+  function parseCSVLine(line) {
+    // simple split; tickers/numbers do not contain commas in this format
+    return line.split(",").map(function (s) { return s.trim(); });
+  }
+
+  function handleCSV(text) {
+    showMsg("");
+    var lines = String(text).replace(/\r\n/g, "\n").split("\n")
+      .map(function (l) { return l.trim(); })
+      .filter(function (l) { return l.length > 0; });
+
+    if (!lines.length) { showMsg("That CSV was empty.", "err"); return; }
+
+    var header = parseCSVLine(lines[0]).map(function (h) { return h.toLowerCase(); }).join(",");
+    if (header !== "ticker,shares,cost_basis") {
+      showMsg("CSV header must be exactly <code>ticker,shares,cost_basis</code>. Got: <code>" + D.esc(lines[0]) + "</code>", "err");
+      return;
+    }
+
+    var dataLines = lines.slice(1);
+    if (dataLines.length > 200) {
+      showMsg("Too many rows (" + dataLines.length + "). Max 200.", "err");
+      return;
+    }
+
+    var good = [];
+    var errors = [];
+    dataLines.forEach(function (line, i) {
+      var cells = parseCSVLine(line);
+      if (cells.length < 3) {
+        errors.push("Row " + (i + 2) + ": expected 3 columns.");
+        return;
+      }
+      var v = validatePosition(cells[0], cells[1], cells[2]);
+      if (v.error) { errors.push("Row " + (i + 2) + ": " + v.error); return; }
+      good.push(v.position);
+    });
+
+    if (good.length) {
+      var arr = loadPortfolio().concat(good);
+      savePortfolio(arr);
+      renderDesk();
+    }
+
+    var out = "";
+    if (good.length) out += "Imported " + good.length + " row" + (good.length === 1 ? "" : "s") + ".";
+    if (errors.length) {
+      out += (out ? " " : "") + "Skipped " + errors.length + ":<ul>" +
+        errors.slice(0, 25).map(function (e) { return "<li>" + e + "</li>"; }).join("") +
+        (errors.length > 25 ? "<li>...and " + (errors.length - 25) + " more</li>" : "") +
+        "</ul>";
+    }
+    if (!good.length && !errors.length) out = "No data rows found.";
+    showMsg(out, errors.length ? "err" : "ok");
+  }
+
+  function exportCSV() {
+    var arr = loadPortfolio();
+    var lines = ["ticker,shares,cost_basis"];
+    arr.forEach(function (r) { lines.push(r.ticker + "," + r.shares + "," + r.costBasis); });
+    var blob = new Blob([lines.join("\n") + "\n"], { type: "text/csv" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "yb-desk-portfolio.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function wireCSV() {
+    var fileInput = document.getElementById("csv-file");
+    document.getElementById("csv-import-btn").addEventListener("click", function () { fileInput.click(); });
+    fileInput.addEventListener("change", function () {
+      var f = fileInput.files && fileInput.files[0];
+      if (!f) return;
+      var reader = new FileReader();
+      reader.onload = function () { handleCSV(reader.result); fileInput.value = ""; };
+      reader.onerror = function () { showMsg("Could not read that file.", "err"); fileInput.value = ""; };
+      reader.readAsText(f);
+    });
+    document.getElementById("csv-export-btn").addEventListener("click", exportCSV);
+  }
+
+  // ============ SECTION C: THE OFFICE ============
+  function statusMeta(status) {
+    if (status === null || status === undefined || status === "") {
+      return { cls: "idle", label: "not yet run" };
+    }
+    var s = String(status).toLowerCase();
+    if (s.indexOf("ok") === 0 || s === "success" || s === "done") return { cls: "ok", label: status };
+    if (s.indexOf("err") === 0 || s === "failed" || s === "fail") return { cls: "err", label: status };
+    if (s.indexOf("not yet") === 0 || s === "idle" || s === "pending") return { cls: "idle", label: status };
+    return { cls: "", label: status };
+  }
+
+  function renderOffice(office) {
+    var grid = document.getElementById("office-grid");
+    var agents = (office && Array.isArray(office.agents)) ? office.agents : [];
+    if (!agents.length) {
+      grid.innerHTML = '<div class="empty">No agents registered yet.</div>';
+      return;
+    }
+    grid.innerHTML = agents.map(function (a) {
+      var sm = statusMeta(a.lastStatus);
+      var lastRun = a.lastRun ? D.fmtAsOf(a.lastRun) : "never";
+      // "job" (seed) or "role" (live agent contract) both describe what it does
+      var desc = a.job || a.role || "";
+      var metaRows =
+        (a.schedule ? '<div class="r"><span class="k">Schedule</span><span class="val">' + D.esc(a.schedule) + '</span></div>' : '') +
+        '<div class="r"><span class="k">Last run</span><span class="val">' + D.esc(lastRun) + '</span></div>';
+      return '<div class="agent-card">' +
+        '<div class="top">' +
+          '<span class="name">' + D.esc(a.name || a.id) + '</span>' +
+          '<span class="status-label"><span class="status-dot ' + sm.cls + '"></span>' + D.esc(sm.label) + '</span>' +
+        '</div>' +
+        '<div class="job">' + D.esc(desc) + '</div>' +
+        '<div class="meta">' + metaRows + '</div>' +
+        (a.note ? '<div class="note">' + D.esc(a.note) + '</div>' : '') +
+        '</div>';
+    }).join("");
+
+    var note = document.getElementById("office-note");
+    if (office && office.updated) note.textContent = "as of " + D.fmtAsOf(office.updated);
+  }
+
+  // ============ DESK REPORTS ============
+  function renderReports(index) {
+    var wrap = document.getElementById("reports-wrap");
+    var reports = (index && Array.isArray(index.reports)) ? index.reports : [];
+    if (!reports.length) {
+      wrap.innerHTML = '<div class="empty">No desk reports yet. The desk-report agent writes one each trading day once Actions are enabled.</div>';
+      return;
+    }
+    // newest first
+    reports.sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+    wrap.innerHTML = '<div class="report-list">' + reports.map(function (r) {
+      // Resolve fetch path from the index entry. Live agent contract uses
+      // "file" relative to data/ (e.g. "reports/2026-07-06.md"); seed used
+      // "path". Fall back to a date-derived path.
+      var path;
+      if (r.file) path = "data/" + String(r.file).replace(/^\/+/, "");
+      else if (r.path) path = r.path;
+      else path = "data/reports/" + r.date + ".md";
+      return '<div class="report-item" data-report="' + D.esc(path) + '">' +
+        '<span class="date">' + D.esc(r.date || "") + '</span>' +
+        '<span class="title">' + D.esc(r.title || "Desk report") + '</span>' +
+        '</div>';
+    }).join("") + '</div>';
+
+    wrap.querySelectorAll(".report-item").forEach(function (item) {
+      item.addEventListener("click", function () { openReport(item.getAttribute("data-report")); });
+    });
+  }
+
+  function openReport(path) {
+    var view = document.getElementById("report-view");
+    view.innerHTML = '<div class="loading">Loading report...</div>';
+    fetch(path, { cache: "no-store" }).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.text();
+    }).then(function (md) {
+      view.innerHTML = '<div class="report-view">' +
+        '<button type="button" class="report-close" id="rp-close">Close report</button>' +
+        D.mdToHtml(md) + '</div>';
+      document.getElementById("rp-close").addEventListener("click", function () { view.innerHTML = ""; });
+      view.scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      view.innerHTML = '<div class="report-view"><button type="button" class="report-close" id="rp-close">Close</button>' +
+        '<p class="dim">Could not load that report.</p></div>';
+      var c = document.getElementById("rp-close");
+      if (c) c.addEventListener("click", function () { view.innerHTML = ""; });
+    });
+  }
+
+  // ============ BOOT ============
+  wireAddForm();
+  wireCSV();
+
+  // Book + prices first (desk depends on both for overlap + pricing)
+  D.loadJSON("data/book.json").then(function (book) {
+    state.book = book;
+    renderCanonical(book);
+    renderBook(book);
+  }).catch(function (e) {
+    document.getElementById("book-body").innerHTML =
+      '<tr><td class="l" colspan="7"><span class="empty">Could not load the book. ' + D.esc(e.message) + '</span></td></tr>';
+  });
+
+  D.loadJSON("data/prices.json").then(function (prices) {
+    state.prices = prices;
+    var el = document.getElementById("prices-asof");
+    if (prices && prices.updated) el.textContent = "prices as of " + D.fmtAsOf(prices.updated);
+    renderDesk();
+  }).catch(function () {
+    document.getElementById("prices-asof").textContent = "prices unavailable";
+    renderDesk();
+  });
+
+  // Render desk immediately (works even before prices arrive)
+  renderDesk();
+
+  D.loadJSON("data/office.json").then(renderOffice).catch(function () {
+    document.getElementById("office-grid").innerHTML = '<div class="empty">Could not load the office.</div>';
+  });
+
+  D.loadJSON("data/reports-index.json").then(renderReports).catch(function () {
+    document.getElementById("reports-wrap").innerHTML = '<div class="empty">Could not load reports.</div>';
+  });
+
+})();
+</script>
