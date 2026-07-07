@@ -1,0 +1,41 @@
+name: research queue
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tape-writes
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: process website research requests
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node agents/research-queue.mjs
+
+      - name: commit briefs and cursor
+        run: |
+          git config user.name "yb-desk-agent"
+          git config user.email "yb-desk-agent@users.noreply.github.com"
+          git add data docs/data
+          if git diff --cached --quiet; then
+            echo "no queue changes, nothing to commit"
+          else
+            git commit -m "research: website queue cycle"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push
+          fi

@@ -62,6 +62,8 @@ function buildPrompt(ticker, pos, quote) {
   } else {
     context.push('No fresh price on the desk tape for this ticker.');
   }
+  const asked = String(process.env.QUESTION || '').trim().slice(0, 280);
+  if (asked) context.push(`The requester specifically asks: ${asked}`);
   return [
     `You are the Young Bull research desk. Write a research brief on ${ticker}.`,
     '',
