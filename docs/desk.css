@@ -97,8 +97,9 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.nav a { color: var(--text-dim); }
+.nav a { color: var(--text-dim); padding-bottom: 4px; border-bottom: 2px solid transparent; }
 .nav a:hover { color: var(--gold); text-decoration: none; }
+.nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
 
 /* ---- Hero strip (account canonical) ---- */
 .hero {
@@ -540,6 +541,77 @@ table.grid tbody tr.detail-row td {
 
 .loading { color: var(--text-faint); font-size: 0.86rem; padding: 16px 0; }
 
+/* ---- Watchlist ---- */
+.watch-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+.watch-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.watch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  padding: 6px 8px 6px 12px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+.watch-chip .wt-ticker { color: var(--gold); font-weight: 700; }
+.watch-chip .wt-price { color: var(--text); }
+.watch-chip .wt-day { font-size: 0.76rem; }
+.watch-chip .wt-remove {
+  background: transparent;
+  border: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 2px 4px;
+}
+.watch-chip .wt-remove:hover { color: var(--loss); }
+.watch-empty {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+  margin-bottom: 18px;
+}
+
+/* ---- Share desk ---- */
+.share-msg {
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  color: #a9e3c4;
+  background: rgba(76,175,125,0.1);
+  border: 1px solid rgba(76,175,125,0.35);
+}
+.share-msg .priv-note { display: block; color: var(--text-dim); margin-top: 4px; font-size: 0.76rem; }
+
+.shared-banner {
+  border: 1px solid var(--gold-dim);
+  background: rgba(212,168,67,0.08);
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.shared-banner .msg-text { color: var(--text); font-size: 0.88rem; }
+.shared-banner .msg-text b { color: var(--gold); }
+.shared-banner .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
 /* ---- Responsive ---- */
 @media (max-width: 560px) {
   body { font-size: 14px; }
@@ -549,6 +621,7 @@ table.grid tbody tr.detail-row td {
   .field { flex: 1 1 100%; }
   .field.tkf { flex: 1 1 40%; }
   .desk-tools .btn { flex: 1 1 100%; }
+  .watch-tools .btn { flex: 1 1 100%; }
   .stat .v { font-size: 1.05rem; }
 }
 @media (max-width: 380px) {

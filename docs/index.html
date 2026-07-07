@@ -11,7 +11,9 @@
       <span class="sub">The Desk</span>
     </div>
     <nav class="nav">
-      <a href="index.html">Desk</a>
+      <a href="index.html" class="active">Desk</a>
+      <a href="research.html">Research</a>
+      <a href="reports.html">Reports</a>
       <a href="about.html">How it works</a>
       <a href="https://github.com/qbyars08-ui/yb-desk" target="_blank" rel="noopener">GitHub</a>
     </nav>
@@ -26,6 +28,8 @@
 </section>
 
 <main class="wrap">
+
+  <div id="shared-banner"></div>
 
   <!-- SECTION A: QUINN'S BOOK -->
   <section class="section" id="book">
@@ -63,6 +67,21 @@
 
     <div id="desk-msg"></div>
 
+    <div id="share-msg-wrap"></div>
+
+    <div class="section-head" style="margin:0 0 10px">
+      <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Watching</h2>
+      <span class="note">Tickers you're tracking, no position required</span>
+    </div>
+    <form id="watch-form" class="watch-tools" autocomplete="off">
+      <div class="field tkf">
+        <label for="w-ticker">Ticker</label>
+        <input class="tk" id="w-ticker" name="ticker" maxlength="12" placeholder="NVDA" required>
+      </div>
+      <button type="submit" class="btn ghost">Add to watchlist</button>
+    </form>
+    <div id="watch-chips" class="watch-chips"></div>
+
     <form id="add-form" class="desk-tools" autocomplete="off">
       <div class="field tkf">
         <label for="f-ticker">Ticker</label>
@@ -82,6 +101,7 @@
     <div class="aux-bar">
       <button type="button" class="btn ghost" id="csv-import-btn">Import CSV</button>
       <button type="button" class="btn ghost" id="csv-export-btn">Export CSV</button>
+      <button type="button" class="btn ghost" id="share-desk-btn">Share desk</button>
       <input type="file" id="csv-file" accept=".csv,text/csv" class="file-hidden">
       <span class="hint">CSV header must be exactly <code>ticker,shares,cost_basis</code></span>
       <span class="asof" id="prices-asof" style="margin-left:auto"></span>
@@ -148,6 +168,7 @@
   "use strict";
   var D = window.Desk;
   var LS_KEY = "ybdesk.portfolio.v1";
+  var WATCH_LS_KEY = "ybdesk.watchlist.v1";
   var TICKER_RE = /^[A-Z][A-Z0-9.\-]{0,11}$/;
 
   var state = {
@@ -155,7 +176,8 @@
     prices: null,
     bookTickers: {},    // set of tickers in the book
     liveQuotes: {},     // any-ticker quotes fetched from the live tape API
-    quotesTried: {}     // tickers we already asked the live tape for (loop guard)
+    quotesTried: {},    // tickers we already asked the live tape for (loop guard)
+    sharedView: null    // decoded {positions, watchlist} from a #d= link, while viewing read-only
   };
   var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
   var QUOTES_CACHE_KEY = "ybdesk.quotes.v1";
@@ -292,6 +314,86 @@
     catch (e) { showMsg("Could not save to this browser. Storage may be full or blocked.", "err"); }
   }
 
+  // ---- Watchlist: second, independent localStorage list of bare tickers ----
+  function loadWatchlist() {
+    try {
+      var raw = localStorage.getItem(WATCH_LS_KEY);
+      if (!raw) return [];
+      var arr = JSON.parse(raw);
+      if (!Array.isArray(arr)) return [];
+      return arr.filter(function (t) { return typeof t === "string" && TICKER_RE.test(t); });
+    } catch (e) {
+      return [];
+    }
+  }
+  function saveWatchlist(arr) {
+    try { localStorage.setItem(WATCH_LS_KEY, JSON.stringify(arr)); }
+    catch (e) { showMsg("Could not save to this browser. Storage may be full or blocked.", "err"); }
+  }
+
+  function renderWatchlist() {
+    if (state.sharedView) { renderSharedReadOnlyDesk(state.sharedView); return; }
+    var list = loadWatchlist();
+    var wrap = document.getElementById("watch-chips");
+    if (!list.length) {
+      wrap.innerHTML = '<div class="watch-empty">No tickers on your watchlist yet.</div>';
+      return;
+    }
+    wrap.innerHTML = list.map(function (t, idx) {
+      var q = priceFor(t);
+      var priceHtml, dayHtml;
+      if (q) {
+        priceHtml = '<span class="wt-price">' + D.fmtPrice(q.price) + '</span>';
+        dayHtml = '<span class="wt-day ' + D.pctClass(q.changePct) + '">' + D.fmtPct(q.changePct) + '</span>';
+      } else {
+        priceHtml = '<span class="wt-price faint">-</span>';
+        dayHtml = '<span class="wt-day faint">-</span>';
+      }
+      return '<span class="watch-chip">' +
+        '<span class="wt-ticker">' + D.esc(t) + '</span>' +
+        priceHtml + dayHtml +
+        '<button type="button" class="wt-remove" data-watch-remove="' + idx + '" title="Remove">&times;</button>' +
+        '</span>';
+    }).join("");
+
+    wrap.querySelectorAll("button[data-watch-remove]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var i = parseInt(btn.getAttribute("data-watch-remove"), 10);
+        var cur = loadWatchlist();
+        if (i >= 0 && i < cur.length) {
+          var next = cur.slice(0, i).concat(cur.slice(i + 1));
+          saveWatchlist(next);
+          renderWatchlist();
+        }
+      });
+    });
+
+    // Price anything the committed tape doesn't cover.
+    fetchMissingQuotes(list);
+  }
+
+  function wireWatchForm() {
+    var form = document.getElementById("watch-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      showMsg("");
+      var input = document.getElementById("w-ticker");
+      var t = String(input.value || "").trim().toUpperCase();
+      if (!TICKER_RE.test(t)) {
+        showMsg("Ticker \"" + D.esc(input.value || "") + "\" is not valid.", "err");
+        return;
+      }
+      var list = loadWatchlist();
+      if (list.indexOf(t) === -1) {
+        list = list.concat([t]);
+        saveWatchlist(list);
+      }
+      form.reset();
+      input.focus();
+      renderWatchlist();
+    });
+  }
+
   function showMsg(html, kind) {
     var el = document.getElementById("desk-msg");
     if (!html) { el.innerHTML = ""; return; }
@@ -326,7 +428,7 @@
           if (q && typeof q.price === "number") { state.liveQuotes[t] = q; hit = true; }
         });
         var stillMissing = missing.filter(function (t) { return !state.liveQuotes[t]; });
-        if (!stillMissing.length) { if (hit) renderDesk(); return; }
+        if (!stillMissing.length) { if (hit) refreshPricedViews(); return; }
         missing = stillMissing;
       }
     } catch (e) { /* bad cache, ignore */ }
@@ -346,9 +448,21 @@
           Object.keys(state.liveQuotes).forEach(function (t) { merged[t] = state.liveQuotes[t]; });
           sessionStorage.setItem(QUOTES_CACHE_KEY, JSON.stringify({ ts: Date.now(), quotes: merged }));
         } catch (e) { /* storage full or blocked, fine */ }
-        if (got) renderDesk();
+        if (got) refreshPricedViews();
       })
       .catch(function () { /* offline or API down: dashes stay, no crash */ });
+  }
+
+  // Re-render whichever desk+watchlist view is currently active once new
+  // quotes land: the read-only shared view if one is being viewed, else the
+  // visitor's own local desk and watchlist.
+  function refreshPricedViews() {
+    if (state.sharedView) {
+      renderSharedReadOnlyDesk(state.sharedView);
+    } else {
+      renderDesk();
+      renderWatchlist();
+    }
   }
 
   function validatePosition(ticker, shares, cost) {
@@ -362,6 +476,9 @@
   }
 
   function renderDesk() {
+    // While viewing a shared desk link, the read-only shared render owns this
+    // DOM until the visitor dismisses it or loads it into their own desk.
+    if (state.sharedView) { renderSharedReadOnlyDesk(state.sharedView); return; }
     var arr = loadPortfolio();
     var body = document.getElementById("desk-body");
     var foot = document.getElementById("desk-foot");
@@ -454,8 +571,9 @@
       });
     });
 
-    // Price anything the committed tape doesn't cover (visitor's own tickers).
-    fetchMissingQuotes(arr.map(function (r) { return r.ticker; }));
+    // Price anything the committed tape doesn't cover (visitor's own tickers,
+    // plus the watchlist, so one shared fetch covers both sections).
+    fetchMissingQuotes(arr.map(function (r) { return r.ticker; }).concat(loadWatchlist()));
   }
 
   function wireAddForm() {
@@ -655,9 +773,207 @@
     });
   }
 
+  // ============ SHARE YOUR DESK ============
+  // base64url (no padding) JSON of { positions: [...], watchlist: [...] } in location.hash (#d=...)
+  function b64urlEncode(str) {
+    var b64 = btoa(unescape(encodeURIComponent(str)));
+    return b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+  function b64urlDecode(str) {
+    var b64 = String(str).replace(/-/g, "+").replace(/_/g, "/");
+    while (b64.length % 4) b64 += "=";
+    return decodeURIComponent(escape(atob(b64)));
+  }
+
+  function encodeShareData(positions, watchlist) {
+    var payload = { positions: positions, watchlist: watchlist };
+    return b64urlEncode(JSON.stringify(payload));
+  }
+
+  // Validate every entry defensively: this is untrusted input from a URL.
+  function decodeShareData(encoded) {
+    var json;
+    try { json = JSON.parse(b64urlDecode(encoded)); }
+    catch (e) { return null; }
+    if (!json || typeof json !== "object") return null;
+
+    var positions = Array.isArray(json.positions) ? json.positions : [];
+    var cleanPositions = [];
+    positions.forEach(function (p) {
+      if (!p || typeof p !== "object") return;
+      var t = String(p.ticker || "").toUpperCase();
+      var sh = Number(p.shares);
+      var cb = Number(p.costBasis);
+      if (!TICKER_RE.test(t)) return;
+      if (!isFinite(sh) || sh <= 0) return;
+      if (!isFinite(cb) || cb < 0) return;
+      cleanPositions.push({ ticker: t, shares: sh, costBasis: cb });
+    });
+
+    var watchlist = Array.isArray(json.watchlist) ? json.watchlist : [];
+    var cleanWatch = [];
+    watchlist.forEach(function (t) {
+      var u = String(t || "").toUpperCase();
+      if (TICKER_RE.test(u) && cleanWatch.indexOf(u) === -1) cleanWatch.push(u);
+    });
+
+    return { positions: cleanPositions, watchlist: cleanWatch };
+  }
+
+  function showShareMsg(html) {
+    var el = document.getElementById("share-msg-wrap");
+    if (!html) { el.innerHTML = ""; return; }
+    el.innerHTML = '<div class="share-msg">' + html + '</div>';
+  }
+
+  function wireShareButton() {
+    var btn = document.getElementById("share-desk-btn");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var positions = loadPortfolio();
+      var watchlist = loadWatchlist();
+      var encoded = encodeShareData(positions, watchlist);
+      var url = location.origin + location.pathname + "#d=" + encoded;
+
+      var afterCopy = function (ok) {
+        var note = ok ? "Link copied to your clipboard." : "Could not copy automatically, copy it from here: <code>" + D.esc(url) + "</code>";
+        showShareMsg(note +
+          '<span class="priv-note">The link itself contains your positions, share it only with people you want to see them.</span>');
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () { afterCopy(true); }).catch(function () { afterCopy(false); });
+      } else {
+        afterCopy(false);
+      }
+    });
+  }
+
+  // ---- Read-only shared-desk view ----
+  function renderSharedBanner() {
+    var el = document.getElementById("shared-banner");
+    if (!state.sharedView) { el.innerHTML = ""; return; }
+    el.innerHTML = '<div class="shared-banner">' +
+      '<span class="msg-text"><b>Viewing a shared desk</b> (read only).</span>' +
+      '<span class="actions">' +
+        '<button type="button" class="btn" id="shared-load-btn">Load into my desk</button>' +
+        '<button type="button" class="btn ghost" id="shared-dismiss-btn">Dismiss</button>' +
+      '</span>' +
+      '</div>';
+    document.getElementById("shared-load-btn").addEventListener("click", function () {
+      var ok = window.confirm("This replaces your current desk and watchlist in this browser with the shared one. Continue?");
+      if (!ok) return;
+      savePortfolio(state.sharedView.positions);
+      saveWatchlist(state.sharedView.watchlist);
+      dismissSharedView();
+    });
+    document.getElementById("shared-dismiss-btn").addEventListener("click", dismissSharedView);
+  }
+
+  function dismissSharedView() {
+    state.sharedView = null;
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    renderSharedBanner();
+    renderDesk();
+    renderWatchlist();
+  }
+
+  function renderSharedReadOnlyDesk(shared) {
+    var body = document.getElementById("desk-body");
+    var foot = document.getElementById("desk-foot");
+    var emptyEl = document.getElementById("desk-empty");
+    var tableScroll = document.querySelector("#desk .table-scroll");
+
+    var positions = shared.positions;
+    if (!positions.length) {
+      body.innerHTML = "";
+      foot.innerHTML = "";
+      tableScroll.style.display = "none";
+      emptyEl.innerHTML = '<div class="empty">This shared desk has no positions.</div>';
+    } else {
+      tableScroll.style.display = "";
+      emptyEl.innerHTML = "";
+      var totValue = 0, totCost = 0, haveAnyPrice = false;
+      var rows = positions.map(function (r) {
+        var q = priceFor(r.ticker);
+        var lastCell, dayCell, mvCell, plCell, plPctCell;
+        if (q) {
+          haveAnyPrice = true;
+          var mv = r.shares * q.price;
+          var cost = r.shares * r.costBasis;
+          var pl = mv - cost;
+          var plPct = cost > 0 ? (pl / cost) * 100 : 0;
+          totValue += mv; totCost += cost;
+          lastCell = D.fmtPrice(q.price);
+          dayCell = '<span class="' + D.pctClass(q.changePct) + '">' + D.fmtPct(q.changePct) + '</span>';
+          mvCell = D.fmtMoney(mv);
+          plCell = '<span class="' + D.pctClass(pl) + '">' + D.fmtMoney(pl) + '</span>';
+          plPctCell = '<span class="' + D.pctClass(plPct) + '">' + D.fmtPct(plPct) + '</span>';
+        } else {
+          lastCell = dayCell = mvCell = plCell = plPctCell = '<span class="faint">-</span>';
+        }
+        return '<tr>' +
+          '<td class="l"><span class="ticker">' + D.esc(r.ticker) + '</span></td>' +
+          '<td>' + D.fmtPrice(r.shares) + '</td>' +
+          '<td>' + D.fmtPrice(r.costBasis) + '</td>' +
+          '<td>' + lastCell + '</td>' +
+          '<td>' + dayCell + '</td>' +
+          '<td>' + mvCell + '</td>' +
+          '<td>' + plCell + '</td>' +
+          '<td>' + plPctCell + '</td>' +
+          '<td></td>' +
+          '</tr>';
+      }).join("");
+      body.innerHTML = rows;
+      if (haveAnyPrice) {
+        var totPl = totValue - totCost;
+        var totPlPct = totCost > 0 ? (totPl / totCost) * 100 : 0;
+        foot.innerHTML = '<tr class="tot"><td class="l">Total</td><td></td><td></td><td></td><td></td>' +
+          '<td>' + D.fmtMoney(totValue) + '</td>' +
+          '<td><span class="' + D.pctClass(totPl) + '">' + D.fmtMoney(totPl) + '</span></td>' +
+          '<td><span class="' + D.pctClass(totPlPct) + '">' + D.fmtPct(totPlPct) + '</span></td>' +
+          '<td></td></tr>';
+      } else {
+        foot.innerHTML = "";
+      }
+    }
+
+    // read-only watchlist chips (no remove buttons, no add form interaction needed)
+    var wrap = document.getElementById("watch-chips");
+    if (!shared.watchlist.length) {
+      wrap.innerHTML = '<div class="watch-empty">This shared desk has no watchlist tickers.</div>';
+    } else {
+      wrap.innerHTML = shared.watchlist.map(function (t) {
+        var q = priceFor(t);
+        var priceHtml = q ? '<span class="wt-price">' + D.fmtPrice(q.price) + '</span>' : '<span class="wt-price faint">-</span>';
+        var dayHtml = q ? '<span class="wt-day ' + D.pctClass(q.changePct) + '">' + D.fmtPct(q.changePct) + '</span>' : '<span class="wt-day faint">-</span>';
+        return '<span class="watch-chip"><span class="wt-ticker">' + D.esc(t) + '</span>' + priceHtml + dayHtml + '</span>';
+      }).join("");
+    }
+
+    fetchMissingQuotes(positions.map(function (r) { return r.ticker; }).concat(shared.watchlist));
+  }
+
+  function checkForSharedLink() {
+    var m = /(^|[?&#])d=([^&]+)/.exec(location.hash);
+    if (!m) return;
+    var decoded = decodeShareData(m[2]);
+    if (!decoded) {
+      showShareMsg('Could not read that shared desk link, it may be corrupted.');
+      history.replaceState(null, "", location.pathname + location.search);
+      return;
+    }
+    state.sharedView = decoded;
+    renderSharedBanner();
+    renderSharedReadOnlyDesk(decoded);
+  }
+
   // ============ BOOT ============
   wireAddForm();
   wireCSV();
+  wireWatchForm();
+  wireShareButton();
+  checkForSharedLink();
 
   // Book + prices first (desk depends on both for overlap + pricing)
   D.loadJSON("data/book.json").then(function (book) {
@@ -679,8 +995,9 @@
     renderDesk();
   });
 
-  // Render desk immediately (works even before prices arrive)
+  // Render desk + watchlist immediately (works even before prices arrive)
   renderDesk();
+  renderWatchlist();
 
   D.loadJSON("data/office.json").then(renderOffice).catch(function () {
     document.getElementById("office-grid").innerHTML = '<div class="empty">Could not load the office.</div>';
