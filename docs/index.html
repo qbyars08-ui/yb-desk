@@ -128,6 +128,12 @@
       </table>
     </div>
     <div id="desk-empty"></div>
+
+    <div class="section-head" style="margin:24px 0 10px">
+      <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Desk Analytics</h2>
+      <span class="note">Computed from the table above, in this browser</span>
+    </div>
+    <div id="analytics" hidden></div>
   </section>
 
   <!-- SECTION C: THE OFFICE -->
@@ -491,6 +497,7 @@
       foot.innerHTML = "";
       tableScroll.style.display = "none";
       emptyEl.innerHTML = '<div class="empty">No positions yet. Add one above, or import a CSV. Everything stays in this browser.</div>';
+      D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
       return;
     }
     tableScroll.style.display = "";
@@ -575,6 +582,8 @@
     // Price anything the committed tape doesn't cover (visitor's own tickers,
     // plus the watchlist, so one shared fetch covers both sections).
     fetchMissingQuotes(arr.map(function (r) { return r.ticker; }).concat(loadWatchlist()));
+
+    D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
   }
 
   function wireAddForm() {

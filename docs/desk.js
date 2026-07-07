@@ -97,6 +97,155 @@
     return out.join("\n");
   }
 
+  // --- Desk Analytics: pure math (no DOM) ---
+  // rows: [{ticker, shares, costBasis}]
+  // priceFor(ticker) -> {price, changePct} | falsy
+  // book: {positions: [{t, layer, ...}]} | null
+  // returns {alloc, buckets, flags, overlap}
+  function computeAnalytics(rows, priceFor, book) {
+    var list = Array.isArray(rows) ? rows : [];
+    var bookPositions = (book && Array.isArray(book.positions)) ? book.positions : [];
+    var layerByTicker = {};
+    bookPositions.forEach(function (p) {
+      if (p && p.t) layerByTicker[String(p.t).toUpperCase()] = p.layer || "unlabeled";
+    });
+    var bookTickerSet = {};
+    bookPositions.forEach(function (p) { if (p && p.t) bookTickerSet[String(p.t).toUpperCase()] = true; });
+    var bookCount = Object.keys(bookTickerSet).length;
+
+    var items = list.map(function (r) {
+      var ticker = String(r.ticker).toUpperCase();
+      var shares = Number(r.shares);
+      var cost = Number(r.costBasis);
+      var q = priceFor ? priceFor(ticker) : null;
+      var hasPrice = !!(q && typeof q.price === "number");
+      var value = hasPrice ? shares * q.price : shares * cost;
+      return { ticker: ticker, value: value, hasPrice: hasPrice };
+    });
+
+    var totalValue = items.reduce(function (sum, it) { return sum + it.value; }, 0);
+
+    var alloc = items.map(function (it) {
+      return {
+        ticker: it.ticker,
+        value: it.value,
+        pct: totalValue > 0 ? (it.value / totalValue) * 100 : 0,
+        hasPrice: it.hasPrice
+      };
+    }).sort(function (a, b) { return b.value - a.value; });
+
+    var bucketMap = {};
+    items.forEach(function (it) {
+      var name = layerByTicker[it.ticker] || "outside the book";
+      if (!bucketMap[name]) bucketMap[name] = 0;
+      bucketMap[name] += it.value;
+    });
+    var buckets = Object.keys(bucketMap).map(function (name) {
+      var value = bucketMap[name];
+      return { name: name, value: value, pct: totalValue > 0 ? (value / totalValue) * 100 : 0 };
+    }).sort(function (a, b) { return b.value - a.value; });
+
+    var flags = [];
+    alloc.forEach(function (a) {
+      if (a.pct >= 25) {
+        flags.push(a.ticker + " is " + Math.round(a.pct) + "% of your desk.");
+      }
+    });
+    buckets.forEach(function (b) {
+      if (b.pct >= 40) {
+        flags.push('"' + b.name + '" is ' + Math.round(b.pct) + "% of your desk.");
+      }
+    });
+    var noQuoteCount = items.filter(function (it) { return !it.hasPrice; }).length;
+    if (noQuoteCount > 0) {
+      flags.push(noQuoteCount + " position" + (noQuoteCount === 1 ? "" : "s") + " on your desk " +
+        (noQuoteCount === 1 ? "has" : "have") + " no live quote.");
+    }
+    if (!flags.length) {
+      flags.push("No concentration flags at these weights.");
+    }
+
+    var heldTickers = {};
+    items.forEach(function (it) { if (bookTickerSet[it.ticker]) heldTickers[it.ticker] = true; });
+    var heldCount = Object.keys(heldTickers).length;
+    var overlapValue = items.reduce(function (sum, it) {
+      return sum + (bookTickerSet[it.ticker] ? it.value : 0);
+    }, 0);
+    var overlap = {
+      heldCount: heldCount,
+      bookCount: bookCount,
+      pctOfDeskValue: totalValue > 0 ? (overlapValue / totalValue) * 100 : 0
+    };
+
+    return { alloc: alloc, buckets: buckets, flags: flags, overlap: overlap };
+  }
+
+  // --- Desk Analytics: renderer ---
+  // containerEl: element to render into (hidden entirely when rows is empty)
+  // rows: [{ticker, shares, costBasis}]
+  // priceFor(ticker) -> {price, changePct} | falsy
+  // bookPositions: the book object (see computeAnalytics)
+  function barRowHtml(label, value, pct, extra) {
+    var pctLabel = (typeof pct === "number" && isFinite(pct)) ? pct.toFixed(1) + "%" : "-";
+    return '<div class="analytics-bar-row">' +
+      '<div class="analytics-bar-label">' + esc(label) + (extra || "") + '</div>' +
+      '<div class="analytics-bar-track"><div class="analytics-bar-fill" style="width:' + Math.max(0, Math.min(100, pct || 0)) + '%"></div></div>' +
+      '<div class="analytics-bar-pct mono">' + pctLabel + '</div>' +
+      '</div>';
+  }
+
+  function renderAnalytics(containerEl, rows, priceFor, bookPositions) {
+    if (!containerEl) return;
+    var list = Array.isArray(rows) ? rows : [];
+    if (!list.length) {
+      containerEl.hidden = true;
+      containerEl.innerHTML = "";
+      return;
+    }
+    containerEl.hidden = false;
+
+    var a = computeAnalytics(list, priceFor, bookPositions);
+
+    var allocHtml = a.alloc.map(function (it) {
+      var extra = it.hasPrice ? "" : ' <span class="faint">(no quote, cost basis used)</span>';
+      return barRowHtml(it.ticker, it.value, it.pct, extra);
+    }).join("");
+
+    var bucketsHtml = a.buckets.map(function (b) {
+      return barRowHtml(b.name, b.value, b.pct);
+    }).join("");
+
+    var flagsHtml = '<ul class="analytics-flags">' + a.flags.map(function (f) {
+      return "<li>" + esc(f) + "</li>";
+    }).join("") + "</ul>";
+
+    var overlapPct = a.overlap.pctOfDeskValue;
+    var overlapHtml =
+      '<div class="analytics-overlap-line">You hold ' + a.overlap.heldCount + " of the " + a.overlap.bookCount +
+      " names in Quinn's book (" + (isFinite(overlapPct) ? overlapPct.toFixed(1) : "0.0") +
+      "% of your desk value overlaps).</div>" +
+      '<div class="analytics-bar-track"><div class="analytics-bar-fill" style="width:' +
+      Math.max(0, Math.min(100, overlapPct || 0)) + '%"></div></div>';
+
+    containerEl.innerHTML =
+      '<div class="analytics-block">' +
+        '<h3 class="analytics-h">Allocation</h3>' +
+        '<div class="analytics-bars">' + allocHtml + '</div>' +
+      '</div>' +
+      '<div class="analytics-block">' +
+        '<h3 class="analytics-h">Sleeve / layer split</h3>' +
+        '<div class="analytics-bars">' + bucketsHtml + '</div>' +
+      '</div>' +
+      '<div class="analytics-block">' +
+        '<h3 class="analytics-h">Concentration flags</h3>' +
+        flagsHtml +
+      '</div>' +
+      '<div class="analytics-block">' +
+        '<h3 class="analytics-h">Overlap with the book</h3>' +
+        overlapHtml +
+      '</div>';
+  }
+
   // --- footer disclaimer injection (consistent across pages) ---
   function mountFooter(el) {
     if (!el) return;
@@ -120,6 +269,8 @@
     fmtAsOf: fmtAsOf,
     loadJSON: loadJSON,
     mdToHtml: mdToHtml,
-    mountFooter: mountFooter
+    mountFooter: mountFooter,
+    computeAnalytics: computeAnalytics,
+    renderAnalytics: renderAnalytics
   };
 })(window);

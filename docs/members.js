@@ -20,10 +20,16 @@
     premium: null,       // bool | null (unknown yet)
     holdings: [],
     liveQuotes: {},
-    quotesTried: {}
+    quotesTried: {},
+    book: null           // Quinn's book (data/book.json), for sleeve/layer lookups
   };
 
   D.mountFooter(document.getElementById("site-footer"));
+
+  D.loadJSON("data/book.json").then(function (book) {
+    state.book = book;
+    renderHoldings();
+  }).catch(function () { /* analytics falls back to "outside the book" for all names */ });
 
   // ============ SESSION STORAGE ============
   function loadSession() {
@@ -359,11 +365,16 @@
     var tableScroll = document.querySelector("#holdings-section .table-scroll");
     var rows = state.holdings;
 
+    var analyticsRows = rows.map(function (r) {
+      return { ticker: String(r.ticker).toUpperCase(), shares: Number(r.shares), costBasis: Number(r.cost_basis) };
+    });
+
     if (!rows.length) {
       body.innerHTML = "";
       foot.innerHTML = "";
       tableScroll.style.display = "none";
       emptyEl.innerHTML = '<div class="empty">No synced holdings yet. Add one above, or import your local desk.</div>';
+      D.renderAnalytics(document.getElementById("m-analytics"), analyticsRows, priceFor, state.book);
       return;
     }
     tableScroll.style.display = "";
@@ -417,6 +428,8 @@
     } else {
       foot.innerHTML = "";
     }
+
+    D.renderAnalytics(document.getElementById("m-analytics"), analyticsRows, priceFor, state.book);
 
     body.querySelectorAll("button[data-h-remove]").forEach(function (btn) {
       btn.addEventListener("click", function () {

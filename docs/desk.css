@@ -691,6 +691,44 @@ table.grid tbody tr.detail-row td {
 /* ---- Members: import bar ---- */
 .import-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
 
+/* ---- Desk Analytics ---- */
+.analytics-block { margin-bottom: 22px; }
+.analytics-block:last-child { margin-bottom: 0; }
+.analytics-h {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.analytics-bars { display: flex; flex-direction: column; gap: 8px; }
+.analytics-bar-row { display: flex; align-items: center; gap: 10px; }
+.analytics-bar-label {
+  flex: 0 0 150px;
+  color: var(--text);
+  font-size: 0.82rem;
+  white-space: normal;
+  line-height: 1.25;
+}
+.analytics-bar-track {
+  flex: 1 1 auto;
+  height: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+}
+.analytics-bar-fill { height: 100%; background: var(--gold); }
+.analytics-bar-pct {
+  flex: 0 0 56px;
+  text-align: right;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+.analytics-flags { color: var(--text); margin: 0; padding-left: 20px; }
+.analytics-flags li { margin-bottom: 6px; font-size: 0.86rem; }
+.analytics-overlap-line { color: var(--text); font-size: 0.86rem; margin-bottom: 8px; }
+
 /* ---- Responsive ---- */
 @media (max-width: 560px) {
   body { font-size: 14px; }
@@ -702,6 +740,8 @@ table.grid tbody tr.detail-row td {
   .desk-tools .btn { flex: 1 1 100%; }
   .watch-tools .btn { flex: 1 1 100%; }
   .stat .v { font-size: 1.05rem; }
+  .analytics-bar-label { flex-basis: 84px; font-size: 0.76rem; }
+  .analytics-bar-pct { flex-basis: 44px; }
 }
 @media (max-width: 380px) {
   .wrap { padding: 0 12px; }
