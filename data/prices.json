@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T00:09:09.100Z",
+  "updated": "2026-07-07T04:03:33.781Z",
   "quotes": {
     "ALMU": {
       "price": 18.91,
@@ -34,8 +34,8 @@
       "changePct": 4.0762
     },
     "LPKFF": {
-      "price": 21.86,
-      "changePct": 0.7373
+      "price": 22.1,
+      "changePct": 1.8433
     },
     "LUMN": {
       "price": 6.48,
@@ -96,6 +96,10 @@
     "XNDU": {
       "price": 11.78,
       "changePct": 1.3769
+    },
+    "IQMX": {
+      "price": 13.91,
+      "changePct": 6.7536
     }
   }
 }

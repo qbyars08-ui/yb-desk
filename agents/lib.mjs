@@ -65,6 +65,7 @@ export async function writeJsonBoth(relPath, value) {
 }
 
 const OFFICE_AGENTS = [
+  { id: 'book-sync', name: 'Book Sync', job: 'pulls Quinn\'s live book daily' },
   { id: 'price-agent', name: 'Price Agent', role: 'Pulls live quotes for the book and watchlist' },
   { id: 'desk-report', name: 'Desk Report', role: 'Writes the deterministic daily desk report' },
   { id: 'watchdog', name: 'Watchdog', role: 'Flags book tickers moving 5 percent or more' },
@@ -79,14 +80,21 @@ export function officeSeed() {
 }
 
 // Record an agent run in office.json (both copies). Creates the seed if missing.
+// A new agent that is in the OFFICE_AGENTS roster is appended with its seed
+// metadata (name, job/role) so the office card reads correctly on first run.
 export async function updateOffice(agentId, status) {
   const current = await readJson('office.json', null);
   const base = current && Array.isArray(current.agents) ? current : officeSeed();
   const known = base.agents.some((agent) => agent.id === agentId);
   const stamped = { lastRun: nowISO(), lastStatus: status };
+  const seedMeta = OFFICE_AGENTS.find((agent) => agent.id === agentId) || {
+    id: agentId,
+    name: agentId,
+    role: '',
+  };
   const agents = known
     ? base.agents.map((agent) => (agent.id === agentId ? { ...agent, ...stamped } : agent))
-    : [...base.agents, { id: agentId, name: agentId, role: '', ...stamped }];
+    : [...base.agents, { ...seedMeta, lastRun: null, lastStatus: null, ...stamped }];
   await writeJsonBoth('office.json', { ...base, updated: nowISO(), agents });
 }
 

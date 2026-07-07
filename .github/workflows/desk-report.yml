@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: sync Quinn's live book
+        run: node agents/book-sync.mjs
+
       - name: refresh the tape
         run: node agents/price-agent.mjs
 

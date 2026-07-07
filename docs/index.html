@@ -153,8 +153,13 @@
   var state = {
     book: null,
     prices: null,
-    bookTickers: {}     // set of tickers in the book
+    bookTickers: {},    // set of tickers in the book
+    liveQuotes: {},     // any-ticker quotes fetched from the live tape API
+    quotesTried: {}     // tickers we already asked the live tape for (loop guard)
   };
+  var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
+  var QUOTES_CACHE_KEY = "ybdesk.quotes.v1";
+  var QUOTES_TTL_MS = 5 * 60 * 1000;
 
   D.mountFooter(document.getElementById("site-footer"));
 
@@ -224,9 +229,15 @@
     var rows = positions.map(function (p) {
       var sleeve = p.sleeve ? '<span class="pill">' + D.esc(p.sleeve) + '</span>' : '<span class="faint">-</span>';
       var layer = p.layer ? '<span class="pill layer">' + D.esc(p.layer) + '</span>' : '<span class="faint">-</span>';
-      var last = (typeof p.last === "number") ? D.fmtPrice(p.last) : '<span class="faint">-</span>';
-      var day = (typeof p.dayChangePct === "number")
-        ? '<span class="' + D.pctClass(p.dayChangePct) + '">' + D.fmtPct(p.dayChangePct) + '</span>'
+      // Prefer the book's own last/day; fall back to the live tape (prices.json)
+      // for names the book has not backfilled yet (e.g. just-added positions).
+      var tape = priceFor(String(p.t || "").toUpperCase());
+      var lastVal = (typeof p.last === "number") ? p.last : (tape ? tape.price : null);
+      var dayVal = (typeof p.dayChangePct === "number") ? p.dayChangePct
+        : (tape && typeof tape.changePct === "number") ? tape.changePct : null;
+      var last = (typeof lastVal === "number") ? D.fmtPrice(lastVal) : '<span class="faint">-</span>';
+      var day = (typeof dayVal === "number")
+        ? '<span class="' + D.pctClass(dayVal) + '">' + D.fmtPct(dayVal) + '</span>'
         : '<span class="faint">-</span>';
       var gain = (typeof p.gainPctAtBase === "number")
         ? '<span class="' + D.pctClass(p.gainPctAtBase) + '">' + D.fmtPct(p.gainPctAtBase) + '</span>'
@@ -288,9 +299,56 @@
   }
 
   function priceFor(ticker) {
-    if (!state.prices || !state.prices.quotes) return null;
-    var q = state.prices.quotes[ticker];
-    return (q && typeof q.price === "number") ? q : null;
+    if (state.prices && state.prices.quotes) {
+      var q = state.prices.quotes[ticker];
+      if (q && typeof q.price === "number") return q;
+    }
+    var lq = state.liveQuotes[ticker];
+    return (lq && typeof lq.price === "number") ? lq : null;
+  }
+
+  // Any-ticker pricing: the committed tape (prices.json) only covers the book
+  // and watchlist. For everything else a visitor adds, ask the live quotes API
+  // once per session (5 min cache), then re-render.
+  function fetchMissingQuotes(tickers) {
+    var missing = tickers.filter(function (t) {
+      return !priceFor(t) && !state.quotesTried[t] && TICKER_RE.test(t);
+    });
+    if (!missing.length) return;
+    missing.forEach(function (t) { state.quotesTried[t] = true; });
+
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(QUOTES_CACHE_KEY) || "null");
+      if (cached && (Date.now() - cached.ts) < QUOTES_TTL_MS && cached.quotes) {
+        var hit = false;
+        missing.forEach(function (t) {
+          var q = cached.quotes[t];
+          if (q && typeof q.price === "number") { state.liveQuotes[t] = q; hit = true; }
+        });
+        var stillMissing = missing.filter(function (t) { return !state.liveQuotes[t]; });
+        if (!stillMissing.length) { if (hit) renderDesk(); return; }
+        missing = stillMissing;
+      }
+    } catch (e) { /* bad cache, ignore */ }
+
+    fetch(QUOTES_API + encodeURIComponent(missing.slice(0, 60).join(",")))
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        if (!data || !data.ok || !data.quotes) return;
+        var got = false;
+        Object.keys(data.quotes).forEach(function (t) {
+          var q = data.quotes[t];
+          if (q && typeof q.price === "number") { state.liveQuotes[t] = q; got = true; }
+        });
+        try {
+          var prev = JSON.parse(sessionStorage.getItem(QUOTES_CACHE_KEY) || "null");
+          var merged = (prev && (Date.now() - prev.ts) < QUOTES_TTL_MS && prev.quotes) ? prev.quotes : {};
+          Object.keys(state.liveQuotes).forEach(function (t) { merged[t] = state.liveQuotes[t]; });
+          sessionStorage.setItem(QUOTES_CACHE_KEY, JSON.stringify({ ts: Date.now(), quotes: merged }));
+        } catch (e) { /* storage full or blocked, fine */ }
+        if (got) renderDesk();
+      })
+      .catch(function () { /* offline or API down: dashes stay, no crash */ });
   }
 
   function validatePosition(ticker, shares, cost) {
@@ -395,6 +453,9 @@
         }
       });
     });
+
+    // Price anything the committed tape doesn't cover (visitor's own tickers).
+    fetchMissingQuotes(arr.map(function (r) { return r.ticker; }));
   }
 
   function wireAddForm() {
@@ -611,7 +672,7 @@
   D.loadJSON("data/prices.json").then(function (prices) {
     state.prices = prices;
     var el = document.getElementById("prices-asof");
-    if (prices && prices.updated) el.textContent = "prices as of " + D.fmtAsOf(prices.updated);
+    if (prices && prices.updated) el.textContent = "desk tape + live quotes, as of " + D.fmtAsOf(prices.updated);
     renderDesk();
   }).catch(function () {
     document.getElementById("prices-asof").textContent = "prices unavailable";

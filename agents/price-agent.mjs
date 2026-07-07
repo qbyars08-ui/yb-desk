@@ -16,12 +16,14 @@ import {
 
 const AGENT_ID = 'price-agent';
 const YAHOO_BASE = 'https://query1.finance.yahoo.com/v8/finance/chart';
+const YB_QUOTES_BASE = 'https://youngbullinvests.com/api/quotes';
 const REQUEST_HEADERS = {
   'User-Agent':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 yb-desk/1.0',
   Accept: 'application/json',
 };
 const TIMEOUT_MS = 8000;
+const FALLBACK_TIMEOUT_MS = 10000;
 
 function buildUniverse(book, watch) {
   const tickers = new Set();
@@ -58,6 +60,31 @@ async function fetchQuote(ticker) {
   return { price: round(price, 4), changePct };
 }
 
+// Fallback: batch-fetch the tickers Yahoo could not serve from the public
+// youngbullinvests quotes endpoint. Same contract as the client fallback:
+// { ok, quotes: { T: { price, prevClose, changePct } | null } }. Returns a map
+// of ticker -> { price, changePct } for whatever it could resolve.
+async function fetchFallbackQuotes(tickers) {
+  if (tickers.length === 0) return {};
+  const url = `${YB_QUOTES_BASE}?tickers=${tickers.map(encodeURIComponent).join(',')}`;
+  const res = await fetchWithTimeout(url, { headers: REQUEST_HEADERS }, FALLBACK_TIMEOUT_MS);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const payload = await res.json();
+  const quotes = payload?.quotes ?? {};
+  const resolved = {};
+  for (const ticker of tickers) {
+    const q = quotes[ticker];
+    if (q && typeof q.price === 'number' && Number.isFinite(q.price)) {
+      const changePct =
+        typeof q.changePct === 'number' && Number.isFinite(q.changePct)
+          ? round(q.changePct, 4)
+          : null;
+      resolved[ticker] = { price: round(q.price, 4), changePct };
+    }
+  }
+  return resolved;
+}
+
 async function main() {
   const book = await readJson('book.json');
   const watch = await readJson('watch.json', { tickers: [] });
@@ -68,7 +95,7 @@ async function main() {
 
   const settled = await Promise.allSettled(universe.map((t) => fetchQuote(t)));
   const quotes = { ...(previous.quotes ?? {}) };
-  const skipped = [];
+  const yahooMissed = [];
   let fresh = 0;
   settled.forEach((outcome, i) => {
     const ticker = universe[i];
@@ -76,17 +103,39 @@ async function main() {
       quotes[ticker] = outcome.value;
       fresh += 1;
     } else {
-      skipped.push(ticker);
+      yahooMissed.push(ticker);
     }
   });
-  if (fresh === 0) throw new Error(`all ${universe.length} quote fetches failed`);
+
+  // Any ticker Yahoo could not serve gets a second attempt against the
+  // youngbullinvests quotes endpoint before falling back to the previous quote.
+  let recovered = [];
+  if (yahooMissed.length) {
+    try {
+      const fallbackQuotes = await fetchFallbackQuotes(yahooMissed);
+      recovered = Object.keys(fallbackQuotes);
+      for (const ticker of recovered) quotes[ticker] = fallbackQuotes[ticker];
+    } catch (err) {
+      console.error(`price-agent: fallback quotes failed: ${err.message}`);
+    }
+  }
+
+  const stillMissing = yahooMissed.filter((t) => !recovered.includes(t));
+  if (fresh === 0 && recovered.length === 0) {
+    throw new Error(`all ${universe.length} quote fetches failed`);
+  }
 
   await writeJsonBoth('prices.json', { updated: nowISO(), quotes });
   await updateOffice(AGENT_ID, 'ok');
-  const skippedNote = skipped.length
-    ? `, ${skipped.length} skipped kept previous quote: ${skipped.join(' ')}`
+  const recoveredNote = recovered.length
+    ? `, ${recovered.length} recovered via youngbullinvests: ${recovered.join(' ')}`
     : '';
-  console.log(`price-agent: ${fresh}/${universe.length} quotes fresh${skippedNote}`);
+  const skippedNote = stillMissing.length
+    ? `, ${stillMissing.length} kept previous quote: ${stillMissing.join(' ')}`
+    : '';
+  console.log(
+    `price-agent: ${fresh}/${universe.length} quotes fresh from Yahoo${recoveredNote}${skippedNote}`,
+  );
 }
 
 main().catch((err) => fail(AGENT_ID, err.message));

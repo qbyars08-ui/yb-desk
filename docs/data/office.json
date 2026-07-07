@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-07T00:10:44.748Z",
+  "updated": "2026-07-07T04:03:33.786Z",
   "agents": [
     {
       "id": "price-agent",
       "name": "Price Agent",
       "role": "Pulls live quotes for the book and watchlist",
-      "lastRun": "2026-07-07T00:09:09.103Z",
+      "lastRun": "2026-07-07T04:03:33.786Z",
       "lastStatus": "ok"
     },
     {
@@ -27,6 +27,13 @@
       "name": "Research Agent",
       "role": "Runs on-demand ticker research briefs",
       "lastRun": "2026-07-07T00:10:44.748Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "book-sync",
+      "name": "Book Sync",
+      "job": "pulls Quinn's live book daily",
+      "lastRun": "2026-07-07T00:23:13.475Z",
       "lastStatus": "ok"
     }
   ]
