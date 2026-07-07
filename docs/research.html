@@ -2,6 +2,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Task the yb-desk research agent on any ticker. The brief lands back on this site, usually within 15 minutes.">
+<meta property="og:title" content="yb-desk, Research">
+<meta property="og:description" content="Task the yb-desk research agent on any ticker. The brief lands back on this site, usually within 15 minutes.">
+<meta property="og:image" content="https://qbyars08-ui.github.io/yb-desk/og-card.png">
+<meta property="og:url" content="https://qbyars08-ui.github.io/yb-desk/research.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://qbyars08-ui.github.io/yb-desk/og-card.png">
 <link rel="stylesheet" href="desk.css">
 
 <header class="site-header">
@@ -107,8 +114,21 @@
     btn.textContent = isSubmitting ? "Sending..." : "Task the desk";
   }
 
+  // Prefill the ticker from ?t= so per-ticker pages can deep-link the form.
+  function prefillFromQuery() {
+    var m = /[?&]t=([^&]+)/.exec(window.location.search || "");
+    if (!m) return;
+    var t = decodeURIComponent(m[1]).trim().toUpperCase();
+    if (!TICKER_RE.test(t)) return;
+    var input = document.getElementById("r-ticker");
+    input.value = t;
+    var ask = document.getElementById("r-ask");
+    if (ask) ask.focus();
+  }
+
   function wireForm() {
     setGhLink("", "");
+    prefillFromQuery();
     var form = document.getElementById("research-form");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -233,7 +253,7 @@
       var isFresh = opts.freshKey && key === opts.freshKey;
       return '<div class="report-item" data-idx="' + i + '" data-path="' + D.esc(path) + '">' +
         '<span class="date">' + D.esc(r.date || "") + '</span>' +
-        (ticker ? '<span class="ticker">' + D.esc(ticker) + '</span>' : '') +
+        (ticker && TICKER_RE.test(ticker) ? '<a class="ticker" href="ticker.html?t=' + encodeURIComponent(ticker) + '" onclick="event.stopPropagation()">' + D.esc(ticker) + '</a>' : '') +
         '<span class="title">' + D.esc(r.title || "Research brief") + '</span>' +
         (isFresh ? '<span class="badge-book">Fresh off the desk</span>' : '') +
         '<span class="caret" style="margin-left:auto;color:var(--text-faint)">&#9656;</span>' +
