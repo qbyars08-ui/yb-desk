@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T04:59:25.487Z",
+  "updated": "2026-07-07T07:57:31.101Z",
   "agents": [
     {
       "id": "price-agent",
@@ -26,7 +26,7 @@
       "id": "research-agent",
       "name": "Research Agent",
       "role": "Runs on-demand ticker research briefs",
-      "lastRun": "2026-07-07T04:19:51.184Z",
+      "lastRun": "2026-07-07T07:57:31.101Z",
       "lastStatus": "ok"
     },
     {
