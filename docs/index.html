@@ -23,8 +23,11 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="lead">A <strong>portfolio desk</strong> and <strong>agent office</strong> that runs entirely free on GitHub. Quinn's real book up top. Build your own desk below. Your numbers never leave your browser.</p>
-    <div class="stat-grid" id="canonical"></div>
+    <p class="lead"><strong>Build your desk in 60 seconds.</strong> Add your positions and get live prices, allocation analytics, and your performance vs SPY, right here in your browser. Nothing you type ever leaves it. Quinn's real book runs below as the live demo.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#desk" id="hero-build-btn">Build your desk</a>
+      <a class="btn ghost" href="#book">See Quinn's book</a>
+    </div>
   </div>
 </section>
 
@@ -32,42 +35,7 @@
 
   <div id="shared-banner"></div>
 
-  <!-- SECTION A: QUINN'S BOOK -->
-  <section class="section" id="book">
-    <div class="section-head">
-      <h2>&#9612; Quinn's Book</h2>
-      <span class="note" id="book-note"></span>
-    </div>
-    <div class="table-scroll">
-      <table class="grid" id="book-table">
-        <thead>
-          <tr>
-            <th class="l">Ticker</th>
-            <th class="l">Sleeve</th>
-            <th class="l">Layer</th>
-            <th>Last</th>
-            <th>Day %</th>
-            <th>Gain %</th>
-            <th>Weight %</th>
-          </tr>
-        </thead>
-        <tbody id="book-body">
-          <tr><td class="l" colspan="7"><span class="loading">Loading the book...</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="hint" style="margin-top:8px">Click any row to open the thesis, variant perception, and kill vectors.</p>
-
-    <div class="perf-block" style="margin-top:24px">
-      <div class="section-head" style="margin:0 0 10px">
-        <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Performance, 1 year</h2>
-        <span class="note">Book weighting vs SPY</span>
-      </div>
-      <div id="book-perf"></div>
-    </div>
-  </section>
-
-  <!-- SECTION B: YOUR DESK -->
+  <!-- SECTION A: YOUR DESK -->
   <section class="section" id="desk">
     <div class="section-head">
       <h2>&#9612; Your Desk</h2>
@@ -77,19 +45,6 @@
     <div id="desk-msg"></div>
 
     <div id="share-msg-wrap"></div>
-
-    <div class="section-head" style="margin:0 0 10px">
-      <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Watching</h2>
-      <span class="note">Tickers you're tracking, no position required</span>
-    </div>
-    <form id="watch-form" class="watch-tools" autocomplete="off">
-      <div class="field tkf">
-        <label for="w-ticker">Ticker</label>
-        <input class="tk" id="w-ticker" name="ticker" maxlength="12" placeholder="NVDA" required>
-      </div>
-      <button type="submit" class="btn ghost">Add to watchlist</button>
-    </form>
-    <div id="watch-chips" class="watch-chips"></div>
 
     <form id="add-form" class="desk-tools" autocomplete="off">
       <div class="field tkf">
@@ -138,11 +93,61 @@
     <div id="desk-empty"></div>
 
     <div class="section-head" style="margin:24px 0 10px">
+      <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Watching</h2>
+      <span class="note">Tickers you're tracking, no position required</span>
+    </div>
+    <form id="watch-form" class="watch-tools" autocomplete="off">
+      <div class="field tkf">
+        <label for="w-ticker">Ticker</label>
+        <input class="tk" id="w-ticker" name="ticker" maxlength="12" placeholder="NVDA" required>
+      </div>
+      <button type="submit" class="btn ghost">Add to watchlist</button>
+    </form>
+    <div id="watch-chips" class="watch-chips"></div>
+
+    <div class="section-head" style="margin:24px 0 10px">
       <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Desk Analytics</h2>
       <span class="note">Computed from the table above, in this browser</span>
     </div>
     <div id="analytics" hidden></div>
     <div id="your-perf" class="perf-block" style="margin-top:24px" hidden></div>
+  </section>
+
+  <!-- SECTION B: QUINN'S BOOK, THE LIVE DEMO -->
+  <section class="section" id="book">
+    <div class="section-head">
+      <h2>&#9612; Quinn's Book</h2>
+      <span class="note" id="book-note"></span>
+    </div>
+    <p class="hint" style="margin:0 0 12px">The live demo. This is Quinn's real money, updated by the same agents that price your desk.</p>
+    <div class="stat-grid" id="canonical" style="margin-bottom:14px"></div>
+    <div class="table-scroll">
+      <table class="grid" id="book-table">
+        <thead>
+          <tr>
+            <th class="l">Ticker</th>
+            <th class="l">Sleeve</th>
+            <th class="l">Layer</th>
+            <th>Last</th>
+            <th>Day %</th>
+            <th>Gain %</th>
+            <th>Weight %</th>
+          </tr>
+        </thead>
+        <tbody id="book-body">
+          <tr><td class="l" colspan="7"><span class="loading">Loading the book...</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint" style="margin-top:8px">Click any row to open the thesis, variant perception, and kill vectors.</p>
+
+    <div class="perf-block" style="margin-top:24px">
+      <div class="section-head" style="margin:0 0 10px">
+        <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Performance, 1 year</h2>
+        <span class="note">Book weighting vs SPY</span>
+      </div>
+      <div id="book-perf"></div>
+    </div>
   </section>
 
   <!-- SECTION C: THE OFFICE -->
@@ -506,13 +511,26 @@
       body.innerHTML = "";
       foot.innerHTML = "";
       tableScroll.style.display = "none";
-      emptyEl.innerHTML = '<div class="empty">No positions yet. Add one above, or import a CSV. Everything stays in this browser.</div>';
+      emptyEl.innerHTML = '<div class="onboard">' +
+        '<div class="onboard-title">Your desk is empty. Three steps and it is alive:</div>' +
+        '<ol class="onboard-steps">' +
+        '<li><b>Add a position</b> above: ticker, shares, cost basis. Or import a CSV of your whole book in one go.</li>' +
+        '<li><b>Watch it come alive</b>: live prices, allocation analytics, and your performance vs SPY appear the moment one position is in.</li>' +
+        '<li><b>Share it</b>: one link carries your whole desk to anyone, no account needed.</li>' +
+        '</ol>' +
+        '<button type="button" class="btn ghost" id="sample-desk-btn">Load a sample desk to see it working</button>' +
+        '<span class="onboard-note">Everything stays in this browser. Nothing you type is sent anywhere.</span>' +
+        '</div>';
+      var sampleBtn = document.getElementById("sample-desk-btn");
+      if (sampleBtn) sampleBtn.addEventListener("click", loadSampleDesk);
+      setShareProminence(false);
       D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
       renderYourPerf();
       return;
     }
     tableScroll.style.display = "";
     emptyEl.innerHTML = "";
+    setShareProminence(true);
 
     var totValue = 0, totCost = 0, totDay = 0, haveAnyPrice = false;
 
@@ -596,6 +614,26 @@
 
     D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
     renderYourPerf();
+  }
+
+  // Sample desk: three book tickers so the committed tape prices them with
+  // no extra API call. Clearly marked sample data the visitor can wipe.
+  function loadSampleDesk() {
+    var sample = [
+      { ticker: "MU", shares: 2, costBasis: 800 },
+      { ticker: "CRDO", shares: 10, costBasis: 210 },
+      { ticker: "OUST", shares: 20, costBasis: 38 }
+    ];
+    savePortfolio(sample);
+    renderDesk();
+    showMsg("Sample desk loaded, three names from Quinn's book with made-up cost bases. Remove rows with &times; or add your own on top.", "ok");
+  }
+
+  // The share button earns the primary gold treatment once there is
+  // actually a desk to share; before that it stays quiet.
+  function setShareProminence(hasPositions) {
+    var btn = document.getElementById("share-desk-btn");
+    if (btn) btn.className = hasPositions ? "btn" : "btn ghost";
   }
 
   function wireAddForm() {
@@ -1053,6 +1091,15 @@
   wireWatchForm();
   wireShareButton();
   checkForSharedLink();
+
+  // Hero CTA: land the visitor in the add-position form, cursor ready.
+  var heroBuild = document.getElementById("hero-build-btn");
+  if (heroBuild) heroBuild.addEventListener("click", function () {
+    setTimeout(function () {
+      var tk = document.getElementById("f-ticker");
+      if (tk) tk.focus();
+    }, 350);
+  });
 
   // Book + prices first (desk depends on both for overlap + pricing)
   D.loadJSON("data/book.json").then(function (book) {

@@ -759,6 +759,35 @@ table.grid tbody tr.detail-row td {
 .spark-leg-muted::before { background: var(--spark-muted); }
 .spark-note { color: var(--text-faint); font-size: 0.78rem; margin: 8px 0 0; line-height: 1.4; }
 
+/* ---- Hero actions + onboarding ---- */
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-actions .btn { text-decoration: none; }
+.onboard {
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 18px 20px;
+}
+.onboard-title {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+.onboard-steps {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  color: var(--text-dim);
+  font-size: 0.86rem;
+}
+.onboard-steps li { margin-bottom: 8px; }
+.onboard-steps b { color: var(--gold); font-weight: 600; }
+.onboard-note {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-faint);
+  font-size: 0.76rem;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 560px) {
   body { font-size: 14px; }
