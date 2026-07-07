@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T19:48:26.535Z",
+  "updated": "2026-07-07T20:22:10.525Z",
   "agents": [
     {
       "id": "price-agent",
@@ -34,6 +34,13 @@
       "name": "Book Sync",
       "job": "pulls Quinn's live book daily",
       "lastRun": "2026-07-07T00:23:13.475Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "member-alerts",
+      "name": "Member Alerts",
+      "role": "Emails opted-in members when their names move past their threshold",
+      "lastRun": "2026-07-07T20:22:10.518Z",
       "lastStatus": "ok"
     }
   ]
