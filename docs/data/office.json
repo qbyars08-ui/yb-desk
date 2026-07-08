@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T23:11:08.365Z",
+  "updated": "2026-07-08T01:18:19.871Z",
   "agents": [
     {
       "id": "price-agent",
@@ -40,7 +40,7 @@
       "id": "member-alerts",
       "name": "Member Alerts",
       "role": "Emails opted-in members when their names move past their threshold",
-      "lastRun": "2026-07-07T23:11:08.284Z",
+      "lastRun": "2026-07-08T01:18:19.866Z",
       "lastStatus": "ok"
     }
   ]
