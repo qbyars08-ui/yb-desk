@@ -216,15 +216,23 @@ table.grid tbody tr.tot td {
   color: var(--gold);
   letter-spacing: 0.02em;
 }
-.book-row { cursor: pointer; }
-.book-row:hover { background: var(--bg-row-hover); }
-.book-row td.l .caret {
+.book-row, .deskrow { cursor: pointer; }
+.book-row:hover, .deskrow:hover { background: var(--bg-row-hover); }
+.book-row td.l .caret, .deskrow td.l .caret {
   display: inline-block;
   width: 12px;
   color: var(--text-faint);
   transition: transform 0.12s ease;
 }
-.book-row.open td.l .caret { transform: rotate(90deg); color: var(--gold); }
+.book-row.open td.l .caret, .deskrow.open td.l .caret { transform: rotate(90deg); color: var(--gold); }
+
+/* news list inside expanded rows and the ticker page */
+.news-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.news-list li { display: flex; flex-direction: column; gap: 2px; }
+.news-list li a { color: var(--text); font-size: 0.88rem; line-height: 1.4; }
+.news-list li a:hover { color: var(--gold); }
+.news-meta { color: var(--text-faint); font-size: 0.72rem; font-family: var(--mono); }
+.dd-chart svg { max-width: 100%; max-height: 190px; height: auto; }
 
 /* expanded detail row */
 table.grid tbody tr.detail-row td {
@@ -238,8 +246,18 @@ table.grid tbody tr.detail-row td {
 .detail-inner {
   padding: 14px 16px 16px;
   display: grid;
+  /* The panel lives in a wide, horizontally-scrollable table cell. Pin it to
+     the left edge and cap its width to the viewport, and constrain the grid
+     column (minmax 0) so headlines and thesis text wrap where the reader can
+     see them instead of running off to the right. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
+  max-width: 94vw;
+  position: sticky;
+  left: 0;
 }
+.detail-block { min-width: 0; }
+.detail-block .body, .news-list li a { overflow-wrap: anywhere; }
 .detail-block .lab {
   color: var(--gold-dim);
   font-family: var(--mono);

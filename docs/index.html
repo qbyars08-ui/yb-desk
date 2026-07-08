@@ -588,6 +588,83 @@
     return { position: { ticker: t, shares: sh, costBasis: cb } };
   }
 
+  // Next earnings date for a ticker, from the earnings session cache.
+  function deskEarningsFor(ticker) {
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(EARNINGS_CACHE_KEY) || "null");
+      if (cached && cached.earnings) {
+        var e = cached.earnings[String(ticker).toUpperCase()];
+        if (e && e.reportDate) return e.reportDate;
+      }
+    } catch (x) { /* no cache */ }
+    return null;
+  }
+
+  // Mini 1y-vs-SPY chart block, only for names history covers (book + SPY).
+  function deskChartBlock(ticker) {
+    var series = (state.history && state.history.series) ? state.history.series : {};
+    var s = series[String(ticker).toUpperCase()];
+    if (!s || !s.length) return "";
+    var list = [{ points: D.normalizePct(s), cls: "primary", label: ticker }];
+    if (series.SPY && series.SPY.length) list.push({ points: D.normalizePct(series.SPY), cls: "muted", label: "SPY" });
+    return '<div class="detail-block dd-chart"><div class="lab">1 year vs SPY</div>' +
+      D.sparkSVG(list, { unit: "%" }) + '</div>';
+  }
+
+  // The rich inline panel a desk row expands into.
+  function deskDetailRowHtml(r) {
+    var t = String(r.ticker).toUpperCase();
+    var pos = null;
+    if (state.bookTickers[t] && state.book && Array.isArray(state.book.positions)) {
+      for (var i = 0; i < state.book.positions.length; i++) {
+        if (String(state.book.positions[i].t || "").toUpperCase() === t) { pos = state.book.positions[i]; break; }
+      }
+    }
+    var blocks = [];
+    blocks.push(deskChartBlock(t));
+
+    if (pos && pos.thesis) {
+      blocks.push('<div class="detail-block"><div class="lab">Quinn\'s thesis</div><div class="body">' + D.esc(pos.thesis) + '</div></div>');
+    }
+    if (pos && pos.variantPerception) {
+      blocks.push('<div class="detail-block"><div class="lab">Variant perception</div><div class="body">' + D.esc(pos.variantPerception) + '</div></div>');
+    }
+
+    var ed = deskEarningsFor(t);
+    if (ed) {
+      var d = new Date(ed + "T12:00:00");
+      if (!isNaN(d.getTime())) {
+        var days = Math.round((d.getTime() - Date.now()) / 86400000);
+        blocks.push('<div class="detail-block"><div class="lab">Next earnings</div><div class="body">Reports ' +
+          D.esc(d.toLocaleDateString("en-US", { month: "short", day: "numeric" })) +
+          (days >= 0 ? " (in " + days + "d)" : "") + '</div></div>');
+      }
+    }
+
+    var targets = loadWatchTargets();
+    var tgt = Number(targets[t]);
+    if (isFinite(tgt) && tgt > 0 && loadWatchlist().indexOf(t) !== -1) {
+      var q = priceFor(t);
+      var tline;
+      if (q && typeof q.price === "number") {
+        var dist = ((q.price - tgt) / tgt) * 100;
+        tline = dist <= 0 ? "At or below your " + D.fmtPrice(tgt) + " target, last " + D.fmtPrice(q.price)
+          : dist.toFixed(1) + "% above your " + D.fmtPrice(tgt) + " target";
+      } else {
+        tline = "Target " + D.fmtPrice(tgt);
+      }
+      blocks.push('<div class="detail-block"><div class="lab">Your target</div><div class="body">' + D.esc(tline) + '</div></div>');
+    }
+
+    blocks.push('<div class="detail-block"><div class="lab">Latest news</div>' +
+      '<div class="dd-news" data-news-ticker="' + D.esc(t) + '"><p class="dim" style="margin:0">Open to load headlines...</p></div></div>');
+    blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(t) +
+      '">Open the full ' + D.esc(t) + ' page</a></div></div>');
+
+    return '<tr class="detail-row" hidden><td colspan="9"><div class="detail-inner">' +
+      blocks.filter(Boolean).join("") + '</div></td></tr>';
+  }
+
   function renderDesk() {
     // While viewing a shared desk link, the read-only shared render owns this
     // DOM until the visitor dismisses it or loads it into their own desk.
@@ -629,7 +706,7 @@
     var rows = arr.map(function (r, idx) {
       var q = priceFor(r.ticker);
       var inBook = state.bookTickers[r.ticker];
-      var tickerCell = '<a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a>' +
+      var tickerCell = '<span class="caret">&#9656;</span> <span class="ticker">' + D.esc(r.ticker) + '</span>' +
         (inBook ? ' <span class="badge-book">In the book</span>' : '');
 
       var lastCell, dayCell, mvCell, plCell, plPctCell;
@@ -655,7 +732,7 @@
         plPctCell = '<span class="faint">-</span>';
       }
 
-      return '<tr>' +
+      return '<tr class="deskrow">' +
         '<td class="l">' + tickerCell + '</td>' +
         '<td>' + D.fmtPrice(r.shares) + '</td>' +
         '<td>' + D.fmtPrice(r.costBasis) + '</td>' +
@@ -665,7 +742,7 @@
         '<td>' + plCell + '</td>' +
         '<td>' + plPctCell + '</td>' +
         '<td><button type="button" class="btn danger" data-remove="' + idx + '" title="Remove">&times;</button></td>' +
-        '</tr>';
+        '</tr>' + deskDetailRowHtml(r);
     }).join("");
 
     body.innerHTML = rows;
@@ -687,15 +764,34 @@
       foot.innerHTML = "";
     }
 
-    // wire remove buttons
+    // wire remove buttons (stop the click before it toggles the row open)
     body.querySelectorAll("button[data-remove]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
         var i = parseInt(btn.getAttribute("data-remove"), 10);
         var cur = loadPortfolio();
         if (i >= 0 && i < cur.length) {
           var next = cur.slice(0, i).concat(cur.slice(i + 1));
           savePortfolio(next);
           renderDesk();
+        }
+      });
+    });
+
+    // expand/collapse each row into its live drilldown; news loads on first open
+    body.querySelectorAll("tr.deskrow").forEach(function (row) {
+      row.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("button, a")) return;
+        var detail = row.nextElementSibling;
+        if (!detail || !detail.classList.contains("detail-row")) return;
+        var isOpen = row.classList.toggle("open");
+        detail.hidden = !isOpen;
+        if (isOpen) {
+          var newsEl = detail.querySelector(".dd-news");
+          if (newsEl && newsEl.getAttribute("data-loaded") !== "1") {
+            newsEl.setAttribute("data-loaded", "1");
+            loadNewsInto(newsEl, newsEl.getAttribute("data-news-ticker"));
+          }
         }
       });
     });
@@ -707,6 +803,57 @@
     D.renderAnalytics(document.getElementById("analytics"), arr, priceFor, state.book);
     renderYourPerf();
     renderEarnings(arr.map(function (r) { return r.ticker; }).concat(loadWatchlist()));
+  }
+
+  // ---- News: lazy per-ticker headlines for expandable rows. Fetched the
+  // first time a row opens, cached for the session so re-opening is instant.
+  var NEWS_API = "https://youngbullinvests.com/api/ticker-news?tickers=";
+  var newsCache = {}; // ticker -> array of items, or "pending"
+
+  function timeAgo(iso) {
+    if (!iso) return "";
+    var then = new Date(iso).getTime();
+    if (!isFinite(then)) return "";
+    var mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return mins + "m ago";
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24) return hrs + "h ago";
+    var days = Math.round(hrs / 24);
+    return days + "d ago";
+  }
+
+  function newsListHtml(items) {
+    if (!items || !items.length) return '<p class="dim" style="margin:0">No fresh headlines on this name right now.</p>';
+    return '<ul class="news-list">' + items.map(function (n) {
+      var ago = timeAgo(n.publishedAt);
+      var meta = [n.source, ago].filter(Boolean).map(D.esc).join(" &middot; ");
+      return '<li>' +
+        '<a href="' + encodeURI(String(n.url)) + '" target="_blank" rel="noopener nofollow">' + D.esc(n.title) + '</a>' +
+        (meta ? '<span class="news-meta">' + meta + '</span>' : '') +
+        '</li>';
+    }).join("") + '</ul>';
+  }
+
+  // Render headlines into el, fetching once and caching per session.
+  function loadNewsInto(el, ticker) {
+    if (!el) return;
+    var t = String(ticker || "").toUpperCase();
+    if (Array.isArray(newsCache[t])) { el.innerHTML = newsListHtml(newsCache[t]); return; }
+    el.innerHTML = '<p class="dim" style="margin:0">Loading headlines...</p>';
+    if (newsCache[t] === "pending") return;
+    newsCache[t] = "pending";
+    fetch(NEWS_API + encodeURIComponent(t)).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    }).then(function (data) {
+      var items = (data && data.ok && data.news && Array.isArray(data.news[t])) ? data.news[t] : [];
+      newsCache[t] = items;
+      el.innerHTML = newsListHtml(items);
+    }).catch(function () {
+      newsCache[t] = [];
+      el.innerHTML = '<p class="dim" style="margin:0">Headlines are not available right now.</p>';
+    });
   }
 
   // ---- Earnings ahead: next scheduled report date per desk/watchlist name.
@@ -1575,6 +1722,8 @@
     state.history = history;
     renderBookPerf();
     renderYourPerf();
+    // Desk rows built before history arrived have no chart yet; rebuild them.
+    renderDesk();
   }).catch(function () {
     var bp = document.getElementById("book-perf");
     if (bp) bp.innerHTML = '<p class="spark-note">Price history is not available right now.</p>';
