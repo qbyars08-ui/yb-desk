@@ -1,50 +1,40 @@
 {
-  "updated": "2026-07-08T17:05:18.869Z",
+  "updated": "2026-07-08T18:42:24.991Z",
   "alerts": [
     {
       "ticker": "PENG",
-      "changePct": 24.2545,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "changePct": 25.5621,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     },
     {
       "ticker": "WYY",
-      "changePct": -13.3569,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "changePct": -12.3675,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     },
     {
       "ticker": "IQMX",
-      "changePct": -9.55,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "changePct": -10.0078,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     },
     {
       "ticker": "WYFI",
-      "changePct": 6.2238,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
-    },
-    {
-      "ticker": "ANET",
-      "changePct": 6.0375,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -5.8557,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
-    },
-    {
-      "ticker": "TEM",
-      "changePct": -5.6083,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "changePct": 8.1029,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     },
     {
       "ticker": "NBIS",
-      "changePct": 5.6048,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "changePct": 7.0188,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     },
     {
-      "ticker": "BRUN",
-      "changePct": 5.2947,
-      "flaggedAt": "2026-07-08T17:05:18.869Z"
+      "ticker": "ANET",
+      "changePct": 6.9386,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
+    },
+    {
+      "ticker": "TEM",
+      "changePct": -5.2005,
+      "flaggedAt": "2026-07-08T18:42:24.991Z"
     }
   ]
 }
