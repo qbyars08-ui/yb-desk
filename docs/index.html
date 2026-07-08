@@ -119,6 +119,10 @@
         <label for="w-ticker">Ticker</label>
         <input class="tk" id="w-ticker" name="ticker" maxlength="12" placeholder="NVDA" required>
       </div>
+      <div class="field tkf">
+        <label for="w-target">Target buy, optional</label>
+        <input class="tk" id="w-target" name="target" inputmode="decimal" placeholder="180.00" style="text-transform:none;width:110px">
+      </div>
       <button type="submit" class="btn ghost">Add to watchlist</button>
     </form>
     <div id="watch-chips" class="watch-chips"></div>
@@ -398,6 +402,20 @@
     catch (e) { showMsg("Could not save to this browser. Storage may be full or blocked.", "err"); }
   }
 
+  // Optional target buy prices, keyed by ticker in a separate map so the
+  // watchlist itself (and every share link that carries it) stays a plain
+  // list of tickers.
+  var WATCH_TARGETS_KEY = "ybdesk.watchtargets.v1";
+  function loadWatchTargets() {
+    try {
+      var map = JSON.parse(localStorage.getItem(WATCH_TARGETS_KEY) || "{}");
+      return (map && typeof map === "object" && !Array.isArray(map)) ? map : {};
+    } catch (e) { return {}; }
+  }
+  function saveWatchTargets(map) {
+    try { localStorage.setItem(WATCH_TARGETS_KEY, JSON.stringify(map)); } catch (e) { /* chip just won't show a target */ }
+  }
+
   function renderWatchlist() {
     if (state.sharedView) { renderSharedReadOnlyDesk(state.sharedView); return; }
     var list = loadWatchlist();
@@ -406,6 +424,7 @@
       wrap.innerHTML = '<div class="watch-empty">No tickers on your watchlist yet.</div>';
       return;
     }
+    var targets = loadWatchTargets();
     wrap.innerHTML = list.map(function (t, idx) {
       var q = priceFor(t);
       var priceHtml, dayHtml;
@@ -416,9 +435,21 @@
         priceHtml = '<span class="wt-price faint">-</span>';
         dayHtml = '<span class="wt-day faint">-</span>';
       }
+      var targetHtml = "";
+      var tgt = Number(targets[t]);
+      if (isFinite(tgt) && tgt > 0) {
+        if (q && typeof q.price === "number") {
+          var dist = ((q.price - tgt) / tgt) * 100;
+          targetHtml = dist <= 0
+            ? '<span class="wt-day gain" title="At or below your target buy">AT TARGET ' + D.fmtPrice(tgt) + '</span>'
+            : '<span class="wt-day faint" title="Your target buy">tgt ' + D.fmtPrice(tgt) + ', ' + dist.toFixed(1) + '% above</span>';
+        } else {
+          targetHtml = '<span class="wt-day faint">tgt ' + D.fmtPrice(tgt) + '</span>';
+        }
+      }
       return '<span class="watch-chip">' +
         '<a class="wt-ticker" href="ticker.html?t=' + encodeURIComponent(t) + '">' + D.esc(t) + '</a>' +
-        priceHtml + dayHtml +
+        priceHtml + dayHtml + targetHtml +
         '<button type="button" class="wt-remove" data-watch-remove="' + idx + '" title="Remove">&times;</button>' +
         '</span>';
     }).join("");
@@ -428,8 +459,11 @@
         var i = parseInt(btn.getAttribute("data-watch-remove"), 10);
         var cur = loadWatchlist();
         if (i >= 0 && i < cur.length) {
+          var removed = cur[i];
           var next = cur.slice(0, i).concat(cur.slice(i + 1));
           saveWatchlist(next);
+          var map = loadWatchTargets();
+          if (removed in map) { delete map[removed]; saveWatchTargets(map); }
           renderWatchlist();
         }
       });
@@ -455,6 +489,17 @@
       if (list.indexOf(t) === -1) {
         list = list.concat([t]);
         saveWatchlist(list);
+      }
+      var targetRaw = String(document.getElementById("w-target").value || "").trim();
+      if (targetRaw) {
+        var tgt = Number(targetRaw);
+        if (isFinite(tgt) && tgt > 0) {
+          var map = loadWatchTargets();
+          map[t] = Math.round(tgt * 100) / 100;
+          saveWatchTargets(map);
+        } else {
+          showMsg("Target \"" + D.esc(targetRaw) + "\" is not a valid price, saved the ticker without it.", "err");
+        }
       }
       form.reset();
       input.focus();
@@ -1103,6 +1148,24 @@
       }
     } catch (e) { /* no cache, skip section */ }
     if (earnLines.length) out.push({ title: "Earnings ahead", lines: earnLines, progress: "scanning the calendar..." });
+
+    // Watch targets
+    var targets = loadWatchTargets();
+    var targetLines = [];
+    loadWatchlist().forEach(function (t) {
+      var tgt = Number(targets[t]);
+      if (!isFinite(tgt) || tgt <= 0) return;
+      var q = priceFor(t);
+      if (q && typeof q.price === "number") {
+        var dist = ((q.price - tgt) / tgt) * 100;
+        targetLines.push(dist <= 0
+          ? D.esc(t) + " is at or below your " + D.fmtPrice(tgt) + " target, last " + D.fmtPrice(q.price) + "."
+          : D.esc(t) + " sits " + dist.toFixed(1) + "% above your " + D.fmtPrice(tgt) + " target.");
+      } else {
+        targetLines.push(D.esc(t) + " has a " + D.fmtPrice(tgt) + " target and no live quote right now.");
+      }
+    });
+    if (targetLines.length) out.push({ title: "Watch targets", lines: targetLines, progress: "checking your targets..." });
 
     return out;
   }
