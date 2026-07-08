@@ -101,6 +101,16 @@
     <div id="desk-empty"></div>
 
     <div class="section-head" style="margin:24px 0 10px">
+      <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Desk Check</h2>
+      <span class="note">The analyst reads your desk on demand, computed in this browser</span>
+    </div>
+    <div id="deskcheck-wrap">
+      <button type="button" class="btn" id="deskcheck-btn">Run a desk check</button>
+      <div id="deskcheck-progress" class="loading" hidden></div>
+      <div id="deskcheck-out" class="report-view" style="margin-top:12px" hidden></div>
+    </div>
+
+    <div class="section-head" style="margin:24px 0 10px">
       <h2 style="font-size:0.86rem;border-color:var(--gold-dim)">Watching</h2>
       <span class="note">Tickers you're tracking, no position required</span>
     </div>
@@ -1015,6 +1025,130 @@
     });
   }
 
+  // ---- Desk Check: the analyst reads the visitor's desk, on demand ----
+  // Deterministic, computed from the tape in this browser, staged so the
+  // agent visibly works. No LLM, no server, nothing leaves the page.
+  function deskCheckSections() {
+    var rows = loadPortfolio();
+    var priced = [];
+    var totValue = 0, totCost = 0, totDay = 0;
+    rows.forEach(function (r) {
+      var q = priceFor(r.ticker);
+      if (!q) return;
+      var mv = r.shares * q.price;
+      priced.push({ ticker: r.ticker, day: q.changePct, mv: mv, cost: r.shares * r.costBasis,
+        plPct: r.costBasis > 0 ? ((q.price - r.costBasis) / r.costBasis) * 100 : 0 });
+      totValue += mv; totCost += r.shares * r.costBasis;
+      totDay += mv * (q.changePct / 100);
+    });
+    var a = D.computeAnalytics(rows, priceFor, state.book);
+    var out = [];
+
+    // What moved
+    var moved = [];
+    if (priced.length && totValue > totDay) {
+      var dayPct = (totDay / (totValue - totDay)) * 100;
+      moved.push("Your desk moved " + D.fmtPct(dayPct) + " today, weighted by position size.");
+      var spy = state.prices && state.prices.quotes && state.prices.quotes.SPY;
+      if (spy && typeof spy.changePct === "number") moved.push("SPY did " + D.fmtPct(spy.changePct) + ".");
+      var bookDay = computeTapeDayPct(state.book);
+      if (bookDay !== null) moved.push("Quinn's book did " + D.fmtPct(bookDay) + ".");
+      var byDay = priced.slice().sort(function (x, y) { return y.day - x.day; });
+      var lead = byDay[0], drag = byDay[byDay.length - 1];
+      if (lead && lead.day > 0) moved.push(D.esc(lead.ticker) + " led, " + D.fmtPct(lead.day) + ".");
+      if (drag && drag.day < 0 && (!lead || drag.ticker !== lead.ticker)) moved.push(D.esc(drag.ticker) + " was the drag, " + D.fmtPct(drag.day) + ".");
+    } else {
+      moved.push("No live quotes on your names right now, so no day read.");
+    }
+    out.push({ title: "What moved", lines: [moved.join(" ")], progress: "reading the tape..." });
+
+    // Where you stand
+    var stand = [];
+    if (totCost > 0 && priced.length) {
+      var pl = totValue - totCost;
+      stand.push("You hold " + rows.length + " name" + (rows.length === 1 ? "" : "s") + ". Value " + D.fmtMoney(totValue) +
+        " on " + D.fmtMoney(totCost) + " cost, " + (pl >= 0 ? "up" : "down") + " " + D.fmtPct(Math.abs((pl / totCost) * 100)) + " overall.");
+      var byPl = priced.slice().sort(function (x, y) { return y.plPct - x.plPct; });
+      var best = byPl[0], worst = byPl[byPl.length - 1];
+      if (best) stand.push("Best on cost: " + D.esc(best.ticker) + " " + D.fmtPct(best.plPct) + ".");
+      if (worst && worst.plPct < 0 && worst.ticker !== best.ticker) stand.push("Under water: " + D.esc(worst.ticker) + " " + D.fmtPct(worst.plPct) + ".");
+    } else {
+      stand.push("Cost data is thin, add cost basis to get the full read.");
+    }
+    out.push({ title: "Where you stand", lines: [stand.join(" ")], progress: "weighing the positions..." });
+
+    // Concentration
+    out.push({ title: "Concentration", lines: a.flags.map(function (f) { return D.esc(f); }), progress: "checking concentration..." });
+
+    // The book
+    var ov = a.overlap || {};
+    var ovLine = (ov.heldCount || 0)
+      ? "You share " + ov.heldCount + " name" + (ov.heldCount === 1 ? "" : "s") + " with Quinn's book" +
+        (typeof ov.pctOfDeskValue === "number" && isFinite(ov.pctOfDeskValue) ? ", " + Math.round(ov.pctOfDeskValue) + "% of your desk by value." : ".")
+      : "No overlap with Quinn's book. Your desk is your own thesis.";
+    out.push({ title: "Against the book", lines: [ovLine], progress: "comparing against the book..." });
+
+    // Earnings ahead (from the strip's session cache, no extra request)
+    var earnLines = [];
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(EARNINGS_CACHE_KEY) || "null");
+      if (cached && cached.earnings) {
+        rows.forEach(function (r) {
+          var e = cached.earnings[String(r.ticker).toUpperCase()];
+          if (e && e.reportDate) {
+            var d = new Date(e.reportDate + "T12:00:00");
+            earnLines.push(D.esc(r.ticker) + " reports " + d.toLocaleDateString("en-US", { month: "short", day: "numeric" }) + ".");
+          }
+        });
+      }
+    } catch (e) { /* no cache, skip section */ }
+    if (earnLines.length) out.push({ title: "Earnings ahead", lines: earnLines, progress: "scanning the calendar..." });
+
+    return out;
+  }
+
+  function runDeskCheck() {
+    var btn = document.getElementById("deskcheck-btn");
+    var prog = document.getElementById("deskcheck-progress");
+    var outEl = document.getElementById("deskcheck-out");
+    if (!loadPortfolio().length) {
+      outEl.hidden = false;
+      outEl.innerHTML = '<p class="dim">Nothing on the desk yet. Add a position above, then run the check.</p>';
+      return;
+    }
+    btn.disabled = true;
+    outEl.hidden = false;
+    outEl.innerHTML = "";
+    prog.hidden = false;
+
+    var sections = deskCheckSections();
+    var stamp = new Date().toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+    outEl.innerHTML = "<h2>Desk Check, " + D.esc(stamp) + "</h2>";
+
+    var i = 0;
+    function step() {
+      if (i >= sections.length) {
+        outEl.innerHTML += '<p class="dim" style="margin-top:14px">Every number above was computed in this browser just now. No AI wrote this. Nothing you hold left the page.</p>' +
+          '<p class="dim">Not investment advice. Your money, your call.</p>';
+        prog.hidden = true;
+        btn.disabled = false;
+        btn.textContent = "Run it again";
+        return;
+      }
+      var s = sections[i];
+      prog.textContent = s.progress;
+      outEl.innerHTML += "<h3>" + D.esc(s.title) + "</h3>" + s.lines.map(function (l) { return "<p>" + l + "</p>"; }).join("");
+      i += 1;
+      setTimeout(step, 420);
+    }
+    setTimeout(step, 380);
+  }
+
+  function wireDeskCheck() {
+    var btn = document.getElementById("deskcheck-btn");
+    if (btn) btn.addEventListener("click", runDeskCheck);
+  }
+
   // ---- Share card: a downloadable image of the desk vs the book ----
   // Percentages only. Dollar values never leave the browser, and the card
   // is built to be posted publicly, so it carries the flex, not the size.
@@ -1329,6 +1463,7 @@
   wireWatchForm();
   wireShareButton();
   wireShareCard();
+  wireDeskCheck();
   checkForSharedLink();
 
   // Hero CTA: land the visitor in the add-position form, cursor ready.
