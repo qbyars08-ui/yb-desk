@@ -294,6 +294,8 @@
     if (!blocks.length) {
       blocks.push('<div class="detail-block"><div class="body dim">No thesis on file yet for this position.</div></div>');
     }
+    blocks.push('<div class="detail-block"><div class="lab">Latest news</div>' +
+      '<div class="dd-news" data-news-ticker="' + D.esc(String(p.t).toUpperCase()) + '"><p class="dim" style="margin:0">Open to load headlines...</p></div></div>');
     blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(p.t) + '">Open the ' + D.esc(p.t) + ' page: chart, next earnings, latest brief</a></div></div>');
     return '<tr class="detail-row" hidden><td colspan="' + colspan + '"><div class="detail-inner">' +
       blocks.join("") + '</div></td></tr>';
@@ -354,11 +356,19 @@
     // wire expand/collapse
     var bookRows = body.querySelectorAll("tr.book-row");
     bookRows.forEach(function (row) {
-      row.addEventListener("click", function () {
+      row.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("a")) return;
         var detail = row.nextElementSibling;
         if (!detail || !detail.classList.contains("detail-row")) return;
         var isOpen = row.classList.toggle("open");
         detail.hidden = !isOpen;
+        if (isOpen) {
+          var newsEl = detail.querySelector(".dd-news");
+          if (newsEl && newsEl.getAttribute("data-loaded") !== "1") {
+            newsEl.setAttribute("data-loaded", "1");
+            loadNewsInto(newsEl, newsEl.getAttribute("data-news-ticker"));
+          }
+        }
       });
     });
 

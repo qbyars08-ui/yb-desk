@@ -60,6 +60,14 @@
     <div id="earnings-wrap"></div>
   </section>
 
+  <!-- LATEST NEWS -->
+  <section class="section" id="news-section">
+    <div class="section-head">
+      <h2>&#9612; Latest News</h2>
+    </div>
+    <div id="news-wrap"><div class="loading">Loading...</div></div>
+  </section>
+
   <!-- LATEST RESEARCH BRIEF -->
   <section class="section" id="brief-section">
     <div class="section-head">
@@ -86,6 +94,7 @@
   var TICKER_RE = /^[A-Z][A-Z0-9.\-]{0,11}$/;
   var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
   var EARNINGS_API = "https://youngbullinvests.com/api/earnings-calendar?tickers=";
+  var NEWS_API = "https://youngbullinvests.com/api/ticker-news?tickers=";
 
   D.mountFooter(document.getElementById("site-footer"));
 
@@ -256,6 +265,42 @@
     });
   }
 
+  // ============ LATEST NEWS ============
+  function timeAgo(iso) {
+    if (!iso) return "";
+    var then = new Date(iso).getTime();
+    if (!isFinite(then)) return "";
+    var mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return mins + "m ago";
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24) return hrs + "h ago";
+    return Math.round(hrs / 24) + "d ago";
+  }
+
+  function renderNews() {
+    var wrap = document.getElementById("news-wrap");
+    fetch(NEWS_API + encodeURIComponent(ticker)).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    }).then(function (data) {
+      var items = (data && data.ok && data.news && Array.isArray(data.news[ticker])) ? data.news[ticker] : [];
+      if (!items.length) {
+        wrap.innerHTML = '<div class="empty">No fresh headlines on this name right now.</div>';
+        return;
+      }
+      wrap.innerHTML = '<ul class="news-list">' + items.map(function (n) {
+        var meta = [n.source, timeAgo(n.publishedAt)].filter(Boolean).map(D.esc).join(" &middot; ");
+        return '<li>' +
+          '<a href="' + encodeURI(String(n.url)) + '" target="_blank" rel="noopener nofollow">' + D.esc(n.title) + '</a>' +
+          (meta ? '<span class="news-meta">' + meta + '</span>' : '') +
+          '</li>';
+      }).join("") + '</ul>';
+    }).catch(function () {
+      wrap.innerHTML = '<div class="empty">Headlines are not available right now.</div>';
+    });
+  }
+
   // ============ LATEST RESEARCH BRIEF ============
   function isResearch(r) {
     if (r.type === "research") return true;
@@ -326,6 +371,7 @@
     });
 
     renderEarnings();
+    renderNews();
 
     reportsP.then(function (index) {
       renderBrief(index);
