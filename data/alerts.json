@@ -1,45 +1,45 @@
 {
-  "updated": "2026-07-08T20:35:57.722Z",
+  "updated": "2026-07-08T21:47:48.987Z",
   "alerts": [
     {
       "ticker": "PENG",
       "changePct": 25.1316,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "IQMX",
       "changePct": -11.0163,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "NBIS",
       "changePct": 10.9073,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "WYY",
       "changePct": -10.106,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "WYFI",
       "changePct": 9.9342,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "ANET",
       "changePct": 8.7649,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "CIFR",
       "changePct": 6.7416,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     },
     {
       "ticker": "SILC",
       "changePct": 5.1554,
-      "flaggedAt": "2026-07-08T20:35:57.722Z"
+      "flaggedAt": "2026-07-08T21:47:48.987Z"
     }
   ]
 }
