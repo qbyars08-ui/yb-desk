@@ -1,14 +1,14 @@
 {
-  "updated": "2026-07-09T21:03:11.657Z",
+  "updated": "2026-07-09T21:06:00.971Z",
   "ok": true,
   "marketOpen": true,
   "weekendWindow": false,
-  "dryRun": true,
+  "dryRun": false,
   "checks": [
     {
       "id": "tape",
       "file": "prices.json",
-      "ageMinutes": 36,
+      "ageMinutes": 38,
       "maxAgeMinutes": 210,
       "fresh": true,
       "workflow": "prices.yml",
@@ -17,7 +17,7 @@
     {
       "id": "book",
       "file": "book.json",
-      "ageMinutes": 41,
+      "ageMinutes": 44,
       "maxAgeMinutes": 1800,
       "fresh": true,
       "workflow": "desk-report.yml",
@@ -35,7 +35,7 @@
     {
       "id": "reports",
       "file": "reports-index.json",
-      "ageMinutes": 41,
+      "ageMinutes": 44,
       "maxAgeMinutes": 1800,
       "fresh": true,
       "workflow": "desk-report.yml",
