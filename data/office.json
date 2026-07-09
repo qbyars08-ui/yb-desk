@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:31:20.594Z",
+  "updated": "2026-07-09T20:50:00.953Z",
   "agents": [
     {
       "id": "price-agent",
@@ -47,7 +47,7 @@
       "id": "signals",
       "name": "Signals",
       "role": "Real technicals per name: EMA stack, RSI, MACD, trend read",
-      "lastRun": "2026-07-09T20:31:20.594Z",
+      "lastRun": "2026-07-09T20:50:00.953Z",
       "lastStatus": "ok"
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:31:20.592Z",
+  "updated": "2026-07-09T20:50:00.951Z",
   "method": "mphinance/momentum-mcp EMA stack 8/21/34/55/89 + RSI(14) + MACD(12,26,9), ported to zero-dep Node",
   "signals": {
     "ALMU": {
