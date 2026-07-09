@@ -40,6 +40,6 @@ jobs:
             echo "signals unchanged"
           else
             git commit -m "signals: momentum engine update"
-            git pull --rebase origin "$GITHUB_REF_NAME"
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
             git push
           fi
