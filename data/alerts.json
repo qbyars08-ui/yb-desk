@@ -1,35 +1,35 @@
 {
-  "updated": "2026-07-09T20:27:40.799Z",
+  "updated": "2026-07-09T22:06:37.635Z",
   "alerts": [
     {
       "ticker": "OUST",
       "changePct": 9.4909,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     },
     {
       "ticker": "ARM",
       "changePct": 9.2026,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     },
     {
       "ticker": "NOK",
       "changePct": 7.9498,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     },
     {
       "ticker": "CIFR",
       "changePct": 6.4531,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     },
     {
       "ticker": "IQMX",
       "changePct": 6.4516,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     },
     {
       "ticker": "SILC",
       "changePct": 5.5035,
-      "flaggedAt": "2026-07-09T20:27:40.799Z"
+      "flaggedAt": "2026-07-09T22:06:37.635Z"
     }
   ]
 }
