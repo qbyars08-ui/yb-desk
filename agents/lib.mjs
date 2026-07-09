@@ -72,6 +72,7 @@ const OFFICE_AGENTS = [
   { id: 'research-agent', name: 'Research Agent', role: 'Runs on-demand ticker research briefs' },
   { id: 'member-alerts', name: 'Member Alerts', role: 'Emails opted-in members when their names move past their threshold' },
   { id: 'signals', name: 'Signals', role: 'Real technicals per name: EMA stack, RSI, MACD, trend read' },
+  { id: 'sentinel', name: 'Sentinel', role: 'Verifies every data feed hourly and restarts anything that dies' },
 ];
 
 export function officeSeed() {

@@ -186,6 +186,7 @@
       <h2>&#9612; The Office</h2>
       <span class="note" id="office-note"></span>
     </div>
+    <div id="system-strip" class="system-strip" hidden></div>
     <div class="office-grid" id="office-grid">
       <div class="loading">Loading the office...</div>
     </div>
@@ -227,6 +228,7 @@
     prices: null,
     history: null,      // { updated, series: { TICKER: [[date, close], ...] } }
     signals: null,      // { updated, signals: { TICKER: {trend, score, rsi, macd, ...} } }
+    health: null,       // sentinel health.json, powers the system strip
     bookTickers: {},    // set of tickers in the book
     liveQuotes: {},     // any-ticker quotes fetched from the live tape API
     quotesTried: {},    // tickers we already asked the live tape for (loop guard)
@@ -1195,6 +1197,48 @@
     return { cls: "", label: status };
   }
 
+  // ---- System strip: the desk shows its own receipts. Ages are recomputed
+  // from the artifacts themselves against the VISITOR'S clock, so a dead
+  // sentinel cannot fake freshness. The sentinel's health.json adds the
+  // heal-loop status on top.
+  function renderSystemStrip(health) {
+    var el = document.getElementById("system-strip");
+    if (!el) return;
+    var now = Date.now();
+    function ageOf(iso) {
+      if (!iso) return null;
+      var t = new Date(iso).getTime();
+      return isFinite(t) ? Math.round((now - t) / 60000) : null;
+    }
+    function agoTxt(min) {
+      if (min === null) return "unknown";
+      if (min < 60) return min + "m ago";
+      if (min < 48 * 60) return Math.round(min / 60) + "h ago";
+      return Math.round(min / 1440) + "d ago";
+    }
+    var maxByid = {};
+    ((health && health.checks) || []).forEach(function (c) { maxByid[c.id] = c.maxAgeMinutes; });
+    var items = [
+      { label: "tape", iso: state.prices && state.prices.updated, id: "tape" },
+      { label: "book", iso: state.book && state.book.generated_at, id: "book" },
+      { label: "signals", iso: state.signals && state.signals.updated, id: "signals" }
+    ];
+    var chips = items.map(function (it) {
+      var age = ageOf(it.iso);
+      var max = maxByid[it.id] || 36 * 60;
+      var cls = age === null ? "err" : age <= max ? "ok" : "err";
+      return '<span class="sys-item"><span class="status-dot ' + cls + '"></span>' +
+        D.esc(it.label) + ' <span class="mono">' + D.esc(agoTxt(age)) + '</span></span>';
+    });
+    var checkedAge = ageOf(health && health.updated);
+    var healing = health && Array.isArray(health.checks) && health.checks.some(function (c) { return !c.fresh; });
+    chips.push('<span class="sys-item"><span class="status-dot ' + (checkedAge !== null && checkedAge <= 150 ? "ok" : "idle") + '"></span>' +
+      'self-check <span class="mono">' + D.esc(agoTxt(checkedAge)) + '</span>' + (healing ? ' <span class="loss">healing</span>' : '') + '</span>');
+    el.innerHTML = '<span class="sys-lede">System, verified in your browser:</span> ' + chips.join(" ") +
+      ' <span class="hint">Every feed is checked hourly and restarts itself if it dies.</span>';
+    el.hidden = false;
+  }
+
   function renderOffice(office) {
     var grid = document.getElementById("office-grid");
     var agents = (office && Array.isArray(office.agents)) ? office.agents : [];
@@ -1841,8 +1885,21 @@
   D.loadJSON("data/prices.json").then(function (prices) {
     state.prices = prices;
     var el = document.getElementById("prices-asof");
-    if (prices && prices.updated) el.textContent = "desk tape + live quotes, as of " + D.fmtAsOf(prices.updated);
+    if (prices && prices.updated) {
+      el.textContent = "desk tape + live quotes, as of " + D.fmtAsOf(prices.updated);
+      // Honesty flag: if the tape is old while the market is open, say so
+      // in red instead of letting a stale number pass as live.
+      var ageMin = (Date.now() - new Date(prices.updated).getTime()) / 60000;
+      var d = new Date();
+      var utcMin = d.getUTCHours() * 60 + d.getUTCMinutes();
+      var day = d.getUTCDay();
+      var marketOpen = day >= 1 && day <= 5 && utcMin >= 810 && utcMin <= 1290;
+      if (marketOpen && ageMin > 210) {
+        el.innerHTML = D.esc(el.textContent) + ' <span class="loss">(stale, self-repair running)</span>';
+      }
+    }
     renderDesk();
+    renderSystemStrip(state.health);
     // Book table and headline stats prefer the tape; re-render them now
     // that it has arrived (book.json usually loads first).
     if (state.book) { renderCanonical(state.book); renderBook(state.book); }
@@ -1855,7 +1912,17 @@
   D.loadJSON("data/signals.json").then(function (sig) {
     state.signals = sig;
     renderDesk();
+    renderSystemStrip(state.health);
   }).catch(function () { /* signals optional; desk works without them */ });
+
+  // Sentinel health: powers the system strip in the Office section.
+  D.loadJSON("data/health.json").then(function (health) {
+    state.health = health;
+    renderSystemStrip(health);
+  }).catch(function () {
+    // No health file yet: still show the strip from raw artifact ages.
+    renderSystemStrip(null);
+  });
 
   D.loadJSON("data/history.json").then(function (history) {
     state.history = history;

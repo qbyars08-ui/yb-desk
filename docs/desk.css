@@ -233,6 +233,20 @@ table.grid tbody tr.tot td {
 .news-list li a:hover { color: var(--gold); }
 .news-meta { color: var(--text-faint); font-size: 0.72rem; font-family: var(--mono); }
 .dd-chart svg { max-width: 100%; max-height: 190px; height: auto; }
+.system-strip {
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
+.sys-lede { color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.64rem; font-family: var(--mono); }
+.sys-item { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
 .sig-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .sig-chip {
   border: 1px solid var(--border-strong);
