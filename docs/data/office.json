@@ -1,25 +1,25 @@
 {
-  "updated": "2026-07-09T20:27:40.800Z",
+  "updated": "2026-07-09T20:27:33.494Z",
   "agents": [
     {
       "id": "price-agent",
       "name": "Price Agent",
       "role": "Pulls live quotes for the book and watchlist",
-      "lastRun": "2026-07-09T20:27:40.752Z",
+      "lastRun": "2026-07-08T22:44:14.897Z",
       "lastStatus": "ok"
     },
     {
       "id": "desk-report",
       "name": "Desk Report",
       "role": "Writes the deterministic daily desk report",
-      "lastRun": "2026-07-09T20:21:56.202Z",
+      "lastRun": "2026-07-08T22:44:14.971Z",
       "lastStatus": "ok"
     },
     {
       "id": "watchdog",
       "name": "Watchdog",
       "role": "Flags book tickers moving 5 percent or more",
-      "lastRun": "2026-07-09T20:27:40.800Z",
+      "lastRun": "2026-07-08T21:47:48.989Z",
       "lastStatus": "ok"
     },
     {
@@ -33,7 +33,7 @@
       "id": "book-sync",
       "name": "Book Sync",
       "job": "pulls Quinn's live book daily",
-      "lastRun": "2026-07-09T20:21:55.765Z",
+      "lastRun": "2026-07-08T22:44:14.508Z",
       "lastStatus": "ok"
     },
     {
@@ -41,6 +41,13 @@
       "name": "Member Alerts",
       "role": "Emails opted-in members when their names move past their threshold",
       "lastRun": "2026-07-08T01:20:43.046Z",
+      "lastStatus": "ok"
+    },
+    {
+      "id": "signals",
+      "name": "Signals",
+      "role": "Real technicals per name: EMA stack, RSI, MACD, trend read",
+      "lastRun": "2026-07-09T20:27:33.494Z",
       "lastStatus": "ok"
     }
   ]

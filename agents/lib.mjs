@@ -71,6 +71,7 @@ const OFFICE_AGENTS = [
   { id: 'watchdog', name: 'Watchdog', role: 'Flags book tickers moving 5 percent or more' },
   { id: 'research-agent', name: 'Research Agent', role: 'Runs on-demand ticker research briefs' },
   { id: 'member-alerts', name: 'Member Alerts', role: 'Emails opted-in members when their names move past their threshold' },
+  { id: 'signals', name: 'Signals', role: 'Real technicals per name: EMA stack, RSI, MACD, trend read' },
 ];
 
 export function officeSeed() {

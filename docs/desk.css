@@ -233,6 +233,16 @@ table.grid tbody tr.tot td {
 .news-list li a:hover { color: var(--gold); }
 .news-meta { color: var(--text-faint); font-size: 0.72rem; font-family: var(--mono); }
 .dd-chart svg { max-width: 100%; max-height: 190px; height: auto; }
+.sig-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.sig-chip {
+  border: 1px solid var(--border-strong);
+  background: var(--bg-input);
+  border-radius: 2px;
+  padding: 4px 9px;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+.sig-chip .sig-k { color: var(--text-faint); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .dd-note-text { white-space: pre-wrap; }
 .dd-note-input {
   width: 100%;

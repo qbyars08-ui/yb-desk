@@ -1,0 +1,41 @@
+name: signals
+
+on:
+  schedule:
+    # Twice a day on offset minutes (GitHub throttles herd-minute crons).
+    # Post-open and post-close, weekdays.
+    - cron: '17 14 * * 1-5'
+    - cron: '17 21 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tape-writes
+  cancel-in-progress: false
+
+jobs:
+  signals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: compute technical signals
+        run: node agents/signals.mjs
+
+      - name: commit signals
+        run: |
+          git config user.name "yb-desk-agent"
+          git config user.email "yb-desk-agent@users.noreply.github.com"
+          git add data docs/data
+          if git diff --cached --quiet; then
+            echo "signals unchanged"
+          else
+            git commit -m "signals: technical update"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push
+          fi

@@ -1,0 +1,483 @@
+{
+  "updated": "2026-07-09T20:27:33.490Z",
+  "method": "mphinance/momentum-mcp EMA stack 8/21/34/55/89 + RSI(14) + MACD(12,26,9), ported to zero-dep Node",
+  "signals": {
+    "ALMU": {
+      "price": 18.25,
+      "trend": "downtrend",
+      "score": 42,
+      "rsi": 39.5,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -1.396,
+        "signal": -0.889,
+        "hist": -0.507
+      },
+      "emaStack": {
+        "8": 19.15,
+        "21": 20.95,
+        "34": 21.5,
+        "55": 21.29,
+        "89": 20.49
+      },
+      "aboveStack": false
+    },
+    "ANET": {
+      "price": 184.69,
+      "trend": "strong uptrend",
+      "score": 95,
+      "rsi": 61.9,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 4.57,
+        "signal": 3.067,
+        "hist": 1.503
+      },
+      "emaStack": {
+        "8": 172.89,
+        "21": 167.28,
+        "34": 164.09,
+        "55": 160.02,
+        "89": 154.96
+      },
+      "aboveStack": true
+    },
+    "ARM": {
+      "price": 327.87,
+      "trend": "uptrend",
+      "score": 64,
+      "rsi": 48.7,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -1.849,
+        "signal": 9.136,
+        "hist": -10.986
+      },
+      "emaStack": {
+        "8": 325.48,
+        "21": 337.65,
+        "34": 326.75,
+        "55": 299.87,
+        "89": 263.81
+      },
+      "aboveStack": true
+    },
+    "ASTS": {
+      "price": 73.88,
+      "trend": "strong downtrend",
+      "score": 27,
+      "rsi": 42.8,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -3.832,
+        "signal": -3.572,
+        "hist": -0.26
+      },
+      "emaStack": {
+        "8": 77.85,
+        "21": 81.82,
+        "34": 84.15,
+        "55": 85.66,
+        "89": 85.85
+      },
+      "aboveStack": false
+    },
+    "BRUN": {
+      "price": 30.2,
+      "trend": "mixed",
+      "score": 54,
+      "rsi": 46.6,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 0.438,
+        "signal": 1.476,
+        "hist": -1.038
+      },
+      "emaStack": {
+        "8": 31.69,
+        "21": 32.25,
+        "34": 30.83,
+        "55": 27.95,
+        "89": 24.3
+      },
+      "aboveStack": true
+    },
+    "CIFR": {
+      "price": 23.26,
+      "trend": "uptrend",
+      "score": 64,
+      "rsi": 49.3,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.333,
+        "signal": 0.263,
+        "hist": -0.596
+      },
+      "emaStack": {
+        "8": 22.72,
+        "21": 23.58,
+        "34": 23.26,
+        "55": 22.26,
+        "89": 20.84
+      },
+      "aboveStack": true
+    },
+    "CRDO": {
+      "price": 265.65,
+      "trend": "strong uptrend",
+      "score": 79,
+      "rsi": 55.1,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 10.155,
+        "signal": 12.925,
+        "hist": -2.77
+      },
+      "emaStack": {
+        "8": 258.22,
+        "21": 251.31,
+        "34": 239.49,
+        "55": 221.18,
+        "89": 200.18
+      },
+      "aboveStack": true
+    },
+    "EUV": {
+      "price": 27.19,
+      "trend": "downtrend",
+      "score": 42,
+      "rsi": 47.3,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.26,
+        "signal": 0.183,
+        "hist": -0.443
+      },
+      "emaStack": {
+        "8": 27.48,
+        "21": 28.11,
+        "34": 28.04
+      },
+      "aboveStack": false
+    },
+    "IQMX": {
+      "price": 12.21,
+      "trend": "strong uptrend",
+      "score": 95,
+      "rsi": 55.3,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 0.395,
+        "signal": 0.236,
+        "hist": 0.159
+      },
+      "emaStack": {
+        "8": 12.16,
+        "21": 11.65,
+        "34": 11.44,
+        "55": 11.25,
+        "89": 11.06
+      },
+      "aboveStack": true
+    },
+    "LPKFF": {
+      "price": 20.32,
+      "trend": "downtrend",
+      "score": 42,
+      "rsi": 39.1,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -1.271,
+        "signal": -0.323,
+        "hist": -0.947
+      },
+      "emaStack": {
+        "8": 21.99,
+        "21": 24.07,
+        "34": 24.16,
+        "55": 22.86,
+        "89": 20.35
+      },
+      "aboveStack": false
+    },
+    "LUMN": {
+      "price": 6.75,
+      "trend": "downtrend",
+      "score": 42,
+      "rsi": 32.6,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.653,
+        "signal": -0.528,
+        "hist": -0.124
+      },
+      "emaStack": {
+        "8": 6.95,
+        "21": 7.68,
+        "34": 8.05,
+        "55": 8.24,
+        "89": 8.23
+      },
+      "aboveStack": false
+    },
+    "MU": {
+      "price": 991.64,
+      "trend": "mixed",
+      "score": 54,
+      "rsi": 50,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 24.454,
+        "signal": 54.986,
+        "hist": -30.532
+      },
+      "emaStack": {
+        "8": 1006.66,
+        "21": 1011.91,
+        "34": 962.99,
+        "55": 873.59,
+        "89": 757.16
+      },
+      "aboveStack": true
+    },
+    "NBIS": {
+      "price": 216.2,
+      "trend": "mixed",
+      "score": 54,
+      "rsi": 45.3,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -2.576,
+        "signal": 5.66,
+        "hist": -8.236
+      },
+      "emaStack": {
+        "8": 224.14,
+        "21": 234.16,
+        "34": 228.57,
+        "55": 213.15,
+        "89": 190.54
+      },
+      "aboveStack": true
+    },
+    "NOK": {
+      "price": 12.9,
+      "trend": "uptrend",
+      "score": 64,
+      "rsi": 46.7,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.477,
+        "signal": -0.308,
+        "hist": -0.169
+      },
+      "emaStack": {
+        "8": 12.63,
+        "21": 13.26,
+        "34": 13.35,
+        "55": 12.93,
+        "89": 11.96
+      },
+      "aboveStack": true
+    },
+    "OSS": {
+      "price": 14.54,
+      "trend": "mixed",
+      "score": 54,
+      "rsi": 40.8,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.365,
+        "signal": 0.082,
+        "hist": -0.447
+      },
+      "emaStack": {
+        "8": 15.4,
+        "21": 16.17,
+        "34": 15.98,
+        "55": 15.13,
+        "89": 13.75
+      },
+      "aboveStack": true
+    },
+    "OUST": {
+      "price": 47.53,
+      "trend": "mixed",
+      "score": 69,
+      "rsi": 52.9,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 2.61,
+        "signal": 3.335,
+        "hist": -0.726
+      },
+      "emaStack": {
+        "8": 47.92,
+        "21": 46.14,
+        "34": 43.4,
+        "55": 39.55,
+        "89": 35.44
+      },
+      "aboveStack": true
+    },
+    "PENG": {
+      "price": 81.39,
+      "trend": "strong uptrend",
+      "score": 95,
+      "rsi": 63.5,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 4.853,
+        "signal": 4.402,
+        "hist": 0.451
+      },
+      "emaStack": {
+        "8": 71.49,
+        "21": 66.64,
+        "34": 62.03,
+        "55": 55.16,
+        "89": 47.18
+      },
+      "aboveStack": true
+    },
+    "RKLB": {
+      "price": 82.55,
+      "trend": "downtrend",
+      "score": 42,
+      "rsi": 38.1,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -6.514,
+        "signal": -5.147,
+        "hist": -1.367
+      },
+      "emaStack": {
+        "8": 89.45,
+        "21": 97.05,
+        "34": 99.96,
+        "55": 99.09,
+        "89": 94.32
+      },
+      "aboveStack": false
+    },
+    "SILC": {
+      "price": 43.9,
+      "trend": "uptrend",
+      "score": 64,
+      "rsi": 51.9,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 0.049,
+        "signal": 0.332,
+        "hist": -0.283
+      },
+      "emaStack": {
+        "8": 42.71,
+        "21": 42.98,
+        "34": 42.25,
+        "55": 39.89,
+        "89": 35.92
+      },
+      "aboveStack": true
+    },
+    "SMH": {
+      "price": 607.73,
+      "trend": "uptrend",
+      "score": 64,
+      "rsi": 50.4,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 3.774,
+        "signal": 11.02,
+        "hist": -7.246
+      },
+      "emaStack": {
+        "8": 606.66,
+        "21": 610.03,
+        "34": 598.52,
+        "55": 572.76,
+        "89": 534.88
+      },
+      "aboveStack": true
+    },
+    "TEM": {
+      "price": 61.5,
+      "trend": "uptrend",
+      "score": 80,
+      "rsi": 63.2,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 2.956,
+        "signal": 2.315,
+        "hist": 0.641
+      },
+      "emaStack": {
+        "8": 58.85,
+        "21": 55.46,
+        "34": 53.75,
+        "55": 52.82,
+        "89": 53.48
+      },
+      "aboveStack": true
+    },
+    "WYFI": {
+      "price": 38.84,
+      "trend": "strong uptrend",
+      "score": 79,
+      "rsi": 57.8,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 2.297,
+        "signal": 2.701,
+        "hist": -0.404
+      },
+      "emaStack": {
+        "8": 36.25,
+        "21": 34.45,
+        "34": 32.17,
+        "55": 29.16,
+        "89": 26.19
+      },
+      "aboveStack": true
+    },
+    "WYY": {
+      "price": 13.11,
+      "trend": "mixed",
+      "score": 69,
+      "rsi": 47.3,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": 0.888,
+        "signal": 1.448,
+        "hist": -0.56
+      },
+      "emaStack": {
+        "8": 14.56,
+        "21": 14.22,
+        "34": 13.15,
+        "55": 11.67,
+        "89": 10.1
+      },
+      "aboveStack": true
+    },
+    "XNDU": {
+      "price": 11.27,
+      "trend": "strong downtrend",
+      "score": 43,
+      "rsi": 41.6,
+      "rsiNote": "neutral",
+      "macd": {
+        "macd": -0.934,
+        "signal": -1.005,
+        "hist": 0.071
+      },
+      "emaStack": {
+        "8": 11.55,
+        "21": 12.36,
+        "34": 13.14,
+        "55": 13.65
+      },
+      "aboveStack": false
+    }
+  }
+}

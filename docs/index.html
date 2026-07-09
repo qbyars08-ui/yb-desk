@@ -226,6 +226,7 @@
     book: null,
     prices: null,
     history: null,      // { updated, series: { TICKER: [[date, close], ...] } }
+    signals: null,      // { updated, signals: { TICKER: {trend, score, rsi, macd, ...} } }
     bookTickers: {},    // set of tickers in the book
     liveQuotes: {},     // any-ticker quotes fetched from the live tape API
     quotesTried: {},    // tickers we already asked the live tape for (loop guard)
@@ -707,6 +708,29 @@
       D.sparkSVG(list, { unit: "%" }) + '</div>';
   }
 
+  // Real technical read for a ticker, from signals.json (mphinance momentum
+  // methodology: EMA stack, RSI, MACD, trend). Rendered as a compact block.
+  function signalBlockHtml(ticker) {
+    var s = (state.signals && state.signals.signals) ? state.signals.signals[String(ticker).toUpperCase()] : null;
+    if (!s || s.error) return "";
+    var scoreCls = s.score >= 66 ? "gain" : s.score <= 40 ? "loss" : "flat";
+    var trendCls = /uptrend/.test(s.trend) ? "gain" : /downtrend/.test(s.trend) ? "loss" : "flat";
+    var parts = [];
+    parts.push('<span class="sig-chip"><span class="sig-k">Trend</span> <span class="' + trendCls + '">' + D.esc(s.trend) + '</span></span>');
+    parts.push('<span class="sig-chip"><span class="sig-k">Momentum</span> <span class="mono ' + scoreCls + '">' + D.esc(String(s.score)) + '/100</span></span>');
+    if (typeof s.rsi === "number") {
+      var rsiCls = s.rsiNote === "overbought" ? "loss" : s.rsiNote === "oversold" ? "gain" : "flat";
+      parts.push('<span class="sig-chip"><span class="sig-k">RSI</span> <span class="mono ' + rsiCls + '">' + D.esc(String(s.rsi)) + '</span> ' + D.esc(s.rsiNote || "") + '</span>');
+    }
+    if (s.macd && typeof s.macd.hist === "number") {
+      parts.push('<span class="sig-chip"><span class="sig-k">MACD</span> <span class="' + (s.macd.hist >= 0 ? "gain" : "loss") + '">' + (s.macd.hist >= 0 ? "rising" : "falling") + '</span></span>');
+    }
+    parts.push('<span class="sig-chip"><span class="sig-k">vs EMA stack</span> <span class="' + (s.aboveStack ? "gain" : "loss") + '">' + (s.aboveStack ? "above" : "below") + '</span></span>');
+    return '<div class="detail-block"><div class="lab">Technical read</div>' +
+      '<div class="sig-row">' + parts.join("") + '</div>' +
+      '<div class="hint" style="margin-top:4px">EMA 8/21/34/55/89 stack, RSI, MACD. Method from mphinance momentum.</div></div>';
+  }
+
   // The rich inline panel a desk row expands into.
   function deskDetailRowHtml(r) {
     var t = String(r.ticker).toUpperCase();
@@ -718,6 +742,7 @@
     }
     var blocks = [];
     blocks.push(deskChartBlock(t));
+    blocks.push(signalBlockHtml(t));
 
     if (pos && pos.thesis) {
       blocks.push('<div class="detail-block"><div class="lab">Quinn\'s thesis</div><div class="body">' + D.esc(pos.thesis) + '</div></div>');
@@ -1816,6 +1841,11 @@
   });
 
   // Price history powers both performance charts. Never blocks the rest of the page.
+  D.loadJSON("data/signals.json").then(function (sig) {
+    state.signals = sig;
+    renderDesk();
+  }).catch(function () { /* signals optional; desk works without them */ });
+
   D.loadJSON("data/history.json").then(function (history) {
     state.history = history;
     renderBookPerf();
