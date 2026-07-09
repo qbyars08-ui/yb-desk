@@ -190,6 +190,16 @@
     <div id="scan-wrap"><div class="loading">Loading the scan...</div></div>
   </section>
 
+  <!-- SECTION: PROVING GROUND -->
+  <section class="section" id="proving">
+    <div class="section-head">
+      <h2>&#9612; Proving Ground</h2>
+      <span class="note" id="proving-note"></span>
+    </div>
+    <p class="hint" style="margin:0 0 12px">Six classic strategies, backtested over 2 years of the book's names with real slippage, in the open. Spoiler: most lose to just holding. That is the point.</p>
+    <div id="proving-wrap"><div class="loading">Loading backtests...</div></div>
+  </section>
+
   <!-- SECTION C: THE OFFICE -->
   <section class="section" id="office">
     <div class="section-head">
@@ -1207,6 +1217,34 @@
     return { cls: "", label: status };
   }
 
+  // ---- Proving Ground: his backtest engine's results, honestly framed.
+  function renderProving(bt) {
+    var wrap = document.getElementById("proving-wrap");
+    var strategies = (bt && Array.isArray(bt.strategies)) ? bt.strategies.filter(function (s) { return s.agg; }) : [];
+    if (!strategies.length) {
+      wrap.innerHTML = '<div class="empty">No backtests on file yet. The engine runs daily.</div>';
+      return;
+    }
+    if (bt.updated) document.getElementById("proving-note").textContent = bt.period + " window, as of " + D.fmtAsOf(bt.updated);
+    var rows = strategies.map(function (s) {
+      var a = s.agg;
+      var beatCls = a.beatBuyHold > a.names / 2 ? "gain" : "loss";
+      var stratCls = D.pctClass(a.medianStrategyPct);
+      return '<tr>' +
+        '<td class="l"><b>' + D.esc(s.id.replace(/_/g, " ")) + '</b><br><span class="hint">' + D.esc(s.description || "") + '</span></td>' +
+        '<td><span class="' + stratCls + '">' + D.fmtPct(a.medianStrategyPct) + '</span></td>' +
+        '<td><span class="' + D.pctClass(a.medianBuyHoldPct) + '">' + D.fmtPct(a.medianBuyHoldPct) + '</span></td>' +
+        '<td><span class="' + beatCls + '">' + a.beatBuyHold + '/' + a.names + '</span></td>' +
+        '<td>' + (a.avgWinRatePct != null ? a.avgWinRatePct + '%' : '-') + '</td>' +
+        '<td class="l"><span class="hint">best ' + D.esc(s.best.ticker) + ' ' + D.fmtPct(s.best.strategyPct) + ', worst ' + D.esc(s.worst.ticker) + ' ' + D.fmtPct(s.worst.strategyPct) + '</span></td>' +
+        '</tr>';
+    }).join("");
+    wrap.innerHTML = '<div class="table-scroll"><table class="grid">' +
+      '<thead><tr><th class="l">Strategy</th><th>Median result</th><th>Just holding</th><th>Beat holding</th><th>Win rate</th><th class="l">Range</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div>' +
+      '<p class="hint" style="margin-top:8px">Simulated on history with 10bps slippage by the momentum engine. History is not the future, and this is not advice.</p>';
+  }
+
   // ---- Market Scan: three market-wide screens from the momentum engine.
   // Every ticker links to its full page. Descriptive only.
   function renderScan(scan) {
@@ -1952,6 +1990,10 @@
     renderDesk();
     renderSystemStrip(state.health);
   }).catch(function () { /* signals optional; desk works without them */ });
+
+  D.loadJSON("data/backtests.json").then(renderProving).catch(function () {
+    document.getElementById("proving-wrap").innerHTML = '<div class="empty">No backtests on file yet. The engine runs daily.</div>';
+  });
 
   D.loadJSON("data/scan.json").then(renderScan).catch(function () {
     document.getElementById("scan-wrap").innerHTML = '<div class="empty">No scan on file yet. The engine runs twice a day.</div>';

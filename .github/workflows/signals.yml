@@ -34,6 +34,9 @@ jobs:
       - name: scan the whole market
         run: python agents/scan_pro.py
 
+      - name: run the proving ground
+        run: python agents/backtest_pro.py
+
       - name: commit signals
         run: |
           git config user.name "yb-desk-agent"
