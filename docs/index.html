@@ -412,6 +412,92 @@
     catch (e) { showMsg("Could not save to this browser. Storage may be full or blocked.", "err"); }
   }
 
+  // Private per-ticker notes: your own thesis on a name. Kept in a separate
+  // map, browser-only, and deliberately NEVER placed in a share link, since a
+  // note is private to you. Keyed by ticker so it survives remove/re-add.
+  var NOTES_KEY = "ybdesk.notes.v1";
+  function loadNotes() {
+    try {
+      var m = JSON.parse(localStorage.getItem(NOTES_KEY) || "{}");
+      return (m && typeof m === "object" && !Array.isArray(m)) ? m : {};
+    } catch (e) { return {}; }
+  }
+  function saveNotes(m) {
+    try { localStorage.setItem(NOTES_KEY, JSON.stringify(m)); } catch (e) { /* storage blocked */ }
+  }
+  function noteBlockView(t) {
+    var note = loadNotes()[t];
+    if (note) {
+      return '<div class="lab">Your note</div>' +
+        '<div class="body dd-note-text">' + D.esc(note) + '</div>' +
+        '<button type="button" class="btn ghost dd-note-edit" data-note="' + D.esc(t) + '" style="margin-top:6px">Edit note</button>';
+    }
+    return '<div class="lab">Your note</div>' +
+      '<button type="button" class="btn ghost dd-note-edit" data-note="' + D.esc(t) + '">Add a private note</button>';
+  }
+  function noteBlockEdit(t) {
+    var note = loadNotes()[t] || "";
+    return '<div class="lab">Your note</div>' +
+      '<textarea class="dd-note-input" data-note="' + D.esc(t) + '" rows="3" maxlength="600" ' +
+      'placeholder="Why you own it, your target, what you are watching. Private to this browser.">' + D.esc(note) + '</textarea>' +
+      '<div style="display:flex;gap:8px;margin-top:6px">' +
+      '<button type="button" class="btn dd-note-save" data-note="' + D.esc(t) + '">Save</button>' +
+      '<button type="button" class="btn ghost dd-note-cancel" data-note="' + D.esc(t) + '">Cancel</button>' +
+      '</div>';
+  }
+  function noteBlockHtml(t) {
+    return '<div class="detail-block dd-note-block" data-note-block="' + D.esc(t) + '">' + noteBlockView(t) + '</div>';
+  }
+  function noteBlockEl(t) {
+    return document.querySelector('.dd-note-block[data-note-block="' + t + '"]');
+  }
+  // One delegated listener for the whole desk table, added once at boot so it
+  // never stacks across re-renders. Handles edit/save/cancel, and stops the
+  // click from toggling the row open/closed.
+  function wireNoteEditing() {
+    var body = document.getElementById("desk-body");
+    if (!body) return;
+    body.addEventListener("click", function (e) {
+      var tgt = e.target;
+      if (!tgt || !tgt.closest) return;
+      var edit = tgt.closest(".dd-note-edit");
+      if (edit) {
+        e.stopPropagation();
+        var t = edit.getAttribute("data-note");
+        var block = noteBlockEl(t);
+        if (block) {
+          block.innerHTML = noteBlockEdit(t);
+          var ta = block.querySelector(".dd-note-input");
+          if (ta) { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); }
+        }
+        return;
+      }
+      var save = tgt.closest(".dd-note-save");
+      if (save) {
+        e.stopPropagation();
+        var st = save.getAttribute("data-note");
+        var block2 = noteBlockEl(st);
+        var input = block2 ? block2.querySelector(".dd-note-input") : null;
+        if (block2 && input) {
+          var val = String(input.value || "").trim();
+          var m = loadNotes();
+          if (val) m[st] = val; else delete m[st];
+          saveNotes(m);
+          block2.innerHTML = noteBlockView(st);
+        }
+        return;
+      }
+      var cancel = tgt.closest(".dd-note-cancel");
+      if (cancel) {
+        e.stopPropagation();
+        var ct = cancel.getAttribute("data-note");
+        var block3 = noteBlockEl(ct);
+        if (block3) block3.innerHTML = noteBlockView(ct);
+        return;
+      }
+    });
+  }
+
   // Optional target buy prices, keyed by ticker in a separate map so the
   // watchlist itself (and every share link that carries it) stays a plain
   // list of tickers.
@@ -666,6 +752,7 @@
       blocks.push('<div class="detail-block"><div class="lab">Your target</div><div class="body">' + D.esc(tline) + '</div></div>');
     }
 
+    blocks.push(noteBlockHtml(t));
     blocks.push('<div class="detail-block"><div class="lab">Latest news</div>' +
       '<div class="dd-news" data-news-ticker="' + D.esc(t) + '"><p class="dim" style="margin:0">Open to load headlines...</p></div></div>');
     blocks.push('<div class="detail-block"><div class="body"><a href="ticker.html?t=' + encodeURIComponent(t) +
@@ -1684,6 +1771,7 @@
   wireShareButton();
   wireShareCard();
   wireDeskCheck();
+  wireNoteEditing();
   checkForSharedLink();
 
   // Hero CTA: land the visitor in the add-position form, cursor ready.

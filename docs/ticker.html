@@ -175,6 +175,23 @@
     });
   }
 
+  // Your private note for this ticker, read from the desk's localStorage
+  // (same origin). Shown here read-only; you edit it on the Desk.
+  function userNoteFor(t) {
+    try {
+      var m = JSON.parse(localStorage.getItem("ybdesk.notes.v1") || "{}");
+      var note = m && m[String(t).toUpperCase()];
+      return (typeof note === "string" && note.trim()) ? note.trim() : null;
+    } catch (e) { return null; }
+  }
+  function userNoteBlock() {
+    var note = userNoteFor(ticker);
+    if (!note) return "";
+    return '<div class="detail-block"><div class="lab">Your note</div>' +
+      '<div class="body" style="white-space:pre-wrap">' + D.esc(note) + '</div>' +
+      '<div class="hint" style="margin-top:4px">Private to your browser. Edit it on the <a href="index.html">Desk</a>.</div></div>';
+  }
+
   // ============ THESIS ============
   function renderThesis(book) {
     var wrap = document.getElementById("thesis-wrap");
@@ -185,7 +202,10 @@
     }
 
     if (!pos) {
-      wrap.innerHTML = '<div class="empty">Not in Quinn\'s book. No thesis on file.</div>';
+      var noteOnly = userNoteBlock();
+      wrap.innerHTML = noteOnly
+        ? '<div class="detail-inner">' + noteOnly + '</div>'
+        : '<div class="empty">Not in Quinn\'s book. Add your own note on the <a href="index.html">Desk</a>.</div>';
       return;
     }
 
@@ -212,6 +232,8 @@
     if (!blocks.length) {
       blocks.push('<div class="detail-block"><div class="body dim">No thesis detail on file for this position.</div></div>');
     }
+    var mine = userNoteBlock();
+    if (mine) blocks.push(mine);
     wrap.innerHTML = '<div class="detail-inner">' + blocks.join("") + '</div>';
   }
 
