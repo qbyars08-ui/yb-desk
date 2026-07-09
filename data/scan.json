@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-09T21:12:03.339775+00:00",
+  "updated": "2026-07-09T22:14:03.095269+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 241,
+      "totalMatches": 242,
       "rows": [
         {
           "ticker": "TXG",
@@ -120,7 +120,7 @@
           "company": "MDA Space Ltd.",
           "price": 35.39,
           "changePct": -8.48,
-          "relVol": 6.7,
+          "relVol": 7.0,
           "rsi": 41.9,
           "cap": "4.9B"
         },
@@ -147,7 +147,7 @@
           "company": "Houlihan Lokey, Inc.",
           "price": 136.44,
           "changePct": 1.59,
-          "relVol": 4.1,
+          "relVol": 4.2,
           "rsi": 44.7,
           "cap": "9.5B"
         },
@@ -184,8 +184,17 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 8,
+      "totalMatches": 9,
       "rows": [
+        {
+          "ticker": "VOD",
+          "company": "Vodafone Group Plc",
+          "price": 13.08,
+          "changePct": -0.08,
+          "relVol": 0.5,
+          "rsi": 28.4,
+          "cap": "30.2B"
+        },
         {
           "ticker": "STLA",
           "company": "Stellantis N.V.",
@@ -200,7 +209,7 @@
           "company": "Telus Corporation",
           "price": 10.41,
           "changePct": -0.38,
-          "relVol": 0.6,
+          "relVol": 0.7,
           "rsi": 25.0,
           "cap": "16.4B"
         },
