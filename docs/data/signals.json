@@ -1,385 +1,329 @@
 {
-  "updated": "2026-07-09T20:50:00.951Z",
-  "method": "mphinance/momentum-mcp EMA stack 8/21/34/55/89 + RSI(14) + MACD(12,26,9), ported to zero-dep Node",
+  "updated": "2026-07-09T20:52:57.097466+00:00",
+  "method": "mphinance/momentum-mcp analyze_technicals (RSI, MACD, EMA 8/21/34/55/89, SMA, ADX+DI, ATR, Bollinger)",
   "signals": {
     "ALMU": {
       "price": 18.25,
       "trend": "downtrend",
-      "score": 42,
+      "score": 44,
       "rsi": 39.5,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -1.396,
-        "signal": -0.889,
-        "hist": -0.507
-      },
-      "emaStack": {
-        "8": 19.15,
-        "21": 20.95,
-        "34": 21.5,
-        "55": 21.29,
-        "89": 20.49
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 15.58,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 12.5,
+      "sma50": 23.26,
+      "sma200": 17.93,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "ALMU last traded at 18.25. RSI(14) is 39.5 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.8890."
     },
     "ANET": {
       "price": 184.69,
-      "trend": "strong uptrend",
-      "score": 95,
-      "rsi": 61.9,
+      "trend": "mixed",
+      "score": 82,
+      "rsi": 61.87,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 4.57,
-        "signal": 3.067,
-        "hist": 1.503
-      },
-      "emaStack": {
-        "8": 172.89,
-        "21": 167.28,
-        "34": 164.09,
-        "55": 160.02,
-        "89": 154.96
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 17.11,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 5.5,
+      "sma50": 159.91,
+      "sma200": 143.74,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "ANET last traded at 184.69000244140625. RSI(14) is 61.9 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 3.0672."
     },
     "ARM": {
       "price": 327.87,
       "trend": "uptrend",
-      "score": 64,
-      "rsi": 48.7,
+      "score": 86,
+      "rsi": 48.68,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -1.849,
-        "signal": 9.136,
-        "hist": -10.986
-      },
-      "emaStack": {
-        "8": 325.48,
-        "21": 337.65,
-        "34": 326.75,
-        "55": 299.87,
-        "89": 263.81
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 24.67,
+      "adxNote": "trend forming",
+      "diDir": "bull",
+      "atrPct": 10.1,
+      "sma50": 306.7,
+      "sma200": 180.44,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "ARM last traded at 327.8699951171875. RSI(14) is 48.7 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 9.1364."
     },
     "ASTS": {
       "price": 73.88,
-      "trend": "strong downtrend",
-      "score": 27,
-      "rsi": 42.8,
+      "trend": "downtrend",
+      "score": 34,
+      "rsi": 42.77,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -3.832,
-        "signal": -3.572,
-        "hist": -0.26
-      },
-      "emaStack": {
-        "8": 77.85,
-        "21": 81.82,
-        "34": 84.15,
-        "55": 85.66,
-        "89": 85.85
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 13.94,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 11.5,
+      "sma50": 86.15,
+      "sma200": 82.81,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "ASTS last traded at 73.87999725341797. RSI(14) is 42.8 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -3.5720."
     },
     "CIFR": {
       "price": 23.26,
-      "trend": "uptrend",
-      "score": 64,
-      "rsi": 49.3,
+      "trend": "mixed",
+      "score": 70,
+      "rsi": 49.26,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.333,
-        "signal": 0.263,
-        "hist": -0.596
-      },
-      "emaStack": {
-        "8": 22.72,
-        "21": 23.58,
-        "34": 23.26,
-        "55": 22.26,
-        "89": 20.84
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 18.0,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 10.8,
+      "sma50": 22.69,
+      "sma200": 18.13,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "CIFR last traded at 23.260000228881836. RSI(14) is 49.3 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 0.2630."
     },
     "CRDO": {
       "price": 265.65,
       "trend": "strong uptrend",
-      "score": 79,
-      "rsi": 55.1,
+      "score": 100,
+      "rsi": 55.13,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 10.155,
-        "signal": 12.925,
-        "hist": -2.77
-      },
-      "emaStack": {
-        "8": 258.22,
-        "21": 251.31,
-        "34": 239.49,
-        "55": 221.18,
-        "89": 200.18
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 25.21,
+      "adxNote": "strong trend",
+      "diDir": "bull",
+      "atrPct": 10.4,
+      "sma50": 223.06,
+      "sma200": 160.55,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "CRDO last traded at 265.6499938964844. RSI(14) is 55.1 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 12.9251."
     },
     "IQMX": {
       "price": 12.21,
       "trend": "strong uptrend",
-      "score": 95,
-      "rsi": 55.3,
+      "score": 100,
+      "rsi": 55.33,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 0.395,
-        "signal": 0.236,
-        "hist": 0.159
-      },
-      "emaStack": {
-        "8": 12.16,
-        "21": 11.65,
-        "34": 11.44,
-        "55": 11.25,
-        "89": 11.06
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 31.64,
+      "adxNote": "strong trend",
+      "diDir": "bull",
+      "atrPct": 7.2,
+      "sma50": 11.27,
+      "sma200": 10.6,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "IQMX last traded at 12.210000038146973. RSI(14) is 55.3 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 0.2358."
     },
     "LPKFF": {
       "price": 20.32,
       "trend": "downtrend",
-      "score": 42,
-      "rsi": 39.1,
+      "score": 44,
+      "rsi": 39.09,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -1.271,
-        "signal": -0.323,
-        "hist": -0.947
-      },
-      "emaStack": {
-        "8": 21.99,
-        "21": 24.07,
-        "34": 24.16,
-        "55": 22.86,
-        "89": 20.35
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 18.94,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 11.3,
+      "sma50": 25.7,
+      "sma200": 12.83,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "LPKFF last traded at 20.31999969482422. RSI(14) is 39.1 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.3232."
     },
     "LUMN": {
       "price": 6.75,
-      "trend": "downtrend",
-      "score": 42,
+      "trend": "mixed",
+      "score": 56,
       "rsi": 32.6,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.653,
-        "signal": -0.528,
-        "hist": -0.124
-      },
-      "emaStack": {
-        "8": 6.95,
-        "21": 7.68,
-        "34": 8.05,
-        "55": 8.24,
-        "89": 8.23
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 31.32,
+      "adxNote": "strong trend",
+      "diDir": "bull",
+      "atrPct": 7.3,
+      "sma50": 8.79,
+      "sma200": 8.07,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "LUMN last traded at 6.75. RSI(14) is 32.6 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.5282."
     },
     "MU": {
       "price": 991.64,
       "trend": "mixed",
-      "score": 54,
-      "rsi": 50,
+      "score": 70,
+      "rsi": 49.99,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 24.454,
-        "signal": 54.986,
-        "hist": -30.532
-      },
-      "emaStack": {
-        "8": 1006.66,
-        "21": 1011.91,
-        "34": 962.99,
-        "55": 873.59,
-        "89": 757.16
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 19.69,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 9.1,
+      "sma50": 889.42,
+      "sma200": 460.23,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "MU last traded at 991.6400146484375. RSI(14) is 50.0 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 54.9933."
     },
     "NBIS": {
       "price": 216.2,
       "trend": "mixed",
-      "score": 54,
-      "rsi": 45.3,
+      "score": 70,
+      "rsi": 45.28,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -2.576,
-        "signal": 5.66,
-        "hist": -8.236
-      },
-      "emaStack": {
-        "8": 224.14,
-        "21": 234.16,
-        "34": 228.57,
-        "55": 213.15,
-        "89": 190.54
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 16.29,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 12.0,
+      "sma50": 219.8,
+      "sma200": 135.26,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "NBIS last traded at 216.1999969482422. RSI(14) is 45.3 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 5.6600."
     },
     "NOK": {
       "price": 12.9,
-      "trend": "uptrend",
-      "score": 64,
-      "rsi": 46.7,
+      "trend": "mixed",
+      "score": 54,
+      "rsi": 46.66,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.477,
-        "signal": -0.308,
-        "hist": -0.169
-      },
-      "emaStack": {
-        "8": 12.63,
-        "21": 13.26,
-        "34": 13.35,
-        "55": 12.93,
-        "89": 11.96
-      },
-      "aboveStack": true
+      "macdDir": "falling",
+      "adx": 21.6,
+      "adxNote": "trend forming",
+      "diDir": "bear",
+      "atrPct": 6.7,
+      "sma50": 13.9,
+      "sma200": 8.75,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "NOK last traded at 12.899999618530273. RSI(14) is 46.7 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.3082."
     },
     "OSS": {
       "price": 14.54,
       "trend": "mixed",
-      "score": 54,
-      "rsi": 40.8,
+      "score": 70,
+      "rsi": 40.83,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.365,
-        "signal": 0.082,
-        "hist": -0.447
-      },
-      "emaStack": {
-        "8": 15.4,
-        "21": 16.17,
-        "34": 15.98,
-        "55": 15.13,
-        "89": 13.75
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 19.38,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 10.6,
+      "sma50": 15.89,
+      "sma200": 9.72,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "OSS last traded at 14.539999961853027. RSI(14) is 40.8 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 0.0816."
     },
     "OUST": {
       "price": 47.53,
-      "trend": "mixed",
-      "score": 69,
+      "trend": "strong uptrend",
+      "score": 100,
       "rsi": 52.9,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 2.61,
-        "signal": 3.335,
-        "hist": -0.726
-      },
-      "emaStack": {
-        "8": 47.92,
-        "21": 46.14,
-        "34": 43.4,
-        "55": 39.55,
-        "89": 35.44
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 31.19,
+      "adxNote": "strong trend",
+      "diDir": "bull",
+      "atrPct": 13.0,
+      "sma50": 39.2,
+      "sma200": 28.04,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "OUST last traded at 47.529998779296875. RSI(14) is 52.9 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 3.3355."
     },
     "PENG": {
       "price": 81.39,
-      "trend": "strong uptrend",
-      "score": 95,
-      "rsi": 63.5,
+      "trend": "mixed",
+      "score": 76,
+      "rsi": 63.53,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 4.853,
-        "signal": 4.402,
-        "hist": 0.451
-      },
-      "emaStack": {
-        "8": 71.49,
-        "21": 66.64,
-        "34": 62.03,
-        "55": 55.16,
-        "89": 47.18
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 37.68,
+      "adxNote": "strong trend",
+      "diDir": "bear",
+      "atrPct": 10.5,
+      "sma50": 55.86,
+      "sma200": 29.8,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "PENG last traded at 81.38999938964844. RSI(14) is 63.5 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 4.4021."
     },
     "RKLB": {
       "price": 82.55,
-      "trend": "downtrend",
-      "score": 42,
-      "rsi": 38.1,
+      "trend": "mixed",
+      "score": 60,
+      "rsi": 38.08,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -6.514,
-        "signal": -5.147,
-        "hist": -1.367
-      },
-      "emaStack": {
-        "8": 89.45,
-        "21": 97.05,
-        "34": 99.96,
-        "55": 99.09,
-        "89": 94.32
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 23.49,
+      "adxNote": "trend forming",
+      "diDir": "bull",
+      "atrPct": 11.1,
+      "sma50": 107.05,
+      "sma200": 76.64,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "RKLB last traded at 82.55000305175781. RSI(14) is 38.1 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -5.1466."
     },
     "SILC": {
       "price": 43.9,
-      "trend": "uptrend",
-      "score": 64,
-      "rsi": 51.9,
+      "trend": "mixed",
+      "score": 70,
+      "rsi": 51.86,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 0.049,
-        "signal": 0.332,
-        "hist": -0.283
-      },
-      "emaStack": {
-        "8": 42.71,
-        "21": 42.98,
-        "34": 42.25,
-        "55": 39.89,
-        "89": 35.92
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 17.95,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 11.2,
+      "sma50": 43.07,
+      "sma200": 24.32,
+      "emaStackBull": false,
+      "aboveStack": true,
+      "analysis": "SILC last traded at 43.900001525878906. RSI(14) is 51.9 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 0.3318."
     },
     "WYY": {
       "price": 13.11,
-      "trend": "mixed",
-      "score": 69,
-      "rsi": 47.3,
+      "trend": "strong uptrend",
+      "score": 100,
+      "rsi": 47.29,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": 0.888,
-        "signal": 1.448,
-        "hist": -0.56
-      },
-      "emaStack": {
-        "8": 14.56,
-        "21": 14.22,
-        "34": 13.15,
-        "55": 11.67,
-        "89": 10.1
-      },
-      "aboveStack": true
+      "macdDir": "rising",
+      "adx": 37.56,
+      "adxNote": "strong trend",
+      "diDir": "bull",
+      "atrPct": 14.7,
+      "sma50": 11.55,
+      "sma200": 7.19,
+      "emaStackBull": true,
+      "aboveStack": true,
+      "analysis": "WYY last traded at 13.109999656677246. RSI(14) is 47.3 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 1.4484."
     },
     "XNDU": {
       "price": 11.27,
-      "trend": "strong downtrend",
-      "score": 43,
-      "rsi": 41.6,
+      "trend": "downtrend",
+      "score": 34,
+      "rsi": 41.84,
       "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.934,
-        "signal": -1.005,
-        "hist": 0.071
-      },
-      "emaStack": {
-        "8": 11.55,
-        "21": 12.36,
-        "34": 13.14,
-        "55": 13.65
-      },
-      "aboveStack": false
+      "macdDir": "falling",
+      "adx": 6.99,
+      "adxNote": "choppy / no trend",
+      "diDir": "bear",
+      "atrPct": 11.3,
+      "sma50": 14.95,
+      "sma200": null,
+      "emaStackBull": false,
+      "aboveStack": false,
+      "analysis": "XNDU last traded at 11.270000457763672. RSI(14) is 41.8 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.9028."
     }
   }
 }
