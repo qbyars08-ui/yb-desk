@@ -722,13 +722,24 @@
       var rsiCls = s.rsiNote === "overbought" ? "loss" : s.rsiNote === "oversold" ? "gain" : "flat";
       parts.push('<span class="sig-chip"><span class="sig-k">RSI</span> <span class="mono ' + rsiCls + '">' + D.esc(String(s.rsi)) + '</span> ' + D.esc(s.rsiNote || "") + '</span>');
     }
-    if (s.macd && typeof s.macd.hist === "number") {
-      parts.push('<span class="sig-chip"><span class="sig-k">MACD</span> <span class="' + (s.macd.hist >= 0 ? "gain" : "loss") + '">' + (s.macd.hist >= 0 ? "rising" : "falling") + '</span></span>');
+    if (typeof s.adx === "number") {
+      parts.push('<span class="sig-chip"><span class="sig-k">Trend strength</span> <span class="mono">' + D.esc(String(s.adx)) + '</span> ' + D.esc(s.adxNote || "") + '</span>');
+    }
+    if (s.diDir) {
+      parts.push('<span class="sig-chip"><span class="sig-k">Direction</span> <span class="' + (s.diDir === "bull" ? "gain" : "loss") + '">' + (s.diDir === "bull" ? "buyers" : "sellers") + '</span></span>');
+    }
+    var macdDir = s.macdDir || (s.macd && typeof s.macd.hist === "number" ? (s.macd.hist >= 0 ? "rising" : "falling") : null);
+    if (macdDir) {
+      parts.push('<span class="sig-chip"><span class="sig-k">MACD</span> <span class="' + (macdDir === "rising" ? "gain" : "loss") + '">' + D.esc(macdDir) + '</span></span>');
+    }
+    if (typeof s.atrPct === "number") {
+      parts.push('<span class="sig-chip"><span class="sig-k">Volatility</span> <span class="mono">' + D.esc(String(s.atrPct)) + '%</span> ATR</span>');
     }
     parts.push('<span class="sig-chip"><span class="sig-k">vs EMA stack</span> <span class="' + (s.aboveStack ? "gain" : "loss") + '">' + (s.aboveStack ? "above" : "below") + '</span></span>');
+    var analysisHtml = s.analysis ? '<div class="body" style="margin-top:8px;font-size:0.85rem">' + D.esc(s.analysis) + '</div>' : '';
     return '<div class="detail-block"><div class="lab">Technical read</div>' +
-      '<div class="sig-row">' + parts.join("") + '</div>' +
-      '<div class="hint" style="margin-top:4px">EMA 8/21/34/55/89 stack, RSI, MACD. Method from mphinance momentum.</div></div>';
+      '<div class="sig-row">' + parts.join("") + '</div>' + analysisHtml +
+      '<div class="hint" style="margin-top:4px">RSI, MACD, EMA 8/21/34/55/89 stack, ADX, ATR. Powered by mphinance momentum.</div></div>';
   }
 
   // The rich inline panel a desk row expands into.
