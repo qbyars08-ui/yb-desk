@@ -44,6 +44,15 @@
     <div id="thesis-wrap"></div>
   </section>
 
+  <!-- FUNDAMENTALS -->
+  <section class="section" id="fundamentals-section">
+    <div class="section-head">
+      <h2>&#9612; Snapshot</h2>
+      <span class="note" id="fundamentals-note"></span>
+    </div>
+    <div id="fundamentals-wrap"><div class="loading">Loading...</div></div>
+  </section>
+
   <!-- PRICE HISTORY -->
   <section class="section" id="history-section">
     <div class="section-head">
@@ -95,6 +104,7 @@
   var QUOTES_API = "https://youngbullinvests.com/api/quotes?tickers=";
   var EARNINGS_API = "https://youngbullinvests.com/api/earnings-calendar?tickers=";
   var NEWS_API = "https://youngbullinvests.com/api/ticker-news?tickers=";
+  var FUNDAMENTALS_API = "https://youngbullinvests.com/api/fundamentals?ticker=";
 
   D.mountFooter(document.getElementById("site-footer"));
 
@@ -287,6 +297,66 @@
     });
   }
 
+  // ============ SNAPSHOT (fundamentals) ============
+  function fmtBig(v) {
+    var n = Number(v);
+    if (!isFinite(n) || n <= 0) return null;
+    // API returns market cap in millions.
+    if (n >= 1e6) return "$" + (n / 1e6).toFixed(2) + "T";
+    if (n >= 1e3) return "$" + (n / 1e3).toFixed(1) + "B";
+    return "$" + Math.round(n) + "M";
+  }
+  function fmtNum(v, suffix) {
+    var n = Number(v);
+    if (!isFinite(n)) return null;
+    return n.toFixed(1) + (suffix || "");
+  }
+  function statCell(k, v, cls) {
+    if (v === null || v === undefined) return "";
+    return '<div class="stat"><div class="k">' + D.esc(k) + '</div>' +
+      '<div class="v ' + (cls || "") + '">' + D.esc(v) + '</div></div>';
+  }
+
+  function renderFundamentals() {
+    var wrap = document.getElementById("fundamentals-wrap");
+    var note = document.getElementById("fundamentals-note");
+    fetch(FUNDAMENTALS_API + encodeURIComponent(ticker)).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    }).then(function (data) {
+      var m = (data && data.metrics) || {};
+      var p = (data && data.profile) || {};
+      var cells = [
+        statCell("Market cap", fmtBig(m.marketCap)),
+        statCell("P/E (ttm)", fmtNum(m.peRatioTTM)),
+        statCell("P/S (ttm)", fmtNum(m.psRatioTTM)),
+        statCell("Gross margin", fmtNum(m.grossMargin, "%")),
+        statCell("Net margin", fmtNum(m.netMargin, "%")),
+        statCell("Rev growth YoY", fmtNum(m.revenueGrowthTTMYoy, "%"),
+          (Number(m.revenueGrowthTTMYoy) >= 0 ? "gain" : "loss")),
+        statCell("52w low", (isFinite(Number(m.low52w)) ? D.fmtPrice(Number(m.low52w)) : null)),
+        statCell("52w high", (isFinite(Number(m.high52w)) ? D.fmtPrice(Number(m.high52w)) : null)),
+        statCell("Beta", fmtNum(m.beta))
+      ].filter(Boolean);
+
+      if (!cells.length) {
+        wrap.innerHTML = '<div class="empty">No fundamentals on file for this name right now.</div>';
+        return;
+      }
+      var exch = "";
+      if (p.exchange) {
+        var u = String(p.exchange).toUpperCase();
+        exch = u.indexOf("NASDAQ") !== -1 ? "NASDAQ"
+          : (u.indexOf("NEW YORK") !== -1 || u.indexOf("NYSE") !== -1) ? "NYSE"
+          : String(p.exchange).split(/[\s,\-]/)[0];
+      }
+      if (p.industry || exch) note.textContent = [p.industry, exch].filter(Boolean).join(" · ");
+      wrap.innerHTML = '<div class="stat-grid">' + cells.join("") + '</div>';
+    }).catch(function () {
+      wrap.innerHTML = '<div class="empty">Fundamentals are not available right now.</div>';
+    });
+  }
+
   // ============ LATEST NEWS ============
   function timeAgo(iso) {
     if (!iso) return "";
@@ -392,6 +462,7 @@
       document.getElementById("history-wrap").innerHTML = '<div class="empty">No price history on file for this name. History covers Quinn\'s book names.</div>';
     });
 
+    renderFundamentals();
     renderEarnings();
     renderNews();
 
