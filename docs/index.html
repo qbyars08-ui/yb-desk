@@ -180,6 +180,16 @@
     </div>
   </section>
 
+  <!-- SECTION: MARKET SCAN -->
+  <section class="section" id="scan">
+    <div class="section-head">
+      <h2>&#9612; Market Scan</h2>
+      <span class="note" id="scan-note"></span>
+    </div>
+    <p class="hint" style="margin:0 0 12px">The desk screens the whole market twice a day: NASDAQ, NYSE and AMEX, price over $5, real volume. What screened, not what to buy.</p>
+    <div id="scan-wrap"><div class="loading">Loading the scan...</div></div>
+  </section>
+
   <!-- SECTION C: THE OFFICE -->
   <section class="section" id="office">
     <div class="section-head">
@@ -1197,6 +1207,34 @@
     return { cls: "", label: status };
   }
 
+  // ---- Market Scan: three market-wide screens from the momentum engine.
+  // Every ticker links to its full page. Descriptive only.
+  function renderScan(scan) {
+    var wrap = document.getElementById("scan-wrap");
+    var scans = (scan && Array.isArray(scan.scans)) ? scan.scans.filter(function (s) { return s.rows && s.rows.length; }) : [];
+    if (!scans.length) {
+      wrap.innerHTML = '<div class="empty">No scan on file yet. The engine runs twice a day.</div>';
+      return;
+    }
+    if (scan.updated) document.getElementById("scan-note").textContent = "as of " + D.fmtAsOf(scan.updated);
+    wrap.innerHTML = '<div class="scan-grid">' + scans.map(function (s) {
+      var rows = s.rows.slice(0, 6).map(function (r) {
+        return '<tr>' +
+          '<td class="l"><a class="ticker" href="ticker.html?t=' + encodeURIComponent(r.ticker) + '">' + D.esc(r.ticker) + '</a></td>' +
+          '<td>' + D.fmtPrice(r.price) + '</td>' +
+          '<td><span class="' + D.pctClass(r.changePct) + '">' + D.fmtPct(r.changePct) + '</span></td>' +
+          '<td>' + (s.id === "volume" ? D.esc(String(r.relVol)) + "x vol" : s.id === "oversold" ? "RSI " + D.esc(String(r.rsi)) : (r.cap ? D.esc(r.cap) : "-")) + '</td>' +
+          '</tr>';
+      }).join("");
+      return '<div class="scan-col">' +
+        '<div class="lab" style="margin-bottom:6px">' + D.esc(s.title) +
+        (typeof s.totalMatches === "number" ? ' <span class="faint">(' + s.totalMatches + ' match' + (s.totalMatches === 1 ? '' : 'es') + ')</span>' : '') + '</div>' +
+        '<div class="hint" style="margin-bottom:6px">' + D.esc(s.note || "") + '</div>' +
+        '<div class="table-scroll"><table class="grid"><tbody>' + rows + '</tbody></table></div>' +
+        '</div>';
+    }).join("") + '</div>';
+  }
+
   // ---- System strip: the desk shows its own receipts. Ages are recomputed
   // from the artifacts themselves against the VISITOR'S clock, so a dead
   // sentinel cannot fake freshness. The sentinel's health.json adds the
@@ -1914,6 +1952,10 @@
     renderDesk();
     renderSystemStrip(state.health);
   }).catch(function () { /* signals optional; desk works without them */ });
+
+  D.loadJSON("data/scan.json").then(renderScan).catch(function () {
+    document.getElementById("scan-wrap").innerHTML = '<div class="empty">No scan on file yet. The engine runs twice a day.</div>';
+  });
 
   // Sentinel health: powers the system strip in the Office section.
   D.loadJSON("data/health.json").then(function (health) {

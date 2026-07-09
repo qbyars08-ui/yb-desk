@@ -233,6 +233,9 @@ table.grid tbody tr.tot td {
 .news-list li a:hover { color: var(--gold); }
 .news-meta { color: var(--text-faint); font-size: 0.72rem; font-family: var(--mono); }
 .dd-chart svg { max-width: 100%; max-height: 190px; height: auto; }
+.scan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.scan-col .table-scroll { border: 1px solid var(--border); }
+.scan-col table.grid td { padding: 6px 10px; font-size: 0.84rem; }
 .system-strip {
   border: 1px solid var(--border);
   background: var(--bg-panel);

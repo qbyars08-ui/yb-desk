@@ -31,6 +31,9 @@ jobs:
       - name: compute signals with mphinance momentum engine
         run: python agents/signals_pro.py
 
+      - name: scan the whole market
+        run: python agents/scan_pro.py
+
       - name: commit signals
         run: |
           git config user.name "yb-desk-agent"

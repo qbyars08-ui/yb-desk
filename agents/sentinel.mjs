@@ -34,6 +34,7 @@ const CHECKS = [
   { id: 'book',    file: 'book.json',          field: 'generated_at', workflow: 'desk-report.yml', weekdayMaxH: 30,  weekendMaxH: 80 },
   { id: 'signals', file: 'signals.json',       field: 'updated',      workflow: 'signals.yml',     weekdayMaxH: 30,  weekendMaxH: 80 },
   { id: 'reports', file: 'reports-index.json', field: 'updated',      workflow: 'desk-report.yml', weekdayMaxH: 30,  weekendMaxH: 80 },
+  { id: 'scan',    file: 'scan.json',          field: 'updated',      workflow: 'signals.yml',     weekdayMaxH: 30,  weekendMaxH: 80 },
 ];
 
 function isMarketHoursUTC(d) {
