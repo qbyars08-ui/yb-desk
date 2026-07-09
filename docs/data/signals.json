@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:27:33.490Z",
+  "updated": "2026-07-09T20:31:20.592Z",
   "method": "mphinance/momentum-mcp EMA stack 8/21/34/55/89 + RSI(14) + MACD(12,26,9), ported to zero-dep Node",
   "signals": {
     "ALMU": {
@@ -82,26 +82,6 @@
       },
       "aboveStack": false
     },
-    "BRUN": {
-      "price": 30.2,
-      "trend": "mixed",
-      "score": 54,
-      "rsi": 46.6,
-      "rsiNote": "neutral",
-      "macd": {
-        "macd": 0.438,
-        "signal": 1.476,
-        "hist": -1.038
-      },
-      "emaStack": {
-        "8": 31.69,
-        "21": 32.25,
-        "34": 30.83,
-        "55": 27.95,
-        "89": 24.3
-      },
-      "aboveStack": true
-    },
     "CIFR": {
       "price": 23.26,
       "trend": "uptrend",
@@ -141,24 +121,6 @@
         "89": 200.18
       },
       "aboveStack": true
-    },
-    "EUV": {
-      "price": 27.19,
-      "trend": "downtrend",
-      "score": 42,
-      "rsi": 47.3,
-      "rsiNote": "neutral",
-      "macd": {
-        "macd": -0.26,
-        "signal": 0.183,
-        "hist": -0.443
-      },
-      "emaStack": {
-        "8": 27.48,
-        "21": 28.11,
-        "34": 28.04
-      },
-      "aboveStack": false
     },
     "IQMX": {
       "price": 12.21,
@@ -377,66 +339,6 @@
         "34": 42.25,
         "55": 39.89,
         "89": 35.92
-      },
-      "aboveStack": true
-    },
-    "SMH": {
-      "price": 607.73,
-      "trend": "uptrend",
-      "score": 64,
-      "rsi": 50.4,
-      "rsiNote": "neutral",
-      "macd": {
-        "macd": 3.774,
-        "signal": 11.02,
-        "hist": -7.246
-      },
-      "emaStack": {
-        "8": 606.66,
-        "21": 610.03,
-        "34": 598.52,
-        "55": 572.76,
-        "89": 534.88
-      },
-      "aboveStack": true
-    },
-    "TEM": {
-      "price": 61.5,
-      "trend": "uptrend",
-      "score": 80,
-      "rsi": 63.2,
-      "rsiNote": "neutral",
-      "macd": {
-        "macd": 2.956,
-        "signal": 2.315,
-        "hist": 0.641
-      },
-      "emaStack": {
-        "8": 58.85,
-        "21": 55.46,
-        "34": 53.75,
-        "55": 52.82,
-        "89": 53.48
-      },
-      "aboveStack": true
-    },
-    "WYFI": {
-      "price": 38.84,
-      "trend": "strong uptrend",
-      "score": 79,
-      "rsi": 57.8,
-      "rsiNote": "neutral",
-      "macd": {
-        "macd": 2.297,
-        "signal": 2.701,
-        "hist": -0.404
-      },
-      "emaStack": {
-        "8": 36.25,
-        "21": 34.45,
-        "34": 32.17,
-        "55": 29.16,
-        "89": 26.19
       },
       "aboveStack": true
     },
