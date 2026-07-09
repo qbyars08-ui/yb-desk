@@ -1,45 +1,60 @@
 {
-  "updated": "2026-07-08T21:47:48.987Z",
+  "updated": "2026-07-09T16:08:31.293Z",
   "alerts": [
     {
       "ticker": "PENG",
-      "changePct": 25.1316,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
+      "changePct": 12.2238,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
     },
     {
-      "ticker": "IQMX",
-      "changePct": -11.0163,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
+      "ticker": "ARM",
+      "changePct": 10.9979,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
     },
     {
-      "ticker": "NBIS",
-      "changePct": 10.9073,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
-    },
-    {
-      "ticker": "WYY",
-      "changePct": -10.106,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
-    },
-    {
-      "ticker": "WYFI",
-      "changePct": 9.9342,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
-    },
-    {
-      "ticker": "ANET",
-      "changePct": 8.7649,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
+      "ticker": "OUST",
+      "changePct": 9.5139,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
     },
     {
       "ticker": "CIFR",
-      "changePct": 6.7416,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
+      "changePct": 8.6499,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": 7.4705,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "WYFI",
+      "changePct": 7.2945,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": 7.2385,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
     },
     {
       "ticker": "SILC",
-      "changePct": 5.1554,
-      "flaggedAt": "2026-07-08T21:47:48.987Z"
+      "changePct": 6.585,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": 6.5619,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "EUV",
+      "changePct": 6.1757,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
+    },
+    {
+      "ticker": "TEM",
+      "changePct": 5.6574,
+      "flaggedAt": "2026-07-09T16:08:31.293Z"
     }
   ]
 }
