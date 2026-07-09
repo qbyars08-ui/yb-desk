@@ -1,60 +1,55 @@
 {
-  "updated": "2026-07-09T16:08:31.293Z",
+  "updated": "2026-07-09T18:23:45.273Z",
   "alerts": [
     {
-      "ticker": "PENG",
-      "changePct": 12.2238,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
+      "ticker": "ARM",
+      "changePct": 10.858,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
     },
     {
-      "ticker": "ARM",
-      "changePct": 10.9979,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
+      "ticker": "PENG",
+      "changePct": 10.7302,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
     },
     {
       "ticker": "OUST",
-      "changePct": 9.5139,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": 8.6499,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "MU",
-      "changePct": 7.4705,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "WYFI",
-      "changePct": 7.2945,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": 7.2385,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": 6.585,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": 6.5619,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
-    },
-    {
-      "ticker": "EUV",
-      "changePct": 6.1757,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
+      "changePct": 10.0898,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
     },
     {
       "ticker": "TEM",
-      "changePct": 5.6574,
-      "flaggedAt": "2026-07-09T16:08:31.293Z"
+      "changePct": 7.4734,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": 7.314,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": 7.0709,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": 6.5439,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "WYFI",
+      "changePct": 6.5188,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": 5.4915,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
+    },
+    {
+      "ticker": "EUV",
+      "changePct": 5.4469,
+      "flaggedAt": "2026-07-09T18:23:45.273Z"
     }
   ]
 }
