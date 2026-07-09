@@ -30,6 +30,7 @@ jobs:
       - name: verify and heal
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          CRON_ALERTS_TOKEN: ${{ secrets.CRON_ALERTS_TOKEN }}
         run: node agents/sentinel.mjs
 
       - name: commit health

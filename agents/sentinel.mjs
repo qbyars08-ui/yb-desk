@@ -159,6 +159,42 @@ async function main() {
     );
   }
 
+  // Money queue: paying subscribers waiting for desk access. One deduped
+  // issue (label: members) so Quinn gets a native notification, no checking.
+  let memberIssue = null;
+  const cronToken = process.env.CRON_ALERTS_TOKEN || '';
+  if (!dryRun && cronToken) {
+    try {
+      const r = await fetch('https://youngbullinvests.com/api/member-request', {
+        headers: { 'x-cron-token': cronToken },
+      });
+      const j = r.ok ? await r.json().catch(() => null) : null;
+      const pending = j && Array.isArray(j.pending) ? j.pending : [];
+      if (pending.length) {
+        const list = await gh(`/repos/${REPO}/issues?labels=members&state=open&per_page=1`);
+        const already = list.ok ? await list.json().catch(() => []) : [];
+        if (!Array.isArray(already) || !already.length) {
+          const res = await gh(`/repos/${REPO}/issues`, {
+            method: 'POST',
+            body: JSON.stringify({
+              title: `members: ${pending.length} pending activation${pending.length === 1 ? '' : 's'}`,
+              body: 'These signed-in readers say they subscribed on the Substack and are waiting for desk access:\n\n' +
+                pending.map((p) => `- ${p.email} (asked ${p.requested_at})`).join('\n') +
+                '\n\nVerify each against the Substack subscriber list, then activate with:\n' +
+                '`INSERT INTO premium_members (email, status, synced_at) VALUES (\'their@email\', \'active\', now()) ON CONFLICT DO NOTHING;`\n' +
+                'and mark the queue row `UPDATE pending_members SET status=\'activated\' WHERE email=\'their@email\';`\n' +
+                'Or tell the next desk session to "activate the pending members" and it handles it.',
+              labels: ['members'],
+            }),
+          });
+          memberIssue = res.ok ? 'opened' : 'open_failed';
+        } else {
+          memberIssue = 'already_open';
+        }
+      }
+    } catch { /* queue check is best-effort, never blocks health */ }
+  }
+
   const ok = checks.every((c) => c.fresh);
   await writeJsonBoth('health.json', {
     updated: nowISO(),
@@ -170,6 +206,7 @@ async function main() {
     dispatches,
     attempts,
     issue,
+    memberIssue,
   });
   await updateOffice(AGENT_ID, ok ? 'ok' : 'healing');
   console.log(

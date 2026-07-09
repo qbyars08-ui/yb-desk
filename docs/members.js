@@ -323,6 +323,8 @@
       loadAlertOptin();
     } else {
       document.getElementById("locked-section").hidden = false;
+      renderFoundingCountdown();
+      wireActivateRequest();
     }
   }
 
@@ -593,6 +595,41 @@
       try { return JSON.stringify(a.payload); } catch (e) { /* fall through */ }
     }
     return a.payload ? String(a.payload) : "";
+  }
+
+  // ---- Founding window: honest countdown to the price change (2026-07-22).
+  function renderFoundingCountdown() {
+    var el = document.getElementById("founding-countdown");
+    if (!el) return;
+    var days = Math.ceil((new Date("2026-07-22T00:00:00-07:00").getTime() - Date.now()) / 86400000);
+    if (days > 1) el.textContent = "The price goes up after July 22. " + days + " days left at $99.";
+    else if (days >= 0) el.textContent = "The price goes up after July 22. Last day at $99.";
+    else el.textContent = "Founding pricing has closed. Current pricing is on the Substack.";
+  }
+
+  // ---- "I subscribed, activate me": queues the request so access gets
+  // matched to the Substack list. No self-serve activation, by design.
+  function wireActivateRequest() {
+    var box = document.getElementById("activate-box");
+    var btn = document.getElementById("activate-btn");
+    var msg = document.getElementById("activate-msg");
+    if (!box || !btn || box.getAttribute("data-wired") === "1") { if (box) box.hidden = false; return; }
+    box.setAttribute("data-wired", "1");
+    box.hidden = false;
+    btn.addEventListener("click", function () {
+      btn.disabled = true;
+      msg.textContent = "Sending...";
+      memberFetch("/api/member-request", { method: "POST", body: "{}" }).then(function (j) {
+        if (j.state === "already_active") {
+          msg.textContent = "You are already active. Refresh this page.";
+        } else {
+          msg.textContent = "Queued. Access gets matched to the Substack list, usually within a few hours. No need to do anything else.";
+        }
+      }).catch(function (e) {
+        btn.disabled = false;
+        msg.textContent = "Could not send: " + e.message;
+      });
+    });
   }
 
   // ---- Email alert opt-in: one toggle over /api/me/email-preferences.

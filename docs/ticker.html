@@ -44,6 +44,15 @@
     <div id="thesis-wrap"></div>
   </section>
 
+  <!-- TECHNICAL READ (momentum engine) -->
+  <section class="section" id="techread-section" hidden>
+    <div class="section-head">
+      <h2>&#9612; Technical Read</h2>
+      <span class="note" id="techread-note"></span>
+    </div>
+    <div id="techread-wrap"></div>
+  </section>
+
   <!-- FUNDAMENTALS -->
   <section class="section" id="fundamentals-section">
     <div class="section-head">
@@ -357,6 +366,31 @@
     });
   }
 
+  // ============ TECHNICAL READ (signals.json, book + watch names) ============
+  function renderTechRead() {
+    D.loadJSON("data/signals.json").then(function (sig) {
+      var s = sig && sig.signals ? sig.signals[ticker] : null;
+      if (!s || s.error) return; // engine only covers book + watchlist names
+      var wrap = document.getElementById("techread-wrap");
+      var sec = document.getElementById("techread-section");
+      var scoreCls = s.score >= 66 ? "gain" : s.score <= 40 ? "loss" : "flat";
+      var trendCls = /uptrend/.test(s.trend) ? "gain" : /downtrend/.test(s.trend) ? "loss" : "flat";
+      var parts = [];
+      parts.push('<span class="sig-chip"><span class="sig-k">Trend</span> <span class="' + trendCls + '">' + D.esc(s.trend) + '</span></span>');
+      parts.push('<span class="sig-chip"><span class="sig-k">Momentum</span> <span class="mono ' + scoreCls + '">' + D.esc(String(s.score)) + '/100</span></span>');
+      if (typeof s.rsi === "number") parts.push('<span class="sig-chip"><span class="sig-k">RSI</span> <span class="mono">' + D.esc(String(s.rsi)) + '</span> ' + D.esc(s.rsiNote || "") + '</span>');
+      if (typeof s.adx === "number") parts.push('<span class="sig-chip"><span class="sig-k">Trend strength</span> <span class="mono">' + D.esc(String(s.adx)) + '</span> ' + D.esc(s.adxNote || "") + '</span>');
+      if (s.diDir) parts.push('<span class="sig-chip"><span class="sig-k">Direction</span> <span class="' + (s.diDir === "bull" ? "gain" : "loss") + '">' + (s.diDir === "bull" ? "buyers" : "sellers") + '</span></span>');
+      if (s.macdDir) parts.push('<span class="sig-chip"><span class="sig-k">MACD</span> <span class="' + (s.macdDir === "rising" ? "gain" : "loss") + '">' + D.esc(s.macdDir) + '</span></span>');
+      if (typeof s.atrPct === "number") parts.push('<span class="sig-chip"><span class="sig-k">Volatility</span> <span class="mono">' + D.esc(String(s.atrPct)) + '%</span> ATR</span>');
+      wrap.innerHTML = '<div class="sig-row">' + parts.join("") + '</div>' +
+        (s.analysis ? '<p style="margin:10px 0 0;font-size:0.88rem">' + D.esc(s.analysis) + '</p>' : '') +
+        '<p class="hint" style="margin-top:6px">Powered by the mphinance momentum engine, refreshed twice a day. Descriptive, not advice.</p>';
+      if (sig.updated) document.getElementById("techread-note").textContent = "as of " + D.fmtAsOf(sig.updated);
+      sec.hidden = false;
+    }).catch(function () { /* optional section */ });
+  }
+
   // ============ LATEST NEWS ============
   function timeAgo(iso) {
     if (!iso) return "";
@@ -462,6 +496,7 @@
       document.getElementById("history-wrap").innerHTML = '<div class="empty">No price history on file for this name. History covers Quinn\'s book names.</div>';
     });
 
+    renderTechRead();
     renderFundamentals();
     renderEarnings();
     renderNews();
