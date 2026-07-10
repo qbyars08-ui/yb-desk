@@ -1,20 +1,10 @@
 {
-  "updated": "2026-07-10T15:38:56.755Z",
+  "updated": "2026-07-10T17:57:52.719Z",
   "alerts": [
     {
       "ticker": "OUST",
-      "changePct": -7.7004,
-      "flaggedAt": "2026-07-10T15:38:56.755Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": -6.4934,
-      "flaggedAt": "2026-07-10T15:38:56.755Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -5.2957,
-      "flaggedAt": "2026-07-10T15:38:56.755Z"
+      "changePct": -6.2487,
+      "flaggedAt": "2026-07-10T17:57:52.719Z"
     }
   ]
 }
