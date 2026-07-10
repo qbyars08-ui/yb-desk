@@ -1,18 +1,18 @@
 {
-  "updated": "2026-07-10T22:37:46.609Z",
+  "updated": "2026-07-10T22:40:46.735Z",
   "agents": [
     {
       "id": "price-agent",
       "name": "Price Agent",
       "role": "Pulls live quotes for the book and watchlist",
-      "lastRun": "2026-07-10T22:37:46.566Z",
+      "lastRun": "2026-07-10T22:40:46.665Z",
       "lastStatus": "ok"
     },
     {
       "id": "desk-report",
       "name": "Desk Report",
       "role": "Writes the deterministic daily desk report",
-      "lastRun": "2026-07-09T22:56:27.706Z",
+      "lastRun": "2026-07-10T22:40:46.734Z",
       "lastStatus": "ok"
     },
     {
@@ -33,7 +33,7 @@
       "id": "book-sync",
       "name": "Book Sync",
       "job": "pulls Quinn's live book daily",
-      "lastRun": "2026-07-09T22:56:27.274Z",
+      "lastRun": "2026-07-10T22:40:46.266Z",
       "lastStatus": "ok"
     },
     {
