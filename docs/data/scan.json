@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-10T16:34:12.734799+00:00",
+  "updated": "2026-07-10T22:15:44.427604+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 67,
+      "totalMatches": 223,
       "rows": [
         {
           "ticker": "CCC",
           "company": "CCC Intelligent Solutions Holdings Inc.",
-          "price": 5.75,
-          "changePct": 6.88,
-          "relVol": 1.1,
-          "rsi": 67.1,
-          "cap": "3.4B"
+          "price": 5.92,
+          "changePct": 10.04,
+          "relVol": 1.7,
+          "rsi": 69.5,
+          "cap": "3.5B"
+        },
+        {
+          "ticker": "CAKE",
+          "company": "The Cheesecake Factory Incorporated",
+          "price": 82.76,
+          "changePct": 5.53,
+          "relVol": 1.8,
+          "rsi": 72.1,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "KMX",
+          "company": "CarMax Inc",
+          "price": 53.49,
+          "changePct": 4.86,
+          "relVol": 0.8,
+          "rsi": 62.2,
+          "cap": "7.6B"
+        },
+        {
+          "ticker": "ETSY",
+          "company": "Etsy, Inc.",
+          "price": 81.05,
+          "changePct": 4.28,
+          "relVol": 0.9,
+          "rsi": 66.4,
+          "cap": "7.7B"
+        },
+        {
+          "ticker": "DLO",
+          "company": "DLocal Limited",
+          "price": 15.19,
+          "changePct": 4.26,
+          "relVol": 0.6,
+          "rsi": 70.2,
+          "cap": "4.5B"
+        },
+        {
+          "ticker": "FBIN",
+          "company": "Fortune Brands Innovations, Inc.",
+          "price": 51.61,
+          "changePct": 4.22,
+          "relVol": 0.7,
+          "rsi": 63.9,
+          "cap": "6.2B"
         },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 8.59,
-          "changePct": 3.68,
-          "relVol": 0.6,
-          "rsi": 66.9,
+          "price": 8.62,
+          "changePct": 4.11,
+          "relVol": 1.0,
+          "rsi": 67.6,
           "cap": "93.6B"
         },
         {
-          "ticker": "UAA",
-          "company": "Under Armour, Inc.",
-          "price": 6.79,
+          "ticker": "PBI",
+          "company": "Pitney Bowes Inc.",
+          "price": 18.33,
+          "changePct": 3.56,
+          "relVol": 0.9,
+          "rsi": 66.1,
+          "cap": "2.5B"
+        },
+        {
+          "ticker": "BBY",
+          "company": "Best Buy Co., Inc.",
+          "price": 82.8,
+          "changePct": 3.51,
+          "relVol": 1.0,
+          "rsi": 70.5,
+          "cap": "17.5B"
+        },
+        {
+          "ticker": "XRAY",
+          "company": "DENTSPLY SIRONA Inc.",
+          "price": 12.26,
           "changePct": 3.11,
-          "relVol": 0.2,
-          "rsi": 64.1,
-          "cap": "2.9B"
-        },
-        {
-          "ticker": "LEVI",
-          "company": "Levi Strauss & Co",
-          "price": 24.57,
-          "changePct": 3.06,
           "relVol": 0.6,
-          "rsi": 58.4,
-          "cap": "9.5B"
-        },
-        {
-          "ticker": "HPQ",
-          "company": "HP Inc.",
-          "price": 24.75,
-          "changePct": 2.59,
-          "relVol": 0.3,
-          "rsi": 60.1,
-          "cap": "22.6B"
-        },
-        {
-          "ticker": "U",
-          "company": "Unity Software Inc.",
-          "price": 31.49,
-          "changePct": 2.48,
-          "relVol": 1.3,
-          "rsi": 65.2,
-          "cap": "13.7B"
-        },
-        {
-          "ticker": "CMG",
-          "company": "Chipotle Mexican Grill, Inc.",
-          "price": 35.42,
-          "changePct": 2.38,
-          "relVol": 0.2,
-          "rsi": 61.8,
-          "cap": "45.4B"
-        },
-        {
-          "ticker": "KVUE",
-          "company": "Kenvue Inc.",
-          "price": 19.53,
-          "changePct": 1.82,
-          "relVol": 0.2,
-          "rsi": 63.2,
-          "cap": "37.5B"
-        },
-        {
-          "ticker": "SOFI",
-          "company": "SoFi Technologies, Inc.",
-          "price": 18.95,
-          "changePct": 1.8,
-          "relVol": 0.7,
-          "rsi": 61.5,
-          "cap": "24.3B"
-        },
-        {
-          "ticker": "MBLY",
-          "company": "Mobileye Global Inc.",
-          "price": 9.7,
-          "changePct": 1.78,
-          "relVol": 0.4,
-          "rsi": 55.4,
-          "cap": "8.2B"
+          "rsi": 66.6,
+          "cap": "2.5B"
         }
       ]
     },
@@ -107,22 +107,22 @@
       "totalMatches": 2,
       "rows": [
         {
-          "ticker": "VOD",
-          "company": "Vodafone Group Plc",
-          "price": 14.78,
-          "changePct": 12.96,
-          "relVol": 3.4,
-          "rsi": 60.1,
-          "cap": "30.2B"
-        },
-        {
           "ticker": "FRMI",
           "company": "Fermi Inc.",
-          "price": 6.38,
-          "changePct": -12.91,
-          "relVol": 3.0,
-          "rsi": 38.8,
-          "cap": "4.1B"
+          "price": 6.59,
+          "changePct": -9.97,
+          "relVol": 5.0,
+          "rsi": 40.3,
+          "cap": "4.2B"
+        },
+        {
+          "ticker": "VOD",
+          "company": "Vodafone Group Plc",
+          "price": 14.72,
+          "changePct": 12.54,
+          "relVol": 4.7,
+          "rsi": 59.6,
+          "cap": "30.2B"
         }
       ]
     },
@@ -130,52 +130,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 5,
+      "totalMatches": 10,
       "rows": [
+        {
+          "ticker": "ORCL/PD",
+          "company": "Oracle Corporation Depositary Shares, each repre",
+          "price": 42.8,
+          "changePct": -1.59,
+          "relVol": 1.4,
+          "rsi": 29.6,
+          "cap": "415.4B"
+        },
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 141.7,
-          "changePct": -1.75,
-          "relVol": 0.4,
-          "rsi": 31.4,
-          "cap": "408.2B"
+          "price": 140.64,
+          "changePct": -2.48,
+          "relVol": 0.8,
+          "rsi": 30.9,
+          "cap": "405.1B"
         },
         {
           "ticker": "EQT",
           "company": "EQT Corporation",
-          "price": 48.35,
-          "changePct": -3.59,
+          "price": 48.85,
+          "changePct": -2.59,
+          "relVol": 1.4,
+          "rsi": 30.4,
+          "cap": "30.6B"
+        },
+        {
+          "ticker": "STLA",
+          "company": "Stellantis N.V.",
+          "price": 5.5,
+          "changePct": 3.19,
+          "relVol": 0.9,
+          "rsi": 31.2,
+          "cap": "20.7B"
+        },
+        {
+          "ticker": "TU",
+          "company": "Telus Corporation",
+          "price": 10.42,
+          "changePct": 0.1,
           "relVol": 0.5,
-          "rsi": 28.9,
-          "cap": "30.2B"
+          "rsi": 25.4,
+          "cap": "16.4B"
+        },
+        {
+          "ticker": "AA",
+          "company": "Alcoa Corporation",
+          "price": 48.68,
+          "changePct": -0.08,
+          "relVol": 0.6,
+          "rsi": 30.7,
+          "cap": "12.8B"
+        },
+        {
+          "ticker": "SOLS",
+          "company": "Solstice Advanced Materials Inc.",
+          "price": 61.3,
+          "changePct": -2.39,
+          "relVol": 0.6,
+          "rsi": 29.5,
+          "cap": "9.7B"
         },
         {
           "ticker": "IONS",
           "company": "Ionis Pharmaceuticals, Inc.",
-          "price": 58.76,
-          "changePct": -8.57,
-          "relVol": 1.3,
-          "rsi": 26.9,
-          "cap": "9.7B"
-        },
-        {
-          "ticker": "XE",
-          "company": "X-Energy, Inc.",
-          "price": 15.32,
-          "changePct": -7.71,
-          "relVol": 0.7,
-          "rsi": 31.2,
-          "cap": "6.2B"
+          "price": 58.25,
+          "changePct": -9.37,
+          "relVol": 2.7,
+          "rsi": 26.5,
+          "cap": "9.6B"
         },
         {
           "ticker": "LUNR",
           "company": "Intuitive Machines, Inc.",
-          "price": 16.09,
-          "changePct": -4.76,
-          "relVol": 0.4,
-          "rsi": 30.4,
+          "price": 16.14,
+          "changePct": -4.5,
+          "relVol": 0.8,
+          "rsi": 30.5,
           "cap": "3.5B"
+        },
+        {
+          "ticker": "CRGY",
+          "company": "Crescent Energy Company",
+          "price": 9.47,
+          "changePct": -0.53,
+          "relVol": 0.5,
+          "rsi": 30.7,
+          "cap": "3.1B"
         }
       ]
     }
