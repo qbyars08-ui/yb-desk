@@ -1,60 +1,65 @@
 {
-  "updated": "2026-07-13T19:45:47.610Z",
+  "updated": "2026-07-13T21:10:32.161Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": -9.204,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
-    },
-    {
-      "ticker": "ALMU",
-      "changePct": -8.9205,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -8.006,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
-    },
-    {
-      "ticker": "ASTS",
-      "changePct": -7.8833,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
-    },
-    {
-      "ticker": "ARM",
-      "changePct": -7.5482,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "changePct": -9.1588,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
       "ticker": "CRDO",
-      "changePct": -7.2365,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "changePct": -8.1113,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": -7.8409,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": -7.8287,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
       "ticker": "LPKFF",
-      "changePct": -7.2236,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "changePct": -7.6167,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
-      "ticker": "OSS",
-      "changePct": -6.3365,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "ticker": "ARM",
+      "changePct": -7.5451,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
-      "ticker": "XNDU",
-      "changePct": -5.8908,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "ticker": "OUST",
+      "changePct": -7.5092,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
       "ticker": "NOK",
-      "changePct": -5.7476,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "changePct": -6.0289,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": -5.9982,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
+    },
+    {
+      "ticker": "IQMX",
+      "changePct": -5.9485,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": -5.3897,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     },
     {
       "ticker": "RKLB",
-      "changePct": -5.3307,
-      "flaggedAt": "2026-07-13T19:45:47.610Z"
+      "changePct": -5.3184,
+      "flaggedAt": "2026-07-13T21:10:32.161Z"
     }
   ]
 }
