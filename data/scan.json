@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-13T16:43:34.490015+00:00",
+  "updated": "2026-07-13T22:09:20.079764+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 69,
+      "totalMatches": 240,
       "rows": [
+        {
+          "ticker": "RHI",
+          "company": "Robert Half Inc.",
+          "price": 35.59,
+          "changePct": 9.85,
+          "relVol": 1.6,
+          "rsi": 64.4,
+          "cap": "3.6B"
+        },
         {
           "ticker": "TEAM",
           "company": "Atlassian Corporation",
-          "price": 94.94,
-          "changePct": 6.84,
-          "relVol": 0.6,
-          "rsi": 59.9,
-          "cap": "24.1B"
+          "price": 96.16,
+          "changePct": 8.22,
+          "relVol": 1.5,
+          "rsi": 60.9,
+          "cap": "24.4B"
         },
         {
-          "ticker": "FRSH",
-          "company": "Freshworks Inc.",
-          "price": 10.94,
-          "changePct": 5.55,
-          "relVol": 0.2,
-          "rsi": 68.0,
-          "cap": "3.1B"
+          "ticker": "BRZE",
+          "company": "Braze, Inc.",
+          "price": 26.6,
+          "changePct": 5.85,
+          "relVol": 1.4,
+          "rsi": 70.2,
+          "cap": "3.0B"
+        },
+        {
+          "ticker": "VLO",
+          "company": "Valero Energy Corporation",
+          "price": 295.79,
+          "changePct": 5.38,
+          "relVol": 0.9,
+          "rsi": 71.9,
+          "cap": "87.8B"
+        },
+        {
+          "ticker": "PSX",
+          "company": "Phillips 66",
+          "price": 198.29,
+          "changePct": 5.27,
+          "relVol": 1.1,
+          "rsi": 72.5,
+          "cap": "79.5B"
         },
         {
           "ticker": "CCC",
           "company": "CCC Intelligent Solutions Holdings Inc.",
-          "price": 6.18,
-          "changePct": 4.48,
+          "price": 6.23,
+          "changePct": 5.24,
+          "relVol": 1.4,
+          "rsi": 73.3,
+          "cap": "3.7B"
+        },
+        {
+          "ticker": "BIIB",
+          "company": "Biogen Inc.",
+          "price": 209.03,
+          "changePct": 4.96,
+          "relVol": 1.6,
+          "rsi": 56.4,
+          "cap": "30.9B"
+        },
+        {
+          "ticker": "DINO",
+          "company": "HF Sinclair Corporation",
+          "price": 81.7,
+          "changePct": 4.65,
+          "relVol": 1.1,
+          "rsi": 73.2,
+          "cap": "14.7B"
+        },
+        {
+          "ticker": "FRSH",
+          "company": "Freshworks Inc.",
+          "price": 10.83,
+          "changePct": 4.54,
+          "relVol": 0.4,
+          "rsi": 67.0,
+          "cap": "3.1B"
+        },
+        {
+          "ticker": "WDAY",
+          "company": "Workday, Inc.",
+          "price": 144.87,
+          "changePct": 4.26,
           "relVol": 0.7,
-          "rsi": 72.8,
-          "cap": "3.6B"
-        },
-        {
-          "ticker": "NOW",
-          "company": "ServiceNow, Inc.",
-          "price": 112.33,
-          "changePct": 4.28,
-          "relVol": 0.4,
-          "rsi": 59.6,
-          "cap": "115.8B"
-        },
-        {
-          "ticker": "SNOW",
-          "company": "Snowflake Inc.",
-          "price": 272.27,
-          "changePct": 4.14,
-          "relVol": 0.3,
-          "rsi": 69.8,
-          "cap": "94.4B"
-        },
-        {
-          "ticker": "CMG",
-          "company": "Chipotle Mexican Grill, Inc.",
-          "price": 36.7,
-          "changePct": 4.1,
-          "relVol": 0.4,
-          "rsi": 66.2,
-          "cap": "47.1B"
-        },
-        {
-          "ticker": "S",
-          "company": "SentinelOne, Inc.",
-          "price": 18.52,
-          "changePct": 3.61,
-          "relVol": 0.4,
-          "rsi": 63.6,
-          "cap": "6.4B"
-        },
-        {
-          "ticker": "PTON",
-          "company": "Peloton Interactive, Inc.",
-          "price": 6.05,
-          "changePct": 3.33,
-          "relVol": 0.5,
-          "rsi": 59.0,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "TOST",
-          "company": "Toast, Inc.",
-          "price": 30.3,
-          "changePct": 3.33,
-          "relVol": 0.2,
-          "rsi": 68.9,
-          "cap": "17.6B"
-        },
-        {
-          "ticker": "ZETA",
-          "company": "Zeta Global Holdings Corp.",
-          "price": 22.2,
-          "changePct": 3.3,
-          "relVol": 0.5,
-          "rsi": 61.1,
-          "cap": "5.5B"
+          "rsi": 62.5,
+          "cap": "35.8B"
         }
       ]
     },
@@ -104,16 +104,43 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 1,
+      "totalMatches": 4,
       "rows": [
         {
           "ticker": "APO/PA",
           "company": "Apollo Global Management, Inc. 6.75% Series A Ma",
-          "price": 61.18,
-          "changePct": -1.13,
-          "relVol": 12.2,
-          "rsi": 40.5,
+          "price": 61.03,
+          "changePct": -1.37,
+          "relVol": 13.4,
+          "rsi": 40.1,
           "cap": "69.4B"
+        },
+        {
+          "ticker": "FHB",
+          "company": "First Hawaiian, Inc.",
+          "price": 29.14,
+          "changePct": -3.29,
+          "relVol": 5.2,
+          "rsi": 52.2,
+          "cap": "3.5B"
+        },
+        {
+          "ticker": "LEU",
+          "company": "Centrus Energy Corp.",
+          "price": 156.05,
+          "changePct": -8.77,
+          "relVol": 4.2,
+          "rsi": 42.1,
+          "cap": "3.1B"
+        },
+        {
+          "ticker": "ERIC",
+          "company": "Ericsson",
+          "price": 11.72,
+          "changePct": 3.26,
+          "relVol": 3.1,
+          "rsi": 52.6,
+          "cap": "37.8B"
         }
       ]
     },
@@ -121,79 +148,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 8,
+      "totalMatches": 14,
       "rows": [
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 134.35,
-          "changePct": -4.47,
-          "relVol": 0.6,
-          "rsi": 28.0,
-          "cap": "387.0B"
+          "price": 131.54,
+          "changePct": -6.47,
+          "relVol": 1.5,
+          "rsi": 26.9,
+          "cap": "378.9B"
+        },
+        {
+          "ticker": "CCJ",
+          "company": "Cameco Corporation",
+          "price": 90.2,
+          "changePct": -6.03,
+          "relVol": 2.1,
+          "rsi": 31.4,
+          "cap": "39.3B"
+        },
+        {
+          "ticker": "TU",
+          "company": "Telus Corporation",
+          "price": 10.54,
+          "changePct": 1.15,
+          "relVol": 0.9,
+          "rsi": 30.9,
+          "cap": "16.6B"
         },
         {
           "ticker": "IONQ",
           "company": "IonQ, Inc.",
-          "price": 39.22,
-          "changePct": -8.49,
+          "price": 38.88,
+          "changePct": -9.29,
+          "relVol": 1.1,
+          "rsi": 29.5,
+          "cap": "14.5B"
+        },
+        {
+          "ticker": "TTMI",
+          "company": "TTM Technologies, Inc.",
+          "price": 136.34,
+          "changePct": -6.9,
           "relVol": 0.5,
-          "rsi": 29.8,
-          "cap": "14.6B"
+          "rsi": 31.3,
+          "cap": "14.2B"
+        },
+        {
+          "ticker": "AA",
+          "company": "Alcoa Corporation",
+          "price": 48.72,
+          "changePct": 0.08,
+          "relVol": 0.5,
+          "rsi": 30.9,
+          "cap": "12.9B"
+        },
+        {
+          "ticker": "MLI",
+          "company": "Mueller Industries, Inc.",
+          "price": 56.44,
+          "changePct": -0.97,
+          "relVol": 1.1,
+          "rsi": 31.6,
+          "cap": "12.5B"
+        },
+        {
+          "ticker": "SOLS",
+          "company": "Solstice Advanced Materials Inc.",
+          "price": 61.06,
+          "changePct": -0.39,
+          "relVol": 0.6,
+          "rsi": 29.4,
+          "cap": "9.7B"
         },
         {
           "ticker": "IONS",
           "company": "Ionis Pharmaceuticals, Inc.",
-          "price": 56.19,
-          "changePct": -3.54,
-          "relVol": 0.4,
-          "rsi": 25.2,
-          "cap": "9.3B"
+          "price": 56.75,
+          "changePct": -2.58,
+          "relVol": 1.0,
+          "rsi": 25.5,
+          "cap": "9.4B"
         },
         {
           "ticker": "APLD",
           "company": "Applied Digital Corporation",
-          "price": 29.03,
-          "changePct": -6.81,
-          "relVol": 0.4,
-          "rsi": 29.8,
-          "cap": "8.3B"
-        },
-        {
-          "ticker": "RIOT",
-          "company": "Riot Platforms, Inc.",
-          "price": 19.71,
-          "changePct": -5.99,
-          "relVol": 0.3,
-          "rsi": 31.0,
-          "cap": "7.5B"
-        },
-        {
-          "ticker": "JOBY",
-          "company": "Joby Aviation, Inc.",
-          "price": 7.46,
-          "changePct": -3.3,
-          "relVol": 0.4,
-          "rsi": 31.8,
-          "cap": "7.3B"
-        },
-        {
-          "ticker": "LUMN",
-          "company": "Lumen Technologies, Inc.",
-          "price": 6.49,
-          "changePct": -3.56,
-          "relVol": 0.2,
-          "rsi": 30.1,
-          "cap": "6.7B"
-        },
-        {
-          "ticker": "LUNR",
-          "company": "Intuitive Machines, Inc.",
-          "price": 15.71,
-          "changePct": -2.63,
-          "relVol": 0.3,
-          "rsi": 29.7,
-          "cap": "3.4B"
+          "price": 28.84,
+          "changePct": -7.42,
+          "relVol": 0.7,
+          "rsi": 29.6,
+          "cap": "8.2B"
         }
       ]
     }
