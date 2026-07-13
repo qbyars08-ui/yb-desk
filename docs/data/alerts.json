@@ -1,40 +1,60 @@
 {
-  "updated": "2026-07-13T15:49:54.940Z",
+  "updated": "2026-07-13T18:04:20.140Z",
   "alerts": [
     {
-      "ticker": "ALMU",
-      "changePct": -9.375,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
+      "ticker": "CIFR",
+      "changePct": -9.3759,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
     },
     {
-      "ticker": "WYY",
-      "changePct": 8.251,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
+      "ticker": "ALMU",
+      "changePct": -8.8068,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
     },
     {
       "ticker": "ARM",
-      "changePct": -6.2401,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": -6.1963,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
+      "changePct": -7.61,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
     },
     {
       "ticker": "ASTS",
-      "changePct": -5.4351,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -5.0983,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
+      "changePct": -7.5559,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
     },
     {
       "ticker": "CRDO",
-      "changePct": -5.0002,
-      "flaggedAt": "2026-07-13T15:49:54.940Z"
+      "changePct": -7.2734,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "LPKFF",
+      "changePct": -7.1253,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "OUST",
+      "changePct": -6.8045,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "NBIS",
+      "changePct": -6.0801,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": -5.6672,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "RKLB",
+      "changePct": -5.3801,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": -5.2524,
+      "flaggedAt": "2026-07-13T18:04:20.140Z"
     }
   ]
 }
