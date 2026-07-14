@@ -1,20 +1,30 @@
 {
-  "updated": "2026-07-14T19:40:32.436Z",
+  "updated": "2026-07-14T21:11:41.728Z",
   "alerts": [
     {
-      "ticker": "IQMX",
-      "changePct": 9.1453,
-      "flaggedAt": "2026-07-14T19:40:32.436Z"
+      "ticker": "NBIS",
+      "changePct": -7.8001,
+      "flaggedAt": "2026-07-14T21:11:41.728Z"
     },
     {
-      "ticker": "NBIS",
-      "changePct": -5.5294,
-      "flaggedAt": "2026-07-14T19:40:32.436Z"
+      "ticker": "IQMX",
+      "changePct": 7.3504,
+      "flaggedAt": "2026-07-14T21:11:41.728Z"
     },
     {
       "ticker": "ARM",
-      "changePct": -5.3346,
-      "flaggedAt": "2026-07-14T19:40:32.436Z"
+      "changePct": -5.9601,
+      "flaggedAt": "2026-07-14T21:11:41.728Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": 5.7143,
+      "flaggedAt": "2026-07-14T21:11:41.728Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": 5.0555,
+      "flaggedAt": "2026-07-14T21:11:41.728Z"
     }
   ]
 }
