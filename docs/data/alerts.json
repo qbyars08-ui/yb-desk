@@ -1,50 +1,30 @@
 {
-  "updated": "2026-07-14T16:35:29.187Z",
+  "updated": "2026-07-14T17:46:31.396Z",
   "alerts": [
     {
       "ticker": "IQMX",
-      "changePct": 8.4188,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
-    },
-    {
-      "ticker": "ARM",
-      "changePct": -6.8899,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
+      "changePct": 9.1453,
+      "flaggedAt": "2026-07-14T17:46:31.396Z"
     },
     {
       "ticker": "NBIS",
-      "changePct": -6.356,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
+      "changePct": -7.1683,
+      "flaggedAt": "2026-07-14T17:46:31.396Z"
     },
     {
       "ticker": "OSS",
-      "changePct": 6.3125,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
+      "changePct": 6.1586,
+      "flaggedAt": "2026-07-14T17:46:31.396Z"
     },
     {
       "ticker": "ALMU",
-      "changePct": 6.1036,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
+      "changePct": 5.4871,
+      "flaggedAt": "2026-07-14T17:46:31.396Z"
     },
     {
       "ticker": "XNDU",
-      "changePct": 6.0952,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": 5.6458,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
-    },
-    {
-      "ticker": "MU",
-      "changePct": 5.0555,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": 5.0176,
-      "flaggedAt": "2026-07-14T16:35:29.187Z"
+      "changePct": 5.4286,
+      "flaggedAt": "2026-07-14T17:46:31.396Z"
     }
   ]
 }
