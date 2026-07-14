@@ -1,65 +1,40 @@
 {
-  "updated": "2026-07-13T22:33:14.979Z",
+  "updated": "2026-07-14T15:01:03.148Z",
   "alerts": [
     {
-      "ticker": "CIFR",
-      "changePct": -9.1588,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": -8.1113,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "ALMU",
-      "changePct": -7.8409,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "ASTS",
-      "changePct": -7.8287,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "LPKFF",
-      "changePct": -7.6167,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
+      "ticker": "OSS",
+      "changePct": 8.6913,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
     },
     {
       "ticker": "ARM",
       "changePct": -7.5451,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -7.5092,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": -6.0289,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
-    },
-    {
-      "ticker": "XNDU",
-      "changePct": -5.9982,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
     },
     {
       "ticker": "IQMX",
-      "changePct": -5.9485,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
+      "changePct": 6.1111,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
     },
     {
-      "ticker": "OSS",
-      "changePct": -5.3897,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
+      "ticker": "XNDU",
+      "changePct": 5.5238,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
     },
     {
-      "ticker": "RKLB",
-      "changePct": -5.3184,
-      "flaggedAt": "2026-07-13T22:33:14.979Z"
+      "ticker": "OUST",
+      "changePct": 5.4084,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": 5.0555,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": -5.0253,
+      "flaggedAt": "2026-07-14T15:01:03.148Z"
     }
   ]
 }
