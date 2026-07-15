@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-14T22:12:09.491296+00:00",
+  "updated": "2026-07-15T15:49:08.812405+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 236,
+      "totalMatches": 62,
       "rows": [
         {
-          "ticker": "ATAI",
-          "company": "AtaiBeckley Inc.",
-          "price": 5.67,
-          "changePct": 14.08,
-          "relVol": 1.3,
-          "rsi": 65.9,
-          "cap": "2.1B"
+          "ticker": "COMP",
+          "company": "Compass, Inc.",
+          "price": 12.71,
+          "changePct": 8.82,
+          "relVol": 0.6,
+          "rsi": 67.2,
+          "cap": "9.6B"
         },
         {
-          "ticker": "CRWD",
-          "company": "CrowdStrike Holdings, Inc.",
-          "price": 210.73,
-          "changePct": 12.14,
-          "relVol": 1.1,
-          "rsi": 69.5,
-          "cap": "214.6B"
-        },
-        {
-          "ticker": "OKTA",
-          "company": "Okta, Inc.",
-          "price": 154.62,
-          "changePct": 10.81,
-          "relVol": 1.5,
-          "rsi": 71.6,
-          "cap": "26.9B"
-        },
-        {
-          "ticker": "TXG",
-          "company": "10x Genomics, Inc.",
-          "price": 45.79,
-          "changePct": 9.62,
-          "relVol": 1.4,
-          "rsi": 74.3,
-          "cap": "5.8B"
-        },
-        {
-          "ticker": "GS",
-          "company": "Goldman Sachs Group, Inc. (The)",
-          "price": 1140.0,
-          "changePct": 9.0,
-          "relVol": 2.2,
-          "rsi": 67.5,
-          "cap": "336.3B"
+          "ticker": "UAA",
+          "company": "Under Armour, Inc.",
+          "price": 7.07,
+          "changePct": 6.88,
+          "relVol": 0.6,
+          "rsi": 66.5,
+          "cap": "3.0B"
         },
         {
           "ticker": "ERAS",
           "company": "Erasca, Inc.",
-          "price": 19.5,
-          "changePct": 8.94,
-          "relVol": 2.3,
-          "rsi": 68.1,
-          "cap": "6.1B"
+          "price": 20.61,
+          "changePct": 5.69,
+          "relVol": 0.6,
+          "rsi": 71.8,
+          "cap": "6.4B"
         },
         {
-          "ticker": "TENB",
-          "company": "Tenable Holdings, Inc.",
-          "price": 42.65,
-          "changePct": 8.8,
-          "relVol": 1.1,
-          "rsi": 75.0,
-          "cap": "4.7B"
+          "ticker": "HIMS",
+          "company": "Hims & Hers Health, Inc.",
+          "price": 37.07,
+          "changePct": 5.46,
+          "relVol": 0.4,
+          "rsi": 63.1,
+          "cap": "8.6B"
         },
         {
-          "ticker": "TRVI",
-          "company": "Trevi Therapeutics, Inc.",
-          "price": 17.91,
-          "changePct": 8.41,
-          "relVol": 0.9,
-          "rsi": 56.4,
-          "cap": "2.5B"
+          "ticker": "CHYM",
+          "company": "Chime Financial, Inc.",
+          "price": 22.61,
+          "changePct": 5.36,
+          "relVol": 0.4,
+          "rsi": 68.3,
+          "cap": "8.6B"
         },
         {
-          "ticker": "S",
-          "company": "SentinelOne, Inc.",
-          "price": 19.92,
-          "changePct": 7.39,
-          "relVol": 1.8,
-          "rsi": 70.3,
-          "cap": "6.8B"
+          "ticker": "GT",
+          "company": "The Goodyear Tire & Rubber Company",
+          "price": 6.98,
+          "changePct": 4.8,
+          "relVol": 0.2,
+          "rsi": 59.8,
+          "cap": "2.0B"
         },
         {
-          "ticker": "DELL",
-          "company": "Dell Technologies Inc.",
-          "price": 457.54,
-          "changePct": 7.12,
-          "relVol": 1.0,
-          "rsi": 63.2,
-          "cap": "296.6B"
+          "ticker": "RIVN",
+          "company": "Rivian Automotive, Inc.",
+          "price": 18.25,
+          "changePct": 4.29,
+          "relVol": 0.3,
+          "rsi": 56.9,
+          "cap": "26.4B"
+        },
+        {
+          "ticker": "XYZ",
+          "company": "Block, Inc.",
+          "price": 83.27,
+          "changePct": 4.09,
+          "relVol": 1.2,
+          "rsi": 67.9,
+          "cap": "49.6B"
+        },
+        {
+          "ticker": "TOST",
+          "company": "Toast, Inc.",
+          "price": 31.16,
+          "changePct": 3.87,
+          "relVol": 0.2,
+          "rsi": 72.3,
+          "cap": "18.1B"
+        },
+        {
+          "ticker": "PTON",
+          "company": "Peloton Interactive, Inc.",
+          "price": 6.39,
+          "changePct": 3.81,
+          "relVol": 0.3,
+          "rsi": 66.4,
+          "cap": "2.8B"
         }
       ]
     },
@@ -104,17 +104,8 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 9,
+      "totalMatches": 4,
       "rows": [
-        {
-          "ticker": "IBM",
-          "company": "International Business Machines Corporation",
-          "price": 217.07,
-          "changePct": -25.21,
-          "relVol": 9.7,
-          "rsi": 30.3,
-          "cap": "204.0B"
-        },
         {
           "ticker": "CPRX",
           "company": "Catalyst Pharmaceuticals, Inc.",
@@ -125,67 +116,31 @@
           "cap": "3.9B"
         },
         {
-          "ticker": "RDN",
-          "company": "Radian Group Inc.",
-          "price": 36.9,
-          "changePct": -2.92,
-          "relVol": 6.8,
-          "rsi": 52.0,
-          "cap": "4.9B"
-        },
-        {
-          "ticker": "UGP",
-          "company": "Ultrapar Participacoes S.A. (New)",
-          "price": 5.94,
-          "changePct": -1.0,
-          "relVol": 5.5,
-          "rsi": 73.0,
-          "cap": "6.5B"
-        },
-        {
-          "ticker": "CLSK",
-          "company": "CleanSpark, Inc.",
-          "price": 13.45,
-          "changePct": 8.82,
-          "relVol": 4.8,
-          "rsi": 43.7,
-          "cap": "3.5B"
-        },
-        {
-          "ticker": "PSO",
-          "company": "Pearson, Plc",
-          "price": 16.57,
-          "changePct": -5.91,
-          "relVol": 4.2,
-          "rsi": 58.5,
-          "cap": "10.5B"
-        },
-        {
-          "ticker": "SEI",
-          "company": "Solaris Energy Infrastructure, Inc.",
-          "price": 69.5,
-          "changePct": 3.5,
+          "ticker": "PYPL",
+          "company": "PayPal Holdings, Inc.",
+          "price": 54.72,
+          "changePct": 15.52,
           "relVol": 4.1,
-          "rsi": 46.2,
-          "cap": "5.1B"
+          "rsi": 79.2,
+          "cap": "48.3B"
         },
         {
-          "ticker": "DNLI",
-          "company": "Denali Therapeutics Inc.",
-          "price": 22.65,
-          "changePct": -14.46,
+          "ticker": "AEHR",
+          "company": "Aehr Test Systems",
+          "price": 93.01,
+          "changePct": 29.16,
           "relVol": 3.7,
-          "rsi": 42.9,
-          "cap": "3.6B"
+          "rsi": 53.6,
+          "cap": "2.9B"
         },
         {
-          "ticker": "ERIC",
-          "company": "Ericsson",
-          "price": 10.14,
-          "changePct": -13.48,
-          "relVol": 3.1,
-          "rsi": 35.2,
-          "cap": "38.5B"
+          "ticker": "CELC",
+          "company": "Celcuity Inc.",
+          "price": 89.82,
+          "changePct": -19.12,
+          "relVol": 3.6,
+          "rsi": 39.3,
+          "cap": "4.4B"
         }
       ]
     },
@@ -193,97 +148,88 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 13,
+      "totalMatches": 9,
       "rows": [
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 127.94,
-          "changePct": -2.74,
-          "relVol": 1.3,
-          "rsi": 25.5,
-          "cap": "368.5B"
+          "price": 131.67,
+          "changePct": 2.92,
+          "relVol": 0.4,
+          "rsi": 29.6,
+          "cap": "379.3B"
         },
         {
           "ticker": "IBM",
           "company": "International Business Machines Corporation",
-          "price": 217.07,
-          "changePct": -25.21,
-          "relVol": 9.7,
-          "rsi": 30.3,
-          "cap": "204.0B"
-        },
-        {
-          "ticker": "LVS",
-          "company": "Las Vegas Sands Corp.",
-          "price": 44.78,
-          "changePct": -2.44,
+          "price": 214.46,
+          "changePct": -1.2,
           "relVol": 1.0,
-          "rsi": 30.7,
-          "cap": "29.7B"
-        },
-        {
-          "ticker": "TU",
-          "company": "Telus Corporation",
-          "price": 10.44,
-          "changePct": -0.95,
-          "relVol": 0.7,
-          "rsi": 29.0,
-          "cap": "16.4B"
+          "rsi": 29.8,
+          "cap": "201.6B"
         },
         {
           "ticker": "IONQ",
           "company": "IonQ, Inc.",
-          "price": 39.29,
-          "changePct": 1.05,
-          "relVol": 1.0,
-          "rsi": 30.5,
-          "cap": "14.7B"
+          "price": 37.78,
+          "changePct": -3.84,
+          "relVol": 0.5,
+          "rsi": 28.9,
+          "cap": "14.1B"
         },
         {
-          "ticker": "FPS",
-          "company": "Forgent Power Solutions, Inc.",
-          "price": 41.18,
-          "changePct": -3.33,
-          "relVol": 1.0,
-          "rsi": 31.9,
-          "cap": "13.1B"
-        },
-        {
-          "ticker": "IONS",
-          "company": "Ionis Pharmaceuticals, Inc.",
-          "price": 54.93,
-          "changePct": -3.21,
-          "relVol": 0.9,
-          "rsi": 24.3,
-          "cap": "9.1B"
-        },
-        {
-          "ticker": "SWKS",
-          "company": "Skyworks Solutions, Inc.",
-          "price": 56.58,
-          "changePct": -2.85,
-          "relVol": 0.9,
-          "rsi": 31.2,
-          "cap": "8.5B"
+          "ticker": "PNR",
+          "company": "Pentair plc.",
+          "price": 63.29,
+          "changePct": -16.37,
+          "relVol": 2.7,
+          "rsi": 25.8,
+          "cap": "10.2B"
         },
         {
           "ticker": "APLD",
           "company": "Applied Digital Corporation",
-          "price": 28.47,
-          "changePct": -1.28,
-          "relVol": 1.0,
-          "rsi": 29.0,
-          "cap": "8.1B"
+          "price": 27.82,
+          "changePct": -2.3,
+          "relVol": 0.4,
+          "rsi": 28.1,
+          "cap": "7.9B"
+        },
+        {
+          "ticker": "RIOT",
+          "company": "Riot Platforms, Inc.",
+          "price": 19.82,
+          "changePct": -1.83,
+          "relVol": 0.3,
+          "rsi": 31.1,
+          "cap": "7.5B"
         },
         {
           "ticker": "LUMN",
           "company": "Lumen Technologies, Inc.",
-          "price": 6.37,
-          "changePct": -1.24,
-          "relVol": 0.8,
-          "rsi": 28.9,
+          "price": 6.45,
+          "changePct": 1.25,
+          "relVol": 0.3,
+          "rsi": 30.8,
           "cap": "6.6B"
+        },
+        {
+          "ticker": "LEGN",
+          "company": "Legend Biotech Corporation",
+          "price": 23.68,
+          "changePct": -7.75,
+          "relVol": 1.7,
+          "rsi": 31.3,
+          "cap": "4.8B"
+        },
+        {
+          "ticker": "LUNR",
+          "company": "Intuitive Machines, Inc.",
+          "price": 15.09,
+          "changePct": 1.21,
+          "relVol": 0.3,
+          "rsi": 29.2,
+          "cap": "3.3B"
         }
       ]
     }
