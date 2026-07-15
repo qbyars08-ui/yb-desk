@@ -1,30 +1,25 @@
 {
-  "updated": "2026-07-14T22:35:49.084Z",
+  "updated": "2026-07-15T14:59:51.946Z",
   "alerts": [
     {
-      "ticker": "NBIS",
-      "changePct": -7.8001,
-      "flaggedAt": "2026-07-14T22:35:49.084Z"
+      "ticker": "PENG",
+      "changePct": -8.072,
+      "flaggedAt": "2026-07-15T14:59:51.946Z"
     },
     {
-      "ticker": "IQMX",
-      "changePct": 7.3504,
-      "flaggedAt": "2026-07-14T22:35:49.084Z"
+      "ticker": "WYY",
+      "changePct": -6.3375,
+      "flaggedAt": "2026-07-15T14:59:51.946Z"
     },
     {
-      "ticker": "ARM",
-      "changePct": -5.9601,
-      "flaggedAt": "2026-07-14T22:35:49.084Z"
+      "ticker": "CRDO",
+      "changePct": -5.5699,
+      "flaggedAt": "2026-07-15T14:59:51.946Z"
     },
     {
-      "ticker": "XNDU",
-      "changePct": 5.7143,
-      "flaggedAt": "2026-07-14T22:35:49.084Z"
-    },
-    {
-      "ticker": "ALMU",
-      "changePct": 5.0555,
-      "flaggedAt": "2026-07-14T22:35:49.084Z"
+      "ticker": "ANET",
+      "changePct": -5.0939,
+      "flaggedAt": "2026-07-15T14:59:51.946Z"
     }
   ]
 }
