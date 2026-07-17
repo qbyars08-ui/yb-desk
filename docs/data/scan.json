@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-16T22:14:39.847805+00:00",
+  "updated": "2026-07-17T15:38:47.381079+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 268,
+      "totalMatches": 60,
       "rows": [
         {
-          "ticker": "ATAI",
-          "company": "AtaiBeckley Inc.",
-          "price": 7.15,
-          "changePct": 33.4,
-          "relVol": 17.4,
-          "rsi": 74.9,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "ABT",
-          "company": "Abbott Laboratories",
-          "price": 98.83,
-          "changePct": 10.71,
-          "relVol": 2.7,
-          "rsi": 64.0,
-          "cap": "172.1B"
-        },
-        {
-          "ticker": "JBHT",
-          "company": "J.B. Hunt Transport Services, Inc.",
-          "price": 298.41,
-          "changePct": 8.01,
-          "relVol": 2.6,
-          "rsi": 64.3,
-          "cap": "28.1B"
-        },
-        {
-          "ticker": "ZGN",
-          "company": "Ermenegildo Zegna N.V.",
-          "price": 14.43,
-          "changePct": 7.37,
-          "relVol": 1.7,
-          "rsi": 62.1,
-          "cap": "6.1B"
-        },
-        {
-          "ticker": "DXCM",
-          "company": "DexCom, Inc.",
-          "price": 77.98,
-          "changePct": 7.22,
+          "ticker": "TRVI",
+          "company": "Trevi Therapeutics, Inc.",
+          "price": 19.61,
+          "changePct": 12.96,
           "relVol": 1.5,
-          "rsi": 62.6,
-          "cap": "30.1B"
+          "rsi": 63.0,
+          "cap": "2.8B"
         },
         {
-          "ticker": "IR",
-          "company": "Ingersoll Rand Inc.",
-          "price": 84.78,
-          "changePct": 7.13,
-          "relVol": 2.5,
-          "rsi": 68.0,
-          "cap": "33.2B"
+          "ticker": "SLS",
+          "company": "SELLAS Life Sciences Group, Inc.",
+          "price": 12.94,
+          "changePct": 10.13,
+          "relVol": 0.6,
+          "rsi": 57.1,
+          "cap": "2.4B"
         },
         {
-          "ticker": "BKD",
-          "company": "Brookdale Senior Living Inc.",
-          "price": 15.28,
-          "changePct": 6.7,
-          "relVol": 1.6,
-          "rsi": 58.6,
-          "cap": "3.6B"
+          "ticker": "TAK",
+          "company": "Takeda Pharmaceutical Company Limited",
+          "price": 17.21,
+          "changePct": 2.9,
+          "relVol": 0.7,
+          "rsi": 67.7,
+          "cap": "52.5B"
         },
         {
-          "ticker": "GPK",
-          "company": "Graphic Packaging Holding Company",
-          "price": 11.13,
-          "changePct": 6.0,
-          "relVol": 0.9,
-          "rsi": 60.1,
-          "cap": "3.3B"
+          "ticker": "MRK",
+          "company": "Merck & Company, Inc.",
+          "price": 131.2,
+          "changePct": 2.8,
+          "relVol": 0.6,
+          "rsi": 62.7,
+          "cap": "324.1B"
+        },
+        {
+          "ticker": "CMG",
+          "company": "Chipotle Mexican Grill, Inc.",
+          "price": 35.1,
+          "changePct": 2.63,
+          "relVol": 0.4,
+          "rsi": 56.4,
+          "cap": "45.0B"
+        },
+        {
+          "ticker": "PANW",
+          "company": "Palo Alto Networks, Inc.",
+          "price": 362.98,
+          "changePct": 2.54,
+          "relVol": 0.4,
+          "rsi": 68.5,
+          "cap": "295.8B"
         },
         {
           "ticker": "UAA",
           "company": "Under Armour, Inc.",
-          "price": 7.25,
-          "changePct": 5.84,
-          "relVol": 1.3,
-          "rsi": 69.3,
+          "price": 7.43,
+          "changePct": 2.48,
+          "relVol": 0.3,
+          "rsi": 71.6,
           "cap": "3.1B"
         },
         {
-          "ticker": "UA",
-          "company": "Under Armour, Inc.",
-          "price": 7.09,
-          "changePct": 5.82,
-          "relVol": 1.2,
-          "rsi": 70.6,
-          "cap": "3.1B"
+          "ticker": "BMY",
+          "company": "Bristol-Myers Squibb Company",
+          "price": 62.01,
+          "changePct": 2.48,
+          "relVol": 0.4,
+          "rsi": 63.9,
+          "cap": "126.6B"
+        },
+        {
+          "ticker": "FHN",
+          "company": "First Horizon Corporation",
+          "price": 25.95,
+          "changePct": 2.17,
+          "relVol": 0.8,
+          "rsi": 58.8,
+          "cap": "12.3B"
+        },
+        {
+          "ticker": "ABT",
+          "company": "Abbott Laboratories",
+          "price": 100.89,
+          "changePct": 2.08,
+          "relVol": 0.6,
+          "rsi": 66.8,
+          "cap": "175.7B"
         }
       ]
     },
@@ -104,88 +104,25 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 9,
+      "totalMatches": 2,
       "rows": [
         {
-          "ticker": "ATAI",
-          "company": "AtaiBeckley Inc.",
-          "price": 7.15,
-          "changePct": 33.4,
-          "relVol": 17.4,
-          "rsi": 74.9,
-          "cap": "2.6B"
+          "ticker": "PSNYW",
+          "company": "Polestar Automotive Holding UK Limited",
+          "price": 7.2,
+          "changePct": 220.0,
+          "relVol": 527.2,
+          "rsi": 85.1,
+          "cap": "2.2B"
         },
         {
-          "ticker": "ORCL/PD",
-          "company": "Oracle Corporation Depositary Shares, each repre",
-          "price": 39.65,
-          "changePct": -3.58,
-          "relVol": 17.0,
-          "rsi": 27.4,
-          "cap": "381.6B"
-        },
-        {
-          "ticker": "BTSG",
-          "company": "BrightSpring Health Services, Inc.",
-          "price": 68.16,
-          "changePct": -0.15,
-          "relVol": 11.0,
-          "rsi": 55.9,
-          "cap": "13.4B"
-        },
-        {
-          "ticker": "KRMN",
-          "company": "Karman Holdings Inc.",
-          "price": 47.45,
-          "changePct": -2.73,
-          "relVol": 6.8,
-          "rsi": 43.3,
-          "cap": "6.3B"
-        },
-        {
-          "ticker": "CDNA",
-          "company": "CareDx, Inc.",
-          "price": 40.34,
-          "changePct": 35.6,
-          "relVol": 5.6,
-          "rsi": 85.0,
-          "cap": "2.1B"
-        },
-        {
-          "ticker": "MAN",
-          "company": "ManpowerGroup",
-          "price": 51.65,
-          "changePct": 32.37,
-          "relVol": 4.6,
-          "rsi": 79.5,
+          "ticker": "CLBK",
+          "company": "Columbia Financial, Inc.",
+          "price": 23.17,
+          "changePct": 0.96,
+          "relVol": 5.5,
+          "rsi": 77.2,
           "cap": "2.4B"
-        },
-        {
-          "ticker": "SMA",
-          "company": "SmartStop Self Storage REIT, Inc.",
-          "price": 35.0,
-          "changePct": 5.64,
-          "relVol": 4.5,
-          "rsi": 70.0,
-          "cap": "2.1B"
-        },
-        {
-          "ticker": "ASTS",
-          "company": "AST SpaceMobile, Inc.",
-          "price": 55.01,
-          "changePct": -17.04,
-          "relVol": 4.2,
-          "rsi": 31.8,
-          "cap": "21.4B"
-        },
-        {
-          "ticker": "SFNC",
-          "company": "Simmons First National Corporation",
-          "price": 23.25,
-          "changePct": 0.09,
-          "relVol": 3.3,
-          "rsi": 62.7,
-          "cap": "3.4B"
         }
       ]
     },
@@ -193,97 +130,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 36,
+      "totalMatches": 33,
       "rows": [
-        {
-          "ticker": "ORCL/PD",
-          "company": "Oracle Corporation Depositary Shares, each repre",
-          "price": 39.65,
-          "changePct": -3.58,
-          "relVol": 17.0,
-          "rsi": 27.4,
-          "cap": "381.6B"
-        },
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 124.21,
-          "changePct": -6.25,
-          "relVol": 1.3,
-          "rsi": 26.9,
-          "cap": "357.8B"
+          "price": 125.51,
+          "changePct": 1.05,
+          "relVol": 0.4,
+          "rsi": 28.3,
+          "cap": "361.5B"
         },
         {
-          "ticker": "AEM",
-          "company": "Agnico Eagle Mines Limited",
-          "price": 137.29,
-          "changePct": -3.47,
-          "relVol": 1.0,
-          "rsi": 29.7,
-          "cap": "69.9B"
+          "ticker": "NFLX",
+          "company": "Netflix, Inc.",
+          "price": 67.76,
+          "changePct": -8.86,
+          "relVol": 1.7,
+          "rsi": 29.0,
+          "cap": "285.3B"
+        },
+        {
+          "ticker": "IBM",
+          "company": "International Business Machines Corporation",
+          "price": 211.31,
+          "changePct": -3.53,
+          "relVol": 0.3,
+          "rsi": 31.2,
+          "cap": "198.6B"
+        },
+        {
+          "ticker": "ISRG",
+          "company": "Intuitive Surgical, Inc.",
+          "price": 351.98,
+          "changePct": -12.51,
+          "relVol": 1.7,
+          "rsi": 31.4,
+          "cap": "124.7B"
+        },
+        {
+          "ticker": "CDNS",
+          "company": "Cadence Design Systems, Inc.",
+          "price": 325.47,
+          "changePct": -10.74,
+          "relVol": 1.4,
+          "rsi": 27.4,
+          "cap": "89.8B"
+        },
+        {
+          "ticker": "NOK",
+          "company": "Nokia Corporation Sponsored",
+          "price": 10.06,
+          "changePct": -3.03,
+          "relVol": 0.6,
+          "rsi": 31.1,
+          "cap": "58.4B"
         },
         {
           "ticker": "RKLB",
           "company": "Rocket Lab Corporation",
-          "price": 67.35,
-          "changePct": -11.61,
-          "relVol": 1.6,
-          "rsi": 30.9,
-          "cap": "40.3B"
+          "price": 67.83,
+          "changePct": 0.71,
+          "relVol": 0.5,
+          "rsi": 31.4,
+          "cap": "40.6B"
         },
         {
           "ticker": "CRWV",
           "company": "CoreWeave, Inc.",
-          "price": 72.91,
-          "changePct": -5.46,
-          "relVol": 0.9,
-          "rsi": 31.7,
-          "cap": "39.8B"
+          "price": 72.83,
+          "changePct": -0.11,
+          "relVol": 0.7,
+          "rsi": 31.6,
+          "cap": "39.7B"
         },
         {
           "ticker": "CCJ",
           "company": "Cameco Corporation",
-          "price": 87.36,
-          "changePct": -3.98,
-          "relVol": 1.4,
-          "rsi": 29.8,
-          "cap": "38.0B"
+          "price": 84.81,
+          "changePct": -2.91,
+          "relVol": 0.7,
+          "rsi": 27.5,
+          "cap": "36.9B"
         },
         {
-          "ticker": "GFS",
-          "company": "GlobalFoundries Inc.",
-          "price": 58.24,
-          "changePct": -5.16,
-          "relVol": 1.8,
-          "rsi": 31.2,
-          "cap": "32.0B"
-        },
-        {
-          "ticker": "ASTS",
-          "company": "AST SpaceMobile, Inc.",
-          "price": 55.01,
-          "changePct": -17.04,
-          "relVol": 4.2,
-          "rsi": 31.8,
-          "cap": "21.4B"
-        },
-        {
-          "ticker": "ALB",
-          "company": "Albemarle Corporation",
-          "price": 119.46,
-          "changePct": -4.23,
-          "relVol": 1.2,
-          "rsi": 26.4,
-          "cap": "14.1B"
-        },
-        {
-          "ticker": "TTMI",
-          "company": "TTM Technologies, Inc.",
-          "price": 130.14,
-          "changePct": -9.39,
-          "relVol": 0.9,
-          "rsi": 31.5,
-          "cap": "13.5B"
+          "ticker": "INIO",
+          "company": "INNIO N.V.",
+          "price": 26.72,
+          "changePct": -4.64,
+          "relVol": 0.6,
+          "rsi": 31.4,
+          "cap": "20.0B"
         }
       ]
     }
