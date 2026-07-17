@@ -1,10 +1,15 @@
 {
-  "updated": "2026-07-17T14:51:42.033Z",
+  "updated": "2026-07-17T16:23:37.212Z",
   "alerts": [
     {
-      "ticker": "CRDO",
-      "changePct": -6.2124,
-      "flaggedAt": "2026-07-17T14:51:42.033Z"
+      "ticker": "ASTS",
+      "changePct": 8.5075,
+      "flaggedAt": "2026-07-17T16:23:37.212Z"
+    },
+    {
+      "ticker": "WYY",
+      "changePct": -5.0737,
+      "flaggedAt": "2026-07-17T16:23:37.212Z"
     }
   ]
 }
