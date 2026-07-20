@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T15:23:41.331Z",
+  "updated": "2026-07-20T18:24:00.465Z",
   "ok": false,
   "marketOpen": true,
   "weekendWindow": false,
@@ -8,7 +8,7 @@
     {
       "id": "tape",
       "file": "prices.json",
-      "ageMinutes": 4,
+      "ageMinutes": 76,
       "maxAgeMinutes": 210,
       "fresh": true,
       "workflow": "prices.yml",
@@ -17,7 +17,7 @@
     {
       "id": "book",
       "file": "book.json",
-      "ageMinutes": 3892,
+      "ageMinutes": 4072,
       "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
@@ -26,16 +26,16 @@
     {
       "id": "signals",
       "file": "signals.json",
-      "ageMinutes": 3917,
+      "ageMinutes": 142,
       "maxAgeMinutes": 1800,
-      "fresh": false,
+      "fresh": true,
       "workflow": "signals.yml",
-      "action": "dispatched"
+      "action": "none"
     },
     {
       "id": "reports",
       "file": "reports-index.json",
-      "ageMinutes": 3892,
+      "ageMinutes": 4072,
       "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
@@ -44,31 +44,31 @@
     {
       "id": "scan",
       "file": "scan.json",
-      "ageMinutes": 3917,
+      "ageMinutes": 142,
       "maxAgeMinutes": 1800,
-      "fresh": false,
+      "fresh": true,
       "workflow": "signals.yml",
-      "action": "waiting_on_dispatch"
+      "action": "none"
     },
     {
       "id": "proving",
       "file": "backtests.json",
-      "ageMinutes": 3916,
+      "ageMinutes": 141,
       "maxAgeMinutes": 1800,
-      "fresh": false,
+      "fresh": true,
       "workflow": "signals.yml",
-      "action": "waiting_on_dispatch"
+      "action": "none"
     }
   ],
   "dispatches": {
     "prices.yml": "2026-07-17T14:06:59.175Z",
-    "desk-report.yml": "2026-07-20T15:23:40.075Z",
+    "desk-report.yml": "2026-07-20T18:24:00.280Z",
     "signals.yml": "2026-07-20T15:23:41.130Z"
   },
   "attempts": {
     "prices.yml": 0,
-    "desk-report.yml": 1,
-    "signals.yml": 1
+    "desk-report.yml": 2,
+    "signals.yml": 0
   },
   "issue": null,
   "memberIssue": null
