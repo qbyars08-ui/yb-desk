@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-20T16:01:37.752478+00:00",
+  "updated": "2026-07-20T22:13:01.171926+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 48,
+      "totalMatches": 192,
       "rows": [
+        {
+          "ticker": "BETA",
+          "company": "Beta Technologies, Inc.",
+          "price": 19.64,
+          "changePct": 10.59,
+          "relVol": 2.0,
+          "rsi": 63.0,
+          "cap": "4.5B"
+        },
+        {
+          "ticker": "ELF",
+          "company": "e.l.f. Beauty, Inc.",
+          "price": 79.65,
+          "changePct": 8.09,
+          "relVol": 1.4,
+          "rsi": 66.7,
+          "cap": "4.7B"
+        },
         {
           "ticker": "NUVB",
           "company": "Nuvation Bio Inc.",
-          "price": 6.33,
-          "changePct": 9.05,
-          "relVol": 1.0,
-          "rsi": 63.2,
+          "price": 6.26,
+          "changePct": 7.93,
+          "relVol": 1.9,
+          "rsi": 62.3,
           "cap": "2.2B"
+        },
+        {
+          "ticker": "VSXY",
+          "company": "Victorias Secret & Co.",
+          "price": 87.41,
+          "changePct": 7.32,
+          "relVol": 2.4,
+          "rsi": 65.3,
+          "cap": "6.9B"
+        },
+        {
+          "ticker": "NAVN",
+          "company": "Navan, Inc.",
+          "price": 27.73,
+          "changePct": 6.82,
+          "relVol": 0.6,
+          "rsi": 68.8,
+          "cap": "7.1B"
         },
         {
           "ticker": "PTON",
           "company": "Peloton Interactive, Inc.",
-          "price": 6.47,
-          "changePct": 5.8,
-          "relVol": 0.4,
-          "rsi": 65.1,
+          "price": 6.52,
+          "changePct": 6.54,
+          "relVol": 1.1,
+          "rsi": 65.9,
           "cap": "2.8B"
         },
         {
           "ticker": "BULL",
           "company": "Webull Corporation",
-          "price": 7.53,
-          "changePct": 4.08,
-          "relVol": 0.4,
-          "rsi": 59.1,
-          "cap": "4.0B"
+          "price": 7.69,
+          "changePct": 6.36,
+          "relVol": 1.2,
+          "rsi": 61.4,
+          "cap": "4.1B"
         },
         {
-          "ticker": "NU",
-          "company": "Nu Holdings Ltd.",
-          "price": 13.99,
-          "changePct": 2.98,
-          "relVol": 0.4,
-          "rsi": 60.1,
-          "cap": "67.6B"
+          "ticker": "RSI",
+          "company": "Rush Street Interactive, Inc.",
+          "price": 34.52,
+          "changePct": 6.22,
+          "relVol": 1.8,
+          "rsi": 67.7,
+          "cap": "8.0B"
         },
         {
-          "ticker": "VG",
-          "company": "Venture Global, Inc.",
-          "price": 14.19,
-          "changePct": 2.83,
-          "relVol": 0.5,
-          "rsi": 65.9,
-          "cap": "35.3B"
+          "ticker": "GPN",
+          "company": "Global Payments Inc.",
+          "price": 82.37,
+          "changePct": 5.85,
+          "relVol": 2.0,
+          "rsi": 66.2,
+          "cap": "22.5B"
         },
         {
-          "ticker": "YMM",
-          "company": "Full Truck Alliance Co. Ltd.",
-          "price": 9.38,
-          "changePct": 2.57,
-          "relVol": 0.5,
-          "rsi": 65.8,
-          "cap": "9.5B"
-        },
-        {
-          "ticker": "SHOP",
-          "company": "Shopify Inc.",
-          "price": 126.7,
-          "changePct": 2.54,
-          "relVol": 0.5,
-          "rsi": 62.0,
-          "cap": "164.4B"
-        },
-        {
-          "ticker": "CCC",
-          "company": "CCC Intelligent Solutions Holdings Inc.",
-          "price": 6.17,
-          "changePct": 2.07,
-          "relVol": 0.2,
+          "ticker": "SGHC",
+          "company": "Super Group (SGHC) Limited",
+          "price": 15.58,
+          "changePct": 5.77,
+          "relVol": 2.4,
           "rsi": 67.3,
-          "cap": "3.6B"
-        },
-        {
-          "ticker": "FRSH",
-          "company": "Freshworks Inc.",
-          "price": 11.05,
-          "changePct": 1.52,
-          "relVol": 0.3,
-          "rsi": 66.1,
-          "cap": "3.2B"
-        },
-        {
-          "ticker": "TOST",
-          "company": "Toast, Inc.",
-          "price": 30.54,
-          "changePct": 1.51,
-          "relVol": 0.2,
-          "rsi": 68.7,
-          "cap": "17.7B"
+          "cap": "7.9B"
         }
       ]
     },
@@ -104,16 +104,61 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 1,
+      "totalMatches": 6,
       "rows": [
         {
           "ticker": "CLBK",
           "company": "Columbia Financial, Inc.",
-          "price": 24.34,
-          "changePct": 3.91,
-          "relVol": 5.8,
-          "rsi": 82.5,
+          "price": 24.5,
+          "changePct": 4.61,
+          "relVol": 14.4,
+          "rsi": 83.1,
           "cap": "2.5B"
+        },
+        {
+          "ticker": "LXP",
+          "company": "LXP Industrial Trust",
+          "price": 60.85,
+          "changePct": 4.0,
+          "relVol": 6.5,
+          "rsi": 76.4,
+          "cap": "3.6B"
+        },
+        {
+          "ticker": "ACHR",
+          "company": "Archer Aviation Inc.",
+          "price": 5.31,
+          "changePct": 19.59,
+          "relVol": 3.9,
+          "rsi": 53.9,
+          "cap": "4.0B"
+        },
+        {
+          "ticker": "MGY",
+          "company": "Magnolia Oil & Gas Corporation",
+          "price": 25.53,
+          "changePct": -6.35,
+          "relVol": 3.7,
+          "rsi": 41.1,
+          "cap": "4.9B"
+        },
+        {
+          "ticker": "HDB",
+          "company": "HDFC Bank Limited",
+          "price": 23.6,
+          "changePct": -10.54,
+          "relVol": 3.5,
+          "rsi": 34.8,
+          "cap": "131.0B"
+        },
+        {
+          "ticker": "DPZ",
+          "company": "Domino's Pizza Inc",
+          "price": 328.97,
+          "changePct": 2.11,
+          "relVol": 3.0,
+          "rsi": 60.9,
+          "cap": "10.9B"
         }
       ]
     },
@@ -121,97 +166,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 14,
+      "totalMatches": 35,
       "rows": [
         {
           "ticker": "ORCL/PD",
           "company": "Oracle Corporation Depositary Shares, each repre",
-          "price": 39.56,
-          "changePct": -2.94,
-          "relVol": 0.5,
-          "rsi": 29.8,
+          "price": 39.5,
+          "changePct": -3.09,
+          "relVol": 1.4,
+          "rsi": 29.7,
           "cap": "364.1B"
         },
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 121.67,
-          "changePct": -3.75,
-          "relVol": 0.4,
-          "rsi": 27.3,
-          "cap": "350.5B"
+          "price": 121.38,
+          "changePct": -3.98,
+          "relVol": 0.8,
+          "rsi": 27.1,
+          "cap": "349.6B"
         },
         {
           "ticker": "NFLX",
           "company": "Netflix, Inc.",
-          "price": 67.97,
-          "changePct": -1.43,
-          "relVol": 0.5,
-          "rsi": 29.2,
-          "cap": "286.2B"
+          "price": 67.6,
+          "changePct": -1.96,
+          "relVol": 1.2,
+          "rsi": 28.7,
+          "cap": "284.6B"
         },
         {
           "ticker": "IBM",
           "company": "International Business Machines Corporation",
-          "price": 211.47,
-          "changePct": -0.56,
-          "relVol": 0.2,
-          "rsi": 31.2,
-          "cap": "198.8B"
+          "price": 213.0,
+          "changePct": 0.16,
+          "relVol": 0.5,
+          "rsi": 31.6,
+          "cap": "200.2B"
+        },
+        {
+          "ticker": "CDNS",
+          "company": "Cadence Design Systems, Inc.",
+          "price": 329.93,
+          "changePct": -0.05,
+          "relVol": 1.2,
+          "rsi": 28.6,
+          "cap": "91.0B"
+        },
+        {
+          "ticker": "SNPS",
+          "company": "Synopsys, Inc.",
+          "price": 378.46,
+          "changePct": -1.51,
+          "relVol": 1.4,
+          "rsi": 22.7,
+          "cap": "72.5B"
+        },
+        {
+          "ticker": "AEM",
+          "company": "Agnico Eagle Mines Limited",
+          "price": 136.34,
+          "changePct": -0.46,
+          "relVol": 0.8,
+          "rsi": 29.0,
+          "cap": "69.5B"
         },
         {
           "ticker": "NOK",
           "company": "Nokia Corporation Sponsored",
-          "price": 10.1,
-          "changePct": -0.25,
-          "relVol": 0.4,
-          "rsi": 31.2,
+          "price": 10.08,
+          "changePct": -0.4,
+          "relVol": 0.9,
+          "rsi": 31.1,
           "cap": "56.5B"
+        },
+        {
+          "ticker": "CRWV",
+          "company": "CoreWeave, Inc.",
+          "price": 73.06,
+          "changePct": -0.2,
+          "relVol": 1.0,
+          "rsi": 32.0,
+          "cap": "39.9B"
         },
         {
           "ticker": "RKLB",
           "company": "Rocket Lab Corporation",
-          "price": 66.25,
-          "changePct": -2.02,
-          "relVol": 0.4,
-          "rsi": 30.5,
-          "cap": "39.6B"
-        },
-        {
-          "ticker": "ERIC",
-          "company": "Ericsson",
-          "price": 9.61,
-          "changePct": -2.19,
-          "relVol": 0.3,
-          "rsi": 31.0,
-          "cap": "32.8B"
-        },
-        {
-          "ticker": "IONQ",
-          "company": "IonQ, Inc.",
-          "price": 34.74,
-          "changePct": -0.12,
-          "relVol": 0.4,
-          "rsi": 26.0,
-          "cap": "13.0B"
-        },
-        {
-          "ticker": "FPS",
-          "company": "Forgent Power Solutions, Inc.",
-          "price": 38.96,
-          "changePct": -2.09,
-          "relVol": 0.2,
-          "rsi": 31.2,
-          "cap": "12.4B"
-        },
-        {
-          "ticker": "PSKY",
-          "company": "Paramount Skydance Corporation",
-          "price": 8.73,
-          "changePct": -0.17,
-          "relVol": 0.3,
-          "rsi": 31.9,
-          "cap": "9.8B"
+          "price": 65.74,
+          "changePct": -2.78,
+          "relVol": 0.9,
+          "rsi": 30.3,
+          "cap": "39.3B"
         }
       ]
     }
