@@ -1,25 +1,75 @@
 {
-  "updated": "2026-07-20T22:10:55.513Z",
+  "updated": "2026-07-21T15:15:14.710Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": 16.9704,
-      "flaggedAt": "2026-07-20T22:10:55.513Z"
+      "changePct": 13.5832,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
     },
     {
-      "ticker": "PENG",
-      "changePct": -11.8854,
-      "flaggedAt": "2026-07-20T22:10:55.513Z"
+      "ticker": "NBIS",
+      "changePct": 13.2406,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
     },
     {
-      "ticker": "XNDU",
-      "changePct": 8.5085,
-      "flaggedAt": "2026-07-20T22:10:55.513Z"
+      "ticker": "LPKFF",
+      "changePct": 13.1404,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
     },
     {
       "ticker": "OUST",
-      "changePct": -6.1285,
-      "flaggedAt": "2026-07-20T22:10:55.513Z"
+      "changePct": 11.6624,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": 10.7802,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": 10.1068,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "IQMX",
+      "changePct": 9.537,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": 9.5146,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 6.9134,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "ARM",
+      "changePct": 6.8692,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": 6.8422,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "LUMN",
+      "changePct": 6.395,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": 5.7057,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": 5.7044,
+      "flaggedAt": "2026-07-21T15:15:14.710Z"
     }
   ]
 }

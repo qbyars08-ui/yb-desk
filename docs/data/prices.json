@@ -1,81 +1,81 @@
 {
-  "updated": "2026-07-20T22:10:55.467Z",
+  "updated": "2026-07-21T15:15:14.654Z",
   "quotes": {
     "ALMU": {
-      "price": 14.61,
-      "changePct": 0.0685
+      "price": 15.32,
+      "changePct": 4.8597
     },
     "ANET": {
-      "price": 169.35,
-      "changePct": 0.4389
+      "price": 177.3,
+      "changePct": 4.6944
     },
     "ARM": {
-      "price": 269.61,
-      "changePct": 0.9057
+      "price": 288.13,
+      "changePct": 6.8692
     },
     "ASTS": {
-      "price": 57.42,
-      "changePct": -0.6574
+      "price": 63.61,
+      "changePct": 10.7802
     },
     "BRUN": {
       "price": 30.54,
       "changePct": 2.363
     },
     "CIFR": {
-      "price": 20.54,
-      "changePct": 16.9704
+      "price": 23.33,
+      "changePct": 13.5832
     },
     "CRDO": {
-      "price": 212.07,
-      "changePct": 4.6329
+      "price": 224.17,
+      "changePct": 5.7057
     },
     "EUV": {
       "price": 27.49,
       "changePct": 5.4469
     },
     "LPKFF": {
-      "price": 16.67,
-      "changePct": -4.1403
+      "price": 18.77,
+      "changePct": 13.1404
     },
     "LUMN": {
-      "price": 6.38,
-      "changePct": 1.5924
+      "price": 6.788,
+      "changePct": 6.395
     },
     "MU": {
-      "price": 865.46,
-      "changePct": 1.9448
+      "price": 952.93,
+      "changePct": 10.1068
     },
     "NBIS": {
-      "price": 182.62,
-      "changePct": 2.7629
+      "price": 206.8,
+      "changePct": 13.2406
     },
     "NOK": {
-      "price": 10.08,
-      "changePct": -0.3953
+      "price": 10.655,
+      "changePct": 5.7044
     },
     "OSS": {
-      "price": 12.36,
-      "changePct": -2.0602
+      "price": 13.536,
+      "changePct": 9.5146
     },
     "OUST": {
-      "price": 34.77,
-      "changePct": -6.1285
+      "price": 38.825,
+      "changePct": 11.6624
     },
     "PENG": {
-      "price": 53.23,
-      "changePct": -11.8854
+      "price": 56.91,
+      "changePct": 6.9134
     },
     "RAAQ": {
       "price": 13.42,
       "changePct": 0
     },
     "RKLB": {
-      "price": 65.74,
-      "changePct": -2.7802
+      "price": 68.82,
+      "changePct": 4.6851
     },
     "SILC": {
-      "price": 44.43,
-      "changePct": 0.8398
+      "price": 47.47,
+      "changePct": 6.8422
     },
     "SMH": {
       "price": 611.51,
@@ -90,20 +90,20 @@
       "changePct": 6.5188
     },
     "WYY": {
-      "price": 11.58,
-      "changePct": -0.6861
+      "price": 12.04,
+      "changePct": 3.9724
     },
     "XNDU": {
-      "price": 10.84,
-      "changePct": 8.5085
+      "price": 11.12,
+      "changePct": 2.583
     },
     "IQMX": {
-      "price": 10.8,
-      "changePct": 0.9346
+      "price": 11.83,
+      "changePct": 9.537
     },
     "SPY": {
-      "price": 742.09,
-      "changePct": -0.1614
+      "price": 747.3,
+      "changePct": 0.7021
     }
   }
 }
