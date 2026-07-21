@@ -1,85 +1,85 @@
 {
-  "updated": "2026-07-21T20:23:29.406Z",
+  "updated": "2026-07-21T21:43:15.947Z",
   "alerts": [
     {
       "ticker": "NBIS",
       "changePct": 18.7822,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "OUST",
       "changePct": 16.9974,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": 16.4557,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "OSS",
       "changePct": 12.6214,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "ALMU",
       "changePct": 12.3888,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "MU",
       "changePct": 12.1739,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "CIFR",
       "changePct": 11.4411,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "IQMX",
       "changePct": 10.6481,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "ASTS",
       "changePct": 10.31,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "PENG",
       "changePct": 9.149,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "ARM",
       "changePct": 7.4626,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "LUMN",
       "changePct": 5.9561,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "CRDO",
       "changePct": 5.5642,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "NOK",
       "changePct": 5.4564,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "SILC",
       "changePct": 5.3342,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     },
     {
       "ticker": "RKLB",
       "changePct": 5.1415,
-      "flaggedAt": "2026-07-21T20:23:29.406Z"
+      "flaggedAt": "2026-07-21T21:43:15.947Z"
     }
   ]
 }
