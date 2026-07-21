@@ -8,7 +8,7 @@
   // ---- Config ----
   var SUPABASE_URL = "https://qfkiijoimekbgfruqfpd.supabase.co";
   var SUPABASE_ANON_KEY = "sb_publishable_9EURziwOccle5cR5WAWAAA_DMdG5bbW";
-  var API_BASE = "https://youngbullinvests.com";
+  var API_BASE = "https://young-bull-site.vercel.app";
   var SESSION_KEY = "ybdesk.session.v1";
   var PORTFOLIO_LS_KEY = "ybdesk.portfolio.v1";
   var TICKER_RE = /^[A-Z][A-Z0-9.\-]{0,11}$/;
