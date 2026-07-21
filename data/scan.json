@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-21T15:53:13.394600+00:00",
+  "updated": "2026-07-21T22:12:42.620246+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 43,
+      "totalMatches": 206,
       "rows": [
-        {
-          "ticker": "MMM",
-          "company": "3M Company",
-          "price": 173.78,
-          "changePct": 9.22,
-          "relVol": 1.9,
-          "rsi": 71.1,
-          "cap": "90.6B"
-        },
         {
           "ticker": "SBRA",
           "company": "Sabra Health Care REIT, Inc.",
-          "price": 21.59,
-          "changePct": 7.97,
-          "relVol": 1.0,
-          "rsi": 71.3,
-          "cap": "5.4B"
+          "price": 22.04,
+          "changePct": 10.2,
+          "relVol": 2.4,
+          "rsi": 73.8,
+          "cap": "5.6B"
         },
         {
-          "ticker": "BULL",
-          "company": "Webull Corporation",
-          "price": 8.13,
-          "changePct": 5.72,
-          "relVol": 0.7,
-          "rsi": 66.9,
-          "cap": "4.3B"
+          "ticker": "TGB",
+          "company": "Trekor Metals Limited",
+          "price": 7.72,
+          "changePct": 9.97,
+          "relVol": 0.8,
+          "rsi": 57.2,
+          "cap": "2.8B"
+        },
+        {
+          "ticker": "HRMY",
+          "company": "Harmony Biosciences Holdings, Inc.",
+          "price": 36.84,
+          "changePct": 9.97,
+          "relVol": 2.3,
+          "rsi": 58.9,
+          "cap": "2.1B"
+        },
+        {
+          "ticker": "TXG",
+          "company": "10x Genomics, Inc.",
+          "price": 47.2,
+          "changePct": 9.21,
+          "relVol": 0.8,
+          "rsi": 71.5,
+          "cap": "6.0B"
         },
         {
           "ticker": "IOVA",
           "company": "Iovance Biotherapeutics, Inc.",
-          "price": 5.28,
-          "changePct": 5.18,
-          "relVol": 0.5,
-          "rsi": 68.6,
+          "price": 5.48,
+          "changePct": 9.16,
+          "relVol": 1.1,
+          "rsi": 70.9,
           "cap": "2.4B"
         },
         {
-          "ticker": "BANC",
-          "company": "Banc of California, Inc.",
-          "price": 21.64,
-          "changePct": 4.01,
+          "ticker": "TPC",
+          "company": "Tutor Perini Corporation",
+          "price": 86.78,
+          "changePct": 7.75,
+          "relVol": 4.4,
+          "rsi": 65.7,
+          "cap": "4.6B"
+        },
+        {
+          "ticker": "BRKR",
+          "company": "Bruker Corporation",
+          "price": 60.43,
+          "changePct": 7.58,
           "relVol": 1.6,
-          "rsi": 65.3,
-          "cap": "3.3B"
+          "rsi": 56.7,
+          "cap": "9.2B"
         },
         {
-          "ticker": "KLAR",
-          "company": "Klarna Group plc",
-          "price": 19.44,
-          "changePct": 3.62,
-          "relVol": 2.0,
-          "rsi": 55.7,
-          "cap": "7.3B"
+          "ticker": "MMM",
+          "company": "3M Company",
+          "price": 170.76,
+          "changePct": 7.32,
+          "relVol": 3.8,
+          "rsi": 68.5,
+          "cap": "89.1B"
         },
         {
-          "ticker": "PR",
-          "company": "Permian Resources Corporation",
-          "price": 20.89,
-          "changePct": 2.98,
-          "relVol": 0.3,
-          "rsi": 68.7,
-          "cap": "17.5B"
+          "ticker": "AMLX",
+          "company": "Amylyx Pharmaceuticals, Inc.",
+          "price": 18.5,
+          "changePct": 6.02,
+          "relVol": 2.2,
+          "rsi": 60.6,
+          "cap": "2.1B"
         },
         {
-          "ticker": "LYG",
-          "company": "Lloyds Banking Group Plc",
-          "price": 6.04,
-          "changePct": 2.81,
-          "relVol": 0.4,
-          "rsi": 59.3,
-          "cap": "87.3B"
-        },
-        {
-          "ticker": "NUVB",
-          "company": "Nuvation Bio Inc.",
-          "price": 6.43,
-          "changePct": 2.72,
-          "relVol": 0.5,
-          "rsi": 64.7,
-          "cap": "2.2B"
-        },
-        {
-          "ticker": "BCS",
-          "company": "Barclays PLC",
-          "price": 27.95,
-          "changePct": 2.62,
-          "relVol": 0.4,
-          "rsi": 58.8,
-          "cap": "93.9B"
+          "ticker": "BULL",
+          "company": "Webull Corporation",
+          "price": 8.15,
+          "changePct": 5.98,
+          "relVol": 1.8,
+          "rsi": 67.1,
+          "cap": "4.3B"
         }
       ]
     },
@@ -104,25 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 2,
+      "totalMatches": 23,
       "rows": [
+        {
+          "ticker": "UTZ",
+          "company": "Utz Brands Inc",
+          "price": 14.06,
+          "changePct": 88.72,
+          "relVol": 32.9,
+          "rsi": 86.9,
+          "cap": "2.0B"
+        },
+        {
+          "ticker": "BA/PA",
+          "company": "Boeing Company (The) Depositary Shares, each rep",
+          "price": 64.1,
+          "changePct": -1.99,
+          "relVol": 31.4,
+          "rsi": 33.2,
+          "cap": "165.1B"
+        },
+        {
+          "ticker": "MCHPP",
+          "company": "Microchip Technology Incorporated - Depositary S",
+          "price": 70.85,
+          "changePct": 3.08,
+          "relVol": 26.9,
+          "rsi": 43.5,
+          "cap": "43.7B"
+        },
+        {
+          "ticker": "NSA",
+          "company": "National Storage Affiliates Trust",
+          "price": 43.41,
+          "changePct": -1.74,
+          "relVol": 18.4,
+          "rsi": 43.1,
+          "cap": "5.8B"
+        },
         {
           "ticker": "MGY",
           "company": "Magnolia Oil & Gas Corporation",
-          "price": 24.66,
-          "changePct": -3.41,
+          "price": 25.09,
+          "changePct": -1.72,
+          "relVol": 15.4,
+          "rsi": 38.3,
+          "cap": "4.6B"
+        },
+        {
+          "ticker": "MOH",
+          "company": "Molina Healthcare Inc",
+          "price": 226.54,
+          "changePct": -1.38,
+          "relVol": 9.6,
+          "rsi": 55.8,
+          "cap": "12.1B"
+        },
+        {
+          "ticker": "ROAD",
+          "company": "Construction Partners, Inc.",
+          "price": 103.21,
+          "changePct": 0.74,
           "relVol": 8.1,
-          "rsi": 36.0,
-          "cap": "4.7B"
+          "rsi": 43.8,
+          "cap": "5.8B"
         },
         {
           "ticker": "DHR",
           "company": "Danaher Corporation",
-          "price": 173.59,
-          "changePct": -13.68,
-          "relVol": 3.3,
-          "rsi": 34.7,
-          "cap": "122.9B"
+          "price": 179.01,
+          "changePct": -10.99,
+          "relVol": 7.2,
+          "rsi": 37.9,
+          "cap": "126.7B"
+        },
+        {
+          "ticker": "TPC",
+          "company": "Tutor Perini Corporation",
+          "price": 86.78,
+          "changePct": 7.75,
+          "relVol": 4.4,
+          "rsi": 65.7,
+          "cap": "4.6B"
+        },
+        {
+          "ticker": "EFX",
+          "company": "Equifax, Inc.",
+          "price": 173.0,
+          "changePct": -3.93,
+          "relVol": 4.4,
+          "rsi": 54.0,
+          "cap": "20.6B"
         }
       ]
     },
@@ -130,79 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 8,
+      "totalMatches": 10,
       "rows": [
-        {
-          "ticker": "ORCL",
-          "company": "Oracle Corporation",
-          "price": 125.46,
-          "changePct": 3.36,
-          "relVol": 0.2,
-          "rsi": 31.5,
-          "cap": "361.4B"
-        },
-        {
-          "ticker": "NFLX",
-          "company": "Netflix, Inc.",
-          "price": 67.44,
-          "changePct": -0.23,
-          "relVol": 0.3,
-          "rsi": 28.4,
-          "cap": "284.0B"
-        },
         {
           "ticker": "IBM",
           "company": "International Business Machines Corporation",
-          "price": 209.59,
-          "changePct": -1.6,
-          "relVol": 0.3,
-          "rsi": 30.8,
-          "cap": "197.0B"
+          "price": 210.5,
+          "changePct": -1.17,
+          "relVol": 0.7,
+          "rsi": 31.0,
+          "cap": "197.8B"
         },
         {
           "ticker": "ERIC",
           "company": "Ericsson",
-          "price": 9.54,
-          "changePct": -0.47,
-          "relVol": 0.3,
-          "rsi": 30.5,
-          "cap": "32.8B"
+          "price": 9.59,
+          "changePct": 0.0,
+          "relVol": 0.6,
+          "rsi": 30.9,
+          "cap": "32.2B"
         },
         {
           "ticker": "TU",
           "company": "Telus Corporation",
-          "price": 10.14,
-          "changePct": -1.31,
-          "relVol": 0.4,
-          "rsi": 26.8,
+          "price": 10.18,
+          "changePct": -0.97,
+          "relVol": 1.5,
+          "rsi": 27.4,
           "cap": "16.0B"
+        },
+        {
+          "ticker": "ALB",
+          "company": "Albemarle Corporation",
+          "price": 118.62,
+          "changePct": 0.36,
+          "relVol": 1.5,
+          "rsi": 27.6,
+          "cap": "14.0B"
         },
         {
           "ticker": "IONQ",
           "company": "IonQ, Inc.",
-          "price": 35.93,
-          "changePct": 4.94,
-          "relVol": 0.5,
-          "rsi": 30.3,
-          "cap": "13.4B"
+          "price": 35.51,
+          "changePct": 3.71,
+          "relVol": 1.1,
+          "rsi": 29.1,
+          "cap": "13.3B"
         },
         {
           "ticker": "AA",
           "company": "Alcoa Corporation",
-          "price": 44.25,
-          "changePct": 1.77,
-          "relVol": 0.4,
-          "rsi": 27.0,
+          "price": 44.35,
+          "changePct": 2.0,
+          "relVol": 1.1,
+          "rsi": 27.4,
           "cap": "11.7B"
+        },
+        {
+          "ticker": "PNR",
+          "company": "Pentair plc.",
+          "price": 61.48,
+          "changePct": -1.03,
+          "relVol": 0.6,
+          "rsi": 26.0,
+          "cap": "9.9B"
         },
         {
           "ticker": "PSKY",
           "company": "Paramount Skydance Corporation",
-          "price": 8.47,
-          "changePct": -1.17,
-          "relVol": 0.3,
-          "rsi": 29.0,
+          "price": 8.53,
+          "changePct": -0.47,
+          "relVol": 0.9,
+          "rsi": 29.6,
           "cap": "9.5B"
+        },
+        {
+          "ticker": "IONS",
+          "company": "Ionis Pharmaceuticals, Inc.",
+          "price": 53.39,
+          "changePct": 0.83,
+          "relVol": 0.5,
+          "rsi": 24.0,
+          "cap": "8.8B"
+        },
+        {
+          "ticker": "LUNR",
+          "company": "Intuitive Machines, Inc.",
+          "price": 14.64,
+          "changePct": 5.86,
+          "relVol": 0.8,
+          "rsi": 32.0,
+          "cap": "3.2B"
         }
       ]
     }
