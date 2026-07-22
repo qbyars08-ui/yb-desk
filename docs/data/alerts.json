@@ -1,10 +1,10 @@
 {
-  "updated": "2026-07-22T15:12:32.004Z",
+  "updated": "2026-07-22T16:59:45.330Z",
   "alerts": [
     {
       "ticker": "WYY",
-      "changePct": -5.1937,
-      "flaggedAt": "2026-07-22T15:12:32.004Z"
+      "changePct": -8.2028,
+      "flaggedAt": "2026-07-22T16:59:45.330Z"
     }
   ]
 }
