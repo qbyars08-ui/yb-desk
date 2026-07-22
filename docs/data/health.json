@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T16:52:22.786Z",
+  "updated": "2026-07-22T18:36:48.903Z",
   "ok": false,
   "marketOpen": true,
   "weekendWindow": false,
@@ -8,7 +8,7 @@
     {
       "id": "tape",
       "file": "prices.json",
-      "ageMinutes": 100,
+      "ageMinutes": 17,
       "maxAgeMinutes": 210,
       "fresh": true,
       "workflow": "prices.yml",
@@ -17,7 +17,7 @@
     {
       "id": "book",
       "file": "book.json",
-      "ageMinutes": 6861,
+      "ageMinutes": 6965,
       "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
@@ -26,7 +26,7 @@
     {
       "id": "signals",
       "file": "signals.json",
-      "ageMinutes": 60,
+      "ageMinutes": 165,
       "maxAgeMinutes": 1800,
       "fresh": true,
       "workflow": "signals.yml",
@@ -35,7 +35,7 @@
     {
       "id": "reports",
       "file": "reports-index.json",
-      "ageMinutes": 6861,
+      "ageMinutes": 6965,
       "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
@@ -44,7 +44,7 @@
     {
       "id": "scan",
       "file": "scan.json",
-      "ageMinutes": 60,
+      "ageMinutes": 165,
       "maxAgeMinutes": 1800,
       "fresh": true,
       "workflow": "signals.yml",
@@ -53,7 +53,7 @@
     {
       "id": "proving",
       "file": "backtests.json",
-      "ageMinutes": 59,
+      "ageMinutes": 164,
       "maxAgeMinutes": 1800,
       "fresh": true,
       "workflow": "signals.yml",
