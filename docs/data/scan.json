@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-22T22:16:18.590382+00:00",
+  "updated": "2026-07-23T16:03:05.429448+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 181,
+      "totalMatches": 40,
       "rows": [
         {
-          "ticker": "ARWR",
-          "company": "Arrowhead Pharmaceuticals, Inc.",
-          "price": 88.7,
-          "changePct": 19.03,
-          "relVol": 3.1,
-          "rsi": 64.5,
-          "cap": "12.5B"
+          "ticker": "NVCR",
+          "company": "NovoCure Limited",
+          "price": 19.43,
+          "changePct": 24.76,
+          "relVol": 3.6,
+          "rsi": 66.5,
+          "cap": "2.2B"
         },
         {
-          "ticker": "WAB",
-          "company": "Westinghouse Air Brake Technologies Corporation",
-          "price": 290.0,
-          "changePct": 10.04,
-          "relVol": 4.4,
-          "rsi": 69.9,
-          "cap": "49.2B"
-        },
-        {
-          "ticker": "PAG",
-          "company": "Penske Automotive Group, Inc.",
-          "price": 214.57,
-          "changePct": 9.93,
-          "relVol": 8.1,
-          "rsi": 73.7,
-          "cap": "14.1B"
-        },
-        {
-          "ticker": "DELL",
-          "company": "Dell Technologies Inc.",
-          "price": 441.8,
-          "changePct": 9.32,
-          "relVol": 1.0,
-          "rsi": 57.6,
-          "cap": "286.4B"
-        },
-        {
-          "ticker": "LQDA",
-          "company": "Liquidia Corporation",
-          "price": 87.04,
-          "changePct": 7.6,
-          "relVol": 2.7,
+          "ticker": "IMAX",
+          "company": "Imax Corporation",
+          "price": 43.4,
+          "changePct": 10.42,
+          "relVol": 2.6,
           "rsi": 65.4,
-          "cap": "7.7B"
+          "cap": "2.4B"
         },
         {
-          "ticker": "EQNR",
-          "company": "Equinor ASA",
-          "price": 39.96,
-          "changePct": 6.3,
-          "relVol": 1.3,
-          "rsi": 73.8,
-          "cap": "90.3B"
+          "ticker": "TMO",
+          "company": "Thermo Fisher Scientific Inc",
+          "price": 578.3,
+          "changePct": 9.85,
+          "relVol": 1.7,
+          "rsi": 74.4,
+          "cap": "214.9B"
+        },
+        {
+          "ticker": "RTX",
+          "company": "RTX Corporation",
+          "price": 209.94,
+          "changePct": 7.73,
+          "relVol": 1.2,
+          "rsi": 72.1,
+          "cap": "282.7B"
+        },
+        {
+          "ticker": "CSX",
+          "company": "CSX Corporation",
+          "price": 52.58,
+          "changePct": 5.31,
+          "relVol": 0.9,
+          "rsi": 74.0,
+          "cap": "97.7B"
+        },
+        {
+          "ticker": "UNP",
+          "company": "Union Pacific Corporation",
+          "price": 307.2,
+          "changePct": 5.0,
+          "relVol": 1.0,
+          "rsi": 72.7,
+          "cap": "182.4B"
+        },
+        {
+          "ticker": "JHX",
+          "company": "James Hardie Industries plc.",
+          "price": 25.91,
+          "changePct": 4.58,
+          "relVol": 0.7,
+          "rsi": 56.1,
+          "cap": "15.0B"
+        },
+        {
+          "ticker": "HUT",
+          "company": "Hut 8 Corp.",
+          "price": 114.36,
+          "changePct": 4.1,
+          "relVol": 0.8,
+          "rsi": 56.1,
+          "cap": "12.9B"
+        },
+        {
+          "ticker": "CIFR",
+          "company": "Cipher Digital Inc.",
+          "price": 25.37,
+          "changePct": 3.72,
+          "relVol": 0.7,
+          "rsi": 58.6,
+          "cap": "10.4B"
         },
         {
           "ticker": "VG",
           "company": "Venture Global, Inc.",
-          "price": 14.82,
-          "changePct": 5.41,
-          "relVol": 1.3,
-          "rsi": 68.2,
-          "cap": "36.8B"
-        },
-        {
-          "ticker": "KSS",
-          "company": "Kohl's Corporation",
-          "price": 19.08,
-          "changePct": 5.24,
-          "relVol": 1.1,
-          "rsi": 63.9,
-          "cap": "2.2B"
-        },
-        {
-          "ticker": "IP",
-          "company": "International Paper Company",
-          "price": 38.09,
-          "changePct": 4.79,
-          "relVol": 0.9,
-          "rsi": 56.9,
-          "cap": "20.2B"
-        },
-        {
-          "ticker": "AUR",
-          "company": "Aurora Innovation, Inc.",
-          "price": 6.61,
-          "changePct": 4.75,
-          "relVol": 1.6,
-          "rsi": 55.4,
-          "cap": "13.0B"
+          "price": 15.24,
+          "changePct": 2.87,
+          "relVol": 0.6,
+          "rsi": 70.4,
+          "cap": "37.9B"
         }
       ]
     },
@@ -104,97 +104,25 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 19,
+      "totalMatches": 2,
       "rows": [
         {
-          "ticker": "ALB/PA",
-          "company": "Albemarle Corporation Depositary Shares each rep",
-          "price": 50.53,
-          "changePct": -1.21,
-          "relVol": 8.3,
-          "rsi": 30.1,
-          "cap": "14.0B"
+          "ticker": "NVCR",
+          "company": "NovoCure Limited",
+          "price": 19.43,
+          "changePct": 24.76,
+          "relVol": 3.6,
+          "rsi": 66.5,
+          "cap": "2.2B"
         },
         {
-          "ticker": "PAG",
-          "company": "Penske Automotive Group, Inc.",
-          "price": 214.57,
-          "changePct": 9.93,
-          "relVol": 8.1,
-          "rsi": 73.7,
-          "cap": "14.1B"
-        },
-        {
-          "ticker": "SMCIP",
-          "company": "Super Micro Computer, Inc. - Depositary Shares E",
-          "price": 53.53,
-          "changePct": 16.72,
-          "relVol": 7.1,
-          "rsi": 57.2,
-          "cap": "16.5B"
-        },
-        {
-          "ticker": "NG",
-          "company": "Novagold Resources Inc.",
-          "price": 6.21,
-          "changePct": 10.3,
-          "relVol": 7.0,
-          "rsi": 48.5,
-          "cap": "2.7B"
-        },
-        {
-          "ticker": "BEP",
-          "company": "Brookfield Renewable Partners L.P. Limited Partn",
-          "price": 32.2,
-          "changePct": 0.06,
-          "relVol": 5.8,
-          "rsi": 36.9,
-          "cap": "9.9B"
-        },
-        {
-          "ticker": "BKU",
-          "company": "BankUnited, Inc.",
-          "price": 45.94,
-          "changePct": -4.43,
-          "relVol": 5.7,
-          "rsi": 37.0,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "SMCI",
-          "company": "Super Micro Computer, Inc.",
-          "price": 30.56,
-          "changePct": 19.84,
-          "relVol": 5.2,
-          "rsi": 53.9,
-          "cap": "19.8B"
-        },
-        {
-          "ticker": "GLNG",
-          "company": "Golar LNG Limited",
-          "price": 49.73,
-          "changePct": -0.06,
-          "relVol": 5.0,
-          "rsi": 43.9,
-          "cap": "5.1B"
-        },
-        {
-          "ticker": "DYN",
-          "company": "Dyne Therapeutics, Inc.",
-          "price": 23.21,
-          "changePct": -2.6,
-          "relVol": 5.0,
-          "rsi": 57.5,
-          "cap": "3.8B"
-        },
-        {
-          "ticker": "BIP",
-          "company": "Brookfield Infrastructure Partners LP Limited Pa",
-          "price": 40.25,
-          "changePct": 1.72,
-          "relVol": 4.8,
-          "rsi": 72.2,
-          "cap": "18.6B"
+          "ticker": "ACI",
+          "company": "Albertsons Companies, Inc.",
+          "price": 11.09,
+          "changePct": -24.08,
+          "relVol": 3.4,
+          "rsi": 21.9,
+          "cap": "5.4B"
         }
       ]
     },
@@ -202,97 +130,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 17,
+      "totalMatches": 15,
       "rows": [
+        {
+          "ticker": "GOOGL",
+          "company": "Alphabet Inc.",
+          "price": 318.0,
+          "changePct": -7.04,
+          "relVol": 1.4,
+          "rsi": 31.1,
+          "cap": "3.87T"
+        },
+        {
+          "ticker": "TSLA",
+          "company": "Tesla, Inc.",
+          "price": 322.25,
+          "changePct": -13.84,
+          "relVol": 1.8,
+          "rsi": 29.5,
+          "cap": "1.21T"
+        },
+        {
+          "ticker": "ORCL",
+          "company": "Oracle Corporation",
+          "price": 120.06,
+          "changePct": -4.59,
+          "relVol": 0.3,
+          "rsi": 29.6,
+          "cap": "345.8B"
+        },
         {
           "ticker": "IBM",
           "company": "International Business Machines Corporation",
-          "price": 205.77,
-          "changePct": -2.25,
-          "relVol": 0.8,
-          "rsi": 29.8,
-          "cap": "193.4B"
-        },
-        {
-          "ticker": "ISRG",
-          "company": "Intuitive Surgical, Inc.",
-          "price": 340.69,
-          "changePct": -2.68,
-          "relVol": 1.0,
-          "rsi": 30.8,
-          "cap": "120.7B"
-        },
-        {
-          "ticker": "SNPS",
-          "company": "Synopsys, Inc.",
-          "price": 377.61,
-          "changePct": -2.95,
-          "relVol": 1.4,
-          "rsi": 26.7,
-          "cap": "72.3B"
+          "price": 206.62,
+          "changePct": 0.41,
+          "relVol": 0.4,
+          "rsi": 30.3,
+          "cap": "194.2B"
         },
         {
           "ticker": "ERIC",
           "company": "Ericsson",
-          "price": 9.49,
-          "changePct": -1.04,
-          "relVol": 0.6,
-          "rsi": 30.0,
+          "price": 9.29,
+          "changePct": -2.05,
+          "relVol": 0.2,
+          "rsi": 28.4,
           "cap": "31.8B"
         },
         {
-          "ticker": "TU",
-          "company": "Telus Corporation",
-          "price": 10.21,
-          "changePct": 0.29,
-          "relVol": 1.3,
-          "rsi": 28.8,
-          "cap": "16.1B"
-        },
-        {
-          "ticker": "ALB/PA",
-          "company": "Albemarle Corporation Depositary Shares each rep",
-          "price": 50.53,
-          "changePct": -1.21,
-          "relVol": 8.3,
-          "rsi": 30.1,
-          "cap": "14.0B"
-        },
-        {
-          "ticker": "ALB",
-          "company": "Albemarle Corporation",
-          "price": 117.45,
-          "changePct": -0.99,
-          "relVol": 1.3,
-          "rsi": 26.8,
-          "cap": "13.9B"
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 39.1,
+          "changePct": -10.04,
+          "relVol": 1.7,
+          "rsi": 27.5,
+          "cap": "18.8B"
         },
         {
           "ticker": "IONQ",
           "company": "IonQ, Inc.",
-          "price": 34.68,
-          "changePct": -2.34,
-          "relVol": 0.8,
-          "rsi": 28.2,
-          "cap": "12.9B"
+          "price": 33.83,
+          "changePct": -2.45,
+          "relVol": 0.5,
+          "rsi": 27.2,
+          "cap": "12.6B"
         },
         {
           "ticker": "RDY",
           "company": "Dr. Reddy's Laboratories Ltd",
-          "price": 11.38,
-          "changePct": -9.39,
-          "relVol": 1.7,
-          "rsi": 24.2,
-          "cap": "10.4B"
+          "price": 11.68,
+          "changePct": 2.64,
+          "relVol": 1.1,
+          "rsi": 29.9,
+          "cap": "10.2B"
         },
         {
-          "ticker": "PNR",
-          "company": "Pentair plc.",
-          "price": 63.02,
-          "changePct": 2.5,
-          "relVol": 0.6,
-          "rsi": 31.1,
-          "cap": "10.2B"
+          "ticker": "AAL",
+          "company": "American Airlines Group, Inc.",
+          "price": 13.59,
+          "changePct": -8.14,
+          "relVol": 0.4,
+          "rsi": 30.4,
+          "cap": "9.0B"
+        },
+        {
+          "ticker": "MP",
+          "company": "MP Materials Corp.",
+          "price": 44.04,
+          "changePct": -3.59,
+          "relVol": 0.5,
+          "rsi": 30.9,
+          "cap": "7.8B"
         }
       ]
     }
