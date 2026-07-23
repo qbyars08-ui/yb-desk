@@ -1,25 +1,25 @@
 {
-  "updated": "2026-07-23T19:58:33.299Z",
+  "updated": "2026-07-23T21:18:47.825Z",
   "alerts": [
     {
       "ticker": "LPKFF",
-      "changePct": -17.8191,
-      "flaggedAt": "2026-07-23T19:58:33.299Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": 5.8667,
-      "flaggedAt": "2026-07-23T19:58:33.299Z"
+      "changePct": -19.0425,
+      "flaggedAt": "2026-07-23T21:18:47.825Z"
     },
     {
       "ticker": "IQMX",
-      "changePct": -5.667,
-      "flaggedAt": "2026-07-23T19:58:33.299Z"
+      "changePct": -6.1029,
+      "flaggedAt": "2026-07-23T21:18:47.825Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": 5.5601,
+      "flaggedAt": "2026-07-23T21:18:47.825Z"
     },
     {
       "ticker": "NOK",
-      "changePct": -5.4961,
-      "flaggedAt": "2026-07-23T19:58:33.299Z"
+      "changePct": -5.3502,
+      "flaggedAt": "2026-07-23T21:18:47.825Z"
     }
   ]
 }
