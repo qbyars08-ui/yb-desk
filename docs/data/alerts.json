@@ -1,75 +1,75 @@
 {
-  "updated": "2026-07-24T20:38:40.999Z",
+  "updated": "2026-07-24T22:15:37.228Z",
   "alerts": [
     {
       "ticker": "NBIS",
       "changePct": -15.0247,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "ALMU",
       "changePct": -10.8777,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "CIFR",
       "changePct": -10.3408,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "CRDO",
       "changePct": -9.8732,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "OUST",
       "changePct": -9.6843,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "RKLB",
       "changePct": -8.687,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "ARM",
       "changePct": -8.1367,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "PENG",
       "changePct": -7.8069,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "MU",
       "changePct": -6.9945,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "NOK",
       "changePct": -6.4748,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "OSS",
       "changePct": -6.1608,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "SILC",
       "changePct": -6.0326,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "WYY",
       "changePct": -5.7554,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     },
     {
       "ticker": "ASTS",
       "changePct": -5.0355,
-      "flaggedAt": "2026-07-24T20:38:40.999Z"
+      "flaggedAt": "2026-07-24T22:15:37.228Z"
     }
   ]
 }
