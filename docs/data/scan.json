@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-23T22:14:36.329461+00:00",
+  "updated": "2026-07-24T15:43:25.581341+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 171,
+      "totalMatches": 33,
       "rows": [
         {
-          "ticker": "NVCR",
-          "company": "NovoCure Limited",
-          "price": 19.99,
-          "changePct": 28.39,
-          "relVol": 8.0,
-          "rsi": 68.4,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "IMAX",
-          "company": "Imax Corporation",
-          "price": 43.96,
-          "changePct": 11.86,
-          "relVol": 5.9,
-          "rsi": 66.8,
-          "cap": "2.4B"
-        },
-        {
-          "ticker": "TMO",
-          "company": "Thermo Fisher Scientific Inc",
-          "price": 572.32,
-          "changePct": 8.71,
-          "relVol": 3.1,
-          "rsi": 73.2,
-          "cap": "212.7B"
-        },
-        {
-          "ticker": "DGX",
-          "company": "Quest Diagnostics Incorporated",
-          "price": 227.9,
-          "changePct": 8.61,
-          "relVol": 4.1,
-          "rsi": 72.2,
-          "cap": "25.2B"
-        },
-        {
-          "ticker": "RTX",
-          "company": "RTX Corporation",
-          "price": 209.16,
-          "changePct": 7.33,
-          "relVol": 2.5,
-          "rsi": 71.5,
-          "cap": "281.7B"
-        },
-        {
-          "ticker": "HUT",
-          "company": "Hut 8 Corp.",
-          "price": 117.67,
-          "changePct": 7.11,
-          "relVol": 1.6,
-          "rsi": 58.1,
-          "cap": "13.2B"
-        },
-        {
-          "ticker": "SLG",
-          "company": "SL Green Realty Corp",
-          "price": 53.61,
-          "changePct": 6.96,
-          "relVol": 3.2,
-          "rsi": 63.2,
+          "ticker": "RNG",
+          "company": "RingCentral, Inc.",
+          "price": 48.71,
+          "changePct": 26.13,
+          "relVol": 2.3,
+          "rsi": 68.5,
           "cap": "4.1B"
         },
         {
-          "ticker": "KN",
-          "company": "Knowles Corporation",
-          "price": 38.81,
-          "changePct": 6.01,
-          "relVol": 3.4,
-          "rsi": 55.7,
-          "cap": "3.3B"
+          "ticker": "HPQ",
+          "company": "HP Inc.",
+          "price": 25.78,
+          "changePct": 5.18,
+          "relVol": 0.2,
+          "rsi": 61.8,
+          "cap": "23.6B"
         },
         {
-          "ticker": "CSX",
-          "company": "CSX Corporation",
-          "price": 52.81,
-          "changePct": 5.77,
-          "relVol": 2.4,
-          "rsi": 74.7,
-          "cap": "98.1B"
+          "ticker": "AAPL",
+          "company": "Apple Inc.",
+          "price": 331.8,
+          "changePct": 3.15,
+          "relVol": 0.3,
+          "rsi": 64.6,
+          "cap": "4.87T"
         },
         {
-          "ticker": "CIFR",
-          "company": "Cipher Digital Inc.",
-          "price": 25.82,
-          "changePct": 5.56,
-          "relVol": 1.2,
-          "rsi": 59.6,
-          "cap": "10.6B"
+          "ticker": "ABT",
+          "company": "Abbott Laboratories",
+          "price": 103.83,
+          "changePct": 3.06,
+          "relVol": 0.2,
+          "rsi": 68.7,
+          "cap": "180.9B"
+        },
+        {
+          "ticker": "OVV",
+          "company": "Ovintiv Inc. (DE)",
+          "price": 63.22,
+          "changePct": 2.98,
+          "relVol": 0.8,
+          "rsi": 74.3,
+          "cap": "17.8B"
+        },
+        {
+          "ticker": "CAG",
+          "company": "ConAgra Brands, Inc.",
+          "price": 14.76,
+          "changePct": 2.68,
+          "relVol": 0.1,
+          "rsi": 58.5,
+          "cap": "7.1B"
+        },
+        {
+          "ticker": "F",
+          "company": "Ford Motor Company",
+          "price": 14.52,
+          "changePct": 2.58,
+          "relVol": 0.3,
+          "rsi": 56.7,
+          "cap": "57.8B"
+        },
+        {
+          "ticker": "PCG",
+          "company": "Pacific Gas & Electric Co.",
+          "price": 17.86,
+          "changePct": 1.85,
+          "relVol": 0.7,
+          "rsi": 60.0,
+          "cap": "39.3B"
+        },
+        {
+          "ticker": "KVUE",
+          "company": "Kenvue Inc.",
+          "price": 19.2,
+          "changePct": 1.61,
+          "relVol": 0.2,
+          "rsi": 56.4,
+          "cap": "36.9B"
+        },
+        {
+          "ticker": "PLD",
+          "company": "Prologis, Inc.",
+          "price": 147.24,
+          "changePct": 1.46,
+          "relVol": 0.5,
+          "rsi": 55.8,
+          "cap": "140.2B"
         }
       ]
     },
@@ -104,195 +104,104 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 30,
-      "rows": [
-        {
-          "ticker": "TPC",
-          "company": "Tutor Perini Corporation",
-          "price": 87.66,
-          "changePct": 0.76,
-          "relVol": 12.2,
-          "rsi": 66.9,
-          "cap": "4.6B"
-        },
-        {
-          "ticker": "KRYS",
-          "company": "Krystal Biotech, Inc.",
-          "price": 327.5,
-          "changePct": -2.76,
-          "relVol": 12.0,
-          "rsi": 41.0,
-          "cap": "9.7B"
-        },
-        {
-          "ticker": "NVCR",
-          "company": "NovoCure Limited",
-          "price": 19.99,
-          "changePct": 28.39,
-          "relVol": 8.0,
-          "rsi": 68.4,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "ACI",
-          "company": "Albertsons Companies, Inc.",
-          "price": 11.44,
-          "changePct": -21.64,
-          "relVol": 7.7,
-          "rsi": 23.1,
-          "cap": "5.6B"
-        },
-        {
-          "ticker": "IMAX",
-          "company": "Imax Corporation",
-          "price": 43.96,
-          "changePct": 11.86,
-          "relVol": 5.9,
-          "rsi": 66.8,
-          "cap": "2.4B"
-        },
-        {
-          "ticker": "MBLY",
-          "company": "Mobileye Global Inc.",
-          "price": 7.47,
-          "changePct": -14.92,
-          "relVol": 4.7,
-          "rsi": 33.4,
-          "cap": "6.3B"
-        },
-        {
-          "ticker": "DOV",
-          "company": "Dover Corporation",
-          "price": 197.8,
-          "changePct": -7.8,
-          "relVol": 4.6,
-          "rsi": 33.0,
-          "cap": "26.6B"
-        },
-        {
-          "ticker": "TKC",
-          "company": "Turkcell Iletisim Hizmetleri AS",
-          "price": 5.6,
-          "changePct": -4.6,
-          "relVol": 4.4,
-          "rsi": 39.0,
-          "cap": "5.0B"
-        },
-        {
-          "ticker": "LBRT",
-          "company": "Liberty Energy Inc.",
-          "price": 19.62,
-          "changePct": -21.96,
-          "relVol": 4.3,
-          "rsi": 26.4,
-          "cap": "3.2B"
-        },
-        {
-          "ticker": "TMHC",
-          "company": "Taylor Morrison Home Corporation",
-          "price": 72.45,
-          "changePct": -0.03,
-          "relVol": 4.3,
-          "rsi": 73.7,
-          "cap": "6.7B"
-        }
-      ]
+      "totalMatches": 0,
+      "rows": []
     },
     {
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 26,
+      "totalMatches": 16,
       "rows": [
-        {
-          "ticker": "GOOGL",
-          "company": "Alphabet Inc.",
-          "price": 317.69,
-          "changePct": -7.13,
-          "relVol": 2.6,
-          "rsi": 31.0,
-          "cap": "3.87T"
-        },
         {
           "ticker": "TSLA",
           "company": "Tesla, Inc.",
-          "price": 319.69,
-          "changePct": -14.52,
-          "relVol": 3.6,
-          "rsi": 29.1,
-          "cap": "1.20T"
+          "price": 310.86,
+          "changePct": -2.76,
+          "relVol": 0.7,
+          "rsi": 27.6,
+          "cap": "1.17T"
         },
         {
           "ticker": "ORCL",
           "company": "Oracle Corporation",
-          "price": 120.04,
-          "changePct": -4.61,
-          "relVol": 0.8,
-          "rsi": 29.6,
-          "cap": "345.8B"
-        },
-        {
-          "ticker": "IBM",
-          "company": "International Business Machines Corporation",
-          "price": 206.65,
-          "changePct": 0.43,
-          "relVol": 0.8,
-          "rsi": 30.3,
-          "cap": "194.2B"
-        },
-        {
-          "ticker": "ISRG",
-          "company": "Intuitive Surgical, Inc.",
-          "price": 332.02,
-          "changePct": -2.54,
-          "relVol": 1.0,
-          "rsi": 29.0,
-          "cap": "117.3B"
-        },
-        {
-          "ticker": "SNPS",
-          "company": "Synopsys, Inc.",
-          "price": 373.52,
-          "changePct": -1.08,
-          "relVol": 1.1,
-          "rsi": 25.8,
-          "cap": "71.5B"
+          "price": 118.86,
+          "changePct": -0.98,
+          "relVol": 0.5,
+          "rsi": 29.1,
+          "cap": "342.4B"
         },
         {
           "ticker": "NOK",
           "company": "Nokia Corporation Sponsored",
-          "price": 9.73,
-          "changePct": -5.35,
-          "relVol": 1.8,
-          "rsi": 31.9,
-          "cap": "58.4B"
+          "price": 9.29,
+          "changePct": -4.57,
+          "relVol": 0.5,
+          "rsi": 29.8,
+          "cap": "55.2B"
         },
         {
           "ticker": "ERIC",
           "company": "Ericsson",
-          "price": 9.31,
-          "changePct": -1.9,
-          "relVol": 0.5,
-          "rsi": 28.5,
-          "cap": "31.8B"
-        },
-        {
-          "ticker": "BSP",
-          "company": "Bending Spoons S.p.A.",
-          "price": 33.35,
-          "changePct": -1.27,
-          "relVol": 1.0,
-          "rsi": 27.4,
-          "cap": "21.2B"
+          "price": 9.38,
+          "changePct": 0.81,
+          "relVol": 0.3,
+          "rsi": 30.1,
+          "cap": "31.1B"
         },
         {
           "ticker": "ROL",
           "company": "Rollins, Inc.",
-          "price": 39.44,
-          "changePct": -9.27,
-          "relVol": 3.8,
-          "rsi": 28.2,
-          "cap": "19.0B"
+          "price": 38.54,
+          "changePct": -2.28,
+          "relVol": 0.5,
+          "rsi": 26.2,
+          "cap": "18.6B"
+        },
+        {
+          "ticker": "IONQ",
+          "company": "IonQ, Inc.",
+          "price": 33.7,
+          "changePct": -1.09,
+          "relVol": 0.3,
+          "rsi": 27.0,
+          "cap": "12.6B"
+        },
+        {
+          "ticker": "FPS",
+          "company": "Forgent Power Solutions, Inc.",
+          "price": 36.54,
+          "changePct": -6.21,
+          "relVol": 0.5,
+          "rsi": 30.4,
+          "cap": "11.7B"
+        },
+        {
+          "ticker": "MP",
+          "company": "MP Materials Corp.",
+          "price": 42.49,
+          "changePct": -4.84,
+          "relVol": 0.4,
+          "rsi": 28.6,
+          "cap": "7.6B"
+        },
+        {
+          "ticker": "PL",
+          "company": "Planet Labs PBC",
+          "price": 20.92,
+          "changePct": -6.44,
+          "relVol": 0.4,
+          "rsi": 28.8,
+          "cap": "7.5B"
+        },
+        {
+          "ticker": "ACI",
+          "company": "Albertsons Companies, Inc.",
+          "price": 11.13,
+          "changePct": -2.71,
+          "relVol": 0.9,
+          "rsi": 21.9,
+          "cap": "5.5B"
         }
       ]
     }
