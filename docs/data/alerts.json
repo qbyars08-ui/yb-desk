@@ -1,75 +1,20 @@
 {
-  "updated": "2026-07-27T15:49:26.762Z",
+  "updated": "2026-07-27T17:51:52.727Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": -17.7576,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "NBIS",
-      "changePct": -17.3847,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": -15.759,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": -13.4224,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "MU",
-      "changePct": -12.3999,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "ALMU",
-      "changePct": -11.4734,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "ARM",
-      "changePct": -10.9596,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -10.6182,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
+      "changePct": -8.7473,
+      "flaggedAt": "2026-07-27T17:51:52.727Z"
     },
     {
       "ticker": "LPKFF",
-      "changePct": 10.1828,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
+      "changePct": 7.8981,
+      "flaggedAt": "2026-07-27T17:51:52.727Z"
     },
     {
-      "ticker": "SILC",
-      "changePct": -8.9307,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": -8.1192,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -7.8888,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": -7.8726,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
-    },
-    {
-      "ticker": "ANET",
-      "changePct": -5.6112,
-      "flaggedAt": "2026-07-27T15:49:26.762Z"
+      "ticker": "MU",
+      "changePct": -5.2164,
+      "flaggedAt": "2026-07-27T17:51:52.727Z"
     }
   ]
 }
