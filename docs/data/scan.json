@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-27T16:34:10.765971+00:00",
+  "updated": "2026-07-27T22:17:34.030313+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 70,
+      "totalMatches": 237,
       "rows": [
         {
-          "ticker": "WDAY",
-          "company": "Workday, Inc.",
-          "price": 147.62,
-          "changePct": 9.07,
-          "relVol": 0.5,
-          "rsi": 58.9,
-          "cap": "36.5B"
+          "ticker": "RHI",
+          "company": "Robert Half Inc.",
+          "price": 39.74,
+          "changePct": 12.61,
+          "relVol": 1.2,
+          "rsi": 60.7,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "W",
+          "company": "Wayfair Inc.",
+          "price": 94.53,
+          "changePct": 12.3,
+          "relVol": 1.5,
+          "rsi": 61.2,
+          "cap": "12.5B"
+        },
+        {
+          "ticker": "DJT",
+          "company": "Trump Media & Technology Group Corp.",
+          "price": 9.56,
+          "changePct": 11.68,
+          "relVol": 1.1,
+          "rsi": 58.7,
+          "cap": "2.6B"
         },
         {
           "ticker": "SHOP",
           "company": "Shopify Inc.",
-          "price": 123.89,
-          "changePct": 8.91,
-          "relVol": 0.6,
-          "rsi": 56.4,
-          "cap": "160.8B"
+          "price": 126.88,
+          "changePct": 11.54,
+          "relVol": 1.5,
+          "rsi": 59.1,
+          "cap": "164.6B"
+        },
+        {
+          "ticker": "RNG",
+          "company": "RingCentral, Inc.",
+          "price": 53.7,
+          "changePct": 11.16,
+          "relVol": 2.1,
+          "rsi": 74.3,
+          "cap": "4.5B"
+        },
+        {
+          "ticker": "NAVN",
+          "company": "Navan, Inc.",
+          "price": 25.78,
+          "changePct": 11.12,
+          "relVol": 1.0,
+          "rsi": 55.8,
+          "cap": "6.6B"
         },
         {
           "ticker": "TEAM",
           "company": "Atlassian Corporation",
-          "price": 94.34,
-          "changePct": 8.59,
+          "price": 95.87,
+          "changePct": 10.35,
+          "relVol": 1.7,
+          "rsi": 56.8,
+          "cap": "24.3B"
+        },
+        {
+          "ticker": "WDAY",
+          "company": "Workday, Inc.",
+          "price": 147.54,
+          "changePct": 9.01,
+          "relVol": 1.7,
+          "rsi": 58.9,
+          "cap": "36.4B"
+        },
+        {
+          "ticker": "FIG",
+          "company": "FIGMA INC",
+          "price": 22.94,
+          "changePct": 8.62,
           "relVol": 0.7,
-          "rsi": 55.7,
-          "cap": "23.9B"
-        },
-        {
-          "ticker": "COMP",
-          "company": "Compass, Inc.",
-          "price": 11.87,
-          "changePct": 7.18,
-          "relVol": 0.4,
-          "rsi": 56.9,
-          "cap": "9.0B"
-        },
-        {
-          "ticker": "FRSH",
-          "company": "Freshworks Inc.",
-          "price": 10.95,
-          "changePct": 6.62,
-          "relVol": 0.3,
-          "rsi": 59.3,
-          "cap": "3.1B"
-        },
-        {
-          "ticker": "PINS",
-          "company": "Pinterest, Inc.",
-          "price": 23.5,
-          "changePct": 6.17,
-          "relVol": 0.3,
-          "rsi": 61.4,
-          "cap": "13.2B"
-        },
-        {
-          "ticker": "M",
-          "company": "Macy's Inc",
-          "price": 24.61,
-          "changePct": 5.28,
-          "relVol": 0.5,
-          "rsi": 58.3,
-          "cap": "6.5B"
-        },
-        {
-          "ticker": "SIRI",
-          "company": "SiriusXM Holdings Inc.",
-          "price": 31.37,
-          "changePct": 5.27,
-          "relVol": 0.7,
-          "rsi": 65.4,
-          "cap": "10.6B"
-        },
-        {
-          "ticker": "VOD",
-          "company": "Vodafone Group Plc",
-          "price": 15.86,
-          "changePct": 4.69,
-          "relVol": 0.8,
-          "rsi": 62.9,
-          "cap": "35.1B"
-        },
-        {
-          "ticker": "SE",
-          "company": "Sea Limited",
-          "price": 104.54,
-          "changePct": 4.54,
-          "relVol": 0.5,
           "rsi": 55.4,
-          "cap": "61.2B"
+          "cap": "12.1B"
+        },
+        {
+          "ticker": "ELF",
+          "company": "e.l.f. Beauty, Inc.",
+          "price": 84.01,
+          "changePct": 8.6,
+          "relVol": 1.1,
+          "rsi": 68.4,
+          "cap": "5.0B"
         }
       ]
     },
@@ -104,104 +104,159 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 0,
-      "rows": []
+      "totalMatches": 6,
+      "rows": [
+        {
+          "ticker": "PHG",
+          "company": "Koninklijke Philips N.V. NY Registry Shares",
+          "price": 25.02,
+          "changePct": -4.39,
+          "relVol": 7.1,
+          "rsi": 33.8,
+          "cap": "25.6B"
+        },
+        {
+          "ticker": "ITRI",
+          "company": "Itron, Inc.",
+          "price": 84.78,
+          "changePct": 0.66,
+          "relVol": 4.7,
+          "rsi": 53.2,
+          "cap": "3.8B"
+        },
+        {
+          "ticker": "LEGN",
+          "company": "Legend Biotech Corporation",
+          "price": 19.27,
+          "changePct": -13.28,
+          "relVol": 4.2,
+          "rsi": 24.2,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "LBTYK",
+          "company": "Liberty Global Ltd.",
+          "price": 9.59,
+          "changePct": -0.1,
+          "relVol": 3.6,
+          "rsi": 29.6,
+          "cap": "3.3B"
+        },
+        {
+          "ticker": "JBS",
+          "company": "JBS N.V.",
+          "price": 13.55,
+          "changePct": 10.34,
+          "relVol": 3.6,
+          "rsi": 69.1,
+          "cap": "14.5B"
+        },
+        {
+          "ticker": "HAPN",
+          "company": "Happen, Inc.",
+          "price": 18.75,
+          "changePct": 3.82,
+          "relVol": 3.2,
+          "rsi": 47.9,
+          "cap": "2.2B"
+        }
+      ]
     },
     {
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 14,
+      "totalMatches": 22,
       "rows": [
         {
           "ticker": "TSLA",
           "company": "Tesla, Inc.",
-          "price": 308.27,
-          "changePct": -1.52,
-          "relVol": 0.6,
-          "rsi": 27.2,
+          "price": 309.22,
+          "changePct": -1.22,
+          "relVol": 1.1,
+          "rsi": 27.3,
           "cap": "1.22T"
-        },
-        {
-          "ticker": "ORCL",
-          "company": "Oracle Corporation",
-          "price": 118.6,
-          "changePct": 3.14,
-          "relVol": 0.4,
-          "rsi": 31.4,
-          "cap": "341.6B"
         },
         {
           "ticker": "NOK",
           "company": "Nokia Corporation Sponsored",
-          "price": 8.98,
-          "changePct": -1.26,
-          "relVol": 0.5,
-          "rsi": 28.4,
+          "price": 9.28,
+          "changePct": 1.98,
+          "relVol": 0.8,
+          "rsi": 30.9,
           "cap": "52.2B"
+        },
+        {
+          "ticker": "GFS",
+          "company": "GlobalFoundries Inc.",
+          "price": 53.18,
+          "changePct": -0.65,
+          "relVol": 1.1,
+          "rsi": 29.0,
+          "cap": "29.2B"
+        },
+        {
+          "ticker": "BSP",
+          "company": "Bending Spoons S.p.A.",
+          "price": 33.26,
+          "changePct": -2.35,
+          "relVol": 1.6,
+          "rsi": 29.3,
+          "cap": "21.1B"
+        },
+        {
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 39.07,
+          "changePct": 1.32,
+          "relVol": 1.0,
+          "rsi": 29.3,
+          "cap": "18.8B"
+        },
+        {
+          "ticker": "ALB",
+          "company": "Albemarle Corporation",
+          "price": 116.18,
+          "changePct": 1.16,
+          "relVol": 1.2,
+          "rsi": 27.7,
+          "cap": "13.7B"
         },
         {
           "ticker": "AA",
           "company": "Alcoa Corporation",
-          "price": 44.07,
-          "changePct": -0.38,
-          "relVol": 0.4,
+          "price": 44.08,
+          "changePct": -0.36,
+          "relVol": 0.8,
           "rsi": 30.4,
           "cap": "11.6B"
         },
         {
           "ticker": "FPS",
           "company": "Forgent Power Solutions, Inc.",
-          "price": 35.54,
-          "changePct": -0.98,
-          "relVol": 0.5,
-          "rsi": 29.1,
-          "cap": "11.3B"
+          "price": 36.22,
+          "changePct": 0.92,
+          "relVol": 0.9,
+          "rsi": 30.6,
+          "cap": "11.6B"
         },
         {
-          "ticker": "PSKY",
-          "company": "Paramount Skydance Corporation",
-          "price": 8.1,
-          "changePct": -1.4,
-          "relVol": 0.7,
-          "rsi": 28.1,
-          "cap": "9.1B"
+          "ticker": "RDY",
+          "company": "Dr. Reddy's Laboratories Ltd",
+          "price": 11.77,
+          "changePct": -0.17,
+          "relVol": 1.3,
+          "rsi": 31.6,
+          "cap": "10.0B"
         },
         {
-          "ticker": "MP",
-          "company": "MP Materials Corp.",
-          "price": 42.29,
-          "changePct": 2.4,
-          "relVol": 0.4,
-          "rsi": 30.4,
-          "cap": "7.5B"
-        },
-        {
-          "ticker": "PL",
-          "company": "Planet Labs PBC",
-          "price": 20.56,
-          "changePct": 0.44,
-          "relVol": 0.3,
-          "rsi": 28.4,
-          "cap": "7.3B"
-        },
-        {
-          "ticker": "ACI",
-          "company": "Albertsons Companies, Inc.",
-          "price": 11.49,
-          "changePct": 4.22,
+          "ticker": "IONS",
+          "company": "Ionis Pharmaceuticals, Inc.",
+          "price": 55.96,
+          "changePct": -1.04,
           "relVol": 0.6,
-          "rsi": 27.6,
-          "cap": "5.6B"
-        },
-        {
-          "ticker": "LEGN",
-          "company": "Legend Biotech Corporation",
-          "price": 18.84,
-          "changePct": -15.21,
-          "relVol": 2.6,
-          "rsi": 23.5,
-          "cap": "4.1B"
+          "rsi": 31.8,
+          "cap": "9.2B"
         }
       ]
     }
