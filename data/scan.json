@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-27T15:19:01.131705+00:00",
+  "updated": "2026-07-27T16:34:10.765971+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 34,
+      "totalMatches": 70,
       "rows": [
+        {
+          "ticker": "WDAY",
+          "company": "Workday, Inc.",
+          "price": 147.62,
+          "changePct": 9.07,
+          "relVol": 0.5,
+          "rsi": 58.9,
+          "cap": "36.5B"
+        },
         {
           "ticker": "SHOP",
           "company": "Shopify Inc.",
-          "price": 123.31,
-          "changePct": 8.4,
-          "relVol": 0.4,
-          "rsi": 55.8,
-          "cap": "160.0B"
-        },
-        {
-          "ticker": "FRSH",
-          "company": "Freshworks Inc.",
-          "price": 10.88,
-          "changePct": 5.94,
-          "relVol": 0.1,
-          "rsi": 58.7,
-          "cap": "3.1B"
-        },
-        {
-          "ticker": "VOD",
-          "company": "Vodafone Group Plc",
-          "price": 15.97,
-          "changePct": 5.45,
+          "price": 123.89,
+          "changePct": 8.91,
           "relVol": 0.6,
-          "rsi": 63.9,
-          "cap": "35.1B"
+          "rsi": 56.4,
+          "cap": "160.8B"
+        },
+        {
+          "ticker": "TEAM",
+          "company": "Atlassian Corporation",
+          "price": 94.34,
+          "changePct": 8.59,
+          "relVol": 0.7,
+          "rsi": 55.7,
+          "cap": "23.9B"
         },
         {
           "ticker": "COMP",
           "company": "Compass, Inc.",
-          "price": 11.62,
-          "changePct": 5.01,
-          "relVol": 0.2,
-          "rsi": 55.0,
-          "cap": "8.8B"
-        },
-        {
-          "ticker": "TOST",
-          "company": "Toast, Inc.",
-          "price": 30.39,
-          "changePct": 4.67,
-          "relVol": 0.2,
-          "rsi": 60.9,
-          "cap": "17.6B"
-        },
-        {
-          "ticker": "AVTR",
-          "company": "Avantor, Inc.",
-          "price": 11.89,
-          "changePct": 3.93,
+          "price": 11.87,
+          "changePct": 7.18,
           "relVol": 0.4,
-          "rsi": 70.1,
-          "cap": "8.1B"
+          "rsi": 56.9,
+          "cap": "9.0B"
         },
         {
-          "ticker": "NU",
-          "company": "Nu Holdings Ltd.",
-          "price": 14.61,
-          "changePct": 3.66,
-          "relVol": 0.1,
-          "rsi": 64.1,
-          "cap": "70.5B"
-        },
-        {
-          "ticker": "BULL",
-          "company": "Webull Corporation",
-          "price": 7.76,
-          "changePct": 3.6,
+          "ticker": "FRSH",
+          "company": "Freshworks Inc.",
+          "price": 10.95,
+          "changePct": 6.62,
           "relVol": 0.3,
-          "rsi": 57.5,
-          "cap": "4.1B"
+          "rsi": 59.3,
+          "cap": "3.1B"
         },
         {
-          "ticker": "SAN",
-          "company": "Banco Santander, S.A. Sponsored",
-          "price": 13.99,
-          "changePct": 3.36,
+          "ticker": "PINS",
+          "company": "Pinterest, Inc.",
+          "price": 23.5,
+          "changePct": 6.17,
           "relVol": 0.3,
-          "rsi": 58.0,
-          "cap": "199.8B"
+          "rsi": 61.4,
+          "cap": "13.2B"
         },
         {
-          "ticker": "BKD",
-          "company": "Brookdale Senior Living Inc.",
-          "price": 15.6,
-          "changePct": 2.94,
+          "ticker": "M",
+          "company": "Macy's Inc",
+          "price": 24.61,
+          "changePct": 5.28,
           "relVol": 0.5,
-          "rsi": 59.7,
-          "cap": "3.7B"
+          "rsi": 58.3,
+          "cap": "6.5B"
+        },
+        {
+          "ticker": "SIRI",
+          "company": "SiriusXM Holdings Inc.",
+          "price": 31.37,
+          "changePct": 5.27,
+          "relVol": 0.7,
+          "rsi": 65.4,
+          "cap": "10.6B"
+        },
+        {
+          "ticker": "VOD",
+          "company": "Vodafone Group Plc",
+          "price": 15.86,
+          "changePct": 4.69,
+          "relVol": 0.8,
+          "rsi": 62.9,
+          "cap": "35.1B"
+        },
+        {
+          "ticker": "SE",
+          "company": "Sea Limited",
+          "price": 104.54,
+          "changePct": 4.54,
+          "relVol": 0.5,
+          "rsi": 55.4,
+          "cap": "61.2B"
         }
       ]
     },
@@ -111,97 +111,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 10,
+      "totalMatches": 14,
       "rows": [
         {
           "ticker": "TSLA",
           "company": "Tesla, Inc.",
-          "price": 309.54,
-          "changePct": -1.12,
-          "relVol": 0.4,
-          "rsi": 27.4,
+          "price": 308.27,
+          "changePct": -1.52,
+          "relVol": 0.6,
+          "rsi": 27.2,
           "cap": "1.22T"
+        },
+        {
+          "ticker": "ORCL",
+          "company": "Oracle Corporation",
+          "price": 118.6,
+          "changePct": 3.14,
+          "relVol": 0.4,
+          "rsi": 31.4,
+          "cap": "341.6B"
         },
         {
           "ticker": "NOK",
           "company": "Nokia Corporation Sponsored",
-          "price": 9.03,
-          "changePct": -0.77,
-          "relVol": 0.4,
-          "rsi": 28.7,
+          "price": 8.98,
+          "changePct": -1.26,
+          "relVol": 0.5,
+          "rsi": 28.4,
           "cap": "52.2B"
+        },
+        {
+          "ticker": "AA",
+          "company": "Alcoa Corporation",
+          "price": 44.07,
+          "changePct": -0.38,
+          "relVol": 0.4,
+          "rsi": 30.4,
+          "cap": "11.6B"
         },
         {
           "ticker": "FPS",
           "company": "Forgent Power Solutions, Inc.",
-          "price": 35.34,
-          "changePct": -1.53,
-          "relVol": 0.4,
-          "rsi": 28.9,
+          "price": 35.54,
+          "changePct": -0.98,
+          "relVol": 0.5,
+          "rsi": 29.1,
           "cap": "11.3B"
         },
         {
           "ticker": "PSKY",
           "company": "Paramount Skydance Corporation",
-          "price": 8.08,
-          "changePct": -1.61,
-          "relVol": 0.5,
-          "rsi": 27.9,
-          "cap": "9.0B"
+          "price": 8.1,
+          "changePct": -1.4,
+          "relVol": 0.7,
+          "rsi": 28.1,
+          "cap": "9.1B"
+        },
+        {
+          "ticker": "MP",
+          "company": "MP Materials Corp.",
+          "price": 42.29,
+          "changePct": 2.4,
+          "relVol": 0.4,
+          "rsi": 30.4,
+          "cap": "7.5B"
+        },
+        {
+          "ticker": "PL",
+          "company": "Planet Labs PBC",
+          "price": 20.56,
+          "changePct": 0.44,
+          "relVol": 0.3,
+          "rsi": 28.4,
+          "cap": "7.3B"
         },
         {
           "ticker": "ACI",
           "company": "Albertsons Companies, Inc.",
-          "price": 11.52,
-          "changePct": 4.4,
-          "relVol": 0.4,
-          "rsi": 27.8,
+          "price": 11.49,
+          "changePct": 4.22,
+          "relVol": 0.6,
+          "rsi": 27.6,
           "cap": "5.6B"
         },
         {
           "ticker": "LEGN",
           "company": "Legend Biotech Corporation",
-          "price": 19.05,
-          "changePct": -14.27,
-          "relVol": 2.2,
-          "rsi": 23.9,
+          "price": 18.84,
+          "changePct": -15.21,
+          "relVol": 2.6,
+          "rsi": 23.5,
           "cap": "4.1B"
-        },
-        {
-          "ticker": "QS",
-          "company": "QuantumScape Corporation",
-          "price": 5.09,
-          "changePct": 4.3,
-          "relVol": 0.3,
-          "rsi": 30.7,
-          "cap": "3.1B"
-        },
-        {
-          "ticker": "LUNR",
-          "company": "Intuitive Machines, Inc.",
-          "price": 13.18,
-          "changePct": 2.01,
-          "relVol": 0.3,
-          "rsi": 29.5,
-          "cap": "2.9B"
-        },
-        {
-          "ticker": "LBRT",
-          "company": "Liberty Energy Inc.",
-          "price": 17.29,
-          "changePct": -0.4,
-          "relVol": 0.4,
-          "rsi": 22.1,
-          "cap": "2.8B"
-        },
-        {
-          "ticker": "RUN",
-          "company": "Sunrun Inc.",
-          "price": 9.93,
-          "changePct": -0.15,
-          "relVol": 0.3,
-          "rsi": 27.1,
-          "cap": "2.4B"
         }
       ]
     }
