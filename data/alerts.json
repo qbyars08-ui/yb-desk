@@ -1,70 +1,50 @@
 {
-  "updated": "2026-07-28T18:43:28.252Z",
+  "updated": "2026-07-28T20:22:45.813Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": -12.0023,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": -10.0019,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "changePct": -9.6817,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
       "ticker": "MU",
-      "changePct": -9.0858,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "changePct": -8.8503,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": -8.3063,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
       "ticker": "ARM",
-      "changePct": -8.4369,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
-    },
-    {
-      "ticker": "LPKFF",
-      "changePct": -7.9646,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -7.5337,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": -7.5058,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": -7.2372,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "changePct": -8.1065,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
       "ticker": "CRDO",
-      "changePct": -7.2163,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "changePct": -7.6199,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
-      "ticker": "RKLB",
-      "changePct": -6.2817,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "ticker": "LPKFF",
+      "changePct": -7.3156,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
-      "ticker": "OUST",
-      "changePct": -6.0899,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "ticker": "OSS",
+      "changePct": -6.82,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
       "ticker": "WYY",
-      "changePct": -5.9813,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "changePct": -5.8878,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     },
     {
-      "ticker": "ALMU",
-      "changePct": -5.0202,
-      "flaggedAt": "2026-07-28T18:43:28.252Z"
+      "ticker": "CIFR",
+      "changePct": -5.6813,
+      "flaggedAt": "2026-07-28T20:22:45.813Z"
     }
   ]
 }
