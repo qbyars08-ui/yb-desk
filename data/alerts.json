@@ -1,60 +1,55 @@
 {
-  "updated": "2026-07-28T15:29:47.064Z",
+  "updated": "2026-07-28T17:05:38.411Z",
   "alerts": [
     {
-      "ticker": "LPKFF",
-      "changePct": -10.0295,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
-    },
-    {
       "ticker": "PENG",
-      "changePct": -9.9067,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
-    },
-    {
-      "ticker": "MU",
-      "changePct": -9.2063,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "changePct": -9.518,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
       "ticker": "NBIS",
-      "changePct": -8.6172,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "changePct": -9.1388,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
-      "ticker": "OSS",
-      "changePct": -8.1681,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "ticker": "MU",
+      "changePct": -8.4881,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
-      "ticker": "CRDO",
-      "changePct": -7.6439,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "ticker": "LPKFF",
+      "changePct": -7.9646,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
       "ticker": "ARM",
-      "changePct": -7.4156,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "changePct": -7.0251,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": -6.4235,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
       "ticker": "WYY",
-      "changePct": -6.8224,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": -6.3741,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -6.033,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "changePct": -6.215,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     },
     {
       "ticker": "SILC",
-      "changePct": -5.904,
-      "flaggedAt": "2026-07-28T15:29:47.064Z"
+      "changePct": -5.6044,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": -5.5972,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": -5.358,
+      "flaggedAt": "2026-07-28T17:05:38.411Z"
     }
   ]
 }
