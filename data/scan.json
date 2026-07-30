@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-29T22:12:34.360321+00:00",
+  "updated": "2026-07-30T16:00:23.886496+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 288,
+      "totalMatches": 63,
       "rows": [
         {
-          "ticker": "YOU",
-          "company": "Clear Secure, Inc.",
-          "price": 58.39,
-          "changePct": 8.45,
-          "relVol": 2.6,
-          "rsi": 60.8,
-          "cap": "7.8B"
-        },
-        {
-          "ticker": "TTAN",
-          "company": "ServiceTitan, Inc.",
-          "price": 84.22,
-          "changePct": 7.44,
-          "relVol": 2.3,
-          "rsi": 64.1,
-          "cap": "8.0B"
-        },
-        {
-          "ticker": "ASH",
-          "company": "Ashland Inc.",
-          "price": 72.84,
-          "changePct": 7.1,
-          "relVol": 4.2,
-          "rsi": 70.4,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "EQNR",
-          "company": "Equinor ASA",
-          "price": 40.95,
-          "changePct": 7.0,
+          "ticker": "CMG",
+          "company": "Chipotle Mexican Grill, Inc.",
+          "price": 38.63,
+          "changePct": 12.82,
           "relVol": 1.1,
-          "rsi": 67.5,
-          "cap": "93.1B"
+          "rsi": 69.0,
+          "cap": "49.6B"
         },
         {
-          "ticker": "SM",
-          "company": "SM Energy Company",
-          "price": 31.72,
-          "changePct": 6.98,
-          "relVol": 0.9,
-          "rsi": 56.2,
-          "cap": "7.6B"
+          "ticker": "BFLY",
+          "company": "Butterfly Network, Inc.",
+          "price": 7.74,
+          "changePct": 8.94,
+          "relVol": 0.5,
+          "rsi": 58.6,
+          "cap": "2.0B"
         },
         {
-          "ticker": "BRZE",
-          "company": "Braze, Inc.",
-          "price": 26.83,
-          "changePct": 6.85,
-          "relVol": 1.1,
-          "rsi": 62.1,
-          "cap": "3.0B"
+          "ticker": "LYG",
+          "company": "Lloyds Banking Group Plc",
+          "price": 6.21,
+          "changePct": 5.71,
+          "relVol": 0.5,
+          "rsi": 59.8,
+          "cap": "86.3B"
         },
         {
-          "ticker": "GKOS",
-          "company": "Glaukos Corporation",
-          "price": 161.66,
-          "changePct": 6.83,
-          "relVol": 5.4,
-          "rsi": 69.6,
-          "cap": "9.5B"
+          "ticker": "SAN",
+          "company": "Banco Santander, S.A. Sponsored",
+          "price": 14.06,
+          "changePct": 5.12,
+          "relVol": 0.8,
+          "rsi": 56.9,
+          "cap": "201.0B"
         },
         {
-          "ticker": "SGRY",
-          "company": "Surgery Partners, Inc.",
-          "price": 16.41,
-          "changePct": 5.33,
-          "relVol": 2.0,
-          "rsi": 55.8,
+          "ticker": "NWG",
+          "company": "NatWest Group plc",
+          "price": 18.45,
+          "changePct": 4.98,
+          "relVol": 0.6,
+          "rsi": 59.5,
+          "cap": "70.6B"
+        },
+        {
+          "ticker": "JBLU",
+          "company": "JetBlue Airways Corporation",
+          "price": 5.99,
+          "changePct": 4.72,
+          "relVol": 0.4,
+          "rsi": 58.2,
+          "cap": "2.3B"
+        },
+        {
+          "ticker": "AEG",
+          "company": "Aegon Ltd. New York Registry Shares",
+          "price": 9.38,
+          "changePct": 3.94,
+          "relVol": 0.6,
+          "rsi": 68.1,
+          "cap": "13.7B"
+        },
+        {
+          "ticker": "SBUX",
+          "company": "Starbucks Corporation",
+          "price": 107.69,
+          "changePct": 3.41,
+          "relVol": 1.4,
+          "rsi": 61.2,
+          "cap": "122.7B"
+        },
+        {
+          "ticker": "FIVN",
+          "company": "Five9, Inc.",
+          "price": 27.98,
+          "changePct": 2.98,
+          "relVol": 1.0,
+          "rsi": 66.3,
           "cap": "2.1B"
         },
         {
-          "ticker": "DDOG",
-          "company": "Datadog, Inc.",
-          "price": 264.2,
-          "changePct": 5.31,
-          "relVol": 1.9,
-          "rsi": 59.7,
-          "cap": "94.0B"
-        },
-        {
-          "ticker": "XRAY",
-          "company": "DENTSPLY SIRONA Inc.",
-          "price": 14.2,
-          "changePct": 5.26,
-          "relVol": 1.1,
-          "rsi": 68.6,
-          "cap": "2.8B"
+          "ticker": "GFL",
+          "company": "GFL Environmental Inc. Subordinate voting shares",
+          "price": 41.0,
+          "changePct": 1.89,
+          "relVol": 1.2,
+          "rsi": 63.5,
+          "cap": "14.8B"
         }
       ]
     },
@@ -104,97 +104,34 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 32,
+      "totalMatches": 3,
       "rows": [
         {
-          "ticker": "CBZ",
-          "company": "CBIZ, Inc.",
-          "price": 54.9,
-          "changePct": 17.56,
-          "relVol": 25.3,
-          "rsi": 84.7,
-          "cap": "2.9B"
+          "ticker": "MKTX",
+          "company": "MarketAxess Holdings, Inc.",
+          "price": 163.12,
+          "changePct": 29.74,
+          "relVol": 10.1,
+          "rsi": 85.5,
+          "cap": "5.8B"
         },
         {
-          "ticker": "PSN",
-          "company": "Parsons Corporation",
-          "price": 40.32,
-          "changePct": -35.0,
-          "relVol": 12.8,
-          "rsi": 28.7,
-          "cap": "4.3B"
-        },
-        {
-          "ticker": "LMND",
-          "company": "Lemonade, Inc.",
-          "price": 47.38,
-          "changePct": -23.72,
-          "relVol": 6.1,
-          "rsi": 28.7,
-          "cap": "3.6B"
-        },
-        {
-          "ticker": "GKOS",
-          "company": "Glaukos Corporation",
-          "price": 161.66,
-          "changePct": 6.83,
-          "relVol": 5.4,
-          "rsi": 69.6,
-          "cap": "9.5B"
-        },
-        {
-          "ticker": "BMO",
-          "company": "Bank Of Montreal",
-          "price": 175.29,
-          "changePct": -2.96,
-          "relVol": 5.3,
-          "rsi": 48.4,
-          "cap": "123.8B"
-        },
-        {
-          "ticker": "WSO",
-          "company": "Watsco, Inc.",
-          "price": 320.02,
-          "changePct": -12.92,
-          "relVol": 5.0,
-          "rsi": 24.1,
-          "cap": "13.0B"
-        },
-        {
-          "ticker": "VRT",
-          "company": "Vertiv Holdings, LLC",
-          "price": 223.04,
-          "changePct": -17.26,
-          "relVol": 4.7,
-          "rsi": 26.9,
-          "cap": "85.7B"
-        },
-        {
-          "ticker": "PAYO",
-          "company": "Payoneer Global Inc.",
-          "price": 7.12,
-          "changePct": -0.42,
-          "relVol": 4.7,
-          "rsi": 70.4,
-          "cap": "2.4B"
-        },
-        {
-          "ticker": "AAUC",
-          "company": "Allied Gold Corporation",
-          "price": 17.03,
-          "changePct": -18.28,
-          "relVol": 4.6,
-          "rsi": 20.7,
+          "ticker": "BHC",
+          "company": "Bausch Health Companies Inc.",
+          "price": 6.0,
+          "changePct": 28.21,
+          "relVol": 4.9,
+          "rsi": 73.7,
           "cap": "2.2B"
         },
         {
-          "ticker": "SITE",
-          "company": "SiteOne Landscape Supply, Inc.",
-          "price": 93.79,
-          "changePct": -9.36,
-          "relVol": 4.5,
-          "rsi": 33.0,
-          "cap": "4.2B"
+          "ticker": "ALNY",
+          "company": "Alnylam Pharmaceuticals, Inc.",
+          "price": 204.0,
+          "changePct": -28.83,
+          "relVol": 3.1,
+          "rsi": 23.3,
+          "cap": "27.2B"
         }
       ]
     },
@@ -202,97 +139,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 81,
+      "totalMatches": 17,
       "rows": [
+        {
+          "ticker": "META",
+          "company": "Meta Platforms, Inc.",
+          "price": 533.24,
+          "changePct": -8.94,
+          "relVol": 1.6,
+          "rsi": 31.2,
+          "cap": "1.35T"
+        },
         {
           "ticker": "TSLA",
           "company": "Tesla, Inc.",
-          "price": 298.32,
-          "changePct": -2.97,
-          "relVol": 0.9,
-          "rsi": 25.4,
-          "cap": "1.18T"
+          "price": 305.83,
+          "changePct": 2.52,
+          "relVol": 0.4,
+          "rsi": 29.2,
+          "cap": "1.21T"
         },
         {
-          "ticker": "INTC",
-          "company": "Intel Corporation",
-          "price": 81.88,
-          "changePct": -5.12,
-          "relVol": 1.2,
-          "rsi": 31.5,
-          "cap": "413.0B"
-        },
-        {
-          "ticker": "CAT",
-          "company": "Caterpillar, Inc.",
-          "price": 782.71,
-          "changePct": -6.91,
-          "relVol": 2.0,
-          "rsi": 29.1,
-          "cap": "360.5B"
-        },
-        {
-          "ticker": "ORCL",
-          "company": "Oracle Corporation",
-          "price": 117.74,
-          "changePct": -1.85,
-          "relVol": 0.7,
-          "rsi": 31.5,
-          "cap": "339.1B"
-        },
-        {
-          "ticker": "LRCX",
-          "company": "Lam Research Corporation",
-          "price": 252.35,
-          "changePct": -6.4,
-          "relVol": 1.5,
-          "rsi": 31.1,
-          "cap": "315.6B"
-        },
-        {
-          "ticker": "MRVL",
-          "company": "Marvell Technology, Inc.",
-          "price": 163.4,
-          "changePct": -6.34,
-          "relVol": 1.0,
-          "rsi": 31.9,
-          "cap": "143.1B"
-        },
-        {
-          "ticker": "GLW",
-          "company": "Corning Incorporated",
-          "price": 124.05,
-          "changePct": -1.56,
-          "relVol": 1.7,
-          "rsi": 30.2,
-          "cap": "106.8B"
+          "ticker": "QCOM",
+          "company": "QUALCOMM Incorporated",
+          "price": 151.78,
+          "changePct": -2.51,
+          "relVol": 0.8,
+          "rsi": 30.6,
+          "cap": "160.0B"
         },
         {
           "ticker": "VRT",
           "company": "Vertiv Holdings, LLC",
-          "price": 223.04,
-          "changePct": -17.26,
-          "relVol": 4.7,
-          "rsi": 26.9,
-          "cap": "85.7B"
+          "price": 228.09,
+          "changePct": 2.26,
+          "relVol": 1.1,
+          "rsi": 29.1,
+          "cap": "87.6B"
         },
         {
-          "ticker": "PWR",
-          "company": "Quanta Services, Inc.",
-          "price": 561.14,
-          "changePct": -4.63,
-          "relVol": 2.2,
-          "rsi": 27.5,
-          "cap": "84.2B"
+          "ticker": "CARR",
+          "company": "Carrier Global Corporation",
+          "price": 59.5,
+          "changePct": -0.7,
+          "relVol": 0.5,
+          "rsi": 29.4,
+          "cap": "49.0B"
         },
         {
-          "ticker": "NXPI",
-          "company": "NXP Semiconductors N.V.",
-          "price": 240.98,
-          "changePct": -7.0,
-          "relVol": 1.9,
-          "rsi": 31.2,
-          "cap": "60.8B"
+          "ticker": "ALNY",
+          "company": "Alnylam Pharmaceuticals, Inc.",
+          "price": 204.0,
+          "changePct": -28.83,
+          "relVol": 3.1,
+          "rsi": 23.3,
+          "cap": "27.2B"
+        },
+        {
+          "ticker": "HAL",
+          "company": "Halliburton Company",
+          "price": 31.34,
+          "changePct": 0.46,
+          "relVol": 0.2,
+          "rsi": 30.8,
+          "cap": "26.1B"
+        },
+        {
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 37.45,
+          "changePct": -3.35,
+          "relVol": 0.3,
+          "rsi": 25.3,
+          "cap": "18.0B"
+        },
+        {
+          "ticker": "CHRW",
+          "company": "C.H. Robinson Worldwide, Inc.",
+          "price": 147.45,
+          "changePct": -15.14,
+          "relVol": 0.9,
+          "rsi": 25.4,
+          "cap": "17.4B"
+        },
+        {
+          "ticker": "RTO",
+          "company": "Rentokil Initial plc",
+          "price": 23.88,
+          "changePct": -18.88,
+          "relVol": 2.6,
+          "rsi": 21.2,
+          "cap": "14.9B"
         }
       ]
     }
