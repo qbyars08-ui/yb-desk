@@ -1,102 +1,102 @@
 {
-  "updated": "2026-07-31T16:10:43.702149+00:00",
+  "updated": "2026-07-31T22:16:02.537877+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 63,
+      "totalMatches": 227,
       "rows": [
         {
-          "ticker": "NWL",
-          "company": "Newell Brands Inc.",
-          "price": 5.83,
-          "changePct": 13.33,
-          "relVol": 4.0,
-          "rsi": 63.7,
-          "cap": "2.5B"
+          "ticker": "AMBA",
+          "company": "Ambarella, Inc.",
+          "price": 86.0,
+          "changePct": 16.08,
+          "relVol": 5.0,
+          "rsi": 64.5,
+          "cap": "3.8B"
         },
         {
           "ticker": "DXCM",
           "company": "DexCom, Inc.",
-          "price": 82.54,
-          "changePct": 10.73,
-          "relVol": 1.3,
-          "rsi": 67.5,
-          "cap": "31.8B"
+          "price": 83.45,
+          "changePct": 11.95,
+          "relVol": 2.8,
+          "rsi": 68.6,
+          "cap": "32.2B"
+        },
+        {
+          "ticker": "NWL",
+          "company": "Newell Brands Inc.",
+          "price": 5.6,
+          "changePct": 8.95,
+          "relVol": 6.2,
+          "rsi": 60.1,
+          "cap": "2.4B"
+        },
+        {
+          "ticker": "GTES",
+          "company": "Gates Industrial Corporation Ltd.",
+          "price": 27.98,
+          "changePct": 8.53,
+          "relVol": 2.1,
+          "rsi": 57.8,
+          "cap": "7.1B"
         },
         {
           "ticker": "GH",
           "company": "Guardant Health, Inc.",
-          "price": 162.25,
-          "changePct": 6.5,
-          "relVol": 1.2,
-          "rsi": 62.0,
+          "price": 161.99,
+          "changePct": 6.33,
+          "relVol": 2.5,
+          "rsi": 61.9,
           "cap": "21.5B"
+        },
+        {
+          "ticker": "PGEN",
+          "company": "Precigen, Inc.",
+          "price": 6.27,
+          "changePct": 5.56,
+          "relVol": 1.5,
+          "rsi": 69.8,
+          "cap": "2.2B"
         },
         {
           "ticker": "ANET",
           "company": "Arista Networks, Inc.",
-          "price": 178.59,
-          "changePct": 4.43,
-          "relVol": 0.6,
-          "rsi": 55.8,
-          "cap": "224.9B"
+          "price": 180.35,
+          "changePct": 5.46,
+          "relVol": 1.4,
+          "rsi": 56.8,
+          "cap": "227.1B"
         },
         {
-          "ticker": "FND",
-          "company": "Floor & Decor Holdings, Inc.",
-          "price": 57.41,
-          "changePct": 3.81,
+          "ticker": "FSLY",
+          "company": "Fastly, Inc.",
+          "price": 22.66,
+          "changePct": 5.15,
+          "relVol": 1.1,
+          "rsi": 66.3,
+          "cap": "3.5B"
+        },
+        {
+          "ticker": "FTNT",
+          "company": "Fortinet, Inc.",
+          "price": 161.95,
+          "changePct": 4.99,
           "relVol": 1.0,
-          "rsi": 56.4,
-          "cap": "6.2B"
+          "rsi": 60.1,
+          "cap": "118.7B"
         },
         {
-          "ticker": "NWG",
-          "company": "NatWest Group plc",
-          "price": 19.0,
-          "changePct": 2.54,
-          "relVol": 0.9,
-          "rsi": 64.1,
-          "cap": "73.2B"
-        },
-        {
-          "ticker": "MSFT",
-          "company": "Microsoft Corporation",
-          "price": 462.13,
-          "changePct": 2.45,
-          "relVol": 0.6,
-          "rsi": 74.0,
-          "cap": "3.43T"
-        },
-        {
-          "ticker": "ADT",
-          "company": "ADT Inc.",
-          "price": 7.67,
-          "changePct": 2.06,
-          "relVol": 0.4,
-          "rsi": 74.2,
-          "cap": "5.2B"
-        },
-        {
-          "ticker": "BEN",
-          "company": "Franklin Resources, Inc.",
-          "price": 33.78,
-          "changePct": 1.84,
-          "relVol": 0.8,
-          "rsi": 57.4,
-          "cap": "17.6B"
-        },
-        {
-          "ticker": "CHYM",
-          "company": "Chime Financial, Inc.",
-          "price": 22.96,
-          "changePct": 1.59,
-          "relVol": 0.4,
-          "rsi": 64.6,
-          "cap": "8.7B"
+          "ticker": "GSAT",
+          "company": "Globalstar, Inc.",
+          "price": 83.38,
+          "changePct": 4.11,
+          "relVol": 2.1,
+          "rsi": 69.3,
+          "cap": "10.7B"
         }
       ]
     },
@@ -104,43 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 4,
+      "totalMatches": 29,
       "rows": [
+        {
+          "ticker": "IHS",
+          "company": "IHS Holding Limited",
+          "price": 8.2,
+          "changePct": 0.0,
+          "relVol": 30.4,
+          "rsi": 47.5,
+          "cap": "2.8B"
+        },
         {
           "ticker": "BSBR",
           "company": "Banco Santander Brasil SA",
-          "price": 5.68,
-          "changePct": 12.57,
-          "relVol": 4.9,
-          "rsi": 60.3,
+          "price": 5.67,
+          "changePct": 12.28,
+          "relVol": 8.3,
+          "rsi": 60.0,
           "cap": "18.6B"
         },
         {
           "ticker": "RBLX",
           "company": "Roblox Corporation",
-          "price": 34.29,
-          "changePct": -29.55,
-          "relVol": 4.2,
-          "rsi": 25.6,
-          "cap": "24.6B"
+          "price": 35.6,
+          "changePct": -26.85,
+          "relVol": 7.3,
+          "rsi": 26.6,
+          "cap": "25.5B"
+        },
+        {
+          "ticker": "ITGR",
+          "company": "Integer Holdings Corporation",
+          "price": 121.21,
+          "changePct": 20.18,
+          "relVol": 6.6,
+          "rsi": 83.5,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "BHC",
+          "company": "Bausch Health Companies Inc.",
+          "price": 6.89,
+          "changePct": 14.26,
+          "relVol": 6.2,
+          "rsi": 80.8,
+          "cap": "2.6B"
         },
         {
           "ticker": "NWL",
           "company": "Newell Brands Inc.",
-          "price": 5.83,
-          "changePct": 13.33,
-          "relVol": 4.0,
-          "rsi": 63.7,
-          "cap": "2.5B"
+          "price": 5.6,
+          "changePct": 8.95,
+          "relVol": 6.2,
+          "rsi": 60.1,
+          "cap": "2.4B"
         },
         {
           "ticker": "RDDT",
           "company": "Reddit, Inc.",
-          "price": 137.57,
-          "changePct": -22.73,
-          "relVol": 3.6,
-          "rsi": 29.6,
-          "cap": "26.5B"
+          "price": 140.67,
+          "changePct": -20.99,
+          "relVol": 6.0,
+          "rsi": 30.5,
+          "cap": "27.1B"
+        },
+        {
+          "ticker": "DD",
+          "company": "DuPont de Nemours, Inc.",
+          "price": 137.0,
+          "changePct": -1.33,
+          "relVol": 5.9,
+          "rsi": 47.0,
+          "cap": "18.5B"
+        },
+        {
+          "ticker": "FIVN",
+          "company": "Five9, Inc.",
+          "price": 27.51,
+          "changePct": -0.54,
+          "relVol": 5.7,
+          "rsi": 64.5,
+          "cap": "2.1B"
+        },
+        {
+          "ticker": "VCYT",
+          "company": "Veracyte, Inc.",
+          "price": 46.32,
+          "changePct": -22.52,
+          "relVol": 5.7,
+          "rsi": 34.1,
+          "cap": "3.7B"
         }
       ]
     },
@@ -148,97 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 16,
+      "totalMatches": 25,
       "rows": [
         {
           "ticker": "TSLA",
           "company": "Tesla, Inc.",
-          "price": 307.62,
-          "changePct": -0.4,
-          "relVol": 0.4,
-          "rsi": 30.3,
-          "cap": "1.21T"
+          "price": 311.21,
+          "changePct": 0.76,
+          "relVol": 0.8,
+          "rsi": 31.7,
+          "cap": "1.23T"
         },
         {
           "ticker": "LIN",
           "company": "Linde plc",
-          "price": 479.3,
-          "changePct": -5.77,
-          "relVol": 1.3,
-          "rsi": 30.4,
-          "cap": "221.7B"
+          "price": 478.38,
+          "changePct": -5.95,
+          "relVol": 2.7,
+          "rsi": 30.1,
+          "cap": "221.3B"
         },
         {
           "ticker": "QCOM",
           "company": "QUALCOMM Incorporated",
-          "price": 148.44,
-          "changePct": -2.09,
-          "relVol": 0.3,
-          "rsi": 29.2,
-          "cap": "155.9B"
+          "price": 147.61,
+          "changePct": -2.63,
+          "relVol": 1.0,
+          "rsi": 28.9,
+          "cap": "155.0B"
+        },
+        {
+          "ticker": "NXPI",
+          "company": "NXP Semiconductors N.V.",
+          "price": 229.16,
+          "changePct": -6.53,
+          "relVol": 1.3,
+          "rsi": 29.0,
+          "cap": "57.8B"
+        },
+        {
+          "ticker": "ALNY",
+          "company": "Alnylam Pharmaceuticals, Inc.",
+          "price": 205.52,
+          "changePct": 0.02,
+          "relVol": 2.1,
+          "rsi": 23.5,
+          "cap": "27.4B"
         },
         {
           "ticker": "GFS",
           "company": "GlobalFoundries Inc.",
-          "price": 50.64,
-          "changePct": 1.5,
-          "relVol": 0.5,
-          "rsi": 31.9,
-          "cap": "27.8B"
+          "price": 49.99,
+          "changePct": 0.2,
+          "relVol": 1.2,
+          "rsi": 30.5,
+          "cap": "27.4B"
         },
         {
           "ticker": "RDDT",
           "company": "Reddit, Inc.",
-          "price": 137.57,
-          "changePct": -22.73,
-          "relVol": 3.6,
-          "rsi": 29.6,
-          "cap": "26.5B"
+          "price": 140.67,
+          "changePct": -20.99,
+          "relVol": 6.0,
+          "rsi": 30.5,
+          "cap": "27.1B"
         },
         {
           "ticker": "RBLX",
           "company": "Roblox Corporation",
-          "price": 34.29,
-          "changePct": -29.55,
-          "relVol": 4.2,
-          "rsi": 25.6,
-          "cap": "24.6B"
+          "price": 35.6,
+          "changePct": -26.85,
+          "relVol": 7.3,
+          "rsi": 26.6,
+          "cap": "25.5B"
         },
         {
-          "ticker": "TU",
-          "company": "Telus Corporation",
-          "price": 9.46,
-          "changePct": -12.12,
-          "relVol": 2.5,
-          "rsi": 31.6,
-          "cap": "14.9B"
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 37.97,
+          "changePct": -0.99,
+          "relVol": 0.7,
+          "rsi": 26.4,
+          "cap": "18.3B"
         },
         {
-          "ticker": "RTO",
-          "company": "Rentokil Initial plc",
-          "price": 23.57,
-          "changePct": -2.78,
-          "relVol": 1.3,
-          "rsi": 20.5,
-          "cap": "11.9B"
-        },
-        {
-          "ticker": "PSKY",
-          "company": "Paramount Skydance Corporation",
-          "price": 7.75,
-          "changePct": -0.77,
-          "relVol": 0.2,
-          "rsi": 25.2,
-          "cap": "8.7B"
-        },
-        {
-          "ticker": "PL",
-          "company": "Planet Labs PBC",
-          "price": 20.25,
-          "changePct": 0.15,
-          "relVol": 0.3,
-          "rsi": 31.3,
-          "cap": "7.2B"
+          "ticker": "CHRW",
+          "company": "C.H. Robinson Worldwide, Inc.",
+          "price": 147.73,
+          "changePct": 0.55,
+          "relVol": 1.4,
+          "rsi": 26.0,
+          "cap": "17.4B"
         }
       ]
     }
