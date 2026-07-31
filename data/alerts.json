@@ -1,85 +1,20 @@
 {
-  "updated": "2026-07-30T21:47:04.348Z",
+  "updated": "2026-07-31T15:27:40.122Z",
   "alerts": [
     {
-      "ticker": "CIFR",
-      "changePct": 28.0667,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "NBIS",
-      "changePct": 27.1286,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
       "ticker": "MU",
-      "changePct": 18.3572,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
+      "changePct": -6.0058,
+      "flaggedAt": "2026-07-31T15:27:40.122Z"
     },
     {
-      "ticker": "PENG",
-      "changePct": 17.6888,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
+      "ticker": "IQMX",
+      "changePct": -5.5713,
+      "flaggedAt": "2026-07-31T15:27:40.122Z"
     },
     {
-      "ticker": "OUST",
-      "changePct": 13.5144,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": 13.3164,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "XNDU",
-      "changePct": 13.0256,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": 10.3956,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": 10.3754,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "ASTS",
-      "changePct": 10.2018,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": 10.1947,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "ANET",
-      "changePct": 8.2611,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "LPKFF",
-      "changePct": 8.1116,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": 8.0856,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "ARM",
-      "changePct": 7.4036,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
-    },
-    {
-      "ticker": "LUMN",
-      "changePct": 5.1282,
-      "flaggedAt": "2026-07-30T21:47:04.348Z"
+      "ticker": "WYY",
+      "changePct": 5.3517,
+      "flaggedAt": "2026-07-31T15:27:40.122Z"
     }
   ]
 }
