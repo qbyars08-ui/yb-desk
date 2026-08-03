@@ -1,24 +1,24 @@
 {
-  "updated": "2026-08-03T11:49:06.351Z",
+  "updated": "2026-08-03T15:21:08.489Z",
   "ok": false,
-  "marketOpen": false,
-  "weekendWindow": true,
+  "marketOpen": true,
+  "weekendWindow": false,
   "dryRun": false,
   "checks": [
     {
       "id": "tape",
       "file": "prices.json",
-      "ageMinutes": 3724,
-      "maxAgeMinutes": 4560,
-      "fresh": true,
+      "ageMinutes": 3936,
+      "maxAgeMinutes": 210,
+      "fresh": false,
       "workflow": "prices.yml",
-      "action": "none"
+      "action": "dispatched"
     },
     {
       "id": "book",
       "file": "book.json",
-      "ageMinutes": 23837,
-      "maxAgeMinutes": 4800,
+      "ageMinutes": 24049,
+      "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
       "action": "escalated"
@@ -26,17 +26,17 @@
     {
       "id": "signals",
       "file": "signals.json",
-      "ageMinutes": 3693,
-      "maxAgeMinutes": 4800,
-      "fresh": true,
+      "ageMinutes": 3905,
+      "maxAgeMinutes": 1800,
+      "fresh": false,
       "workflow": "signals.yml",
-      "action": "none"
+      "action": "dispatched"
     },
     {
       "id": "reports",
       "file": "reports-index.json",
-      "ageMinutes": 23837,
-      "maxAgeMinutes": 4800,
+      "ageMinutes": 24049,
+      "maxAgeMinutes": 1800,
       "fresh": false,
       "workflow": "desk-report.yml",
       "action": "escalated"
@@ -44,31 +44,31 @@
     {
       "id": "scan",
       "file": "scan.json",
-      "ageMinutes": 3693,
-      "maxAgeMinutes": 4800,
-      "fresh": true,
+      "ageMinutes": 3905,
+      "maxAgeMinutes": 1800,
+      "fresh": false,
       "workflow": "signals.yml",
-      "action": "none"
+      "action": "waiting_on_dispatch"
     },
     {
       "id": "proving",
       "file": "backtests.json",
-      "ageMinutes": 3692,
-      "maxAgeMinutes": 4800,
-      "fresh": true,
+      "ageMinutes": 3904,
+      "maxAgeMinutes": 1800,
+      "fresh": false,
       "workflow": "signals.yml",
-      "action": "none"
+      "action": "waiting_on_dispatch"
     }
   ],
   "dispatches": {
-    "prices.yml": "2026-07-31T14:42:20.557Z",
+    "prices.yml": "2026-08-03T15:21:07.015Z",
     "desk-report.yml": "2026-07-20T20:44:12.867Z",
-    "signals.yml": "2026-07-27T15:18:13.848Z"
+    "signals.yml": "2026-08-03T15:21:08.101Z"
   },
   "attempts": {
-    "prices.yml": 0,
+    "prices.yml": 1,
     "desk-report.yml": 3,
-    "signals.yml": 0
+    "signals.yml": 1
   },
   "issue": "already_open",
   "memberIssue": null
