@@ -1,30 +1,45 @@
 {
-  "updated": "2026-08-03T15:50:24.859Z",
+  "updated": "2026-08-03T18:01:49.496Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 12.7567,
-      "flaggedAt": "2026-08-03T15:50:24.859Z"
+      "changePct": 15.9445,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
     },
     {
       "ticker": "CIFR",
-      "changePct": 9.655,
-      "flaggedAt": "2026-08-03T15:50:24.859Z"
+      "changePct": 11.828,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
     },
     {
       "ticker": "ASTS",
-      "changePct": 8.1384,
-      "flaggedAt": "2026-08-03T15:50:24.859Z"
+      "changePct": 9.41,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
     },
     {
       "ticker": "RKLB",
-      "changePct": 7.0593,
-      "flaggedAt": "2026-08-03T15:50:24.859Z"
+      "changePct": 7.4134,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
     },
     {
       "ticker": "OUST",
-      "changePct": 6.729,
-      "flaggedAt": "2026-08-03T15:50:24.859Z"
+      "changePct": 7.4084,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": 6.6231,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": 5.7621,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": 5.4399,
+      "flaggedAt": "2026-08-03T18:01:49.496Z"
     }
   ]
 }
