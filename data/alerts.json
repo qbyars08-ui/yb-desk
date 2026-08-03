@@ -1,45 +1,45 @@
 {
-  "updated": "2026-08-03T19:52:59.297Z",
+  "updated": "2026-08-03T21:17:35.574Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 12.825,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": 8.622,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "changePct": 11.6433,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     },
     {
       "ticker": "OUST",
-      "changePct": 8.3825,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "changePct": 8.8952,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     },
     {
-      "ticker": "ASTS",
-      "changePct": 8.274,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "ticker": "RKLB",
+      "changePct": 8.4373,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     },
     {
       "ticker": "CIFR",
-      "changePct": 7.8405,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "changePct": 8.2437,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": 7.6975,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     },
     {
       "ticker": "OSS",
-      "changePct": 6.9501,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
-    },
-    {
-      "ticker": "XNDU",
-      "changePct": 5.6691,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "changePct": 6.7866,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     },
     {
       "ticker": "CRDO",
-      "changePct": 5.2466,
-      "flaggedAt": "2026-08-03T19:52:59.297Z"
+      "changePct": 5.4882,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": 5.1115,
+      "flaggedAt": "2026-08-03T21:17:35.574Z"
     }
   ]
 }
