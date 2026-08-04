@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-03T22:17:03.179371+00:00",
+  "updated": "2026-08-04T16:22:10.983715+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 277,
+      "totalMatches": 100,
       "rows": [
         {
-          "ticker": "ATKR",
-          "company": "Atkore Inc.",
-          "price": 93.55,
-          "changePct": 28.22,
-          "relVol": 20.1,
-          "rsi": 72.6,
-          "cap": "3.2B"
+          "ticker": "W",
+          "company": "Wayfair Inc.",
+          "price": 116.29,
+          "changePct": 30.31,
+          "relVol": 1.7,
+          "rsi": 72.4,
+          "cap": "15.3B"
+        },
+        {
+          "ticker": "GENI",
+          "company": "Genius Sports Limited",
+          "price": 8.03,
+          "changePct": 13.51,
+          "relVol": 1.3,
+          "rsi": 70.8,
+          "cap": "2.1B"
+        },
+        {
+          "ticker": "EWTX",
+          "company": "Edgewise Therapeutics, Inc.",
+          "price": 43.18,
+          "changePct": 12.51,
+          "relVol": 3.0,
+          "rsi": 57.7,
+          "cap": "4.6B"
+        },
+        {
+          "ticker": "TGB",
+          "company": "Trekor Metals Limited",
+          "price": 7.66,
+          "changePct": 9.83,
+          "relVol": 0.4,
+          "rsi": 56.8,
+          "cap": "2.8B"
+        },
+        {
+          "ticker": "COGT",
+          "company": "Cogent Biosciences, Inc.",
+          "price": 42.57,
+          "changePct": 9.54,
+          "relVol": 1.4,
+          "rsi": 62.9,
+          "cap": "7.3B"
+        },
+        {
+          "ticker": "DELL",
+          "company": "Dell Technologies Inc.",
+          "price": 464.75,
+          "changePct": 8.33,
+          "relVol": 0.5,
+          "rsi": 60.5,
+          "cap": "301.3B"
+        },
+        {
+          "ticker": "CLF",
+          "company": "Cleveland-Cliffs Inc.",
+          "price": 12.01,
+          "changePct": 7.0,
+          "relVol": 0.2,
+          "rsi": 60.6,
+          "cap": "6.8B"
+        },
+        {
+          "ticker": "FIG",
+          "company": "FIGMA INC",
+          "price": 26.64,
+          "changePct": 6.92,
+          "relVol": 0.6,
+          "rsi": 65.5,
+          "cap": "14.1B"
+        },
+        {
+          "ticker": "U",
+          "company": "Unity Software Inc.",
+          "price": 35.64,
+          "changePct": 6.77,
+          "relVol": 0.9,
+          "rsi": 69.4,
+          "cap": "15.6B"
         },
         {
           "ticker": "BFLY",
           "company": "Butterfly Network, Inc.",
-          "price": 8.22,
-          "changePct": 15.61,
-          "relVol": 1.8,
-          "rsi": 59.2,
-          "cap": "2.1B"
-        },
-        {
-          "ticker": "NWL",
-          "company": "Newell Brands Inc.",
-          "price": 6.36,
-          "changePct": 13.57,
-          "relVol": 2.5,
-          "rsi": 70.7,
-          "cap": "2.7B"
-        },
-        {
-          "ticker": "TWST",
-          "company": "Twist Bioscience Corporation",
-          "price": 101.06,
-          "changePct": 10.39,
-          "relVol": 2.3,
+          "price": 8.72,
+          "changePct": 6.08,
+          "relVol": 0.6,
           "rsi": 62.5,
-          "cap": "6.3B"
-        },
-        {
-          "ticker": "WT",
-          "company": "WisdomTree, Inc.",
-          "price": 20.99,
-          "changePct": 8.36,
-          "relVol": 2.7,
-          "rsi": 62.8,
-          "cap": "3.2B"
-        },
-        {
-          "ticker": "OWL",
-          "company": "Blue Owl Capital Inc.",
-          "price": 11.16,
-          "changePct": 8.35,
-          "relVol": 2.2,
-          "rsi": 73.4,
-          "cap": "17.3B"
-        },
-        {
-          "ticker": "ARES",
-          "company": "Ares Management Corporation",
-          "price": 138.57,
-          "changePct": 8.18,
-          "relVol": 1.5,
-          "rsi": 69.2,
-          "cap": "30.8B"
-        },
-        {
-          "ticker": "MHK",
-          "company": "Mohawk Industries, Inc.",
-          "price": 132.99,
-          "changePct": 8.03,
-          "relVol": 2.0,
-          "rsi": 71.8,
-          "cap": "8.1B"
-        },
-        {
-          "ticker": "CRWD",
-          "company": "CrowdStrike Holdings, Inc.",
-          "price": 202.54,
-          "changePct": 6.12,
-          "relVol": 1.3,
-          "rsi": 62.0,
-          "cap": "206.2B"
-        },
-        {
-          "ticker": "NTSK",
-          "company": "Netskope, Inc.",
-          "price": 13.36,
-          "changePct": 6.12,
-          "relVol": 0.8,
-          "rsi": 62.0,
-          "cap": "5.4B"
+          "cap": "2.3B"
         }
       ]
     },
@@ -104,195 +104,68 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 16,
-      "rows": [
-        {
-          "ticker": "ITGR",
-          "company": "Integer Holdings Corporation",
-          "price": 124.45,
-          "changePct": 2.67,
-          "relVol": 20.7,
-          "rsi": 84.9,
-          "cap": "4.2B"
-        },
-        {
-          "ticker": "ATKR",
-          "company": "Atkore Inc.",
-          "price": 93.55,
-          "changePct": 28.22,
-          "relVol": 20.1,
-          "rsi": 72.6,
-          "cap": "3.2B"
-        },
-        {
-          "ticker": "GME",
-          "company": "GameStop Corporation",
-          "price": 19.06,
-          "changePct": -12.25,
-          "relVol": 13.2,
-          "rsi": 27.2,
-          "cap": "8.6B"
-        },
-        {
-          "ticker": "SUPN",
-          "company": "Supernus Pharmaceuticals, Inc.",
-          "price": 46.0,
-          "changePct": 3.07,
-          "relVol": 8.8,
-          "rsi": 46.4,
-          "cap": "2.7B"
-        },
-        {
-          "ticker": "FERG",
-          "company": "Ferguson Enterprises Inc.",
-          "price": 250.08,
-          "changePct": 6.72,
-          "relVol": 8.4,
-          "rsi": 66.4,
-          "cap": "48.5B"
-        },
-        {
-          "ticker": "LNTH",
-          "company": "Lantheus Holdings, Inc.",
-          "price": 101.19,
-          "changePct": 1.56,
-          "relVol": 8.2,
-          "rsi": 45.5,
-          "cap": "6.6B"
-        },
-        {
-          "ticker": "AZN",
-          "company": "AstraZeneca PLC",
-          "price": 157.97,
-          "changePct": -6.88,
-          "relVol": 6.4,
-          "rsi": 32.3,
-          "cap": "245.0B"
-        },
-        {
-          "ticker": "SRAD",
-          "company": "Sportradar Group AG",
-          "price": 12.34,
-          "changePct": -15.13,
-          "relVol": 5.4,
-          "rsi": 28.4,
-          "cap": "3.8B"
-        },
-        {
-          "ticker": "MANE",
-          "company": "Veradermics, Incorporated",
-          "price": 101.89,
-          "changePct": -2.96,
-          "relVol": 4.6,
-          "rsi": 42.8,
-          "cap": "4.3B"
-        },
-        {
-          "ticker": "INDV",
-          "company": "Indivior Pharmaceuticals, Inc.",
-          "price": 37.37,
-          "changePct": -6.6,
-          "relVol": 4.2,
-          "rsi": 35.2,
-          "cap": "4.6B"
-        }
-      ]
+      "totalMatches": 0,
+      "rows": []
     },
     {
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 20,
+      "totalMatches": 6,
       "rows": [
         {
-          "ticker": "LIN",
-          "company": "Linde plc",
-          "price": 480.46,
-          "changePct": 0.43,
-          "relVol": 1.3,
-          "rsi": 31.8,
-          "cap": "222.3B"
+          "ticker": "TU",
+          "company": "Telus Corporation",
+          "price": 9.28,
+          "changePct": -3.23,
+          "relVol": 0.6,
+          "rsi": 29.9,
+          "cap": "14.6B"
         },
         {
-          "ticker": "NXPI",
-          "company": "NXP Semiconductors N.V.",
-          "price": 224.17,
-          "changePct": -2.18,
+          "ticker": "APTV",
+          "company": "Aptiv PLC",
+          "price": 47.19,
+          "changePct": -17.54,
+          "relVol": 2.3,
+          "rsi": 26.2,
+          "cap": "10.0B"
+        },
+        {
+          "ticker": "GME",
+          "company": "GameStop Corporation",
+          "price": 18.96,
+          "changePct": -0.5,
+          "relVol": 0.6,
+          "rsi": 26.7,
+          "cap": "8.5B"
+        },
+        {
+          "ticker": "INDV",
+          "company": "Indivior Pharmaceuticals, Inc.",
+          "price": 36.53,
+          "changePct": -2.25,
           "relVol": 1.1,
-          "rsi": 27.6,
-          "cap": "56.5B"
+          "rsi": 32.0,
+          "cap": "4.5B"
         },
         {
-          "ticker": "CTVA",
-          "company": "Corteva, Inc.",
-          "price": 76.04,
-          "changePct": -3.39,
-          "relVol": 1.8,
-          "rsi": 31.4,
-          "cap": "50.9B"
-        },
-        {
-          "ticker": "ALNY",
-          "company": "Alnylam Pharmaceuticals, Inc.",
-          "price": 220.33,
-          "changePct": 7.21,
-          "relVol": 1.4,
-          "rsi": 31.3,
-          "cap": "29.5B"
-        },
-        {
-          "ticker": "GFS",
-          "company": "GlobalFoundries Inc.",
-          "price": 50.01,
-          "changePct": 0.04,
-          "relVol": 1.0,
-          "rsi": 30.5,
-          "cap": "27.4B"
-        },
-        {
-          "ticker": "RBLX",
-          "company": "Roblox Corporation",
-          "price": 36.67,
-          "changePct": 3.01,
-          "relVol": 1.8,
-          "rsi": 29.1,
-          "cap": "26.2B"
-        },
-        {
-          "ticker": "MTZ",
-          "company": "MasTec, Inc.",
-          "price": 261.22,
-          "changePct": -0.71,
-          "relVol": 1.6,
-          "rsi": 31.8,
-          "cap": "21.0B"
-        },
-        {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 38.19,
-          "changePct": 0.58,
+          "ticker": "SRAD",
+          "company": "Sportradar Group AG",
+          "price": 12.57,
+          "changePct": 1.86,
           "relVol": 0.8,
-          "rsi": 28.1,
-          "cap": "18.4B"
+          "rsi": 31.4,
+          "cap": "3.9B"
         },
         {
-          "ticker": "CHRW",
-          "company": "C.H. Robinson Worldwide, Inc.",
-          "price": 147.0,
-          "changePct": -0.49,
-          "relVol": 1.0,
-          "rsi": 25.8,
-          "cap": "17.3B"
-        },
-        {
-          "ticker": "RTO",
-          "company": "Rentokil Initial plc",
-          "price": 23.85,
-          "changePct": 2.1,
-          "relVol": 1.4,
-          "rsi": 24.1,
-          "cap": "11.7B"
+          "ticker": "ALHC",
+          "company": "Alignment Healthcare, Inc.",
+          "price": 13.74,
+          "changePct": -5.6,
+          "relVol": 0.7,
+          "rsi": 25.0,
+          "cap": "2.9B"
         }
       ]
     }
