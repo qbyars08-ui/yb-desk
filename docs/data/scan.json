@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-04T22:21:52.673475+00:00",
+  "updated": "2026-08-05T16:09:16.942532+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 335,
+      "totalMatches": 88,
       "rows": [
         {
-          "ticker": "W",
-          "company": "Wayfair Inc.",
-          "price": 116.08,
-          "changePct": 30.08,
-          "relVol": 3.6,
-          "rsi": 72.3,
-          "cap": "15.3B"
+          "ticker": "SHOP",
+          "company": "Shopify Inc.",
+          "price": 143.73,
+          "changePct": 16.57,
+          "relVol": 2.0,
+          "rsi": 67.6,
+          "cap": "186.5B"
         },
         {
-          "ticker": "IT",
-          "company": "Gartner, Inc.",
-          "price": 185.79,
-          "changePct": 22.61,
-          "relVol": 2.7,
-          "rsi": 71.3,
-          "cap": "12.4B"
+          "ticker": "TVTX",
+          "company": "Travere Therapeutics, Inc.",
+          "price": 63.46,
+          "changePct": 13.28,
+          "relVol": 1.8,
+          "rsi": 70.3,
+          "cap": "5.9B"
         },
         {
-          "ticker": "EWTX",
-          "company": "Edgewise Therapeutics, Inc.",
-          "price": 44.7,
-          "changePct": 16.48,
-          "relVol": 4.8,
-          "rsi": 60.4,
-          "cap": "4.8B"
+          "ticker": "HNGE",
+          "company": "Hinge Health, Inc.",
+          "price": 88.52,
+          "changePct": 11.45,
+          "relVol": 1.4,
+          "rsi": 67.0,
+          "cap": "6.8B"
         },
         {
-          "ticker": "GENI",
-          "company": "Genius Sports Limited",
-          "price": 8.08,
-          "changePct": 14.29,
-          "relVol": 2.4,
-          "rsi": 71.3,
-          "cap": "2.2B"
+          "ticker": "ZETA",
+          "company": "Zeta Global Holdings Corp.",
+          "price": 26.95,
+          "changePct": 11.09,
+          "relVol": 3.4,
+          "rsi": 74.0,
+          "cap": "6.7B"
         },
         {
-          "ticker": "BETA",
-          "company": "Beta Technologies, Inc.",
-          "price": 21.95,
-          "changePct": 13.2,
-          "relVol": 2.4,
-          "rsi": 68.3,
-          "cap": "5.1B"
+          "ticker": "PRMB",
+          "company": "Primo Brands Corporation",
+          "price": 25.79,
+          "changePct": 10.73,
+          "relVol": 1.3,
+          "rsi": 63.7,
+          "cap": "9.4B"
         },
         {
-          "ticker": "ALAB",
-          "company": "Astera Labs, Inc.",
-          "price": 361.67,
-          "changePct": 12.65,
-          "relVol": 2.3,
-          "rsi": 55.4,
-          "cap": "62.0B"
+          "ticker": "COMP",
+          "company": "Compass, Inc.",
+          "price": 12.97,
+          "changePct": 8.08,
+          "relVol": 1.3,
+          "rsi": 65.7,
+          "cap": "9.7B"
         },
         {
-          "ticker": "OUST",
-          "company": "Ouster, Inc.",
-          "price": 47.84,
-          "changePct": 12.62,
-          "relVol": 1.2,
-          "rsi": 59.3,
-          "cap": "3.0B"
+          "ticker": "YOU",
+          "company": "Clear Secure, Inc.",
+          "price": 59.26,
+          "changePct": 6.33,
+          "relVol": 1.6,
+          "rsi": 61.3,
+          "cap": "7.9B"
         },
         {
-          "ticker": "TGB",
-          "company": "Trekor Metals Limited",
-          "price": 7.83,
-          "changePct": 12.34,
-          "relVol": 1.1,
-          "rsi": 58.4,
-          "cap": "2.9B"
+          "ticker": "BKNG",
+          "company": "Booking Holdings Inc. Common Stock",
+          "price": 205.85,
+          "changePct": 5.96,
+          "relVol": 0.8,
+          "rsi": 68.7,
+          "cap": "159.5B"
         },
         {
-          "ticker": "PPLI",
-          "company": "People Incorporated",
-          "price": 46.43,
-          "changePct": 10.39,
-          "relVol": 2.6,
-          "rsi": 63.0,
-          "cap": "3.5B"
+          "ticker": "ACAD",
+          "company": "ACADIA Pharmaceuticals Inc.",
+          "price": 28.7,
+          "changePct": 5.71,
+          "relVol": 1.7,
+          "rsi": 73.4,
+          "cap": "4.9B"
         },
         {
-          "ticker": "COGT",
-          "company": "Cogent Biosciences, Inc.",
-          "price": 42.84,
-          "changePct": 10.24,
-          "relVol": 2.9,
-          "rsi": 63.5,
-          "cap": "7.3B"
+          "ticker": "CRBG",
+          "company": "Corebridge Financial Inc.",
+          "price": 33.19,
+          "changePct": 5.03,
+          "relVol": 0.7,
+          "rsi": 66.9,
+          "cap": "14.8B"
         }
       ]
     },
@@ -104,97 +104,34 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 28,
+      "totalMatches": 3,
       "rows": [
         {
-          "ticker": "FERG",
-          "company": "Ferguson Enterprises Inc.",
-          "price": 255.51,
-          "changePct": 2.17,
-          "relVol": 20.1,
-          "rsi": 69.4,
-          "cap": "49.6B"
+          "ticker": "ZETA",
+          "company": "Zeta Global Holdings Corp.",
+          "price": 26.95,
+          "changePct": 11.09,
+          "relVol": 3.4,
+          "rsi": 74.0,
+          "cap": "6.7B"
         },
         {
-          "ticker": "EA",
-          "company": "Electronic Arts Inc.",
-          "price": 209.7,
-          "changePct": -0.1,
-          "relVol": 15.0,
-          "rsi": 75.5,
-          "cap": "52.9B"
+          "ticker": "SEDG",
+          "company": "SolarEdge Technologies, Inc.",
+          "price": 37.51,
+          "changePct": -23.08,
+          "relVol": 3.3,
+          "rsi": 37.1,
+          "cap": "2.3B"
         },
         {
-          "ticker": "KNF",
-          "company": "Knife Riv Holding Co.",
-          "price": 69.51,
-          "changePct": -11.83,
-          "relVol": 7.1,
-          "rsi": 35.9,
-          "cap": "3.9B"
-        },
-        {
-          "ticker": "APTV",
-          "company": "Aptiv PLC",
-          "price": 47.72,
-          "changePct": -16.62,
-          "relVol": 6.7,
-          "rsi": 26.8,
-          "cap": "10.1B"
-        },
-        {
-          "ticker": "ULS",
-          "company": "UL Solutions Inc.",
-          "price": 78.34,
-          "changePct": -13.96,
-          "relVol": 5.7,
-          "rsi": 29.4,
-          "cap": "15.8B"
-        },
-        {
-          "ticker": "NRG",
-          "company": "NRG Energy, Inc.",
-          "price": 117.04,
-          "changePct": -15.48,
-          "relVol": 5.4,
-          "rsi": 36.3,
-          "cap": "24.7B"
-        },
-        {
-          "ticker": "PLTR",
-          "company": "Palantir Technologies Inc.",
-          "price": 162.66,
-          "changePct": 29.45,
-          "relVol": 4.9,
-          "rsi": 72.8,
-          "cap": "389.9B"
-        },
-        {
-          "ticker": "EWTX",
-          "company": "Edgewise Therapeutics, Inc.",
-          "price": 44.7,
-          "changePct": 16.48,
-          "relVol": 4.8,
-          "rsi": 60.4,
-          "cap": "4.8B"
-        },
-        {
-          "ticker": "CTRI",
-          "company": "Centuri Holdings, Inc.",
-          "price": 21.88,
-          "changePct": -21.46,
-          "relVol": 4.8,
-          "rsi": 31.4,
-          "cap": "2.2B"
-        },
-        {
-          "ticker": "NVO",
-          "company": "Novo Nordisk A/S",
-          "price": 44.28,
-          "changePct": -5.97,
-          "relVol": 4.4,
-          "rsi": 34.8,
-          "cap": "205.8B"
+          "ticker": "RBA",
+          "company": "RB Global, Inc.",
+          "price": 96.46,
+          "changePct": -13.15,
+          "relVol": 3.3,
+          "rsi": 29.7,
+          "cap": "18.0B"
         }
       ]
     },
@@ -202,97 +139,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 14,
+      "totalMatches": 11,
       "rows": [
         {
-          "ticker": "AZN",
-          "company": "AstraZeneca PLC",
-          "price": 155.62,
-          "changePct": -1.49,
-          "relVol": 2.1,
-          "rsi": 30.7,
-          "cap": "241.3B"
+          "ticker": "AMX",
+          "company": "America Movil, S.A.B. de C.V.",
+          "price": 24.12,
+          "changePct": -3.03,
+          "relVol": 1.0,
+          "rsi": 28.8,
+          "cap": "76.1B"
         },
         {
-          "ticker": "SRE",
-          "company": "DBA Sempra",
-          "price": 86.65,
-          "changePct": -1.23,
-          "relVol": 2.3,
-          "rsi": 31.9,
-          "cap": "56.6B"
+          "ticker": "CNP",
+          "company": "CenterPoint Energy, Inc (Holding Co)",
+          "price": 40.48,
+          "changePct": -2.63,
+          "relVol": 0.6,
+          "rsi": 31.4,
+          "cap": "26.7B"
         },
         {
-          "ticker": "ALNY",
-          "company": "Alnylam Pharmaceuticals, Inc.",
-          "price": 219.0,
-          "changePct": -0.6,
-          "relVol": 1.2,
-          "rsi": 31.0,
-          "cap": "29.3B"
+          "ticker": "EIX",
+          "company": "Edison International",
+          "price": 67.83,
+          "changePct": -4.05,
+          "relVol": 0.6,
+          "rsi": 27.9,
+          "cap": "26.1B"
         },
         {
           "ticker": "RBLX",
           "company": "Roblox Corporation",
-          "price": 37.0,
-          "changePct": 0.9,
-          "relVol": 1.7,
-          "rsi": 29.9,
-          "cap": "26.4B"
+          "price": 35.95,
+          "changePct": -2.84,
+          "relVol": 0.2,
+          "rsi": 28.8,
+          "cap": "25.7B"
         },
         {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 37.81,
-          "changePct": -1.0,
-          "relVol": 0.5,
-          "rsi": 26.9,
-          "cap": "18.2B"
+          "ticker": "NI",
+          "company": "NiSource Inc",
+          "price": 42.3,
+          "changePct": -5.02,
+          "relVol": 1.3,
+          "rsi": 26.8,
+          "cap": "20.3B"
         },
         {
-          "ticker": "ULS",
-          "company": "UL Solutions Inc.",
-          "price": 78.34,
-          "changePct": -13.96,
-          "relVol": 5.7,
-          "rsi": 29.4,
-          "cap": "15.8B"
+          "ticker": "RBA",
+          "company": "RB Global, Inc.",
+          "price": 96.46,
+          "changePct": -13.15,
+          "relVol": 3.3,
+          "rsi": 29.7,
+          "cap": "18.0B"
+        },
+        {
+          "ticker": "DVA",
+          "company": "DaVita Inc.",
+          "price": 185.46,
+          "changePct": -18.66,
+          "relVol": 2.4,
+          "rsi": 22.5,
+          "cap": "11.9B"
+        },
+        {
+          "ticker": "NYT",
+          "company": "New York Times Company (The)",
+          "price": 64.14,
+          "changePct": -15.17,
+          "relVol": 1.9,
+          "rsi": 31.6,
+          "cap": "10.4B"
         },
         {
           "ticker": "APTV",
           "company": "Aptiv PLC",
-          "price": 47.72,
-          "changePct": -16.62,
-          "relVol": 6.7,
-          "rsi": 26.8,
-          "cap": "10.1B"
+          "price": 46.87,
+          "changePct": -1.78,
+          "relVol": 1.0,
+          "rsi": 25.8,
+          "cap": "9.9B"
         },
         {
-          "ticker": "GME",
-          "company": "GameStop Corporation",
-          "price": 19.21,
-          "changePct": 0.79,
-          "relVol": 1.6,
-          "rsi": 29.0,
-          "cap": "8.6B"
-        },
-        {
-          "ticker": "INDV",
-          "company": "Indivior Pharmaceuticals, Inc.",
-          "price": 36.5,
-          "changePct": -2.33,
-          "relVol": 3.6,
-          "rsi": 31.9,
-          "cap": "4.5B"
-        },
-        {
-          "ticker": "LEGN",
-          "company": "Legend Biotech Corporation",
-          "price": 19.13,
-          "changePct": 0.63,
-          "relVol": 0.8,
-          "rsi": 27.8,
-          "cap": "3.5B"
+          "ticker": "PODD",
+          "company": "Insulet Corporation",
+          "price": 132.03,
+          "changePct": -20.85,
+          "relVol": 2.8,
+          "rsi": 29.8,
+          "cap": "9.1B"
         }
       ]
     }
