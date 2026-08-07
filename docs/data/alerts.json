@@ -1,20 +1,10 @@
 {
-  "updated": "2026-08-07T00:43:42.897Z",
+  "updated": "2026-08-07T14:17:28.012Z",
   "alerts": [
     {
-      "ticker": "NBIS",
-      "changePct": -13.2928,
-      "flaggedAt": "2026-08-07T00:43:42.897Z"
-    },
-    {
-      "ticker": "XNDU",
-      "changePct": -9.2576,
-      "flaggedAt": "2026-08-07T00:43:42.897Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": -5.893,
-      "flaggedAt": "2026-08-07T00:43:42.897Z"
+      "ticker": "LUMN",
+      "changePct": 7.0339,
+      "flaggedAt": "2026-08-07T14:17:28.012Z"
     }
   ]
 }
