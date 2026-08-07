@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-07T15:08:50.784972+00:00",
+  "updated": "2026-08-07T21:55:28.950487+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 46,
+      "totalMatches": 257,
       "rows": [
         {
-          "ticker": "FIVN",
-          "company": "Five9, Inc.",
-          "price": 33.13,
-          "changePct": 16.78,
-          "relVol": 0.7,
-          "rsi": 74.0,
-          "cap": "2.5B"
+          "ticker": "DOCS",
+          "company": "Doximity, Inc.",
+          "price": 27.39,
+          "changePct": 32.58,
+          "relVol": 12.3,
+          "rsi": 74.1,
+          "cap": "4.9B"
+        },
+        {
+          "ticker": "TWLO",
+          "company": "Twilio Inc.",
+          "price": 241.28,
+          "changePct": 24.89,
+          "relVol": 4.0,
+          "rsi": 73.6,
+          "cap": "36.6B"
+        },
+        {
+          "ticker": "NTRA",
+          "company": "Natera, Inc.",
+          "price": 322.1,
+          "changePct": 21.37,
+          "relVol": 2.8,
+          "rsi": 74.5,
+          "cap": "46.1B"
+        },
+        {
+          "ticker": "FLR",
+          "company": "Fluor Corporation",
+          "price": 57.0,
+          "changePct": 16.92,
+          "relVol": 3.1,
+          "rsi": 63.8,
+          "cap": "8.0B"
+        },
+        {
+          "ticker": "TXG",
+          "company": "10x Genomics, Inc.",
+          "price": 52.03,
+          "changePct": 14.1,
+          "relVol": 2.0,
+          "rsi": 67.7,
+          "cap": "6.6B"
         },
         {
           "ticker": "DV",
           "company": "DoubleVerify Holdings, Inc.",
-          "price": 13.24,
-          "changePct": 13.11,
-          "relVol": 8.6,
-          "rsi": 69.4,
+          "price": 13.21,
+          "changePct": 12.81,
+          "relVol": 15.8,
+          "rsi": 69.1,
           "cap": "2.0B"
+        },
+        {
+          "ticker": "ZLAB",
+          "company": "Zai Lab Limited",
+          "price": 23.32,
+          "changePct": 11.69,
+          "relVol": 3.5,
+          "rsi": 74.9,
+          "cap": "2.1B"
+        },
+        {
+          "ticker": "HNGE",
+          "company": "Hinge Health, Inc.",
+          "price": 89.33,
+          "changePct": 11.55,
+          "relVol": 1.5,
+          "rsi": 68.4,
+          "cap": "6.9B"
+        },
+        {
+          "ticker": "CON",
+          "company": "Concentra Group Holdings Parent, Inc.",
+          "price": 34.06,
+          "changePct": 11.53,
+          "relVol": 2.3,
+          "rsi": 69.8,
+          "cap": "4.4B"
         },
         {
           "ticker": "CART",
           "company": "Maplebear Inc.",
-          "price": 50.45,
-          "changePct": 12.03,
-          "relVol": 1.7,
-          "rsi": 67.5,
-          "cap": "11.9B"
-        },
-        {
-          "ticker": "JHX",
-          "company": "James Hardie Industries plc.",
-          "price": 30.54,
-          "changePct": 9.05,
-          "relVol": 0.6,
-          "rsi": 73.3,
-          "cap": "17.7B"
-        },
-        {
-          "ticker": "HMY",
-          "company": "Harmony Gold Mining Company Limited",
-          "price": 19.67,
-          "changePct": 8.98,
-          "relVol": 1.1,
-          "rsi": 74.2,
-          "cap": "11.4B"
-        },
-        {
-          "ticker": "PLTR",
-          "company": "Palantir Technologies Inc.",
-          "price": 168.97,
-          "changePct": 8.37,
-          "relVol": 0.6,
-          "rsi": 71.8,
-          "cap": "406.1B"
-        },
-        {
-          "ticker": "GTLB",
-          "company": "GitLab Inc.",
-          "price": 38.59,
-          "changePct": 8.16,
-          "relVol": 1.1,
-          "rsi": 70.1,
-          "cap": "6.5B"
-        },
-        {
-          "ticker": "WAY",
-          "company": "Waystar Holding Corp.",
-          "price": 24.91,
-          "changePct": 6.57,
-          "relVol": 0.6,
-          "rsi": 61.3,
-          "cap": "4.8B"
-        },
-        {
-          "ticker": "NOW",
-          "company": "ServiceNow, Inc.",
-          "price": 125.05,
-          "changePct": 6.56,
-          "relVol": 0.4,
-          "rsi": 67.1,
-          "cap": "129.3B"
-        },
-        {
-          "ticker": "ASAN",
-          "company": "Asana, Inc.",
-          "price": 9.24,
-          "changePct": 6.45,
-          "relVol": 0.4,
+          "price": 50.17,
+          "changePct": 11.41,
+          "relVol": 4.6,
           "rsi": 66.9,
-          "cap": "2.1B"
+          "cap": "11.8B"
         }
       ]
     },
@@ -104,25 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 2,
+      "totalMatches": 24,
       "rows": [
         {
           "ticker": "DV",
           "company": "DoubleVerify Holdings, Inc.",
-          "price": 13.24,
-          "changePct": 13.11,
-          "relVol": 8.6,
-          "rsi": 69.4,
+          "price": 13.21,
+          "changePct": 12.81,
+          "relVol": 15.8,
+          "rsi": 69.1,
           "cap": "2.0B"
         },
         {
           "ticker": "DOCS",
           "company": "Doximity, Inc.",
-          "price": 31.14,
-          "changePct": 50.73,
-          "relVol": 6.2,
-          "rsi": 80.1,
-          "cap": "5.6B"
+          "price": 27.39,
+          "changePct": 32.58,
+          "relVol": 12.3,
+          "rsi": 74.1,
+          "cap": "4.9B"
+        },
+        {
+          "ticker": "SEZL",
+          "company": "Sezzle Inc.",
+          "price": 118.02,
+          "changePct": -33.89,
+          "relVol": 7.9,
+          "rsi": 33.4,
+          "cap": "4.0B"
+        },
+        {
+          "ticker": "LASR",
+          "company": "nLIGHT, Inc.",
+          "price": 56.16,
+          "changePct": -25.56,
+          "relVol": 5.7,
+          "rsi": 39.2,
+          "cap": "3.2B"
+        },
+        {
+          "ticker": "TTD",
+          "company": "The Trade Desk, Inc.",
+          "price": 13.8,
+          "changePct": -21.9,
+          "relVol": 5.3,
+          "rsi": 28.4,
+          "cap": "6.5B"
+        },
+        {
+          "ticker": "CART",
+          "company": "Maplebear Inc.",
+          "price": 50.17,
+          "changePct": 11.41,
+          "relVol": 4.6,
+          "rsi": 66.9,
+          "cap": "11.8B"
+        },
+        {
+          "ticker": "POST",
+          "company": "Post Holdings, Inc.",
+          "price": 78.69,
+          "changePct": -12.79,
+          "relVol": 4.5,
+          "rsi": 31.4,
+          "cap": "3.6B"
+        },
+        {
+          "ticker": "MAC",
+          "company": "Macerich Company (The)",
+          "price": 24.4,
+          "changePct": 3.87,
+          "relVol": 4.3,
+          "rsi": 43.6,
+          "cap": "6.9B"
+        },
+        {
+          "ticker": "HALO",
+          "company": "Halozyme Therapeutics, Inc.",
+          "price": 103.12,
+          "changePct": 20.24,
+          "relVol": 4.2,
+          "rsi": 87.5,
+          "cap": "12.2B"
+        },
+        {
+          "ticker": "TEAM",
+          "company": "Atlassian Corporation",
+          "price": 149.07,
+          "changePct": 35.31,
+          "relVol": 4.1,
+          "rsi": 78.6,
+          "cap": "37.8B"
         }
       ]
     },
@@ -130,52 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 5,
+      "totalMatches": 21,
       "rows": [
         {
           "ticker": "CVS",
           "company": "CVS Health Corporation",
-          "price": 95.84,
-          "changePct": -0.39,
-          "relVol": 0.3,
-          "rsi": 31.9,
-          "cap": "122.6B"
+          "price": 95.7,
+          "changePct": -0.54,
+          "relVol": 1.4,
+          "rsi": 31.7,
+          "cap": "122.4B"
         },
         {
-          "ticker": "APP",
-          "company": "Applovin Corporation",
-          "price": 342.9,
-          "changePct": 2.15,
-          "relVol": 0.3,
-          "rsi": 31.1,
-          "cap": "115.2B"
+          "ticker": "ENB",
+          "company": "Enbridge Inc",
+          "price": 51.28,
+          "changePct": -0.81,
+          "relVol": 1.5,
+          "rsi": 28.3,
+          "cap": "112.0B"
         },
         {
-          "ticker": "RBLX",
-          "company": "Roblox Corporation",
-          "price": 36.86,
-          "changePct": 2.28,
-          "relVol": 0.2,
-          "rsi": 31.2,
-          "cap": "26.3B"
+          "ticker": "AMX",
+          "company": "America Movil, S.A.B. de C.V.",
+          "price": 23.75,
+          "changePct": -0.71,
+          "relVol": 1.0,
+          "rsi": 26.0,
+          "cap": "73.2B"
         },
         {
-          "ticker": "BROS",
-          "company": "Dutch Bros Inc.",
-          "price": 53.45,
-          "changePct": 0.23,
-          "relVol": 0.6,
-          "rsi": 28.8,
-          "cap": "8.8B"
+          "ticker": "TRP",
+          "company": "TC Energy Corporation",
+          "price": 63.23,
+          "changePct": -1.05,
+          "relVol": 1.5,
+          "rsi": 30.5,
+          "cap": "63.2B"
         },
         {
-          "ticker": "TTD",
-          "company": "The Trade Desk, Inc.",
-          "price": 14.38,
-          "changePct": -18.59,
-          "relVol": 3.0,
-          "rsi": 30.0,
-          "cap": "6.8B"
+          "ticker": "SRE",
+          "company": "DBA Sempra",
+          "price": 83.88,
+          "changePct": -0.56,
+          "relVol": 1.7,
+          "rsi": 25.9,
+          "cap": "54.8B"
+        },
+        {
+          "ticker": "NI",
+          "company": "NiSource Inc",
+          "price": 42.61,
+          "changePct": -1.78,
+          "relVol": 1.3,
+          "rsi": 30.2,
+          "cap": "20.4B"
+        },
+        {
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 37.74,
+          "changePct": 2.47,
+          "relVol": 0.9,
+          "rsi": 31.5,
+          "cap": "18.2B"
+        },
+        {
+          "ticker": "LNT",
+          "company": "Alliant Energy Corporation",
+          "price": 69.37,
+          "changePct": -0.22,
+          "relVol": 0.8,
+          "rsi": 31.4,
+          "cap": "18.0B"
+        },
+        {
+          "ticker": "RBA",
+          "company": "RB Global, Inc.",
+          "price": 94.72,
+          "changePct": 2.21,
+          "relVol": 1.1,
+          "rsi": 30.8,
+          "cap": "17.5B"
+        },
+        {
+          "ticker": "ELAN",
+          "company": "Elanco Animal Health Incorporated",
+          "price": 22.12,
+          "changePct": -8.6,
+          "relVol": 2.9,
+          "rsi": 31.6,
+          "cap": "11.1B"
         }
       ]
     }
