@@ -1,25 +1,25 @@
 {
-  "updated": "2026-08-10T20:57:13.418Z",
+  "updated": "2026-08-10T21:54:37.463Z",
   "alerts": [
     {
       "ticker": "LUMN",
       "changePct": 6.4103,
-      "flaggedAt": "2026-08-10T20:57:13.418Z"
+      "flaggedAt": "2026-08-10T21:54:37.463Z"
     },
     {
       "ticker": "ALMU",
       "changePct": -5.7377,
-      "flaggedAt": "2026-08-10T20:57:13.418Z"
+      "flaggedAt": "2026-08-10T21:54:37.463Z"
     },
     {
       "ticker": "PENG",
       "changePct": -5.5622,
-      "flaggedAt": "2026-08-10T20:57:13.418Z"
+      "flaggedAt": "2026-08-10T21:54:37.463Z"
     },
     {
       "ticker": "ARM",
       "changePct": -5.2093,
-      "flaggedAt": "2026-08-10T20:57:13.418Z"
+      "flaggedAt": "2026-08-10T21:54:37.463Z"
     }
   ]
 }
