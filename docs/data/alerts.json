@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-10T15:33:44.482Z",
+  "updated": "2026-08-10T16:28:46.670Z",
   "alerts": [
     {
-      "ticker": "ALMU",
-      "changePct": -5.082,
-      "flaggedAt": "2026-08-10T15:33:44.482Z"
+      "ticker": "LUMN",
+      "changePct": 6.0897,
+      "flaggedAt": "2026-08-10T16:28:46.670Z"
     },
     {
-      "ticker": "CIFR",
-      "changePct": -5.0349,
-      "flaggedAt": "2026-08-10T15:33:44.482Z"
+      "ticker": "ALMU",
+      "changePct": -5.7377,
+      "flaggedAt": "2026-08-10T16:28:46.670Z"
     }
   ]
 }
