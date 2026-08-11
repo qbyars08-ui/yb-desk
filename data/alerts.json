@@ -1,15 +1,15 @@
 {
-  "updated": "2026-08-11T17:35:30.079Z",
+  "updated": "2026-08-11T18:34:33.312Z",
   "alerts": [
     {
-      "ticker": "CIFR",
-      "changePct": 8.4201,
-      "flaggedAt": "2026-08-11T17:35:30.079Z"
+      "ticker": "OUST",
+      "changePct": 7.3368,
+      "flaggedAt": "2026-08-11T18:34:33.312Z"
     },
     {
-      "ticker": "OUST",
-      "changePct": 8.3432,
-      "flaggedAt": "2026-08-11T17:35:30.079Z"
+      "ticker": "CIFR",
+      "changePct": 5.5113,
+      "flaggedAt": "2026-08-11T18:34:33.312Z"
     }
   ]
 }
