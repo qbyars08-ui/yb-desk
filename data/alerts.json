@@ -1,15 +1,20 @@
 {
-  "updated": "2026-08-11T18:34:33.312Z",
+  "updated": "2026-08-11T19:43:47.797Z",
   "alerts": [
     {
+      "ticker": "SILC",
+      "changePct": 9.5215,
+      "flaggedAt": "2026-08-11T19:43:47.797Z"
+    },
+    {
       "ticker": "OUST",
-      "changePct": 7.3368,
-      "flaggedAt": "2026-08-11T18:34:33.312Z"
+      "changePct": 7.6667,
+      "flaggedAt": "2026-08-11T19:43:47.797Z"
     },
     {
       "ticker": "CIFR",
-      "changePct": 5.5113,
-      "flaggedAt": "2026-08-11T18:34:33.312Z"
+      "changePct": 5.3582,
+      "flaggedAt": "2026-08-11T19:43:47.797Z"
     }
   ]
 }
