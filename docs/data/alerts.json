@@ -1,70 +1,40 @@
 {
-  "updated": "2026-08-12T15:32:50.214Z",
+  "updated": "2026-08-12T16:31:41.096Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 29.7404,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": 12.0595,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": 10.0036,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "changePct": 27.4336,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
       "ticker": "NOK",
-      "changePct": 9.8517,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "changePct": 10.0106,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
-      "ticker": "CIFR",
-      "changePct": 8.91,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "ticker": "CRDO",
+      "changePct": 9.4029,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": 8.5985,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "ANET",
-      "changePct": 7.725,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": 7.0971,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
       "ticker": "MU",
-      "changePct": 6.5951,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "changePct": 6.2376,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
       "ticker": "SILC",
-      "changePct": 5.8375,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "changePct": 5.7722,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     },
     {
-      "ticker": "ASTS",
-      "changePct": 5.6574,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": 5.5336,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
-    },
-    {
-      "ticker": "ALMU",
-      "changePct": 5.1014,
-      "flaggedAt": "2026-08-12T15:32:50.214Z"
+      "ticker": "ANET",
+      "changePct": 5.2237,
+      "flaggedAt": "2026-08-12T16:31:41.096Z"
     }
   ]
 }
