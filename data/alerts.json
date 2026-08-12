@@ -1,40 +1,65 @@
 {
-  "updated": "2026-08-12T16:31:41.096Z",
+  "updated": "2026-08-12T17:36:48.616Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 27.4336,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
+      "changePct": 34.5234,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": 14.0851,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
     },
     {
       "ticker": "NOK",
       "changePct": 10.0106,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
-    },
-    {
-      "ticker": "CRDO",
-      "changePct": 9.4029,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
-    },
-    {
-      "ticker": "LPKFF",
-      "changePct": 8.5985,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
-    },
-    {
-      "ticker": "MU",
-      "changePct": 6.2376,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": 5.7722,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
     },
     {
       "ticker": "ANET",
-      "changePct": 5.2237,
-      "flaggedAt": "2026-08-12T16:31:41.096Z"
+      "changePct": 9.08,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "OUST",
+      "changePct": 9.0672,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": 8.8487,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 8.8438,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": 8.2897,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "LPKFF",
+      "changePct": 7.2027,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": 7.0795,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": 6.2029,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": 6.087,
+      "flaggedAt": "2026-08-12T17:36:48.616Z"
     }
   ]
 }
