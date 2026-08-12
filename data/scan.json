@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-11T22:03:53.346657+00:00",
+  "updated": "2026-08-12T15:14:03.388000+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 253,
+      "totalMatches": 47,
       "rows": [
         {
-          "ticker": "RNW",
-          "company": "ReNew Energy Global plc",
-          "price": 6.85,
-          "changePct": 11.75,
-          "relVol": 23.9,
-          "rsi": 68.3,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "AEHR",
-          "company": "Aehr Test Systems",
-          "price": 117.18,
-          "changePct": 10.34,
-          "relVol": 1.0,
-          "rsi": 63.7,
-          "cap": "3.8B"
-        },
-        {
-          "ticker": "ARMK",
-          "company": "Aramark",
-          "price": 60.47,
-          "changePct": 8.54,
-          "relVol": 2.1,
-          "rsi": 70.7,
-          "cap": "15.9B"
-        },
-        {
-          "ticker": "OUST",
-          "company": "Ouster, Inc.",
-          "price": 45.13,
-          "changePct": 7.12,
-          "relVol": 1.1,
-          "rsi": 55.2,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "KKR",
-          "company": "KKR & Co. Inc.",
-          "price": 110.97,
-          "changePct": 6.88,
-          "relVol": 1.6,
-          "rsi": 67.0,
-          "cap": "99.6B"
-        },
-        {
-          "ticker": "APO",
-          "company": "Apollo Global Management, Inc. (New)",
-          "price": 140.28,
-          "changePct": 6.26,
-          "relVol": 1.4,
-          "rsi": 69.2,
-          "cap": "82.9B"
-        },
-        {
-          "ticker": "ZETA",
-          "company": "Zeta Global Holdings Corp.",
-          "price": 29.15,
-          "changePct": 5.85,
-          "relVol": 1.3,
-          "rsi": 74.0,
-          "cap": "7.3B"
-        },
-        {
-          "ticker": "BCRX",
-          "company": "BioCryst Pharmaceuticals, Inc.",
-          "price": 10.34,
-          "changePct": 5.08,
-          "relVol": 1.4,
-          "rsi": 63.4,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "MPC",
-          "company": "Marathon Petroleum Corporation",
-          "price": 336.42,
-          "changePct": 5.03,
-          "relVol": 1.4,
-          "rsi": 69.4,
-          "cap": "94.5B"
-        },
-        {
-          "ticker": "TSHA",
-          "company": "Taysha Gene Therapies, Inc.",
-          "price": 6.68,
-          "changePct": 4.87,
+          "ticker": "DFTX",
+          "company": "Definium Therapeutics, Inc.",
+          "price": 44.76,
+          "changePct": 9.4,
           "relVol": 2.0,
-          "rsi": 61.0,
-          "cap": "2.1B"
+          "rsi": 55.2,
+          "cap": "6.0B"
+        },
+        {
+          "ticker": "ANET",
+          "company": "Arista Networks, Inc.",
+          "price": 206.97,
+          "changePct": 4.61,
+          "relVol": 0.3,
+          "rsi": 67.8,
+          "cap": "261.0B"
+        },
+        {
+          "ticker": "NVDA",
+          "company": "NVIDIA Corporation",
+          "price": 223.9,
+          "changePct": 2.94,
+          "relVol": 0.3,
+          "rsi": 62.3,
+          "cap": "5.42T"
+        },
+        {
+          "ticker": "HPE",
+          "company": "Hewlett Packard Enterprise Company",
+          "price": 55.98,
+          "changePct": 2.93,
+          "relVol": 0.3,
+          "rsi": 68.4,
+          "cap": "74.1B"
+        },
+        {
+          "ticker": "CSCO",
+          "company": "Cisco Systems, Inc.",
+          "price": 123.71,
+          "changePct": 2.72,
+          "relVol": 0.2,
+          "rsi": 62.7,
+          "cap": "487.6B"
+        },
+        {
+          "ticker": "CLBK",
+          "company": "Columbia Financial, Inc.",
+          "price": 11.34,
+          "changePct": 2.21,
+          "relVol": 0.7,
+          "rsi": 73.0,
+          "cap": "3.1B"
+        },
+        {
+          "ticker": "B",
+          "company": "Barrick Mining Corporation",
+          "price": 41.0,
+          "changePct": 2.17,
+          "relVol": 0.4,
+          "rsi": 58.3,
+          "cap": "67.5B"
+        },
+        {
+          "ticker": "TSM",
+          "company": "Taiwan Semiconductor Manufacturing Company Ltd.",
+          "price": 430.15,
+          "changePct": 1.92,
+          "relVol": 0.3,
+          "rsi": 56.5,
+          "cap": "1.92T"
+        },
+        {
+          "ticker": "FSLY",
+          "company": "Fastly, Inc.",
+          "price": 29.32,
+          "changePct": 1.88,
+          "relVol": 0.3,
+          "rsi": 73.2,
+          "cap": "4.7B"
+        },
+        {
+          "ticker": "TEVA",
+          "company": "Teva Pharmaceutical Industries Limited",
+          "price": 37.15,
+          "changePct": 1.84,
+          "relVol": 0.3,
+          "rsi": 69.4,
+          "cap": "42.6B"
         }
       ]
     },
@@ -104,97 +104,16 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 19,
+      "totalMatches": 1,
       "rows": [
         {
-          "ticker": "RNW",
-          "company": "ReNew Energy Global plc",
-          "price": 6.85,
-          "changePct": 11.75,
-          "relVol": 23.9,
-          "rsi": 68.3,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "ONON",
-          "company": "On Holding AG",
-          "price": 30.91,
-          "changePct": -20.29,
-          "relVol": 9.8,
-          "rsi": 32.0,
-          "cap": "10.2B"
-        },
-        {
-          "ticker": "NIQ",
-          "company": "NIQ Global Intelligence plc",
-          "price": 16.58,
-          "changePct": 41.95,
-          "relVol": 6.5,
-          "rsi": 87.2,
-          "cap": "4.9B"
-        },
-        {
-          "ticker": "LIF",
-          "company": "Life360, Inc.",
-          "price": 48.61,
-          "changePct": -24.76,
-          "relVol": 6.3,
-          "rsi": 41.6,
-          "cap": "3.9B"
-        },
-        {
-          "ticker": "HUBG",
-          "company": "Hub Group, Inc.",
-          "price": 38.0,
-          "changePct": -19.75,
-          "relVol": 5.8,
-          "rsi": 27.9,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "ETOR",
-          "company": "eToro Group Ltd.",
-          "price": 29.33,
-          "changePct": -13.74,
-          "relVol": 5.3,
-          "rsi": 23.5,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "JAN",
-          "company": "Janus Living, Inc.",
-          "price": 29.57,
-          "changePct": -2.02,
-          "relVol": 5.0,
-          "rsi": 48.2,
-          "cap": "8.6B"
-        },
-        {
-          "ticker": "RHP",
-          "company": "Ryman Hospitality Properties, Inc. (REIT)",
-          "price": 122.07,
-          "changePct": 1.77,
-          "relVol": 4.8,
-          "rsi": 39.7,
-          "cap": "7.7B"
-        },
-        {
-          "ticker": "ZLAB",
-          "company": "Zai Lab Limited",
-          "price": 26.0,
-          "changePct": 10.31,
-          "relVol": 4.6,
-          "rsi": 81.6,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "KYMR",
-          "company": "Kymera Therapeutics, Inc.",
-          "price": 109.62,
-          "changePct": 0.96,
-          "relVol": 4.4,
-          "rsi": 55.1,
-          "cap": "9.1B"
+          "ticker": "CZR",
+          "company": "Caesars Entertainment, Inc.",
+          "price": 29.61,
+          "changePct": -0.42,
+          "relVol": 3.0,
+          "rsi": 44.2,
+          "cap": "6.0B"
         }
       ]
     },
@@ -202,97 +121,61 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 32,
+      "totalMatches": 6,
       "rows": [
-        {
-          "ticker": "CVS",
-          "company": "CVS Health Corporation",
-          "price": 93.5,
-          "changePct": -2.27,
-          "relVol": 0.9,
-          "rsi": 28.4,
-          "cap": "119.6B"
-        },
-        {
-          "ticker": "ENB",
-          "company": "Enbridge Inc",
-          "price": 51.57,
-          "changePct": 0.35,
-          "relVol": 0.7,
-          "rsi": 31.2,
-          "cap": "112.6B"
-        },
         {
           "ticker": "APP",
           "company": "Applovin Corporation",
-          "price": 318.68,
-          "changePct": -5.99,
-          "relVol": 0.9,
-          "rsi": 28.4,
-          "cap": "106.6B"
+          "price": 314.26,
+          "changePct": -1.39,
+          "relVol": 0.2,
+          "rsi": 27.9,
+          "cap": "105.2B"
         },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.5,
-          "changePct": -4.82,
-          "relVol": 1.9,
-          "rsi": 30.5,
-          "cap": "90.1B"
-        },
-        {
-          "ticker": "CNP",
-          "company": "CenterPoint Energy, Inc (Holding Co)",
-          "price": 40.18,
-          "changePct": 0.37,
-          "relVol": 0.9,
-          "rsi": 30.9,
-          "cap": "26.5B"
+          "price": 7.48,
+          "changePct": -0.25,
+          "relVol": 0.7,
+          "rsi": 30.2,
+          "cap": "85.9B"
         },
         {
           "ticker": "RBLX",
           "company": "Roblox Corporation",
-          "price": 36.22,
-          "changePct": -2.24,
-          "relVol": 1.2,
-          "rsi": 31.5,
-          "cap": "25.9B"
-        },
-        {
-          "ticker": "CMS",
-          "company": "CMS Energy Corporation",
-          "price": 69.62,
-          "changePct": 0.81,
-          "relVol": 1.1,
-          "rsi": 31.4,
-          "cap": "21.8B"
-        },
-        {
-          "ticker": "NI",
-          "company": "NiSource Inc",
-          "price": 42.01,
-          "changePct": 0.55,
-          "relVol": 1.1,
-          "rsi": 29.2,
-          "cap": "20.1B"
+          "price": 35.58,
+          "changePct": -1.77,
+          "relVol": 0.1,
+          "rsi": 30.7,
+          "cap": "25.4B"
         },
         {
           "ticker": "SBS",
           "company": "Companhia de saneamento Basico Do Estado De Sao ",
-          "price": 5.03,
-          "changePct": -3.45,
-          "relVol": 1.2,
-          "rsi": 29.3,
-          "cap": "18.3B"
+          "price": 5.04,
+          "changePct": 0.2,
+          "relVol": 0.4,
+          "rsi": 29.9,
+          "cap": "17.7B"
         },
         {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 37.01,
-          "changePct": -0.59,
-          "relVol": 0.9,
-          "rsi": 29.0,
-          "cap": "17.8B"
+          "ticker": "ONON",
+          "company": "On Holding AG",
+          "price": 30.79,
+          "changePct": -0.4,
+          "relVol": 0.7,
+          "rsi": 31.7,
+          "cap": "10.2B"
+        },
+        {
+          "ticker": "TTD",
+          "company": "The Trade Desk, Inc.",
+          "price": 13.17,
+          "changePct": -2.88,
+          "relVol": 0.2,
+          "rsi": 27.4,
+          "cap": "6.2B"
         }
       ]
     }
