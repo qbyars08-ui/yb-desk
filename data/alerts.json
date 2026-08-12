@@ -1,30 +1,30 @@
 {
-  "updated": "2026-08-12T20:58:54.678Z",
+  "updated": "2026-08-12T21:58:31.524Z",
   "alerts": [
     {
       "ticker": "NBIS",
       "changePct": 34.1407,
-      "flaggedAt": "2026-08-12T20:58:54.678Z"
+      "flaggedAt": "2026-08-12T21:58:31.524Z"
     },
     {
       "ticker": "NOK",
       "changePct": 9.322,
-      "flaggedAt": "2026-08-12T20:58:54.678Z"
+      "flaggedAt": "2026-08-12T21:58:31.524Z"
     },
     {
       "ticker": "CRDO",
       "changePct": 8.2644,
-      "flaggedAt": "2026-08-12T20:58:54.678Z"
+      "flaggedAt": "2026-08-12T21:58:31.524Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": 7.3702,
-      "flaggedAt": "2026-08-12T20:58:54.678Z"
+      "flaggedAt": "2026-08-12T21:58:31.524Z"
     },
     {
       "ticker": "ANET",
       "changePct": 6.3937,
-      "flaggedAt": "2026-08-12T20:58:54.678Z"
+      "flaggedAt": "2026-08-12T21:58:31.524Z"
     }
   ]
 }
