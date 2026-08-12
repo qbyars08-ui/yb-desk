@@ -1,30 +1,70 @@
 {
-  "updated": "2026-08-12T14:23:33.551Z",
+  "updated": "2026-08-12T15:32:50.214Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 21.3942,
-      "flaggedAt": "2026-08-12T14:23:33.551Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": 9.1102,
-      "flaggedAt": "2026-08-12T14:23:33.551Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": 6.8681,
-      "flaggedAt": "2026-08-12T14:23:33.551Z"
+      "changePct": 29.7404,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
     },
     {
       "ticker": "CRDO",
-      "changePct": 5.8581,
-      "flaggedAt": "2026-08-12T14:23:33.551Z"
+      "changePct": 12.0595,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 10.0036,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": 9.8517,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": 8.91,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "LPKFF",
+      "changePct": 8.5985,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "ANET",
+      "changePct": 7.725,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "OUST",
+      "changePct": 7.0971,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
     },
     {
       "ticker": "MU",
-      "changePct": 5.5451,
-      "flaggedAt": "2026-08-12T14:23:33.551Z"
+      "changePct": 6.5951,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": 5.8375,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": 5.6574,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": 5.5336,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": 5.1014,
+      "flaggedAt": "2026-08-12T15:32:50.214Z"
     }
   ]
 }
