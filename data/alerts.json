@@ -1,30 +1,30 @@
 {
-  "updated": "2026-08-13T17:36:57.037Z",
+  "updated": "2026-08-13T18:36:54.774Z",
   "alerts": [
     {
-      "ticker": "IQMX",
-      "changePct": 7.7101,
-      "flaggedAt": "2026-08-13T17:36:57.037Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": 7.211,
-      "flaggedAt": "2026-08-13T17:36:57.037Z"
+      "ticker": "CIFR",
+      "changePct": -7.6385,
+      "flaggedAt": "2026-08-13T18:36:54.774Z"
     },
     {
       "ticker": "MU",
-      "changePct": 6.9188,
-      "flaggedAt": "2026-08-13T17:36:57.037Z"
+      "changePct": 6.0019,
+      "flaggedAt": "2026-08-13T18:36:54.774Z"
     },
     {
-      "ticker": "CIFR",
-      "changePct": -6.4074,
-      "flaggedAt": "2026-08-13T17:36:57.037Z"
+      "ticker": "IQMX",
+      "changePct": 5.9857,
+      "flaggedAt": "2026-08-13T18:36:54.774Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 5.8914,
+      "flaggedAt": "2026-08-13T18:36:54.774Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": -5.6162,
-      "flaggedAt": "2026-08-13T17:36:57.037Z"
+      "flaggedAt": "2026-08-13T18:36:54.774Z"
     }
   ]
 }
