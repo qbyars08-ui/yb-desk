@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-12T22:02:08.254904+00:00",
+  "updated": "2026-08-13T15:14:24.711633+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 260,
+      "totalMatches": 45,
       "rows": [
         {
-          "ticker": "ATRO",
-          "company": "Astronics Corporation",
-          "price": 87.89,
-          "changePct": 17.33,
-          "relVol": 4.0,
-          "rsi": 70.7,
-          "cap": "3.8B"
+          "ticker": "AVAH",
+          "company": "Aveanna Healthcare Holdings Inc.",
+          "price": 10.6,
+          "changePct": 17.07,
+          "relVol": 1.4,
+          "rsi": 67.2,
+          "cap": "2.3B"
         },
         {
-          "ticker": "AEHR",
-          "company": "Aehr Test Systems",
-          "price": 129.23,
-          "changePct": 10.28,
-          "relVol": 1.3,
-          "rsi": 67.8,
+          "ticker": "SMCI",
+          "company": "Super Micro Computer, Inc.",
+          "price": 41.81,
+          "changePct": 11.18,
+          "relVol": 1.0,
+          "rsi": 72.9,
+          "cap": "27.0B"
+        },
+        {
+          "ticker": "ZIM",
+          "company": "ZIM Integrated Shipping Services Ltd.",
+          "price": 27.09,
+          "changePct": 7.2,
+          "relVol": 1.5,
+          "rsi": 59.3,
+          "cap": "3.3B"
+        },
+        {
+          "ticker": "MU",
+          "company": "Micron Technology, Inc.",
+          "price": 958.79,
+          "changePct": 5.21,
+          "relVol": 0.3,
+          "rsi": 55.2,
+          "cap": "1.08T"
+        },
+        {
+          "ticker": "HPQ",
+          "company": "HP Inc.",
+          "price": 30.57,
+          "changePct": 4.41,
+          "relVol": 0.7,
+          "rsi": 68.7,
+          "cap": "28.0B"
+        },
+        {
+          "ticker": "BULL",
+          "company": "Webull Corporation",
+          "price": 7.99,
+          "changePct": 4.11,
+          "relVol": 0.6,
+          "rsi": 61.7,
           "cap": "4.2B"
         },
         {
           "ticker": "DELL",
           "company": "Dell Technologies Inc.",
-          "price": 484.5,
-          "changePct": 9.87,
-          "relVol": 1.1,
-          "rsi": 61.1,
-          "cap": "314.1B"
-        },
-        {
-          "ticker": "CRDO",
-          "company": "Credo Technology Group Holding Ltd",
-          "price": 268.16,
-          "changePct": 8.26,
-          "relVol": 1.0,
-          "rsi": 60.8,
-          "cap": "50.0B"
-        },
-        {
-          "ticker": "HPE",
-          "company": "Hewlett Packard Enterprise Company",
-          "price": 58.79,
-          "changePct": 8.11,
-          "relVol": 1.3,
-          "rsi": 72.5,
-          "cap": "77.8B"
-        },
-        {
-          "ticker": "ANET",
-          "company": "Arista Networks, Inc.",
-          "price": 210.5,
-          "changePct": 6.39,
-          "relVol": 1.1,
-          "rsi": 69.2,
-          "cap": "265.5B"
-        },
-        {
-          "ticker": "LFST",
-          "company": "LifeStance Health Group, Inc.",
-          "price": 12.23,
-          "changePct": 6.35,
-          "relVol": 1.2,
-          "rsi": 67.2,
-          "cap": "4.7B"
-        },
-        {
-          "ticker": "TER",
-          "company": "Teradyne, Inc.",
-          "price": 402.74,
-          "changePct": 6.11,
+          "price": 503.15,
+          "changePct": 3.85,
           "relVol": 0.7,
-          "rsi": 57.2,
-          "cap": "63.0B"
+          "rsi": 63.8,
+          "cap": "326.2B"
         },
         {
-          "ticker": "REZI",
-          "company": "Resideo Technologies, Inc.",
-          "price": 25.71,
-          "changePct": 6.06,
-          "relVol": 1.8,
-          "rsi": 57.0,
-          "cap": "3.9B"
+          "ticker": "NBIS",
+          "company": "Nebius Group N.V.",
+          "price": 267.68,
+          "changePct": 3.27,
+          "relVol": 0.6,
+          "rsi": 63.4,
+          "cap": "67.4B"
         },
         {
-          "ticker": "MRNA",
-          "company": "Moderna, Inc.",
-          "price": 63.67,
-          "changePct": 5.12,
-          "relVol": 1.2,
-          "rsi": 57.4,
-          "cap": "25.4B"
+          "ticker": "ACHR",
+          "company": "Archer Aviation Inc.",
+          "price": 6.49,
+          "changePct": 3.1,
+          "relVol": 0.3,
+          "rsi": 64.9,
+          "cap": "5.0B"
+        },
+        {
+          "ticker": "COMP",
+          "company": "Compass, Inc.",
+          "price": 13.1,
+          "changePct": 2.87,
+          "relVol": 0.2,
+          "rsi": 65.3,
+          "cap": "10.1B"
         }
       ]
     },
@@ -104,97 +104,25 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 18,
+      "totalMatches": 2,
       "rows": [
         {
-          "ticker": "PPLC",
-          "company": "PPL Corporation Corporate",
-          "price": 47.06,
-          "changePct": 0.53,
-          "relVol": 22.5,
-          "rsi": 43.6,
-          "cap": "26.5B"
-        },
-        {
-          "ticker": "SMCIP",
-          "company": "Super Micro Computer, Inc. - Depositary Shares E",
-          "price": 64.22,
-          "changePct": 16.24,
-          "relVol": 6.5,
-          "rsi": 69.5,
-          "cap": "20.4B"
-        },
-        {
-          "ticker": "WRD",
-          "company": "WeRide Inc.",
-          "price": 5.72,
-          "changePct": -9.64,
-          "relVol": 6.3,
-          "rsi": 44.4,
-          "cap": "2.1B"
-        },
-        {
-          "ticker": "AVB",
-          "company": "AvalonBay Communities, Inc.",
-          "price": 179.79,
-          "changePct": -1.08,
-          "relVol": 6.3,
-          "rsi": 36.0,
-          "cap": "25.7B"
-        },
-        {
-          "ticker": "OCTV",
-          "company": "Octave Intelligence plc",
-          "price": 19.08,
-          "changePct": -3.25,
-          "relVol": 5.4,
-          "rsi": 58.4,
-          "cap": "5.1B"
-        },
-        {
-          "ticker": "CZR",
-          "company": "Caesars Entertainment, Inc.",
-          "price": 29.63,
-          "changePct": -0.37,
-          "relVol": 4.7,
-          "rsi": 44.5,
-          "cap": "6.0B"
-        },
-        {
-          "ticker": "NEE/PT",
-          "company": "NextEra Energy, Inc. 7.234% Corporate",
-          "price": 48.56,
-          "changePct": -0.31,
-          "relVol": 4.7,
-          "rsi": 36.3,
-          "cap": "178.9B"
-        },
-        {
-          "ticker": "OPLN",
-          "company": "OPENLANE, Inc.",
-          "price": 35.33,
-          "changePct": -3.21,
-          "relVol": 4.3,
-          "rsi": 33.0,
+          "ticker": "ARX",
+          "company": "Accelerant Holdings",
+          "price": 19.54,
+          "changePct": 43.57,
+          "relVol": 17.4,
+          "rsi": 77.0,
           "cap": "4.3B"
         },
         {
-          "ticker": "ATRO",
-          "company": "Astronics Corporation",
-          "price": 87.89,
-          "changePct": 17.33,
-          "relVol": 4.0,
-          "rsi": 70.7,
-          "cap": "3.8B"
-        },
-        {
-          "ticker": "QNT",
-          "company": "Quantinuum Inc.",
-          "price": 71.74,
-          "changePct": 27.97,
-          "relVol": 3.8,
-          "rsi": 63.7,
-          "cap": "18.7B"
+          "ticker": "CLBT",
+          "company": "Cellebrite DI Ltd.",
+          "price": 10.49,
+          "changePct": -31.22,
+          "relVol": 13.4,
+          "rsi": 24.4,
+          "cap": "2.6B"
         }
       ]
     },
@@ -202,97 +130,61 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 25,
+      "totalMatches": 6,
       "rows": [
-        {
-          "ticker": "ENB",
-          "company": "Enbridge Inc",
-          "price": 51.44,
-          "changePct": -0.25,
-          "relVol": 0.7,
-          "rsi": 30.6,
-          "cap": "112.3B"
-        },
-        {
-          "ticker": "MO",
-          "company": "Altria Group, Inc.",
-          "price": 64.38,
-          "changePct": -1.0,
-          "relVol": 0.7,
-          "rsi": 30.7,
-          "cap": "107.5B"
-        },
         {
           "ticker": "APP",
           "company": "Applovin Corporation",
-          "price": 303.76,
-          "changePct": -4.68,
-          "relVol": 1.0,
-          "rsi": 26.6,
-          "cap": "101.7B"
+          "price": 313.68,
+          "changePct": 3.27,
+          "relVol": 0.2,
+          "rsi": 29.8,
+          "cap": "105.0B"
         },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.4,
-          "changePct": -1.33,
-          "relVol": 1.7,
-          "rsi": 28.8,
-          "cap": "85.9B"
+          "price": 7.39,
+          "changePct": -0.07,
+          "relVol": 0.3,
+          "rsi": 28.7,
+          "cap": "84.5B"
         },
         {
-          "ticker": "AMX",
-          "company": "America Movil, S.A.B. de C.V.",
-          "price": 23.22,
-          "changePct": -0.9,
-          "relVol": 0.7,
-          "rsi": 23.9,
-          "cap": "71.6B"
+          "ticker": "ONON",
+          "company": "On Holding AG",
+          "price": 30.74,
+          "changePct": -0.87,
+          "relVol": 0.4,
+          "rsi": 31.8,
+          "cap": "10.1B"
         },
         {
-          "ticker": "RBLX",
-          "company": "Roblox Corporation",
-          "price": 35.54,
-          "changePct": -1.88,
-          "relVol": 0.5,
-          "rsi": 30.6,
-          "cap": "25.4B"
+          "ticker": "TTD",
+          "company": "The Trade Desk, Inc.",
+          "price": 13.93,
+          "changePct": 3.26,
+          "relVol": 0.2,
+          "rsi": 31.7,
+          "cap": "6.5B"
         },
         {
-          "ticker": "NI",
-          "company": "NiSource Inc",
-          "price": 41.99,
-          "changePct": -0.05,
-          "relVol": 0.9,
-          "rsi": 29.1,
-          "cap": "20.1B"
+          "ticker": "STUB",
+          "company": "StubHub Holdings, Inc.",
+          "price": 7.39,
+          "changePct": -13.47,
+          "relVol": 1.6,
+          "rsi": 31.4,
+          "cap": "2.8B"
         },
         {
-          "ticker": "VIV",
-          "company": "Telefonica Brasil S.A.",
-          "price": 11.58,
-          "changePct": -0.52,
-          "relVol": 2.7,
-          "rsi": 25.7,
-          "cap": "18.7B"
-        },
-        {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 36.52,
-          "changePct": -1.32,
-          "relVol": 1.1,
-          "rsi": 27.3,
-          "cap": "17.6B"
-        },
-        {
-          "ticker": "RBA",
-          "company": "RB Global, Inc.",
-          "price": 86.46,
-          "changePct": -3.54,
-          "relVol": 1.2,
+          "ticker": "CLBT",
+          "company": "Cellebrite DI Ltd.",
+          "price": 10.49,
+          "changePct": -31.22,
+          "relVol": 13.4,
           "rsi": 24.4,
-          "cap": "16.0B"
+          "cap": "2.6B"
         }
       ]
     }
