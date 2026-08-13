@@ -1,20 +1,20 @@
 {
-  "updated": "2026-08-13T20:58:43.579Z",
+  "updated": "2026-08-13T21:57:55.278Z",
   "alerts": [
     {
       "ticker": "IQMX",
       "changePct": 7.8528,
-      "flaggedAt": "2026-08-13T20:58:43.579Z"
+      "flaggedAt": "2026-08-13T21:57:55.278Z"
     },
     {
       "ticker": "CIFR",
       "changePct": -6.995,
-      "flaggedAt": "2026-08-13T20:58:43.579Z"
+      "flaggedAt": "2026-08-13T21:57:55.278Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": -6.3963,
-      "flaggedAt": "2026-08-13T20:58:43.579Z"
+      "flaggedAt": "2026-08-13T21:57:55.278Z"
     }
   ]
 }
