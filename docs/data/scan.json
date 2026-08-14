@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-13T22:02:28.000966+00:00",
+  "updated": "2026-08-14T15:06:44.877276+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 290,
+      "totalMatches": 50,
       "rows": [
         {
-          "ticker": "AVAH",
-          "company": "Aveanna Healthcare Holdings Inc.",
-          "price": 11.29,
-          "changePct": 24.75,
-          "relVol": 5.4,
-          "rsi": 72.1,
-          "cap": "2.5B"
+          "ticker": "NU",
+          "company": "Nu Holdings Ltd.",
+          "price": 15.43,
+          "changePct": 10.73,
+          "relVol": 1.4,
+          "rsi": 66.6,
+          "cap": "74.5B"
         },
         {
-          "ticker": "HUBS",
-          "company": "HubSpot, Inc.",
-          "price": 240.51,
-          "changePct": 14.46,
-          "relVol": 1.3,
-          "rsi": 56.7,
+          "ticker": "AEHR",
+          "company": "Aehr Test Systems",
+          "price": 134.88,
+          "changePct": 9.39,
+          "relVol": 0.8,
+          "rsi": 67.8,
+          "cap": "4.4B"
+        },
+        {
+          "ticker": "LITE",
+          "company": "Lumentum Holdings Inc.",
+          "price": 935.78,
+          "changePct": 6.29,
+          "relVol": 0.4,
+          "rsi": 59.4,
+          "cap": "72.8B"
+        },
+        {
+          "ticker": "NBIS",
+          "company": "Nebius Group N.V.",
+          "price": 270.56,
+          "changePct": 6.08,
+          "relVol": 0.4,
+          "rsi": 63.5,
+          "cap": "68.1B"
+        },
+        {
+          "ticker": "HL",
+          "company": "Hecla Mining Company",
+          "price": 18.55,
+          "changePct": 4.65,
+          "relVol": 0.1,
+          "rsi": 66.2,
+          "cap": "12.5B"
+        },
+        {
+          "ticker": "VG",
+          "company": "Venture Global, Inc.",
+          "price": 14.02,
+          "changePct": 3.51,
+          "relVol": 0.3,
+          "rsi": 55.6,
+          "cap": "35.0B"
+        },
+        {
+          "ticker": "CDE",
+          "company": "Coeur Mining, Inc.",
+          "price": 18.93,
+          "changePct": 2.63,
+          "relVol": 0.1,
+          "rsi": 62.9,
+          "cap": "19.5B"
+        },
+        {
+          "ticker": "MU",
+          "company": "Micron Technology, Inc.",
+          "price": 970.22,
+          "changePct": 2.15,
+          "relVol": 0.3,
+          "rsi": 56.2,
+          "cap": "1.10T"
+        },
+        {
+          "ticker": "KTOS",
+          "company": "Kratos Defense & Security Solutions, Inc.",
+          "price": 64.1,
+          "changePct": 2.09,
+          "relVol": 0.5,
+          "rsi": 69.8,
           "cap": "12.0B"
         },
         {
-          "ticker": "KVYO",
-          "company": "Klaviyo, Inc. Series A",
-          "price": 19.22,
-          "changePct": 11.42,
-          "relVol": 1.1,
-          "rsi": 57.9,
-          "cap": "5.5B"
-        },
-        {
-          "ticker": "FIG",
-          "company": "FIGMA INC",
-          "price": 26.35,
-          "changePct": 10.95,
-          "relVol": 0.8,
-          "rsi": 57.8,
-          "cap": "14.0B"
-        },
-        {
-          "ticker": "ACHR",
-          "company": "Archer Aviation Inc.",
-          "price": 6.97,
-          "changePct": 10.81,
-          "relVol": 1.3,
-          "rsi": 68.8,
-          "cap": "5.4B"
-        },
-        {
-          "ticker": "FROG",
-          "company": "JFrog Ltd.",
-          "price": 95.15,
-          "changePct": 10.59,
-          "relVol": 1.3,
-          "rsi": 62.6,
-          "cap": "11.7B"
-        },
-        {
-          "ticker": "DOCU",
-          "company": "DocuSign, Inc.",
-          "price": 64.09,
-          "changePct": 10.31,
-          "relVol": 1.9,
-          "rsi": 70.8,
-          "cap": "12.2B"
-        },
-        {
-          "ticker": "ASAN",
-          "company": "Asana, Inc.",
-          "price": 9.87,
-          "changePct": 9.79,
-          "relVol": 1.5,
-          "rsi": 69.9,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "MNDY",
-          "company": "monday.com Ltd.",
-          "price": 94.29,
-          "changePct": 9.7,
-          "relVol": 1.2,
-          "rsi": 60.6,
-          "cap": "4.0B"
-        },
-        {
-          "ticker": "GDDY",
-          "company": "GoDaddy Inc.",
-          "price": 100.5,
-          "changePct": 9.45,
-          "relVol": 1.1,
-          "rsi": 60.7,
-          "cap": "12.7B"
+          "ticker": "SNAP",
+          "company": "Snap Inc.",
+          "price": 5.41,
+          "changePct": 2.08,
+          "relVol": 0.2,
+          "rsi": 58.8,
+          "cap": "9.1B"
         }
       ]
     },
@@ -104,97 +104,16 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 18,
+      "totalMatches": 1,
       "rows": [
         {
-          "ticker": "CLBT",
-          "company": "Cellebrite DI Ltd.",
-          "price": 10.8,
-          "changePct": -29.18,
-          "relVol": 31.7,
-          "rsi": 25.3,
-          "cap": "2.7B"
-        },
-        {
-          "ticker": "ARX",
-          "company": "Accelerant Holdings",
-          "price": 19.51,
-          "changePct": 43.35,
-          "relVol": 30.9,
-          "rsi": 76.9,
-          "cap": "4.3B"
-        },
-        {
-          "ticker": "TBBB",
-          "company": "BBB Foods Inc.",
-          "price": 49.2,
-          "changePct": 16.31,
-          "relVol": 6.6,
-          "rsi": 76.6,
-          "cap": "5.9B"
-        },
-        {
-          "ticker": "YETI",
-          "company": "YETI Holdings, Inc.",
-          "price": 45.47,
-          "changePct": -10.56,
-          "relVol": 5.6,
-          "rsi": 34.6,
-          "cap": "3.4B"
-        },
-        {
-          "ticker": "AVAH",
-          "company": "Aveanna Healthcare Holdings Inc.",
-          "price": 11.29,
-          "changePct": 24.75,
-          "relVol": 5.4,
-          "rsi": 72.1,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "EROC",
-          "company": "ERock, Inc.",
-          "price": 15.66,
-          "changePct": 13.31,
-          "relVol": 5.0,
-          "rsi": 64.5,
-          "cap": "3.4B"
-        },
-        {
-          "ticker": "STUB",
-          "company": "StubHub Holdings, Inc.",
-          "price": 7.68,
-          "changePct": -10.07,
-          "relVol": 4.5,
-          "rsi": 33.3,
-          "cap": "2.9B"
-        },
-        {
-          "ticker": "LFTO",
-          "company": "Liftoff Mobile, Inc.",
-          "price": 20.06,
-          "changePct": -20.59,
-          "relVol": 4.2,
-          "rsi": 38.1,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "WDAY",
-          "company": "Workday, Inc.",
-          "price": 206.45,
-          "changePct": 17.78,
-          "relVol": 4.1,
-          "rsi": 75.2,
-          "cap": "51.0B"
-        },
-        {
-          "ticker": "JD",
-          "company": "JD.com, Inc.",
-          "price": 29.3,
-          "changePct": -7.31,
-          "relVol": 4.1,
-          "rsi": 39.0,
-          "cap": "38.0B"
+          "ticker": "HTFL",
+          "company": "Heartflow, Inc.",
+          "price": 41.08,
+          "changePct": 32.46,
+          "relVol": 4.7,
+          "rsi": 82.9,
+          "cap": "3.5B"
         }
       ]
     },
@@ -202,97 +121,34 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 18,
+      "totalMatches": 3,
       "rows": [
-        {
-          "ticker": "ENB",
-          "company": "Enbridge Inc",
-          "price": 51.29,
-          "changePct": -0.29,
-          "relVol": 2.4,
-          "rsi": 29.9,
-          "cap": "112.0B"
-        },
-        {
-          "ticker": "APP",
-          "company": "Applovin Corporation",
-          "price": 312.67,
-          "changePct": 2.93,
-          "relVol": 0.8,
-          "rsi": 29.5,
-          "cap": "104.6B"
-        },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.34,
-          "changePct": -0.81,
-          "relVol": 1.2,
-          "rsi": 27.8,
-          "cap": "84.5B"
-        },
-        {
-          "ticker": "TPR",
-          "company": "Tapestry, Inc.",
-          "price": 128.39,
-          "changePct": -16.49,
-          "relVol": 3.7,
-          "rsi": 30.9,
-          "cap": "25.9B"
-        },
-        {
-          "ticker": "NI",
-          "company": "NiSource Inc",
-          "price": 42.08,
-          "changePct": 0.21,
-          "relVol": 0.6,
-          "rsi": 30.1,
-          "cap": "20.2B"
-        },
-        {
-          "ticker": "VIV",
-          "company": "Telefonica Brasil S.A.",
-          "price": 11.34,
-          "changePct": -2.07,
-          "relVol": 1.5,
-          "rsi": 23.5,
-          "cap": "18.5B"
-        },
-        {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 36.22,
-          "changePct": -0.82,
-          "relVol": 0.9,
-          "rsi": 26.3,
-          "cap": "17.4B"
-        },
-        {
-          "ticker": "CX",
-          "company": "Cemex, S.A.B. de C.V. Sponsored",
-          "price": 11.08,
-          "changePct": -1.42,
+          "price": 7.29,
+          "changePct": -0.75,
           "relVol": 0.4,
-          "rsi": 30.9,
-          "cap": "17.0B"
+          "rsi": 26.9,
+          "cap": "84.4B"
         },
         {
-          "ticker": "BROS",
-          "company": "Dutch Bros Inc.",
-          "price": 51.13,
-          "changePct": 0.22,
-          "relVol": 0.7,
-          "rsi": 29.2,
-          "cap": "8.9B"
+          "ticker": "CLBT",
+          "company": "Cellebrite DI Ltd.",
+          "price": 10.93,
+          "changePct": 1.16,
+          "relVol": 0.5,
+          "rsi": 26.4,
+          "cap": "2.7B"
         },
         {
-          "ticker": "SFD",
-          "company": "Smithfield Foods, Inc.",
-          "price": 22.47,
-          "changePct": -1.19,
-          "relVol": 1.4,
-          "rsi": 25.7,
-          "cap": "8.8B"
+          "ticker": "STNE",
+          "company": "StoneCo Ltd.",
+          "price": 9.62,
+          "changePct": -6.01,
+          "relVol": 1.0,
+          "rsi": 30.4,
+          "cap": "2.3B"
         }
       ]
     }
