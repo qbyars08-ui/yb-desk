@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-14T15:06:44.877276+00:00",
+  "updated": "2026-08-14T21:39:37.363285+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 50,
+      "totalMatches": 262,
       "rows": [
         {
           "ticker": "NU",
           "company": "Nu Holdings Ltd.",
-          "price": 15.43,
-          "changePct": 10.73,
-          "relVol": 1.4,
-          "rsi": 66.6,
-          "cap": "74.5B"
-        },
-        {
-          "ticker": "AEHR",
-          "company": "Aehr Test Systems",
-          "price": 134.88,
-          "changePct": 9.39,
-          "relVol": 0.8,
-          "rsi": 67.8,
-          "cap": "4.4B"
-        },
-        {
-          "ticker": "LITE",
-          "company": "Lumentum Holdings Inc.",
-          "price": 935.78,
-          "changePct": 6.29,
-          "relVol": 0.4,
-          "rsi": 59.4,
-          "cap": "72.8B"
+          "price": 15.23,
+          "changePct": 9.33,
+          "relVol": 3.0,
+          "rsi": 65.1,
+          "cap": "73.6B"
         },
         {
           "ticker": "NBIS",
           "company": "Nebius Group N.V.",
-          "price": 270.56,
-          "changePct": 6.08,
-          "relVol": 0.4,
-          "rsi": 63.5,
-          "cap": "68.1B"
+          "price": 277.68,
+          "changePct": 8.88,
+          "relVol": 1.0,
+          "rsi": 64.6,
+          "cap": "69.9B"
         },
         {
-          "ticker": "HL",
-          "company": "Hecla Mining Company",
-          "price": 18.55,
-          "changePct": 4.65,
-          "relVol": 0.1,
-          "rsi": 66.2,
-          "cap": "12.5B"
+          "ticker": "AEHR",
+          "company": "Aehr Test Systems",
+          "price": 134.06,
+          "changePct": 8.73,
+          "relVol": 1.3,
+          "rsi": 67.6,
+          "cap": "4.4B"
         },
         {
-          "ticker": "VG",
-          "company": "Venture Global, Inc.",
-          "price": 14.02,
-          "changePct": 3.51,
-          "relVol": 0.3,
-          "rsi": 55.6,
-          "cap": "35.0B"
+          "ticker": "OUST",
+          "company": "Ouster, Inc.",
+          "price": 48.71,
+          "changePct": 7.93,
+          "relVol": 1.3,
+          "rsi": 59.2,
+          "cap": "3.5B"
         },
         {
-          "ticker": "CDE",
-          "company": "Coeur Mining, Inc.",
-          "price": 18.93,
-          "changePct": 2.63,
-          "relVol": 0.1,
-          "rsi": 62.9,
-          "cap": "19.5B"
+          "ticker": "IOVA",
+          "company": "Iovance Biotherapeutics, Inc.",
+          "price": 6.98,
+          "changePct": 7.06,
+          "relVol": 0.8,
+          "rsi": 73.0,
+          "cap": "3.2B"
         },
         {
-          "ticker": "MU",
-          "company": "Micron Technology, Inc.",
-          "price": 970.22,
-          "changePct": 2.15,
-          "relVol": 0.3,
-          "rsi": 56.2,
-          "cap": "1.10T"
+          "ticker": "OSCR",
+          "company": "Oscar Health, Inc.",
+          "price": 32.76,
+          "changePct": 6.43,
+          "relVol": 1.0,
+          "rsi": 62.1,
+          "cap": "9.0B"
         },
         {
-          "ticker": "KTOS",
-          "company": "Kratos Defense & Security Solutions, Inc.",
-          "price": 64.1,
-          "changePct": 2.09,
-          "relVol": 0.5,
-          "rsi": 69.8,
-          "cap": "12.0B"
+          "ticker": "GENI",
+          "company": "Genius Sports Limited",
+          "price": 8.38,
+          "changePct": 5.94,
+          "relVol": 0.7,
+          "rsi": 67.3,
+          "cap": "2.2B"
         },
         {
-          "ticker": "SNAP",
-          "company": "Snap Inc.",
-          "price": 5.41,
-          "changePct": 2.08,
-          "relVol": 0.2,
+          "ticker": "STX",
+          "company": "Seagate Technology Holdings PLC",
+          "price": 973.44,
+          "changePct": 5.65,
+          "relVol": 1.1,
+          "rsi": 62.0,
+          "cap": "220.6B"
+        },
+        {
+          "ticker": "LITE",
+          "company": "Lumentum Holdings Inc.",
+          "price": 926.14,
+          "changePct": 5.19,
+          "relVol": 0.7,
           "rsi": 58.8,
-          "cap": "9.1B"
+          "cap": "72.1B"
+        },
+        {
+          "ticker": "ZIM",
+          "company": "ZIM Integrated Shipping Services Ltd.",
+          "price": 28.14,
+          "changePct": 4.92,
+          "relVol": 2.1,
+          "rsi": 63.6,
+          "cap": "3.4B"
         }
       ]
     },
@@ -104,16 +104,61 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 1,
+      "totalMatches": 6,
       "rows": [
         {
           "ticker": "HTFL",
           "company": "Heartflow, Inc.",
-          "price": 41.08,
-          "changePct": 32.46,
-          "relVol": 4.7,
-          "rsi": 82.9,
-          "cap": "3.5B"
+          "price": 42.08,
+          "changePct": 35.7,
+          "relVol": 11.3,
+          "rsi": 83.7,
+          "cap": "3.6B"
+        },
+        {
+          "ticker": "BIRK",
+          "company": "Birkenstock Holding plc",
+          "price": 39.35,
+          "changePct": -4.02,
+          "relVol": 5.9,
+          "rsi": 46.6,
+          "cap": "7.2B"
+        },
+        {
+          "ticker": "CHEF",
+          "company": "The Chefs' Warehouse, Inc.",
+          "price": 109.08,
+          "changePct": -2.65,
+          "relVol": 5.1,
+          "rsi": 59.6,
+          "cap": "4.5B"
+        },
+        {
+          "ticker": "VIV",
+          "company": "Telefonica Brasil S.A.",
+          "price": 11.41,
+          "changePct": 0.62,
+          "relVol": 4.0,
+          "rsi": 25.5,
+          "cap": "18.2B"
+        },
+        {
+          "ticker": "DIOD",
+          "company": "Diodes Incorporated",
+          "price": 103.48,
+          "changePct": 6.47,
+          "relVol": 3.5,
+          "rsi": 56.6,
+          "cap": "4.8B"
+        },
+        {
+          "ticker": "SUI",
+          "company": "Sun Communities, Inc.",
+          "price": 123.29,
+          "changePct": 2.58,
+          "relVol": 3.2,
+          "rsi": 55.9,
+          "cap": "15.0B"
         }
       ]
     },
@@ -121,34 +166,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 3,
+      "totalMatches": 16,
       "rows": [
+        {
+          "ticker": "ENB",
+          "company": "Enbridge Inc",
+          "price": 50.91,
+          "changePct": -0.74,
+          "relVol": 1.5,
+          "rsi": 28.1,
+          "cap": "111.2B"
+        },
+        {
+          "ticker": "APP",
+          "company": "Applovin Corporation",
+          "price": 315.44,
+          "changePct": 0.89,
+          "relVol": 0.6,
+          "rsi": 30.4,
+          "cap": "105.6B"
+        },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.29,
-          "changePct": -0.75,
-          "relVol": 0.4,
-          "rsi": 26.9,
+          "price": 7.4,
+          "changePct": 0.82,
+          "relVol": 1.4,
+          "rsi": 30.4,
           "cap": "84.4B"
         },
         {
-          "ticker": "CLBT",
-          "company": "Cellebrite DI Ltd.",
-          "price": 10.93,
-          "changePct": 1.16,
-          "relVol": 0.5,
-          "rsi": 26.4,
-          "cap": "2.7B"
+          "ticker": "AMX",
+          "company": "America Movil, S.A.B. de C.V.",
+          "price": 23.45,
+          "changePct": 0.82,
+          "relVol": 1.4,
+          "rsi": 29.0,
+          "cap": "71.3B"
         },
         {
-          "ticker": "STNE",
-          "company": "StoneCo Ltd.",
-          "price": 9.62,
-          "changePct": -6.01,
-          "relVol": 1.0,
-          "rsi": 30.4,
-          "cap": "2.3B"
+          "ticker": "TPR",
+          "company": "Tapestry, Inc.",
+          "price": 128.98,
+          "changePct": 0.46,
+          "relVol": 1.9,
+          "rsi": 31.7,
+          "cap": "26.1B"
+        },
+        {
+          "ticker": "VIV",
+          "company": "Telefonica Brasil S.A.",
+          "price": 11.41,
+          "changePct": 0.62,
+          "relVol": 4.0,
+          "rsi": 25.5,
+          "cap": "18.2B"
+        },
+        {
+          "ticker": "ROL",
+          "company": "Rollins, Inc.",
+          "price": 36.2,
+          "changePct": -0.06,
+          "relVol": 0.7,
+          "rsi": 26.3,
+          "cap": "17.4B"
+        },
+        {
+          "ticker": "CX",
+          "company": "Cemex, S.A.B. de C.V. Sponsored",
+          "price": 11.06,
+          "changePct": -0.18,
+          "relVol": 0.5,
+          "rsi": 30.6,
+          "cap": "16.8B"
+        },
+        {
+          "ticker": "RBA",
+          "company": "RB Global, Inc.",
+          "price": 84.26,
+          "changePct": -2.49,
+          "relVol": 1.6,
+          "rsi": 22.9,
+          "cap": "15.6B"
+        },
+        {
+          "ticker": "BROS",
+          "company": "Dutch Bros Inc.",
+          "price": 52.02,
+          "changePct": 1.74,
+          "relVol": 0.7,
+          "rsi": 31.9,
+          "cap": "9.1B"
         }
       ]
     }
