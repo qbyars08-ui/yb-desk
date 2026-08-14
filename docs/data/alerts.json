@@ -1,40 +1,40 @@
 {
-  "updated": "2026-08-14T20:08:44.123Z",
+  "updated": "2026-08-14T21:00:09.323Z",
   "alerts": [
     {
       "ticker": "WYY",
-      "changePct": -19.3035,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "changePct": -18.7446,
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "SILC",
       "changePct": 10.2695,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "NBIS",
       "changePct": 8.877,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "OUST",
       "changePct": 7.9326,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "CIFR",
       "changePct": 7.4308,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "XNDU",
       "changePct": 6.9573,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     },
     {
       "ticker": "LUMN",
-      "changePct": 5.0781,
-      "flaggedAt": "2026-08-14T20:08:44.123Z"
+      "changePct": 5,
+      "flaggedAt": "2026-08-14T21:00:09.323Z"
     }
   ]
 }
