@@ -1,45 +1,65 @@
 {
-  "updated": "2026-08-18T13:53:27.695Z",
+  "updated": "2026-08-18T14:47:46.790Z",
   "alerts": [
     {
-      "ticker": "ARM",
-      "changePct": -9.1755,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
-    },
-    {
       "ticker": "ALMU",
-      "changePct": -8.8491,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
-    },
-    {
-      "ticker": "XNDU",
-      "changePct": -8.7771,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "changePct": -11.0206,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     },
     {
       "ticker": "OUST",
-      "changePct": -7.945,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "changePct": -10.5933,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "ARM",
+      "changePct": -9.6178,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": -8.8465,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     },
     {
       "ticker": "PENG",
-      "changePct": -7.1473,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "changePct": -8.5423,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     },
     {
       "ticker": "LUMN",
-      "changePct": -7.0685,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "changePct": -8.1101,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "NBIS",
+      "changePct": -7.2079,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "OSS",
+      "changePct": -6.0764,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     },
     {
       "ticker": "ASTS",
-      "changePct": -6.3821,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "changePct": -5.8608,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": -5.814,
-      "flaggedAt": "2026-08-18T13:53:27.695Z"
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "CIFR",
+      "changePct": -5.5447,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": -5.3434,
+      "flaggedAt": "2026-08-18T14:47:46.790Z"
     }
   ]
 }
