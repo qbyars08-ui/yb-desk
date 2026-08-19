@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-18T21:37:29.676978+00:00",
+  "updated": "2026-08-19T14:52:45.471343+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 243,
+      "totalMatches": 60,
       "rows": [
         {
-          "ticker": "UGI",
-          "company": "UGI Corporation",
-          "price": 38.39,
-          "changePct": 9.4,
-          "relVol": 8.0,
-          "rsi": 68.5,
-          "cap": "8.2B"
+          "ticker": "EL",
+          "company": "Estee Lauder Companies, Inc. (The)",
+          "price": 98.58,
+          "changePct": 16.98,
+          "relVol": 2.1,
+          "rsi": 73.7,
+          "cap": "35.7B"
         },
         {
-          "ticker": "NUVB",
-          "company": "Nuvation Bio Inc.",
-          "price": 6.96,
-          "changePct": 7.41,
-          "relVol": 1.2,
-          "rsi": 62.4,
-          "cap": "2.5B"
+          "ticker": "TEM",
+          "company": "Tempus AI, Inc.",
+          "price": 57.54,
+          "changePct": 16.57,
+          "relVol": 1.7,
+          "rsi": 61.5,
+          "cap": "10.4B"
         },
         {
-          "ticker": "TRGP",
-          "company": "Targa Resources, Inc.",
-          "price": 297.77,
-          "changePct": 7.13,
-          "relVol": 2.2,
-          "rsi": 67.7,
-          "cap": "63.9B"
-        },
-        {
-          "ticker": "CCC",
-          "company": "CCC Intelligent Solutions Holdings Inc.",
-          "price": 7.14,
-          "changePct": 6.73,
-          "relVol": 3.6,
-          "rsi": 67.6,
-          "cap": "4.2B"
-        },
-        {
-          "ticker": "BHC",
-          "company": "Bausch Health Companies Inc.",
-          "price": 6.93,
-          "changePct": 5.32,
-          "relVol": 1.1,
-          "rsi": 69.5,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "SPOT",
-          "company": "Spotify Technology S.A.",
-          "price": 516.28,
-          "changePct": 4.83,
-          "relVol": 1.2,
-          "rsi": 57.1,
-          "cap": "106.3B"
-        },
-        {
-          "ticker": "WIX",
-          "company": "Wix.com Ltd.",
-          "price": 77.16,
-          "changePct": 4.67,
-          "relVol": 1.5,
-          "rsi": 67.7,
+          "ticker": "EXK",
+          "company": "Endeavour Silver Corporation",
+          "price": 10.9,
+          "changePct": 12.89,
+          "relVol": 0.4,
+          "rsi": 65.9,
           "cap": "3.2B"
         },
         {
-          "ticker": "BETA",
-          "company": "Beta Technologies, Inc.",
-          "price": 26.76,
-          "changePct": 4.53,
-          "relVol": 1.4,
-          "rsi": 72.3,
-          "cap": "6.3B"
+          "ticker": "CDE",
+          "company": "Coeur Mining, Inc.",
+          "price": 20.83,
+          "changePct": 12.54,
+          "relVol": 0.2,
+          "rsi": 67.8,
+          "cap": "21.4B"
         },
         {
-          "ticker": "INTU",
-          "company": "Intuit Inc.",
-          "price": 350.41,
-          "changePct": 4.41,
-          "relVol": 1.2,
-          "rsi": 63.4,
-          "cap": "95.9B"
+          "ticker": "HL",
+          "company": "Hecla Mining Company",
+          "price": 20.18,
+          "changePct": 12.41,
+          "relVol": 0.2,
+          "rsi": 69.3,
+          "cap": "13.6B"
         },
         {
-          "ticker": "BRZE",
-          "company": "Braze, Inc.",
-          "price": 29.12,
-          "changePct": 4.19,
-          "relVol": 1.8,
-          "rsi": 61.1,
-          "cap": "3.3B"
+          "ticker": "AG",
+          "company": "First Majestic Silver Corp.",
+          "price": 20.5,
+          "changePct": 10.96,
+          "relVol": 0.6,
+          "rsi": 65.4,
+          "cap": "10.1B"
+        },
+        {
+          "ticker": "KGC",
+          "company": "Kinross Gold Corporation",
+          "price": 29.91,
+          "changePct": 10.28,
+          "relVol": 0.5,
+          "rsi": 71.2,
+          "cap": "35.5B"
+        },
+        {
+          "ticker": "IAG",
+          "company": "Iamgold Corporation",
+          "price": 20.02,
+          "changePct": 10.03,
+          "relVol": 0.6,
+          "rsi": 70.4,
+          "cap": "11.4B"
+        },
+        {
+          "ticker": "EQX",
+          "company": "Equinox Gold Corp.",
+          "price": 12.6,
+          "changePct": 10.0,
+          "relVol": 0.3,
+          "rsi": 70.2,
+          "cap": "14.7B"
+        },
+        {
+          "ticker": "SBSW",
+          "company": "D/B/A Sibanye-Stillwater Limited",
+          "price": 11.56,
+          "changePct": 9.47,
+          "relVol": 0.4,
+          "rsi": 70.5,
+          "cap": "7.4B"
         }
       ]
     },
@@ -104,97 +104,34 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 12,
+      "totalMatches": 3,
       "rows": [
         {
-          "ticker": "AMLX",
-          "company": "Amylyx Pharmaceuticals, Inc.",
-          "price": 35.11,
-          "changePct": 63.84,
-          "relVol": 12.8,
-          "rsi": 82.7,
-          "cap": "3.9B"
+          "ticker": "MRNA",
+          "company": "Moderna, Inc.",
+          "price": 157.22,
+          "changePct": 149.71,
+          "relVol": 13.9,
+          "rsi": 91.1,
+          "cap": "25.1B"
         },
         {
-          "ticker": "KLAR",
-          "company": "Klarna Group plc",
-          "price": 15.06,
-          "changePct": -22.81,
-          "relVol": 9.3,
-          "rsi": 30.7,
-          "cap": "5.7B"
-        },
-        {
-          "ticker": "UGI",
-          "company": "UGI Corporation",
-          "price": 38.39,
-          "changePct": 9.4,
-          "relVol": 8.0,
-          "rsi": 68.5,
-          "cap": "8.2B"
-        },
-        {
-          "ticker": "BIDU",
-          "company": "Baidu, Inc.",
-          "price": 90.87,
-          "changePct": -12.73,
-          "relVol": 7.6,
-          "rsi": 22.8,
-          "cap": "35.3B"
+          "ticker": "BNTX",
+          "company": "BioNTech SE",
+          "price": 114.49,
+          "changePct": 23.44,
+          "relVol": 4.9,
+          "rsi": 81.5,
+          "cap": "23.3B"
         },
         {
           "ticker": "ALH",
           "company": "Alliance Laundry Holdings Inc.",
-          "price": 24.0,
-          "changePct": -3.19,
-          "relVol": 5.0,
-          "rsi": 34.0,
-          "cap": "4.8B"
-        },
-        {
-          "ticker": "VNET",
-          "company": "VNET Group, Inc.",
-          "price": 6.58,
-          "changePct": -16.92,
+          "price": 24.28,
+          "changePct": 1.16,
           "relVol": 4.8,
-          "rsi": 38.2,
-          "cap": "2.3B"
-        },
-        {
-          "ticker": "WBS",
-          "company": "Webster Financial Corporation",
-          "price": 77.97,
-          "changePct": -0.91,
-          "relVol": 4.6,
-          "rsi": 53.3,
-          "cap": "12.6B"
-        },
-        {
-          "ticker": "FN",
-          "company": "Fabrinet",
-          "price": 482.59,
-          "changePct": -19.38,
-          "relVol": 3.9,
-          "rsi": 44.3,
-          "cap": "17.3B"
-        },
-        {
-          "ticker": "CCC",
-          "company": "CCC Intelligent Solutions Holdings Inc.",
-          "price": 7.14,
-          "changePct": 6.73,
-          "relVol": 3.6,
-          "rsi": 67.6,
-          "cap": "4.2B"
-        },
-        {
-          "ticker": "SAN",
-          "company": "Banco Santander, S.A. Sponsored",
-          "price": 14.24,
-          "changePct": -2.4,
-          "relVol": 3.4,
-          "rsi": 50.8,
-          "cap": "215.6B"
+          "rsi": 36.9,
+          "cap": "4.8B"
         }
       ]
     },
@@ -202,97 +139,25 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 23,
+      "totalMatches": 2,
       "rows": [
-        {
-          "ticker": "APP",
-          "company": "Applovin Corporation",
-          "price": 307.26,
-          "changePct": -1.51,
-          "relVol": 0.6,
-          "rsi": 29.2,
-          "cap": "102.8B"
-        },
-        {
-          "ticker": "ITUB",
-          "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.27,
-          "changePct": -1.22,
-          "relVol": 0.8,
-          "rsi": 27.9,
-          "cap": "83.9B"
-        },
-        {
-          "ticker": "BIDU",
-          "company": "Baidu, Inc.",
-          "price": 90.87,
-          "changePct": -12.73,
-          "relVol": 7.6,
-          "rsi": 22.8,
-          "cap": "35.3B"
-        },
-        {
-          "ticker": "STLA",
-          "company": "Stellantis N.V.",
-          "price": 5.05,
-          "changePct": -1.37,
-          "relVol": 0.8,
-          "rsi": 29.4,
-          "cap": "19.0B"
-        },
-        {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 36.32,
-          "changePct": 0.83,
-          "relVol": 0.8,
-          "rsi": 28.8,
-          "cap": "17.5B"
-        },
         {
           "ticker": "CX",
           "company": "Cemex, S.A.B. de C.V. Sponsored",
-          "price": 10.66,
-          "changePct": -4.05,
-          "relVol": 0.9,
-          "rsi": 25.9,
-          "cap": "16.8B"
+          "price": 10.8,
+          "changePct": 1.36,
+          "relVol": 0.3,
+          "rsi": 30.7,
+          "cap": "16.2B"
         },
         {
-          "ticker": "RBA",
-          "company": "RB Global, Inc.",
-          "price": 85.76,
-          "changePct": 4.45,
-          "relVol": 1.1,
-          "rsi": 29.5,
-          "cap": "15.9B"
-        },
-        {
-          "ticker": "MAIR",
-          "company": "Madison Air Solutions Corporation",
-          "price": 27.44,
-          "changePct": -7.2,
-          "relVol": 2.7,
-          "rsi": 29.9,
-          "cap": "13.8B"
-        },
-        {
-          "ticker": "LEVI",
-          "company": "Levi Strauss & Co",
-          "price": 22.01,
-          "changePct": -2.48,
-          "relVol": 1.1,
-          "rsi": 31.8,
-          "cap": "8.5B"
-        },
-        {
-          "ticker": "BROS",
-          "company": "Dutch Bros Inc.",
-          "price": 48.44,
-          "changePct": -3.93,
+          "ticker": "KLAR",
+          "company": "Klarna Group plc",
+          "price": 14.78,
+          "changePct": -1.89,
           "relVol": 1.0,
-          "rsi": 27.1,
-          "cap": "8.5B"
+          "rsi": 29.9,
+          "cap": "5.6B"
         }
       ]
     }
