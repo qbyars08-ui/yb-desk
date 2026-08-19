@@ -1,45 +1,25 @@
 {
-  "updated": "2026-08-19T13:53:52.259Z",
+  "updated": "2026-08-19T14:48:36.231Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": -11.8826,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
+      "changePct": -9.9062,
+      "flaggedAt": "2026-08-19T14:48:36.231Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": -7.1025,
+      "flaggedAt": "2026-08-19T14:48:36.231Z"
+    },
+    {
+      "ticker": "OUST",
+      "changePct": -6.1642,
+      "flaggedAt": "2026-08-19T14:48:36.231Z"
     },
     {
       "ticker": "LPKFF",
       "changePct": -5.9719,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": -5.9373,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": -5.6203,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "CIFR",
-      "changePct": -5.3743,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "OUST",
-      "changePct": -5.164,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "IQMX",
-      "changePct": 5.102,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -5.0473,
-      "flaggedAt": "2026-08-19T13:53:52.259Z"
+      "flaggedAt": "2026-08-19T14:48:36.231Z"
     }
   ]
 }
