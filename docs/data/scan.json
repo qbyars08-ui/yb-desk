@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-20T14:54:18.258595+00:00",
+  "updated": "2026-08-20T21:43:08.050975+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 44,
+      "totalMatches": 237,
       "rows": [
+        {
+          "ticker": "ANDG",
+          "company": "Andersen Group Inc.",
+          "price": 50.32,
+          "changePct": 11.77,
+          "relVol": 8.1,
+          "rsi": 61.0,
+          "cap": "5.7B"
+        },
         {
           "ticker": "TEM",
           "company": "Tempus AI, Inc.",
-          "price": 65.65,
-          "changePct": 7.19,
-          "relVol": 1.5,
-          "rsi": 69.9,
-          "cap": "11.8B"
+          "price": 66.65,
+          "changePct": 8.82,
+          "relVol": 3.5,
+          "rsi": 70.7,
+          "cap": "12.0B"
+        },
+        {
+          "ticker": "CAI",
+          "company": "Caris Life Sciences, Inc.",
+          "price": 24.58,
+          "changePct": 8.0,
+          "relVol": 1.1,
+          "rsi": 73.5,
+          "cap": "6.9B"
+        },
+        {
+          "ticker": "DE",
+          "company": "Deere & Company",
+          "price": 620.94,
+          "changePct": 6.94,
+          "relVol": 3.3,
+          "rsi": 55.3,
+          "cap": "167.6B"
         },
         {
           "ticker": "BMNR",
           "company": "BitMine Immersion Technologies, Inc.",
-          "price": 21.29,
-          "changePct": 5.16,
-          "relVol": 0.9,
-          "rsi": 68.8,
-          "cap": "12.8B"
+          "price": 21.57,
+          "changePct": 6.57,
+          "relVol": 2.1,
+          "rsi": 69.7,
+          "cap": "13.0B"
         },
         {
-          "ticker": "BULL",
-          "company": "Webull Corporation",
-          "price": 8.99,
-          "changePct": 4.11,
-          "relVol": 2.0,
-          "rsi": 71.4,
-          "cap": "4.8B"
+          "ticker": "MRVL",
+          "company": "Marvell Technology, Inc.",
+          "price": 251.01,
+          "changePct": 5.79,
+          "relVol": 1.3,
+          "rsi": 61.4,
+          "cap": "219.8B"
         },
         {
-          "ticker": "VG",
-          "company": "Venture Global, Inc.",
-          "price": 14.31,
-          "changePct": 3.77,
-          "relVol": 0.3,
-          "rsi": 56.7,
-          "cap": "35.8B"
+          "ticker": "CF",
+          "company": "CF Industries Holdings, Inc.",
+          "price": 125.7,
+          "changePct": 5.61,
+          "relVol": 1.4,
+          "rsi": 59.7,
+          "cap": "19.0B"
         },
         {
-          "ticker": "PR",
-          "company": "Permian Resources Corporation",
-          "price": 23.84,
-          "changePct": 3.58,
-          "relVol": 0.3,
-          "rsi": 73.5,
-          "cap": "20.0B"
+          "ticker": "HMY",
+          "company": "Harmony Gold Mining Company Limited",
+          "price": 22.02,
+          "changePct": 4.41,
+          "relVol": 1.2,
+          "rsi": 73.7,
+          "cap": "13.2B"
         },
         {
-          "ticker": "PCG",
-          "company": "Pacific Gas & Electric Co.",
-          "price": 18.25,
-          "changePct": 3.43,
-          "relVol": 0.4,
-          "rsi": 61.2,
-          "cap": "40.2B"
+          "ticker": "SM",
+          "company": "SM Energy Company",
+          "price": 37.64,
+          "changePct": 4.15,
+          "relVol": 1.1,
+          "rsi": 72.7,
+          "cap": "9.0B"
         },
         {
-          "ticker": "BP",
-          "company": "BP p.l.c.",
-          "price": 45.11,
-          "changePct": 3.16,
-          "relVol": 0.5,
-          "rsi": 63.3,
-          "cap": "113.4B"
-        },
-        {
-          "ticker": "FIG",
-          "company": "FIGMA INC",
-          "price": 27.59,
-          "changePct": 2.99,
-          "relVol": 0.3,
-          "rsi": 60.4,
-          "cap": "14.7B"
-        },
-        {
-          "ticker": "PBR",
-          "company": "Petroleo Brasileiro S.A. Petrobras",
-          "price": 19.07,
-          "changePct": 2.89,
-          "relVol": 0.3,
-          "rsi": 60.6,
-          "cap": "113.2B"
-        },
-        {
-          "ticker": "LBRDK",
-          "company": "Liberty Broadband Corporation",
-          "price": 36.02,
-          "changePct": 2.88,
-          "relVol": 13.2,
-          "rsi": 56.4,
-          "cap": "5.2B"
+          "ticker": "SSRM",
+          "company": "SSR Mining Inc.",
+          "price": 36.83,
+          "changePct": 4.1,
+          "relVol": 1.4,
+          "rsi": 71.9,
+          "cap": "7.5B"
         }
       ]
     },
@@ -104,7 +104,7 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 2,
+      "totalMatches": 19,
       "rows": [
         {
           "ticker": "LBRDK",
@@ -123,6 +123,78 @@
           "relVol": 12.9,
           "rsi": 56.4,
           "cap": "5.2B"
+        },
+        {
+          "ticker": "AAP",
+          "company": "Advance Auto Parts Inc.",
+          "price": 42.39,
+          "changePct": -24.55,
+          "relVol": 11.3,
+          "rsi": 27.5,
+          "cap": "2.6B"
+        },
+        {
+          "ticker": "ANDG",
+          "company": "Andersen Group Inc.",
+          "price": 50.32,
+          "changePct": 11.77,
+          "relVol": 8.1,
+          "rsi": 61.0,
+          "cap": "5.7B"
+        },
+        {
+          "ticker": "FUTU",
+          "company": "Futu Holdings Limited",
+          "price": 112.73,
+          "changePct": 3.03,
+          "relVol": 4.8,
+          "rsi": 62.3,
+          "cap": "15.3B"
+        },
+        {
+          "ticker": "MFC",
+          "company": "Manulife Financial Corporation",
+          "price": 42.47,
+          "changePct": -2.19,
+          "relVol": 4.6,
+          "rsi": 40.0,
+          "cap": "70.5B"
+        },
+        {
+          "ticker": "CRNX",
+          "company": "Crinetics Pharmaceuticals, Inc.",
+          "price": 84.69,
+          "changePct": 0.0,
+          "relVol": 4.2,
+          "rsi": 89.7,
+          "cap": "9.0B"
+        },
+        {
+          "ticker": "BULL",
+          "company": "Webull Corporation",
+          "price": 8.85,
+          "changePct": 2.43,
+          "relVol": 4.1,
+          "rsi": 70.1,
+          "cap": "4.7B"
+        },
+        {
+          "ticker": "WMT",
+          "company": "Walmart Inc.",
+          "price": 103.84,
+          "changePct": -9.15,
+          "relVol": 4.1,
+          "rsi": 29.8,
+          "cap": "826.4B"
+        },
+        {
+          "ticker": "MRNA",
+          "company": "Moderna, Inc.",
+          "price": 133.32,
+          "changePct": -23.55,
+          "relVol": 3.9,
+          "rsi": 69.4,
+          "cap": "53.2B"
         }
       ]
     },
@@ -130,52 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 5,
+      "totalMatches": 29,
       "rows": [
         {
           "ticker": "WMT",
           "company": "Walmart Inc.",
-          "price": 103.68,
-          "changePct": -9.29,
-          "relVol": 1.6,
-          "rsi": 29.5,
-          "cap": "825.1B"
+          "price": 103.84,
+          "changePct": -9.15,
+          "relVol": 4.1,
+          "rsi": 29.8,
+          "cap": "826.4B"
         },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 141.56,
-          "changePct": -2.03,
+          "price": 140.69,
+          "changePct": -2.64,
+          "relVol": 2.1,
+          "rsi": 25.5,
+          "cap": "155.4B"
+        },
+        {
+          "ticker": "APP",
+          "company": "Applovin Corporation",
+          "price": 308.77,
+          "changePct": -0.65,
           "relVol": 0.6,
-          "rsi": 26.3,
-          "cap": "156.4B"
+          "rsi": 30.2,
+          "cap": "103.3B"
         },
         {
           "ticker": "ITUB",
           "company": "Itau Unibanco Banco Holding SA",
-          "price": 7.29,
-          "changePct": -1.15,
-          "relVol": 0.3,
-          "rsi": 30.8,
+          "price": 7.17,
+          "changePct": -2.71,
+          "relVol": 1.4,
+          "rsi": 28.6,
           "cap": "84.6B"
         },
         {
-          "ticker": "KLAR",
-          "company": "Klarna Group plc",
-          "price": 14.14,
-          "changePct": -3.97,
-          "relVol": 0.5,
-          "rsi": 28.1,
-          "cap": "5.3B"
+          "ticker": "AMX",
+          "company": "America Movil, S.A.B. de C.V.",
+          "price": 23.39,
+          "changePct": -0.68,
+          "relVol": 0.9,
+          "rsi": 30.7,
+          "cap": "72.0B"
         },
         {
-          "ticker": "AAP",
-          "company": "Advance Auto Parts Inc.",
-          "price": 43.74,
-          "changePct": -22.13,
-          "relVol": 2.8,
-          "rsi": 28.8,
-          "cap": "2.6B"
+          "ticker": "AFL",
+          "company": "AFLAC Incorporated",
+          "price": 116.17,
+          "changePct": -0.29,
+          "relVol": 1.0,
+          "rsi": 31.4,
+          "cap": "58.2B"
+        },
+        {
+          "ticker": "BIDU",
+          "company": "Baidu, Inc.",
+          "price": 91.97,
+          "changePct": -0.97,
+          "relVol": 1.1,
+          "rsi": 26.7,
+          "cap": "31.7B"
+        },
+        {
+          "ticker": "STLD",
+          "company": "Steel Dynamics, Inc.",
+          "price": 219.0,
+          "changePct": -5.2,
+          "relVol": 2.2,
+          "rsi": 29.6,
+          "cap": "31.4B"
+        },
+        {
+          "ticker": "RYAAY",
+          "company": "Ryanair Holdings plc",
+          "price": 54.51,
+          "changePct": -0.51,
+          "relVol": 2.5,
+          "rsi": 31.7,
+          "cap": "27.7B"
+        },
+        {
+          "ticker": "NI",
+          "company": "NiSource Inc",
+          "price": 41.64,
+          "changePct": 0.02,
+          "relVol": 1.0,
+          "rsi": 30.0,
+          "cap": "20.0B"
         }
       ]
     }
