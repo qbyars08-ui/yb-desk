@@ -1,30 +1,10 @@
 {
-  "updated": "2026-08-20T15:45:41.720Z",
+  "updated": "2026-08-20T16:47:51.437Z",
   "alerts": [
     {
       "ticker": "OUST",
-      "changePct": -5.7664,
-      "flaggedAt": "2026-08-20T15:45:41.720Z"
-    },
-    {
-      "ticker": "RKLB",
-      "changePct": -5.2874,
-      "flaggedAt": "2026-08-20T15:45:41.720Z"
-    },
-    {
-      "ticker": "ASTS",
-      "changePct": -5.2537,
-      "flaggedAt": "2026-08-20T15:45:41.720Z"
-    },
-    {
-      "ticker": "OSS",
-      "changePct": -5.2023,
-      "flaggedAt": "2026-08-20T15:45:41.720Z"
-    },
-    {
-      "ticker": "NBIS",
-      "changePct": -5.0201,
-      "flaggedAt": "2026-08-20T15:45:41.720Z"
+      "changePct": -5.1797,
+      "flaggedAt": "2026-08-20T16:47:51.437Z"
     }
   ]
 }
