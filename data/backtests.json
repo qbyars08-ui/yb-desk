@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T21:40:55.878488+00:00",
+  "updated": "2026-08-20T14:55:20.007516+00:00",
   "period": "2y",
   "universe": "19 book names",
   "engine": "mphinance/momentum-mcp backtest_strategy, walk-forward with 10bps slippage",
@@ -10,35 +10,35 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 123.8,
-        "medianBuyHoldPct": 159.4,
+        "medianBuyHoldPct": 154.2,
         "beatBuyHold": 3,
-        "avgWinRatePct": 40.4,
+        "avgWinRatePct": 40.3,
         "avgTrades": 9.5
       },
       "best": {
         "ticker": "CRDO",
-        "strategyPct": 487.7,
-        "buyHoldPct": 633.8
+        "strategyPct": 481.6,
+        "buyHoldPct": 626.3
       },
       "worst": {
         "ticker": "LUMN",
         "strategyPct": -21.9,
-        "buyHoldPct": -0.3
+        "buyHoldPct": -1.9
       },
       "rows": [
         {
           "ticker": "ALMU",
-          "strategyPct": 105.9,
-          "buyHoldPct": 406.2,
-          "winRatePct": 30.8,
-          "trades": 13,
+          "strategyPct": 69.0,
+          "buyHoldPct": 392.5,
+          "winRatePct": 28.6,
+          "trades": 14,
           "maxDrawdownPct": -65.1,
-          "profitFactor": 2.47
+          "profitFactor": 2.08
         },
         {
           "ticker": "ANET",
-          "strategyPct": 50.8,
-          "buyHoldPct": 110.8,
+          "strategyPct": 51.0,
+          "buyHoldPct": 111.1,
           "winRatePct": 45.5,
           "trades": 11,
           "maxDrawdownPct": -33.3,
@@ -47,7 +47,7 @@
         {
           "ticker": "ARM",
           "strategyPct": 151.8,
-          "buyHoldPct": 91.9,
+          "buyHoldPct": 89.2,
           "winRatePct": 50.0,
           "trades": 8,
           "maxDrawdownPct": -28.3,
@@ -55,17 +55,17 @@
         },
         {
           "ticker": "ASTS",
-          "strategyPct": 30.1,
-          "buyHoldPct": 93.6,
+          "strategyPct": 26.4,
+          "buyHoldPct": 88.0,
           "winRatePct": 46.2,
           "trades": 13,
-          "maxDrawdownPct": -55.6,
-          "profitFactor": 1.77
+          "maxDrawdownPct": -56.8,
+          "profitFactor": 1.7
         },
         {
           "ticker": "CIFR",
           "strategyPct": 119.6,
-          "buyHoldPct": 302.3,
+          "buyHoldPct": 299.6,
           "winRatePct": 50.0,
           "trades": 10,
           "maxDrawdownPct": -64.1,
@@ -73,17 +73,17 @@
         },
         {
           "ticker": "CRDO",
-          "strategyPct": 487.7,
-          "buyHoldPct": 633.8,
+          "strategyPct": 481.6,
+          "buyHoldPct": 626.3,
           "winRatePct": 33.3,
           "trades": 9,
           "maxDrawdownPct": -48.6,
-          "profitFactor": 6.75
+          "profitFactor": 6.64
         },
         {
           "ticker": "IQMX",
           "strategyPct": -14.3,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 20.0,
           "trades": 5,
           "maxDrawdownPct": -23.6,
@@ -92,7 +92,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 123.8,
-          "buyHoldPct": 75.0,
+          "buyHoldPct": 71.2,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -41.6,
@@ -101,7 +101,7 @@
         {
           "ticker": "LUMN",
           "strategyPct": -21.9,
-          "buyHoldPct": -0.3,
+          "buyHoldPct": -1.9,
           "winRatePct": 25.0,
           "trades": 12,
           "maxDrawdownPct": -58.0,
@@ -109,35 +109,35 @@
         },
         {
           "ticker": "MU",
-          "strategyPct": 263.6,
-          "buyHoldPct": 773.2,
+          "strategyPct": 270.3,
+          "buyHoldPct": 789.5,
           "winRatePct": 33.3,
           "trades": 12,
           "maxDrawdownPct": -55.5,
-          "profitFactor": 3.54
+          "profitFactor": 3.61
         },
         {
           "ticker": "NBIS",
-          "strategyPct": 369.3,
-          "buyHoldPct": 1019.5,
+          "strategyPct": 355.7,
+          "buyHoldPct": 987.2,
           "winRatePct": 40.0,
           "trades": 10,
           "maxDrawdownPct": -55.2,
-          "profitFactor": 4.7
+          "profitFactor": 4.53
         },
         {
           "ticker": "NOK",
-          "strategyPct": 191.6,
-          "buyHoldPct": 152.5,
+          "strategyPct": 192.6,
+          "buyHoldPct": 153.4,
           "winRatePct": 71.4,
           "trades": 7,
           "maxDrawdownPct": -24.5,
-          "profitFactor": 18.45
+          "profitFactor": 19.2
         },
         {
           "ticker": "OSS",
           "strategyPct": 255.9,
-          "buyHoldPct": 506.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 50.0,
           "trades": 10,
           "maxDrawdownPct": -45.3,
@@ -145,17 +145,17 @@
         },
         {
           "ticker": "OUST",
-          "strategyPct": 198.9,
-          "buyHoldPct": 411.0,
+          "strategyPct": 187.9,
+          "buyHoldPct": 392.1,
           "winRatePct": 33.3,
           "trades": 12,
           "maxDrawdownPct": -51.5,
-          "profitFactor": 3.8
+          "profitFactor": 3.66
         },
         {
           "ticker": "PENG",
-          "strategyPct": 27.1,
-          "buyHoldPct": 151.2,
+          "strategyPct": 26.6,
+          "buyHoldPct": 147.2,
           "winRatePct": 27.3,
           "trades": 11,
           "maxDrawdownPct": -54.0,
@@ -163,26 +163,26 @@
         },
         {
           "ticker": "RKLB",
-          "strategyPct": 252.2,
-          "buyHoldPct": 1040.5,
+          "strategyPct": 242.1,
+          "buyHoldPct": 1007.7,
           "winRatePct": 57.1,
           "trades": 7,
           "maxDrawdownPct": -34.2,
-          "profitFactor": 8.57
+          "profitFactor": 7.61
         },
         {
           "ticker": "SILC",
-          "strategyPct": 27.5,
-          "buyHoldPct": 230.7,
+          "strategyPct": 26.4,
+          "buyHoldPct": 227.8,
           "winRatePct": 40.0,
           "trades": 15,
-          "maxDrawdownPct": -49.5,
-          "profitFactor": 1.73
+          "maxDrawdownPct": -49.9,
+          "profitFactor": 1.71
         },
         {
           "ticker": "WYY",
           "strategyPct": 138.2,
-          "buyHoldPct": 159.4,
+          "buyHoldPct": 154.2,
           "winRatePct": 40.0,
           "trades": 10,
           "maxDrawdownPct": -49.8,
@@ -190,8 +190,8 @@
         },
         {
           "ticker": "XNDU",
-          "strategyPct": -2.2,
-          "buyHoldPct": 29.5,
+          "strategyPct": -2.8,
+          "buyHoldPct": 26.1,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -3.7,
@@ -205,26 +205,26 @@
       "agg": {
         "names": 18,
         "medianStrategyPct": 0.0,
-        "medianBuyHoldPct": 195.1,
-        "beatBuyHold": 1,
+        "medianBuyHoldPct": 191.0,
+        "beatBuyHold": 2,
         "avgWinRatePct": 25.0,
         "avgTrades": 0.4
       },
       "best": {
         "ticker": "RKLB",
         "strategyPct": 36.2,
-        "buyHoldPct": 1040.5
+        "buyHoldPct": 1007.7
       },
       "worst": {
         "ticker": "LPKFF",
-        "strategyPct": -7.1,
-        "buyHoldPct": 75.0
+        "strategyPct": -9.1,
+        "buyHoldPct": 71.2
       },
       "rows": [
         {
           "ticker": "ALMU",
           "strategyPct": 0.0,
-          "buyHoldPct": 406.2,
+          "buyHoldPct": 392.5,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -233,7 +233,7 @@
         {
           "ticker": "ANET",
           "strategyPct": 17.7,
-          "buyHoldPct": 110.8,
+          "buyHoldPct": 111.1,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -10.4,
@@ -242,7 +242,7 @@
         {
           "ticker": "ARM",
           "strategyPct": 0.0,
-          "buyHoldPct": 91.9,
+          "buyHoldPct": 89.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -251,7 +251,7 @@
         {
           "ticker": "ASTS",
           "strategyPct": 28.3,
-          "buyHoldPct": 93.6,
+          "buyHoldPct": 88.0,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -1.5,
@@ -260,7 +260,7 @@
         {
           "ticker": "CIFR",
           "strategyPct": 0.0,
-          "buyHoldPct": 302.3,
+          "buyHoldPct": 299.6,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -269,7 +269,7 @@
         {
           "ticker": "CRDO",
           "strategyPct": 0.0,
-          "buyHoldPct": 633.8,
+          "buyHoldPct": 626.3,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -278,7 +278,7 @@
         {
           "ticker": "IQMX",
           "strategyPct": 0.0,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -286,8 +286,8 @@
         },
         {
           "ticker": "LPKFF",
-          "strategyPct": -7.1,
-          "buyHoldPct": 75.0,
+          "strategyPct": -9.1,
+          "buyHoldPct": 71.2,
           "winRatePct": 0.0,
           "trades": 2,
           "maxDrawdownPct": -25.3,
@@ -296,7 +296,7 @@
         {
           "ticker": "LUMN",
           "strategyPct": 0.0,
-          "buyHoldPct": -0.3,
+          "buyHoldPct": -1.9,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -305,7 +305,7 @@
         {
           "ticker": "MU",
           "strategyPct": 0.0,
-          "buyHoldPct": 773.2,
+          "buyHoldPct": 789.5,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -314,7 +314,7 @@
         {
           "ticker": "NBIS",
           "strategyPct": 0.0,
-          "buyHoldPct": 1019.5,
+          "buyHoldPct": 987.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -322,17 +322,17 @@
         },
         {
           "ticker": "NOK",
-          "strategyPct": 1.4,
-          "buyHoldPct": 152.5,
+          "strategyPct": 1.8,
+          "buyHoldPct": 153.4,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -16.5,
-          "profitFactor": 1.3
+          "profitFactor": 1.36
         },
         {
           "ticker": "OSS",
           "strategyPct": 0.0,
-          "buyHoldPct": 506.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -341,7 +341,7 @@
         {
           "ticker": "OUST",
           "strategyPct": 0.0,
-          "buyHoldPct": 411.0,
+          "buyHoldPct": 392.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -350,7 +350,7 @@
         {
           "ticker": "PENG",
           "strategyPct": 0.0,
-          "buyHoldPct": 151.2,
+          "buyHoldPct": 147.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -359,7 +359,7 @@
         {
           "ticker": "RKLB",
           "strategyPct": 36.2,
-          "buyHoldPct": 1040.5,
+          "buyHoldPct": 1007.7,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -9.5,
@@ -368,7 +368,7 @@
         {
           "ticker": "SILC",
           "strategyPct": 0.0,
-          "buyHoldPct": 230.7,
+          "buyHoldPct": 227.8,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -377,7 +377,7 @@
         {
           "ticker": "WYY",
           "strategyPct": 22.9,
-          "buyHoldPct": 159.4,
+          "buyHoldPct": 154.2,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -5.5,
@@ -391,7 +391,7 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 1.3,
-        "medianBuyHoldPct": 159.4,
+        "medianBuyHoldPct": 154.2,
         "beatBuyHold": 0,
         "avgWinRatePct": 58.8,
         "avgTrades": 1.2
@@ -399,18 +399,18 @@
       "best": {
         "ticker": "MU",
         "strategyPct": 183.7,
-        "buyHoldPct": 773.2
+        "buyHoldPct": 789.5
       },
       "worst": {
         "ticker": "IQMX",
         "strategyPct": -25.2,
-        "buyHoldPct": 0.2
+        "buyHoldPct": -0.6
       },
       "rows": [
         {
           "ticker": "ALMU",
           "strategyPct": 90.7,
-          "buyHoldPct": 406.2,
+          "buyHoldPct": 392.5,
           "winRatePct": 100.0,
           "trades": 2,
           "maxDrawdownPct": -47.5,
@@ -419,7 +419,7 @@
         {
           "ticker": "ANET",
           "strategyPct": 0.0,
-          "buyHoldPct": 110.8,
+          "buyHoldPct": 111.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -428,7 +428,7 @@
         {
           "ticker": "ARM",
           "strategyPct": 0.0,
-          "buyHoldPct": 91.9,
+          "buyHoldPct": 89.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -437,7 +437,7 @@
         {
           "ticker": "ASTS",
           "strategyPct": 1.3,
-          "buyHoldPct": 93.6,
+          "buyHoldPct": 88.0,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -35.8,
@@ -446,7 +446,7 @@
         {
           "ticker": "CIFR",
           "strategyPct": 0.0,
-          "buyHoldPct": 302.3,
+          "buyHoldPct": 299.6,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -455,7 +455,7 @@
         {
           "ticker": "CRDO",
           "strategyPct": 52.4,
-          "buyHoldPct": 633.8,
+          "buyHoldPct": 626.3,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -35.0,
@@ -464,7 +464,7 @@
         {
           "ticker": "IQMX",
           "strategyPct": -25.2,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 50.0,
           "trades": 4,
           "maxDrawdownPct": -29.2,
@@ -473,7 +473,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 67.8,
-          "buyHoldPct": 75.0,
+          "buyHoldPct": 71.2,
           "winRatePct": 66.7,
           "trades": 3,
           "maxDrawdownPct": -41.2,
@@ -482,7 +482,7 @@
         {
           "ticker": "LUMN",
           "strategyPct": -14.1,
-          "buyHoldPct": -0.3,
+          "buyHoldPct": -1.9,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -19.4,
@@ -491,7 +491,7 @@
         {
           "ticker": "MU",
           "strategyPct": 183.7,
-          "buyHoldPct": 773.2,
+          "buyHoldPct": 789.5,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -30.3,
@@ -500,7 +500,7 @@
         {
           "ticker": "NBIS",
           "strategyPct": 0.0,
-          "buyHoldPct": 1019.5,
+          "buyHoldPct": 987.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -509,7 +509,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 35.2,
-          "buyHoldPct": 152.5,
+          "buyHoldPct": 153.4,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -24.4,
@@ -518,7 +518,7 @@
         {
           "ticker": "OSS",
           "strategyPct": -1.7,
-          "buyHoldPct": 506.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -36.1,
@@ -527,7 +527,7 @@
         {
           "ticker": "OUST",
           "strategyPct": 25.6,
-          "buyHoldPct": 411.0,
+          "buyHoldPct": 392.1,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -37.8,
@@ -536,7 +536,7 @@
         {
           "ticker": "PENG",
           "strategyPct": 109.3,
-          "buyHoldPct": 151.2,
+          "buyHoldPct": 147.2,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -40.9,
@@ -545,7 +545,7 @@
         {
           "ticker": "RKLB",
           "strategyPct": 17.8,
-          "buyHoldPct": 1040.5,
+          "buyHoldPct": 1007.7,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -31.4,
@@ -554,7 +554,7 @@
         {
           "ticker": "SILC",
           "strategyPct": 3.5,
-          "buyHoldPct": 230.7,
+          "buyHoldPct": 227.8,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -14.7,
@@ -563,7 +563,7 @@
         {
           "ticker": "WYY",
           "strategyPct": -12.0,
-          "buyHoldPct": 159.4,
+          "buyHoldPct": 154.2,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -48.3,
@@ -572,7 +572,7 @@
         {
           "ticker": "XNDU",
           "strategyPct": 0.0,
-          "buyHoldPct": 29.5,
+          "buyHoldPct": 26.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -586,26 +586,26 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 13.3,
-        "medianBuyHoldPct": 159.4,
+        "medianBuyHoldPct": 154.2,
         "beatBuyHold": 2,
-        "avgWinRatePct": 73.8,
+        "avgWinRatePct": 73.6,
         "avgTrades": 3.3
       },
       "best": {
         "ticker": "ALMU",
         "strategyPct": 121.2,
-        "buyHoldPct": 406.2
+        "buyHoldPct": 392.5
       },
       "worst": {
         "ticker": "LPKFF",
         "strategyPct": -17.0,
-        "buyHoldPct": 75.0
+        "buyHoldPct": 71.2
       },
       "rows": [
         {
           "ticker": "ALMU",
           "strategyPct": 121.2,
-          "buyHoldPct": 406.2,
+          "buyHoldPct": 392.5,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -7.5,
@@ -614,7 +614,7 @@
         {
           "ticker": "ANET",
           "strategyPct": 10.0,
-          "buyHoldPct": 110.8,
+          "buyHoldPct": 111.1,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -19.5,
@@ -623,7 +623,7 @@
         {
           "ticker": "ARM",
           "strategyPct": 15.1,
-          "buyHoldPct": 91.9,
+          "buyHoldPct": 89.2,
           "winRatePct": 80.0,
           "trades": 5,
           "maxDrawdownPct": -20.6,
@@ -632,7 +632,7 @@
         {
           "ticker": "ASTS",
           "strategyPct": 52.7,
-          "buyHoldPct": 93.6,
+          "buyHoldPct": 88.0,
           "winRatePct": 100.0,
           "trades": 3,
           "maxDrawdownPct": -16.3,
@@ -641,7 +641,7 @@
         {
           "ticker": "CIFR",
           "strategyPct": -9.2,
-          "buyHoldPct": 302.3,
+          "buyHoldPct": 299.6,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -49.7,
@@ -650,7 +650,7 @@
         {
           "ticker": "CRDO",
           "strategyPct": 115.0,
-          "buyHoldPct": 633.8,
+          "buyHoldPct": 626.3,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -28.5,
@@ -659,7 +659,7 @@
         {
           "ticker": "IQMX",
           "strategyPct": 1.6,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": 0.0,
@@ -668,7 +668,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": -17.0,
-          "buyHoldPct": 75.0,
+          "buyHoldPct": 71.2,
           "winRatePct": 25.0,
           "trades": 4,
           "maxDrawdownPct": -17.8,
@@ -676,17 +676,17 @@
         },
         {
           "ticker": "LUMN",
-          "strategyPct": 49.0,
-          "buyHoldPct": -0.3,
-          "winRatePct": 83.3,
-          "trades": 6,
+          "strategyPct": 39.1,
+          "buyHoldPct": -1.9,
+          "winRatePct": 80.0,
+          "trades": 5,
           "maxDrawdownPct": -26.7,
-          "profitFactor": 4.52
+          "profitFactor": 3.97
         },
         {
           "ticker": "MU",
           "strategyPct": 39.1,
-          "buyHoldPct": 773.2,
+          "buyHoldPct": 789.5,
           "winRatePct": 100.0,
           "trades": 2,
           "maxDrawdownPct": -14.3,
@@ -695,7 +695,7 @@
         {
           "ticker": "NBIS",
           "strategyPct": 108.3,
-          "buyHoldPct": 1019.5,
+          "buyHoldPct": 987.2,
           "winRatePct": 100.0,
           "trades": 4,
           "maxDrawdownPct": -12.4,
@@ -704,7 +704,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 2.0,
-          "buyHoldPct": 152.5,
+          "buyHoldPct": 153.4,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -27.8,
@@ -713,7 +713,7 @@
         {
           "ticker": "OSS",
           "strategyPct": 13.3,
-          "buyHoldPct": 506.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -8.6,
@@ -722,7 +722,7 @@
         {
           "ticker": "OUST",
           "strategyPct": 13.0,
-          "buyHoldPct": 411.0,
+          "buyHoldPct": 392.1,
           "winRatePct": 66.7,
           "trades": 3,
           "maxDrawdownPct": -19.8,
@@ -731,7 +731,7 @@
         {
           "ticker": "PENG",
           "strategyPct": 106.4,
-          "buyHoldPct": 151.2,
+          "buyHoldPct": 147.2,
           "winRatePct": 85.7,
           "trades": 7,
           "maxDrawdownPct": -8.6,
@@ -740,7 +740,7 @@
         {
           "ticker": "RKLB",
           "strategyPct": 4.6,
-          "buyHoldPct": 1040.5,
+          "buyHoldPct": 1007.7,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -21.2,
@@ -749,7 +749,7 @@
         {
           "ticker": "SILC",
           "strategyPct": 10.1,
-          "buyHoldPct": 230.7,
+          "buyHoldPct": 227.8,
           "winRatePct": 100.0,
           "trades": 2,
           "maxDrawdownPct": -5.8,
@@ -757,17 +757,17 @@
         },
         {
           "ticker": "WYY",
-          "strategyPct": 34.4,
-          "buyHoldPct": 159.4,
+          "strategyPct": 31.6,
+          "buyHoldPct": 154.2,
           "winRatePct": 85.7,
           "trades": 7,
           "maxDrawdownPct": -31.2,
-          "profitFactor": 3.65
+          "profitFactor": 3.48
         },
         {
           "ticker": "XNDU",
           "strategyPct": 0.0,
-          "buyHoldPct": 29.5,
+          "buyHoldPct": 26.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -780,27 +780,27 @@
       "description": "Classic SMA 50/200 golden cross \u2014 long-term trend",
       "agg": {
         "names": 18,
-        "medianStrategyPct": 28.3,
-        "medianBuyHoldPct": 195.1,
-        "beatBuyHold": 1,
+        "medianStrategyPct": 26.0,
+        "medianBuyHoldPct": 191.0,
+        "beatBuyHold": 2,
         "avgWinRatePct": 58.3,
         "avgTrades": 1.2
       },
       "best": {
         "ticker": "MU",
-        "strategyPct": 651.4,
-        "buyHoldPct": 773.2
+        "strategyPct": 665.4,
+        "buyHoldPct": 789.5
       },
       "worst": {
         "ticker": "ALMU",
-        "strategyPct": -34.7,
-        "buyHoldPct": 406.2
+        "strategyPct": -36.5,
+        "buyHoldPct": 392.5
       },
       "rows": [
         {
           "ticker": "ALMU",
-          "strategyPct": -34.7,
-          "buyHoldPct": 406.2,
+          "strategyPct": -36.5,
+          "buyHoldPct": 392.5,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -47.9,
@@ -808,8 +808,8 @@
         },
         {
           "ticker": "ANET",
-          "strategyPct": 67.6,
-          "buyHoldPct": 110.8,
+          "strategyPct": 67.8,
+          "buyHoldPct": 111.1,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -28.3,
@@ -817,17 +817,17 @@
         },
         {
           "ticker": "ARM",
-          "strategyPct": -12.1,
-          "buyHoldPct": 91.9,
+          "strategyPct": -13.3,
+          "buyHoldPct": 89.2,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -48.8,
-          "profitFactor": 0.56
+          "profitFactor": 0.49
         },
         {
           "ticker": "ASTS",
           "strategyPct": 40.2,
-          "buyHoldPct": 93.6,
+          "buyHoldPct": 88.0,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -60.1,
@@ -835,8 +835,8 @@
         },
         {
           "ticker": "CIFR",
-          "strategyPct": 173.7,
-          "buyHoldPct": 302.3,
+          "strategyPct": 171.9,
+          "buyHoldPct": 299.6,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -51.4,
@@ -844,8 +844,8 @@
         },
         {
           "ticker": "CRDO",
-          "strategyPct": 110.7,
-          "buyHoldPct": 633.8,
+          "strategyPct": 108.5,
+          "buyHoldPct": 626.3,
           "winRatePct": 100.0,
           "trades": 2,
           "maxDrawdownPct": -48.8,
@@ -854,7 +854,7 @@
         {
           "ticker": "IQMX",
           "strategyPct": 0.0,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -862,17 +862,17 @@
         },
         {
           "ticker": "LPKFF",
-          "strategyPct": 21.4,
-          "buyHoldPct": 75.0,
+          "strategyPct": 18.7,
+          "buyHoldPct": 71.2,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -53.8,
-          "profitFactor": 3.36
+          "profitFactor": 3.08
         },
         {
           "ticker": "LUMN",
-          "strategyPct": 12.9,
-          "buyHoldPct": -0.3,
+          "strategyPct": 15.8,
+          "buyHoldPct": -1.9,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -47.7,
@@ -880,8 +880,8 @@
         },
         {
           "ticker": "MU",
-          "strategyPct": 651.4,
-          "buyHoldPct": 773.2,
+          "strategyPct": 665.4,
+          "buyHoldPct": 789.5,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -39.1,
@@ -890,7 +890,7 @@
         {
           "ticker": "NBIS",
           "strategyPct": 0.0,
-          "buyHoldPct": 1019.5,
+          "buyHoldPct": 987.2,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -898,8 +898,8 @@
         },
         {
           "ticker": "NOK",
-          "strategyPct": 57.6,
-          "buyHoldPct": 152.5,
+          "strategyPct": 58.2,
+          "buyHoldPct": 153.4,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -50.1,
@@ -907,8 +907,8 @@
         },
         {
           "ticker": "OSS",
-          "strategyPct": 211.8,
-          "buyHoldPct": 506.1,
+          "strategyPct": 204.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -45.5,
@@ -916,8 +916,8 @@
         },
         {
           "ticker": "OUST",
-          "strategyPct": -10.4,
-          "buyHoldPct": 411.0,
+          "strategyPct": -13.7,
+          "buyHoldPct": 392.1,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -49.9,
@@ -925,17 +925,17 @@
         },
         {
           "ticker": "PENG",
-          "strategyPct": 35.3,
-          "buyHoldPct": 151.2,
+          "strategyPct": 33.2,
+          "buyHoldPct": 147.2,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -46.3,
-          "profitFactor": 11.02
+          "profitFactor": 10.43
         },
         {
           "ticker": "RKLB",
           "strategyPct": 0.0,
-          "buyHoldPct": 1040.5,
+          "buyHoldPct": 1007.7,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,
@@ -943,21 +943,21 @@
         },
         {
           "ticker": "SILC",
-          "strategyPct": 100.9,
-          "buyHoldPct": 230.7,
+          "strategyPct": 99.1,
+          "buyHoldPct": 227.8,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -31.5,
-          "profitFactor": 10.33
+          "profitFactor": 10.17
         },
         {
           "ticker": "WYY",
-          "strategyPct": 0.4,
-          "buyHoldPct": 159.4,
+          "strategyPct": -1.7,
+          "buyHoldPct": 154.2,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -55.2,
-          "profitFactor": 1.14
+          "profitFactor": 0.87
         }
       ]
     },
@@ -967,7 +967,7 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 125.5,
-        "medianBuyHoldPct": 159.4,
+        "medianBuyHoldPct": 154.2,
         "beatBuyHold": 2,
         "avgWinRatePct": 45.1,
         "avgTrades": 6.0
@@ -975,18 +975,18 @@
       "best": {
         "ticker": "MU",
         "strategyPct": 553.2,
-        "buyHoldPct": 773.2
+        "buyHoldPct": 789.5
       },
       "worst": {
         "ticker": "ANET",
-        "strategyPct": -24.9,
-        "buyHoldPct": 110.8
+        "strategyPct": -24.8,
+        "buyHoldPct": 111.1
       },
       "rows": [
         {
           "ticker": "ALMU",
           "strategyPct": 144.4,
-          "buyHoldPct": 406.2,
+          "buyHoldPct": 392.5,
           "winRatePct": 44.4,
           "trades": 9,
           "maxDrawdownPct": -51.8,
@@ -994,8 +994,8 @@
         },
         {
           "ticker": "ANET",
-          "strategyPct": -24.9,
-          "buyHoldPct": 110.8,
+          "strategyPct": -24.8,
+          "buyHoldPct": 111.1,
           "winRatePct": 25.0,
           "trades": 8,
           "maxDrawdownPct": -40.5,
@@ -1004,7 +1004,7 @@
         {
           "ticker": "ARM",
           "strategyPct": 54.3,
-          "buyHoldPct": 91.9,
+          "buyHoldPct": 89.2,
           "winRatePct": 33.3,
           "trades": 6,
           "maxDrawdownPct": -43.0,
@@ -1013,7 +1013,7 @@
         {
           "ticker": "ASTS",
           "strategyPct": 15.4,
-          "buyHoldPct": 93.6,
+          "buyHoldPct": 88.0,
           "winRatePct": 50.0,
           "trades": 6,
           "maxDrawdownPct": -50.5,
@@ -1022,7 +1022,7 @@
         {
           "ticker": "CIFR",
           "strategyPct": 340.2,
-          "buyHoldPct": 302.3,
+          "buyHoldPct": 299.6,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -51.1,
@@ -1031,7 +1031,7 @@
         {
           "ticker": "CRDO",
           "strategyPct": 276.4,
-          "buyHoldPct": 633.8,
+          "buyHoldPct": 626.3,
           "winRatePct": 50.0,
           "trades": 6,
           "maxDrawdownPct": -41.2,
@@ -1040,7 +1040,7 @@
         {
           "ticker": "IQMX",
           "strategyPct": -12.9,
-          "buyHoldPct": 0.2,
+          "buyHoldPct": -0.6,
           "winRatePct": 33.3,
           "trades": 6,
           "maxDrawdownPct": -23.6,
@@ -1049,7 +1049,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 96.3,
-          "buyHoldPct": 75.0,
+          "buyHoldPct": 71.2,
           "winRatePct": 50.0,
           "trades": 4,
           "maxDrawdownPct": -31.7,
@@ -1058,7 +1058,7 @@
         {
           "ticker": "LUMN",
           "strategyPct": -2.5,
-          "buyHoldPct": -0.3,
+          "buyHoldPct": -1.9,
           "winRatePct": 28.6,
           "trades": 7,
           "maxDrawdownPct": -59.4,
@@ -1067,7 +1067,7 @@
         {
           "ticker": "MU",
           "strategyPct": 553.2,
-          "buyHoldPct": 773.2,
+          "buyHoldPct": 789.5,
           "winRatePct": 66.7,
           "trades": 6,
           "maxDrawdownPct": -26.6,
@@ -1076,7 +1076,7 @@
         {
           "ticker": "NBIS",
           "strategyPct": 125.5,
-          "buyHoldPct": 1019.5,
+          "buyHoldPct": 987.2,
           "winRatePct": 50.0,
           "trades": 6,
           "maxDrawdownPct": -42.9,
@@ -1085,7 +1085,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 131.6,
-          "buyHoldPct": 152.5,
+          "buyHoldPct": 153.4,
           "winRatePct": 50.0,
           "trades": 6,
           "maxDrawdownPct": -25.8,
@@ -1094,7 +1094,7 @@
         {
           "ticker": "OSS",
           "strategyPct": 226.5,
-          "buyHoldPct": 506.1,
+          "buyHoldPct": 491.1,
           "winRatePct": 57.1,
           "trades": 7,
           "maxDrawdownPct": -40.0,
@@ -1103,7 +1103,7 @@
         {
           "ticker": "OUST",
           "strategyPct": 181.7,
-          "buyHoldPct": 411.0,
+          "buyHoldPct": 392.1,
           "winRatePct": 57.1,
           "trades": 7,
           "maxDrawdownPct": -48.7,
@@ -1112,7 +1112,7 @@
         {
           "ticker": "PENG",
           "strategyPct": 69.5,
-          "buyHoldPct": 151.2,
+          "buyHoldPct": 147.2,
           "winRatePct": 20.0,
           "trades": 5,
           "maxDrawdownPct": -34.6,
@@ -1121,7 +1121,7 @@
         {
           "ticker": "RKLB",
           "strategyPct": 533.6,
-          "buyHoldPct": 1040.5,
+          "buyHoldPct": 1007.7,
           "winRatePct": 66.7,
           "trades": 6,
           "maxDrawdownPct": -30.5,
@@ -1130,7 +1130,7 @@
         {
           "ticker": "SILC",
           "strategyPct": 75.0,
-          "buyHoldPct": 230.7,
+          "buyHoldPct": 227.8,
           "winRatePct": 40.0,
           "trades": 10,
           "maxDrawdownPct": -25.7,
@@ -1139,7 +1139,7 @@
         {
           "ticker": "WYY",
           "strategyPct": 142.9,
-          "buyHoldPct": 159.4,
+          "buyHoldPct": 154.2,
           "winRatePct": 60.0,
           "trades": 5,
           "maxDrawdownPct": -51.6,
@@ -1148,7 +1148,7 @@
         {
           "ticker": "XNDU",
           "strategyPct": 0.0,
-          "buyHoldPct": 29.5,
+          "buyHoldPct": 26.1,
           "winRatePct": 0.0,
           "trades": 0,
           "maxDrawdownPct": 0.0,

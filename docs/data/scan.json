@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-19T21:39:53.459707+00:00",
+  "updated": "2026-08-20T14:54:18.258595+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 284,
+      "totalMatches": 44,
       "rows": [
         {
           "ticker": "TEM",
           "company": "Tempus AI, Inc.",
-          "price": 61.25,
-          "changePct": 24.09,
-          "relVol": 5.8,
-          "rsi": 65.7,
-          "cap": "11.1B"
-        },
-        {
-          "ticker": "TWST",
-          "company": "Twist Bioscience Corporation",
-          "price": 142.39,
-          "changePct": 22.64,
-          "relVol": 2.2,
-          "rsi": 70.8,
-          "cap": "9.4B"
-        },
-        {
-          "ticker": "EL",
-          "company": "Estee Lauder Companies, Inc. (The)",
-          "price": 98.01,
-          "changePct": 16.3,
-          "relVol": 5.4,
-          "rsi": 73.1,
-          "cap": "35.5B"
-        },
-        {
-          "ticker": "HL",
-          "company": "Hecla Mining Company",
-          "price": 20.54,
-          "changePct": 14.43,
+          "price": 65.65,
+          "changePct": 7.19,
           "relVol": 1.5,
-          "rsi": 70.5,
-          "cap": "13.8B"
+          "rsi": 69.9,
+          "cap": "11.8B"
         },
         {
-          "ticker": "NG",
-          "company": "Novagold Resources Inc.",
-          "price": 8.46,
-          "changePct": 14.17,
-          "relVol": 1.3,
-          "rsi": 69.6,
-          "cap": "3.7B"
+          "ticker": "BMNR",
+          "company": "BitMine Immersion Technologies, Inc.",
+          "price": 21.29,
+          "changePct": 5.16,
+          "relVol": 0.9,
+          "rsi": 68.8,
+          "cap": "12.8B"
         },
         {
-          "ticker": "KC",
-          "company": "Kingsoft Cloud Holdings Limited",
-          "price": 12.37,
-          "changePct": 14.11,
-          "relVol": 2.6,
-          "rsi": 59.4,
-          "cap": "3.4B"
+          "ticker": "BULL",
+          "company": "Webull Corporation",
+          "price": 8.99,
+          "changePct": 4.11,
+          "relVol": 2.0,
+          "rsi": 71.4,
+          "cap": "4.8B"
         },
         {
-          "ticker": "EXK",
-          "company": "Endeavour Silver Corporation",
-          "price": 10.99,
-          "changePct": 13.77,
-          "relVol": 1.2,
-          "rsi": 66.4,
-          "cap": "3.3B"
+          "ticker": "VG",
+          "company": "Venture Global, Inc.",
+          "price": 14.31,
+          "changePct": 3.77,
+          "relVol": 0.3,
+          "rsi": 56.7,
+          "cap": "35.8B"
         },
         {
-          "ticker": "CDE",
-          "company": "Coeur Mining, Inc.",
-          "price": 20.93,
-          "changePct": 13.07,
-          "relVol": 1.2,
-          "rsi": 68.1,
-          "cap": "21.5B"
+          "ticker": "PR",
+          "company": "Permian Resources Corporation",
+          "price": 23.84,
+          "changePct": 3.58,
+          "relVol": 0.3,
+          "rsi": 73.5,
+          "cap": "20.0B"
         },
         {
-          "ticker": "CRSP",
-          "company": "CRISPR Therapeutics AG",
-          "price": 59.81,
-          "changePct": 12.91,
-          "relVol": 3.5,
-          "rsi": 70.2,
-          "cap": "5.8B"
+          "ticker": "PCG",
+          "company": "Pacific Gas & Electric Co.",
+          "price": 18.25,
+          "changePct": 3.43,
+          "relVol": 0.4,
+          "rsi": 61.2,
+          "cap": "40.2B"
         },
         {
-          "ticker": "AG",
-          "company": "First Majestic Silver Corp.",
-          "price": 20.85,
-          "changePct": 12.82,
-          "relVol": 1.7,
-          "rsi": 66.7,
-          "cap": "10.3B"
+          "ticker": "BP",
+          "company": "BP p.l.c.",
+          "price": 45.11,
+          "changePct": 3.16,
+          "relVol": 0.5,
+          "rsi": 63.3,
+          "cap": "113.4B"
+        },
+        {
+          "ticker": "FIG",
+          "company": "FIGMA INC",
+          "price": 27.59,
+          "changePct": 2.99,
+          "relVol": 0.3,
+          "rsi": 60.4,
+          "cap": "14.7B"
+        },
+        {
+          "ticker": "PBR",
+          "company": "Petroleo Brasileiro S.A. Petrobras",
+          "price": 19.07,
+          "changePct": 2.89,
+          "relVol": 0.3,
+          "rsi": 60.6,
+          "cap": "113.2B"
+        },
+        {
+          "ticker": "LBRDK",
+          "company": "Liberty Broadband Corporation",
+          "price": 36.02,
+          "changePct": 2.88,
+          "relVol": 13.2,
+          "rsi": 56.4,
+          "cap": "5.2B"
         }
       ]
     },
@@ -104,44 +104,8 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 30,
+      "totalMatches": 2,
       "rows": [
-        {
-          "ticker": "MRNA",
-          "company": "Moderna, Inc.",
-          "price": 174.38,
-          "changePct": 176.97,
-          "relVol": 33.4,
-          "rsi": 92.2,
-          "cap": "25.1B"
-        },
-        {
-          "ticker": "NTST",
-          "company": "NetSTREIT Corp.",
-          "price": 20.53,
-          "changePct": 0.0,
-          "relVol": 18.0,
-          "rsi": 43.2,
-          "cap": "2.1B"
-        },
-        {
-          "ticker": "SUI",
-          "company": "Sun Communities, Inc.",
-          "price": 122.06,
-          "changePct": 1.57,
-          "relVol": 14.2,
-          "rsi": 52.4,
-          "cap": "14.9B"
-        },
-        {
-          "ticker": "ALH",
-          "company": "Alliance Laundry Holdings Inc.",
-          "price": 23.94,
-          "changePct": -0.25,
-          "relVol": 13.6,
-          "rsi": 33.7,
-          "cap": "4.8B"
-        },
         {
           "ticker": "LBRDK",
           "company": "Liberty Broadband Corporation",
@@ -159,42 +123,6 @@
           "relVol": 12.9,
           "rsi": 56.4,
           "cap": "5.2B"
-        },
-        {
-          "ticker": "WBS",
-          "company": "Webster Financial Corporation",
-          "price": 77.57,
-          "changePct": -0.51,
-          "relVol": 10.5,
-          "rsi": 49.9,
-          "cap": "12.6B"
-        },
-        {
-          "ticker": "BNTX",
-          "company": "BioNTech SE",
-          "price": 113.12,
-          "changePct": 21.96,
-          "relVol": 9.3,
-          "rsi": 80.8,
-          "cap": "23.3B"
-        },
-        {
-          "ticker": "GTY",
-          "company": "Getty Realty Corporation",
-          "price": 33.09,
-          "changePct": 0.3,
-          "relVol": 7.7,
-          "rsi": 42.2,
-          "cap": "2.0B"
-        },
-        {
-          "ticker": "ADC",
-          "company": "Agree Realty Corporation",
-          "price": 74.39,
-          "changePct": 0.24,
-          "relVol": 7.2,
-          "rsi": 38.4,
-          "cap": "9.3B"
         }
       ]
     },
@@ -202,97 +130,52 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 20,
+      "totalMatches": 5,
       "rows": [
+        {
+          "ticker": "WMT",
+          "company": "Walmart Inc.",
+          "price": 103.68,
+          "changePct": -9.29,
+          "relVol": 1.6,
+          "rsi": 29.5,
+          "cap": "825.1B"
+        },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 144.5,
-          "changePct": -4.21,
-          "relVol": 2.4,
-          "rsi": 29.4,
-          "cap": "159.6B"
+          "price": 141.56,
+          "changePct": -2.03,
+          "relVol": 0.6,
+          "rsi": 26.3,
+          "cap": "156.4B"
         },
         {
-          "ticker": "ENB",
-          "company": "Enbridge Inc",
-          "price": 50.25,
-          "changePct": -2.22,
-          "relVol": 0.7,
-          "rsi": 30.0,
-          "cap": "109.8B"
+          "ticker": "ITUB",
+          "company": "Itau Unibanco Banco Holding SA",
+          "price": 7.29,
+          "changePct": -1.15,
+          "relVol": 0.3,
+          "rsi": 30.8,
+          "cap": "84.6B"
         },
         {
-          "ticker": "APP",
-          "company": "Applovin Corporation",
-          "price": 310.79,
-          "changePct": 1.15,
+          "ticker": "KLAR",
+          "company": "Klarna Group plc",
+          "price": 14.14,
+          "changePct": -3.97,
           "relVol": 0.5,
-          "rsi": 30.5,
-          "cap": "104.0B"
+          "rsi": 28.1,
+          "cap": "5.3B"
         },
         {
-          "ticker": "BIDU",
-          "company": "Baidu, Inc.",
-          "price": 92.87,
-          "changePct": 2.2,
-          "relVol": 1.3,
-          "rsi": 27.5,
-          "cap": "35.6B"
-        },
-        {
-          "ticker": "NI",
-          "company": "NiSource Inc",
-          "price": 41.63,
-          "changePct": -1.16,
-          "relVol": 1.0,
-          "rsi": 29.8,
-          "cap": "20.0B"
-        },
-        {
-          "ticker": "VIV",
-          "company": "Telefonica Brasil S.A.",
-          "price": 11.49,
-          "changePct": 1.77,
-          "relVol": 1.1,
-          "rsi": 30.4,
-          "cap": "18.1B"
-        },
-        {
-          "ticker": "ROL",
-          "company": "Rollins, Inc.",
-          "price": 36.26,
-          "changePct": -0.17,
-          "relVol": 0.8,
-          "rsi": 28.5,
-          "cap": "17.4B"
-        },
-        {
-          "ticker": "ZTO",
-          "company": "ZTO Express (Cayman) Inc.",
-          "price": 21.51,
-          "changePct": -7.0,
-          "relVol": 2.2,
-          "rsi": 29.0,
-          "cap": "17.4B"
-        },
-        {
-          "ticker": "CX",
-          "company": "Cemex, S.A.B. de C.V. Sponsored",
-          "price": 10.66,
-          "changePct": 0.0,
-          "relVol": 0.9,
-          "rsi": 25.9,
-          "cap": "16.2B"
-        },
-        {
-          "ticker": "RBA",
-          "company": "RB Global, Inc.",
-          "price": 86.18,
-          "changePct": 0.49,
-          "relVol": 1.1,
-          "rsi": 30.4,
-          "cap": "16.0B"
+          "ticker": "AAP",
+          "company": "Advance Auto Parts Inc.",
+          "price": 43.74,
+          "changePct": -22.13,
+          "relVol": 2.8,
+          "rsi": 28.8,
+          "cap": "2.6B"
         }
       ]
     }
