@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T17:39:59.293Z",
+  "updated": "2026-08-21T17:49:34.920Z",
   "agents": [
     {
       "id": "price-agent",
@@ -54,7 +54,7 @@
       "id": "sentinel",
       "name": "Sentinel",
       "role": "Verifies every data feed hourly and restarts anything that dies",
-      "lastRun": "2026-08-21T16:55:24.455Z",
+      "lastRun": "2026-08-21T17:49:34.920Z",
       "lastStatus": "healing"
     }
   ]
