@@ -1,4 +1,15 @@
 {
-  "updated": "2026-08-21T13:54:41.589Z",
-  "alerts": []
+  "updated": "2026-08-21T14:49:33.527Z",
+  "alerts": [
+    {
+      "ticker": "CIFR",
+      "changePct": -8.9483,
+      "flaggedAt": "2026-08-21T14:49:33.527Z"
+    },
+    {
+      "ticker": "IQMX",
+      "changePct": 6.095,
+      "flaggedAt": "2026-08-21T14:49:33.527Z"
+    }
+  ]
 }
