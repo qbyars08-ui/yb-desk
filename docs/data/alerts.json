@@ -1,15 +1,20 @@
 {
-  "updated": "2026-08-21T18:52:15.444Z",
+  "updated": "2026-08-21T19:33:42.159Z",
   "alerts": [
     {
-      "ticker": "CIFR",
-      "changePct": -8.0476,
-      "flaggedAt": "2026-08-21T18:52:15.444Z"
+      "ticker": "IQMX",
+      "changePct": 8.8843,
+      "flaggedAt": "2026-08-21T19:33:42.159Z"
     },
     {
-      "ticker": "IQMX",
-      "changePct": 7.7479,
-      "flaggedAt": "2026-08-21T18:52:15.444Z"
+      "ticker": "CIFR",
+      "changePct": -8.4544,
+      "flaggedAt": "2026-08-21T19:33:42.159Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": 5.4402,
+      "flaggedAt": "2026-08-21T19:33:42.159Z"
     }
   ]
 }
