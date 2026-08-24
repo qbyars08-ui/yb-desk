@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-21T21:37:14.602208+00:00",
+  "updated": "2026-08-24T14:59:15.384010+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 255,
+      "totalMatches": 56,
       "rows": [
         {
-          "ticker": "SLS",
-          "company": "SELLAS Life Sciences Group, Inc.",
-          "price": 15.46,
-          "changePct": 15.37,
-          "relVol": 2.5,
-          "rsi": 69.8,
-          "cap": "3.1B"
+          "ticker": "SUZ",
+          "company": "Suzano S.A.",
+          "price": 9.13,
+          "changePct": 4.04,
+          "relVol": 0.9,
+          "rsi": 70.6,
+          "cap": "10.8B"
         },
         {
-          "ticker": "HOOD",
-          "company": "Robinhood Markets, Inc.",
-          "price": 108.13,
-          "changePct": 13.7,
-          "relVol": 3.2,
-          "rsi": 62.5,
-          "cap": "97.2B"
-        },
-        {
-          "ticker": "INFQ",
-          "company": "Infleqtion, Inc.",
-          "price": 14.12,
-          "changePct": 12.51,
-          "relVol": 1.5,
-          "rsi": 64.9,
-          "cap": "3.2B"
-        },
-        {
-          "ticker": "DK",
-          "company": "Delek US Holdings, Inc.",
-          "price": 71.47,
-          "changePct": 11.6,
-          "relVol": 2.2,
-          "rsi": 63.4,
-          "cap": "4.4B"
-        },
-        {
-          "ticker": "VIRT",
-          "company": "Virtu Financial, Inc.",
-          "price": 67.93,
-          "changePct": 11.01,
-          "relVol": 1.7,
-          "rsi": 70.9,
-          "cap": "10.5B"
-        },
-        {
-          "ticker": "FUTU",
-          "company": "Futu Holdings Limited",
-          "price": 123.64,
-          "changePct": 9.68,
-          "relVol": 2.8,
-          "rsi": 72.7,
-          "cap": "15.8B"
-        },
-        {
-          "ticker": "ERO",
-          "company": "Ero Copper Corp.",
-          "price": 39.42,
-          "changePct": 9.44,
-          "relVol": 2.2,
-          "rsi": 72.6,
-          "cap": "4.1B"
-        },
-        {
-          "ticker": "MP",
-          "company": "MP Materials Corp.",
-          "price": 60.05,
-          "changePct": 9.1,
-          "relVol": 1.1,
-          "rsi": 65.2,
-          "cap": "10.7B"
-        },
-        {
-          "ticker": "MRNA",
-          "company": "Moderna, Inc.",
-          "price": 145.13,
-          "changePct": 8.86,
-          "relVol": 2.5,
-          "rsi": 71.6,
-          "cap": "57.9B"
-        },
-        {
-          "ticker": "FIGR",
-          "company": "Figure Technology Solutions, Inc.",
-          "price": 39.1,
-          "changePct": 8.43,
-          "relVol": 1.0,
-          "rsi": 71.3,
+          "ticker": "CELH",
+          "company": "Celsius Holdings, Inc.",
+          "price": 34.58,
+          "changePct": 3.66,
+          "relVol": 0.3,
+          "rsi": 67.2,
           "cap": "8.7B"
+        },
+        {
+          "ticker": "SNAP",
+          "company": "Snap Inc.",
+          "price": 5.41,
+          "changePct": 3.25,
+          "relVol": 0.3,
+          "rsi": 58.1,
+          "cap": "9.1B"
+        },
+        {
+          "ticker": "TSCO",
+          "company": "Tractor Supply Company",
+          "price": 36.05,
+          "changePct": 3.04,
+          "relVol": 0.2,
+          "rsi": 65.7,
+          "cap": "18.8B"
+        },
+        {
+          "ticker": "ABNB",
+          "company": "Airbnb, Inc.",
+          "price": 192.76,
+          "changePct": 2.92,
+          "relVol": 0.4,
+          "rsi": 74.8,
+          "cap": "115.4B"
+        },
+        {
+          "ticker": "NU",
+          "company": "Nu Holdings Ltd.",
+          "price": 14.96,
+          "changePct": 2.61,
+          "relVol": 0.1,
+          "rsi": 58.5,
+          "cap": "72.3B"
+        },
+        {
+          "ticker": "KVUE",
+          "company": "Kenvue Inc.",
+          "price": 19.53,
+          "changePct": 2.46,
+          "relVol": 0.1,
+          "rsi": 57.5,
+          "cap": "37.5B"
+        },
+        {
+          "ticker": "BRZE",
+          "company": "Braze, Inc.",
+          "price": 31.81,
+          "changePct": 2.41,
+          "relVol": 0.9,
+          "rsi": 68.3,
+          "cap": "3.6B"
+        },
+        {
+          "ticker": "DIS",
+          "company": "Walt Disney Company (The)",
+          "price": 110.38,
+          "changePct": 2.41,
+          "relVol": 0.5,
+          "rsi": 69.5,
+          "cap": "190.6B"
+        },
+        {
+          "ticker": "CMG",
+          "company": "Chipotle Mexican Grill, Inc.",
+          "price": 37.76,
+          "changePct": 2.32,
+          "relVol": 0.2,
+          "rsi": 65.0,
+          "cap": "47.8B"
         }
       ]
     },
@@ -104,186 +104,23 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 9,
-      "rows": [
-        {
-          "ticker": "IQMX",
-          "company": "IQM Quantum Computers Oyj",
-          "price": 11.11,
-          "changePct": 14.77,
-          "relVol": 17.0,
-          "rsi": 53.3,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "BVN",
-          "company": "Buenaventura Mining Company Inc.",
-          "price": 35.47,
-          "changePct": 3.83,
-          "relVol": 4.3,
-          "rsi": 63.8,
-          "cap": "8.0B"
-        },
-        {
-          "ticker": "XNDU",
-          "company": "Xanadu Quantum Technologies Limited",
-          "price": 10.95,
-          "changePct": 8.31,
-          "relVol": 4.2,
-          "rsi": 50.2,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "AMX",
-          "company": "America Movil, S.A.B. de C.V.",
-          "price": 23.79,
-          "changePct": 1.71,
-          "relVol": 4.1,
-          "rsi": 39.4,
-          "cap": "71.6B"
-        },
-        {
-          "ticker": "DAR",
-          "company": "Darling Ingredients Inc.",
-          "price": 65.74,
-          "changePct": -3.1,
-          "relVol": 3.7,
-          "rsi": 57.6,
-          "cap": "10.4B"
-        },
-        {
-          "ticker": "SA",
-          "company": "Seabridge Gold, Inc.",
-          "price": 30.16,
-          "changePct": -9.35,
-          "relVol": 3.7,
-          "rsi": 51.3,
-          "cap": "3.3B"
-        },
-        {
-          "ticker": "TGTX",
-          "company": "TG Therapeutics, Inc.",
-          "price": 54.27,
-          "changePct": 7.34,
-          "relVol": 3.3,
-          "rsi": 59.1,
-          "cap": "8.3B"
-        },
-        {
-          "ticker": "CALM",
-          "company": "Cal-Maine Foods, Inc.",
-          "price": 82.8,
-          "changePct": 0.45,
-          "relVol": 3.2,
-          "rsi": 47.1,
-          "cap": "3.9B"
-        },
-        {
-          "ticker": "HOOD",
-          "company": "Robinhood Markets, Inc.",
-          "price": 108.13,
-          "changePct": 13.7,
-          "relVol": 3.2,
-          "rsi": 62.5,
-          "cap": "97.2B"
-        }
-      ]
+      "totalMatches": 0,
+      "rows": []
     },
     {
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 22,
+      "totalMatches": 1,
       "rows": [
         {
           "ticker": "WMT",
           "company": "Walmart Inc.",
-          "price": 103.7,
-          "changePct": -0.13,
-          "relVol": 1.7,
-          "rsi": 29.6,
-          "cap": "825.3B"
-        },
-        {
-          "ticker": "NEE",
-          "company": "NextEra Energy, Inc.",
-          "price": 83.65,
-          "changePct": -1.62,
-          "relVol": 1.2,
-          "rsi": 31.7,
-          "cap": "174.5B"
-        },
-        {
-          "ticker": "TJX",
-          "company": "TJX Companies, Inc. (The)",
-          "price": 140.53,
-          "changePct": -0.11,
-          "relVol": 1.5,
-          "rsi": 25.4,
-          "cap": "155.2B"
-        },
-        {
-          "ticker": "APP",
-          "company": "Applovin Corporation",
-          "price": 305.77,
-          "changePct": -0.97,
-          "relVol": 0.9,
-          "rsi": 29.6,
-          "cap": "102.3B"
-        },
-        {
-          "ticker": "SO",
-          "company": "Southern Company (The)",
-          "price": 88.94,
-          "changePct": -2.72,
-          "relVol": 1.4,
-          "rsi": 28.8,
-          "cap": "102.3B"
-        },
-        {
-          "ticker": "AEP",
-          "company": "American Electric Power Company, Inc.",
-          "price": 120.94,
-          "changePct": -3.79,
-          "relVol": 1.7,
-          "rsi": 29.9,
-          "cap": "65.8B"
-        },
-        {
-          "ticker": "PEG",
-          "company": "Public Service Enterprise Group Incorporated",
-          "price": 72.61,
-          "changePct": -2.69,
-          "relVol": 1.0,
-          "rsi": 26.1,
-          "cap": "36.2B"
-        },
-        {
-          "ticker": "BIDU",
-          "company": "Baidu, Inc.",
-          "price": 93.21,
-          "changePct": 1.35,
-          "relVol": 0.8,
-          "rsi": 29.7,
-          "cap": "32.5B"
-        },
-        {
-          "ticker": "CNP",
-          "company": "CenterPoint Energy, Inc (Holding Co)",
-          "price": 38.77,
-          "changePct": -3.56,
-          "relVol": 1.5,
-          "rsi": 25.6,
-          "cap": "25.5B"
-        },
-        {
-          "ticker": "CMS",
-          "company": "CMS Energy Corporation",
-          "price": 68.27,
-          "changePct": -2.23,
-          "relVol": 0.9,
-          "rsi": 30.1,
-          "cap": "21.4B"
+          "price": 104.42,
+          "changePct": 0.7,
+          "relVol": 0.3,
+          "rsi": 31.9,
+          "cap": "831.0B"
         }
       ]
     }
