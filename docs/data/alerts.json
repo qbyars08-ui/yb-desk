@@ -1,25 +1,20 @@
 {
-  "updated": "2026-08-24T13:58:46.065Z",
+  "updated": "2026-08-24T14:55:42.941Z",
   "alerts": [
     {
       "ticker": "CRDO",
-      "changePct": -7.1627,
-      "flaggedAt": "2026-08-24T13:58:46.065Z"
+      "changePct": -6.4145,
+      "flaggedAt": "2026-08-24T14:55:42.941Z"
     },
     {
       "ticker": "MU",
-      "changePct": -7.1361,
-      "flaggedAt": "2026-08-24T13:58:46.065Z"
+      "changePct": -6.3877,
+      "flaggedAt": "2026-08-24T14:55:42.941Z"
     },
     {
       "ticker": "NBIS",
-      "changePct": -6.9867,
-      "flaggedAt": "2026-08-24T13:58:46.065Z"
-    },
-    {
-      "ticker": "PENG",
-      "changePct": -5.591,
-      "flaggedAt": "2026-08-24T13:58:46.065Z"
+      "changePct": -6.2566,
+      "flaggedAt": "2026-08-24T14:55:42.941Z"
     }
   ]
 }
