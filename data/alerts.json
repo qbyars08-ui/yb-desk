@@ -1,25 +1,35 @@
 {
-  "updated": "2026-08-24T15:51:30.805Z",
+  "updated": "2026-08-24T16:52:03.815Z",
   "alerts": [
     {
-      "ticker": "MU",
-      "changePct": -5.8329,
-      "flaggedAt": "2026-08-24T15:51:30.805Z"
-    },
-    {
       "ticker": "ASTS",
-      "changePct": -5.8267,
-      "flaggedAt": "2026-08-24T15:51:30.805Z"
-    },
-    {
-      "ticker": "IQMX",
-      "changePct": -5.6706,
-      "flaggedAt": "2026-08-24T15:51:30.805Z"
+      "changePct": -7.276,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
     },
     {
       "ticker": "ALMU",
-      "changePct": -5.4164,
-      "flaggedAt": "2026-08-24T15:51:30.805Z"
+      "changePct": -6.432,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
+    },
+    {
+      "ticker": "OUST",
+      "changePct": -5.4919,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": -5.4066,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": -5.3881,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
+    },
+    {
+      "ticker": "IQMX",
+      "changePct": -5.2205,
+      "flaggedAt": "2026-08-24T16:52:03.815Z"
     }
   ]
 }
