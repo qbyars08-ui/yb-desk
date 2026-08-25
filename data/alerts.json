@@ -1,4 +1,15 @@
 {
-  "updated": "2026-08-25T17:41:33.437Z",
-  "alerts": []
+  "updated": "2026-08-25T18:53:52.381Z",
+  "alerts": [
+    {
+      "ticker": "CIFR",
+      "changePct": 5.3711,
+      "flaggedAt": "2026-08-25T18:53:52.381Z"
+    },
+    {
+      "ticker": "ALMU",
+      "changePct": 5.0549,
+      "flaggedAt": "2026-08-25T18:53:52.381Z"
+    }
+  ]
 }
