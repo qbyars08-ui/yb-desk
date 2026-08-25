@@ -1,15 +1,10 @@
 {
-  "updated": "2026-08-25T15:55:25.887Z",
+  "updated": "2026-08-25T16:51:32.891Z",
   "alerts": [
     {
-      "ticker": "LPKFF",
-      "changePct": -5.3652,
-      "flaggedAt": "2026-08-25T15:55:25.887Z"
-    },
-    {
       "ticker": "CIFR",
-      "changePct": 5.1432,
-      "flaggedAt": "2026-08-25T15:55:25.887Z"
+      "changePct": 5.2734,
+      "flaggedAt": "2026-08-25T16:51:32.891Z"
     }
   ]
 }
