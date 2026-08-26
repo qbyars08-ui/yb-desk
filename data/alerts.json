@@ -1,15 +1,10 @@
 {
-  "updated": "2026-08-26T18:20:57.470Z",
+  "updated": "2026-08-26T21:11:08.990Z",
   "alerts": [
     {
       "ticker": "ANET",
-      "changePct": 5.7568,
-      "flaggedAt": "2026-08-26T18:20:57.470Z"
-    },
-    {
-      "ticker": "SILC",
-      "changePct": 5.1744,
-      "flaggedAt": "2026-08-26T18:20:57.470Z"
+      "changePct": 5.9233,
+      "flaggedAt": "2026-08-26T21:11:08.990Z"
     }
   ]
 }

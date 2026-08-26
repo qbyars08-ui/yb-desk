@@ -1,11 +1,11 @@
 {
-  "updated": "2026-08-26T20:11:11.585Z",
+  "updated": "2026-08-26T21:11:08.992Z",
   "agents": [
     {
       "id": "price-agent",
       "name": "Price Agent",
       "role": "Pulls live quotes for the book and watchlist",
-      "lastRun": "2026-08-26T18:20:57.405Z",
+      "lastRun": "2026-08-26T21:11:08.929Z",
       "lastStatus": "ok"
     },
     {
@@ -19,7 +19,7 @@
       "id": "watchdog",
       "name": "Watchdog",
       "role": "Flags book tickers moving 5 percent or more",
-      "lastRun": "2026-08-26T18:20:57.471Z",
+      "lastRun": "2026-08-26T21:11:08.992Z",
       "lastStatus": "ok"
     },
     {
