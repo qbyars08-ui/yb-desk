@@ -1,4 +1,10 @@
 {
-  "updated": "2026-08-26T14:00:45.248Z",
-  "alerts": []
+  "updated": "2026-08-26T14:57:55.196Z",
+  "alerts": [
+    {
+      "ticker": "IQMX",
+      "changePct": 7.0093,
+      "flaggedAt": "2026-08-26T14:57:55.196Z"
+    }
+  ]
 }
