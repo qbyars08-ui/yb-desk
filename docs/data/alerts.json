@@ -1,15 +1,4 @@
 {
-  "updated": "2026-08-25T21:38:45.735Z",
-  "alerts": [
-    {
-      "ticker": "CIFR",
-      "changePct": 6.1849,
-      "flaggedAt": "2026-08-25T21:38:45.735Z"
-    },
-    {
-      "ticker": "NBIS",
-      "changePct": 5.2439,
-      "flaggedAt": "2026-08-25T21:38:45.735Z"
-    }
-  ]
+  "updated": "2026-08-26T14:00:45.248Z",
+  "alerts": []
 }
