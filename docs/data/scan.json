@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-27T00:47:37.966614+00:00",
+  "updated": "2026-08-27T23:47:04.015906+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 245,
+      "totalMatches": 253,
       "rows": [
         {
-          "ticker": "BHVN",
-          "company": "Biohaven Ltd.",
-          "price": 16.95,
-          "changePct": 17.87,
-          "relVol": 7.3,
-          "rsi": 67.4,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "BZ",
-          "company": "KANZHUN LIMITED - American Depository Shares",
-          "price": 18.84,
-          "changePct": 15.65,
-          "relVol": 4.3,
-          "rsi": 71.2,
-          "cap": "7.2B"
-        },
-        {
-          "ticker": "URBN",
-          "company": "Urban Outfitters, Inc.",
-          "price": 82.95,
-          "changePct": 9.46,
-          "relVol": 3.3,
-          "rsi": 65.7,
-          "cap": "7.1B"
-        },
-        {
-          "ticker": "ERAS",
-          "company": "Erasca, Inc.",
-          "price": 19.15,
-          "changePct": 7.83,
-          "relVol": 2.9,
-          "rsi": 58.8,
-          "cap": "6.7B"
-        },
-        {
-          "ticker": "LITE",
-          "company": "Lumentum Holdings Inc.",
-          "price": 939.03,
-          "changePct": 6.04,
-          "relVol": 0.9,
-          "rsi": 57.4,
-          "cap": "84.2B"
-        },
-        {
-          "ticker": "P",
-          "company": "Everpure, Inc.",
-          "price": 108.9,
-          "changePct": 5.92,
-          "relVol": 1.6,
-          "rsi": 62.8,
-          "cap": "36.2B"
-        },
-        {
-          "ticker": "ANET",
-          "company": "Arista Networks, Inc.",
-          "price": 202.25,
-          "changePct": 5.92,
-          "relVol": 1.2,
-          "rsi": 60.2,
-          "cap": "255.1B"
-        },
-        {
-          "ticker": "SJM",
-          "company": "The J.M. Smucker Company",
-          "price": 130.9,
-          "changePct": 4.34,
-          "relVol": 2.4,
+          "ticker": "OKTA",
+          "company": "Okta, Inc.",
+          "price": 172.91,
+          "changePct": 28.63,
+          "relVol": 5.2,
           "rsi": 70.4,
-          "cap": "14.0B"
+          "cap": "30.1B"
         },
         {
-          "ticker": "PAA",
-          "company": "Plains All American Pipeline, L.P.",
-          "price": 25.63,
-          "changePct": 3.77,
-          "relVol": 1.2,
+          "ticker": "CRWD",
+          "company": "CrowdStrike Holdings, Inc.",
+          "price": 227.96,
+          "changePct": 20.5,
+          "relVol": 2.8,
+          "rsi": 64.0,
+          "cap": "232.1B"
+        },
+        {
+          "ticker": "FIG",
+          "company": "FIGMA INC",
+          "price": 30.62,
+          "changePct": 13.28,
+          "relVol": 2.1,
           "rsi": 67.9,
-          "cap": "18.1B"
+          "cap": "16.3B"
+        },
+        {
+          "ticker": "PANW",
+          "company": "Palo Alto Networks, Inc.",
+          "price": 382.85,
+          "changePct": 12.83,
+          "relVol": 1.5,
+          "rsi": 60.4,
+          "cap": "312.0B"
+        },
+        {
+          "ticker": "SAIL",
+          "company": "SailPoint, Inc.",
+          "price": 20.45,
+          "changePct": 12.24,
+          "relVol": 3.2,
+          "rsi": 66.6,
+          "cap": "11.6B"
+        },
+        {
+          "ticker": "FROG",
+          "company": "JFrog Ltd.",
+          "price": 104.03,
+          "changePct": 12.1,
+          "relVol": 2.1,
+          "rsi": 68.2,
+          "cap": "12.8B"
+        },
+        {
+          "ticker": "TENB",
+          "company": "Tenable Holdings, Inc.",
+          "price": 37.62,
+          "changePct": 11.76,
+          "relVol": 4.1,
+          "rsi": 57.1,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "MSTR",
+          "company": "Strategy Inc",
+          "price": 137.4,
+          "changePct": 11.54,
+          "relVol": 1.4,
+          "rsi": 72.9,
+          "cap": "52.8B"
         },
         {
           "ticker": "RBRK",
           "company": "Rubrik, Inc.",
-          "price": 96.13,
-          "changePct": 3.76,
-          "relVol": 0.7,
-          "rsi": 57.7,
-          "cap": "19.8B"
+          "price": 107.02,
+          "changePct": 11.33,
+          "relVol": 2.9,
+          "rsi": 67.6,
+          "cap": "22.0B"
+        },
+        {
+          "ticker": "SRPT",
+          "company": "Sarepta Therapeutics, Inc.",
+          "price": 21.59,
+          "changePct": 10.95,
+          "relVol": 3.5,
+          "rsi": 71.1,
+          "cap": "2.3B"
         }
       ]
     },
@@ -104,97 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 12,
+      "totalMatches": 18,
       "rows": [
-        {
-          "ticker": "ANF",
-          "company": "Abercrombie & Fitch Company",
-          "price": 147.75,
-          "changePct": 35.67,
-          "relVol": 15.1,
-          "rsi": 79.1,
-          "cap": "6.6B"
-        },
-        {
-          "ticker": "BHVN",
-          "company": "Biohaven Ltd.",
-          "price": 16.95,
-          "changePct": 17.87,
-          "relVol": 7.3,
-          "rsi": 67.4,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "DY",
-          "company": "Dycom Industries, Inc.",
-          "price": 310.91,
-          "changePct": -11.62,
-          "relVol": 5.3,
-          "rsi": 25.1,
-          "cap": "9.3B"
-        },
-        {
-          "ticker": "BZ",
-          "company": "KANZHUN LIMITED - American Depository Shares",
-          "price": 18.84,
-          "changePct": 15.65,
-          "relVol": 4.3,
-          "rsi": 71.2,
-          "cap": "7.2B"
-        },
-        {
-          "ticker": "TRMD",
-          "company": "TORM plc",
-          "price": 30.08,
-          "changePct": -4.42,
-          "relVol": 4.0,
-          "rsi": 49.9,
-          "cap": "3.1B"
-        },
         {
           "ticker": "JAZZ",
           "company": "Jazz Pharmaceuticals plc",
-          "price": 249.29,
-          "changePct": -4.2,
+          "price": 251.1,
+          "changePct": 0.73,
+          "relVol": 6.1,
+          "rsi": 50.2,
+          "cap": "16.3B"
+        },
+        {
+          "ticker": "OKTA",
+          "company": "Okta, Inc.",
+          "price": 172.91,
+          "changePct": 28.63,
+          "relVol": 5.2,
+          "rsi": 70.4,
+          "cap": "30.1B"
+        },
+        {
+          "ticker": "HQY",
+          "company": "HealthEquity, Inc.",
+          "price": 93.39,
+          "changePct": -10.56,
+          "relVol": 4.7,
+          "rsi": 32.3,
+          "cap": "7.8B"
+        },
+        {
+          "ticker": "CRM",
+          "company": "Salesforce, Inc.",
+          "price": 252.05,
+          "changePct": 22.58,
+          "relVol": 4.4,
+          "rsi": 80.0,
+          "cap": "206.4B"
+        },
+        {
+          "ticker": "HRL",
+          "company": "Hormel Foods Corporation",
+          "price": 21.28,
+          "changePct": -10.25,
+          "relVol": 4.2,
+          "rsi": 21.5,
+          "cap": "11.7B"
+        },
+        {
+          "ticker": "VEEV",
+          "company": "Veeva Systems Inc.",
+          "price": 282.13,
+          "changePct": 15.2,
+          "relVol": 4.2,
+          "rsi": 79.6,
+          "cap": "45.8B"
+        },
+        {
+          "ticker": "TENB",
+          "company": "Tenable Holdings, Inc.",
+          "price": 37.62,
+          "changePct": 11.76,
+          "relVol": 4.1,
+          "rsi": 57.1,
+          "cap": "4.1B"
+        },
+        {
+          "ticker": "NEO",
+          "company": "NeoGenomics, Inc.",
+          "price": 18.64,
+          "changePct": 7.31,
           "relVol": 3.9,
-          "rsi": 48.4,
-          "cap": "16.2B"
+          "rsi": 71.4,
+          "cap": "2.4B"
         },
         {
-          "ticker": "SYRE",
-          "company": "Spyre Therapeutics, Inc.",
-          "price": 93.61,
-          "changePct": -12.81,
+          "ticker": "BUD",
+          "company": "Anheuser-Busch Inbev SA Sponsored",
+          "price": 79.1,
+          "changePct": 0.85,
+          "relVol": 3.9,
+          "rsi": 44.8,
+          "cap": "156.5B"
+        },
+        {
+          "ticker": "GAP",
+          "company": "Gap, Inc. (The)",
+          "price": 20.79,
+          "changePct": -1.7,
           "relVol": 3.8,
-          "rsi": 38.9,
-          "cap": "8.3B"
-        },
-        {
-          "ticker": "EDU",
-          "company": "New Oriental Education & Technology Group, Inc. ",
-          "price": 57.72,
-          "changePct": 1.14,
-          "relVol": 3.6,
-          "rsi": 61.2,
-          "cap": "9.1B"
-        },
-        {
-          "ticker": "ERIC",
-          "company": "Ericsson",
-          "price": 10.06,
-          "changePct": -3.08,
-          "relVol": 3.4,
-          "rsi": 45.9,
-          "cap": "34.3B"
-        },
-        {
-          "ticker": "URBN",
-          "company": "Urban Outfitters, Inc.",
-          "price": 82.95,
-          "changePct": 9.46,
-          "relVol": 3.3,
-          "rsi": 65.7,
-          "cap": "7.1B"
+          "rsi": 54.8,
+          "cap": "7.5B"
         }
       ]
     },
@@ -202,97 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 10,
+      "totalMatches": 15,
       "rows": [
+        {
+          "ticker": "WMT",
+          "company": "Walmart Inc.",
+          "price": 102.63,
+          "changePct": -1.64,
+          "relVol": 0.9,
+          "rsi": 31.8,
+          "cap": "816.7B"
+        },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 136.83,
-          "changePct": -1.9,
+          "price": 134.22,
+          "changePct": -1.91,
+          "relVol": 0.9,
+          "rsi": 19.9,
+          "cap": "148.3B"
+        },
+        {
+          "ticker": "HDB",
+          "company": "HDFC Bank Limited",
+          "price": 22.46,
+          "changePct": -3.06,
           "relVol": 1.4,
-          "rsi": 22.1,
-          "cap": "151.2B"
+          "rsi": 31.9,
+          "cap": "117.5B"
         },
         {
           "ticker": "CARR",
           "company": "Carrier Global Corporation",
-          "price": 58.74,
-          "changePct": 0.38,
-          "relVol": 1.8,
-          "rsi": 30.9,
-          "cap": "48.4B"
+          "price": 58.84,
+          "changePct": 0.17,
+          "relVol": 1.1,
+          "rsi": 31.5,
+          "cap": "48.5B"
+        },
+        {
+          "ticker": "TPR",
+          "company": "Tapestry, Inc.",
+          "price": 123.24,
+          "changePct": -5.38,
+          "relVol": 0.9,
+          "rsi": 30.2,
+          "cap": "24.6B"
+        },
+        {
+          "ticker": "NI",
+          "company": "NiSource Inc",
+          "price": 40.96,
+          "changePct": -0.41,
+          "relVol": 0.7,
+          "rsi": 31.8,
+          "cap": "19.6B"
+        },
+        {
+          "ticker": "LUV",
+          "company": "Southwest Airlines Company",
+          "price": 39.76,
+          "changePct": -2.24,
+          "relVol": 0.9,
+          "rsi": 30.8,
+          "cap": "19.5B"
         },
         {
           "ticker": "BURL",
           "company": "Burlington Stores, Inc.",
-          "price": 313.99,
-          "changePct": -0.41,
-          "relVol": 2.5,
-          "rsi": 29.3,
-          "cap": "19.8B"
+          "price": 290.0,
+          "changePct": -7.64,
+          "relVol": 3.5,
+          "rsi": 21.6,
+          "cap": "18.3B"
         },
         {
           "ticker": "DKS",
           "company": "Dick's Sporting Goods Inc",
-          "price": 129.66,
-          "changePct": 4.3,
-          "relVol": 2.5,
-          "rsi": 19.6,
-          "cap": "11.6B"
-        },
-        {
-          "ticker": "DY",
-          "company": "Dycom Industries, Inc.",
-          "price": 310.91,
-          "changePct": -11.62,
-          "relVol": 5.3,
-          "rsi": 25.1,
-          "cap": "9.3B"
-        },
-        {
-          "ticker": "GME",
-          "company": "GameStop Corporation",
-          "price": 17.97,
-          "changePct": -0.66,
-          "relVol": 0.9,
-          "rsi": 28.1,
-          "cap": "8.1B"
-        },
-        {
-          "ticker": "TTD",
-          "company": "The Trade Desk, Inc.",
-          "price": 13.03,
-          "changePct": -1.66,
-          "relVol": 0.7,
-          "rsi": 31.1,
-          "cap": "6.1B"
-        },
-        {
-          "ticker": "KLAR",
-          "company": "Klarna Group plc",
-          "price": 14.21,
-          "changePct": -0.42,
-          "relVol": 0.4,
-          "rsi": 30.4,
-          "cap": "5.4B"
-        },
-        {
-          "ticker": "STUB",
-          "company": "StubHub Holdings, Inc.",
-          "price": 6.58,
-          "changePct": -3.38,
-          "relVol": 0.6,
-          "rsi": 29.7,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "BXMT",
-          "company": "Blackstone Mortgage Trust, Inc.",
-          "price": 13.92,
-          "changePct": -0.78,
+          "price": 131.77,
+          "changePct": 1.63,
           "relVol": 1.0,
-          "rsi": 31.1,
-          "cap": "2.3B"
+          "rsi": 21.3,
+          "cap": "11.8B"
+        },
+        {
+          "ticker": "HRL",
+          "company": "Hormel Foods Corporation",
+          "price": 21.28,
+          "changePct": -10.25,
+          "relVol": 4.2,
+          "rsi": 21.5,
+          "cap": "11.7B"
         }
       ]
     }
