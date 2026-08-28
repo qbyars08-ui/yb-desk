@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T23:47:45.706646+00:00",
+  "updated": "2026-08-28T05:24:11.757068+00:00",
   "period": "2y",
   "universe": "19 book names",
   "engine": "mphinance/momentum-mcp backtest_strategy, walk-forward with 10bps slippage",
@@ -793,13 +793,13 @@
       },
       "worst": {
         "ticker": "ALMU",
-        "strategyPct": -38.2,
+        "strategyPct": -39.6,
         "buyHoldPct": 378.4
       },
       "rows": [
         {
           "ticker": "ALMU",
-          "strategyPct": -38.2,
+          "strategyPct": -39.6,
           "buyHoldPct": 378.4,
           "winRatePct": 0.0,
           "trades": 1,

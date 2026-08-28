@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T23:47:02.571521+00:00",
+  "updated": "2026-08-28T05:23:11.112214+00:00",
   "method": "mphinance/momentum-mcp analyze_technicals (RSI, MACD, EMA 8/21/34/55/89, SMA, ADX+DI, ATR, Bollinger)",
   "signals": {
     "ALMU": {
@@ -9,7 +9,7 @@
       "rsi": 38.04,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 20.34,
+      "adx": 20.28,
       "adxNote": "trend forming",
       "diDir": "bull",
       "atrPct": 9.2,
@@ -128,7 +128,7 @@
       "rsi": 42.62,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 22.88,
+      "adx": 22.87,
       "adxNote": "trend forming",
       "diDir": "bear",
       "atrPct": 6.9,
