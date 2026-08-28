@@ -1,102 +1,102 @@
 {
-  "updated": "2026-08-28T05:23:12.268151+00:00",
+  "updated": "2026-08-28T23:33:22.518316+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 253,
+      "totalMatches": 214,
       "rows": [
         {
-          "ticker": "OKTA",
-          "company": "Okta, Inc.",
-          "price": 172.91,
-          "changePct": 28.63,
-          "relVol": 5.2,
-          "rsi": 70.4,
-          "cap": "30.1B"
+          "ticker": "WDAY",
+          "company": "Workday, Inc.",
+          "price": 204.72,
+          "changePct": 5.76,
+          "relVol": 1.9,
+          "rsi": 66.2,
+          "cap": "50.4B"
         },
         {
-          "ticker": "CRWD",
-          "company": "CrowdStrike Holdings, Inc.",
-          "price": 227.96,
-          "changePct": 20.5,
-          "relVol": 2.8,
-          "rsi": 64.0,
-          "cap": "232.1B"
+          "ticker": "NWL",
+          "company": "Newell Brands Inc.",
+          "price": 6.17,
+          "changePct": 4.93,
+          "relVol": 1.1,
+          "rsi": 57.7,
+          "cap": "2.6B"
         },
         {
-          "ticker": "FIG",
-          "company": "FIGMA INC",
-          "price": 30.62,
-          "changePct": 13.28,
-          "relVol": 2.1,
-          "rsi": 67.9,
-          "cap": "16.3B"
+          "ticker": "NOW",
+          "company": "ServiceNow, Inc.",
+          "price": 144.71,
+          "changePct": 4.54,
+          "relVol": 1.7,
+          "rsi": 72.7,
+          "cap": "149.6B"
         },
         {
-          "ticker": "PANW",
-          "company": "Palo Alto Networks, Inc.",
-          "price": 382.85,
-          "changePct": 12.83,
-          "relVol": 1.5,
-          "rsi": 60.4,
-          "cap": "312.0B"
+          "ticker": "DOCS",
+          "company": "Doximity, Inc.",
+          "price": 26.73,
+          "changePct": 4.45,
+          "relVol": 1.1,
+          "rsi": 62.4,
+          "cap": "4.8B"
         },
         {
-          "ticker": "SAIL",
-          "company": "SailPoint, Inc.",
-          "price": 20.45,
-          "changePct": 12.24,
+          "ticker": "GFL",
+          "company": "GFL Environmental Inc. Subordinate voting shares",
+          "price": 42.83,
+          "changePct": 4.39,
+          "relVol": 2.5,
+          "rsi": 62.4,
+          "cap": "15.5B"
+        },
+        {
+          "ticker": "SLB",
+          "company": "SLB Limited",
+          "price": 57.33,
+          "changePct": 4.22,
+          "relVol": 2.0,
+          "rsi": 70.9,
+          "cap": "85.1B"
+        },
+        {
+          "ticker": "AMZN",
+          "company": "Amazon.com, Inc.",
+          "price": 266.43,
+          "changePct": 3.97,
+          "relVol": 1.6,
+          "rsi": 55.9,
+          "cap": "2.87T"
+        },
+        {
+          "ticker": "BEKE",
+          "company": "KE Holdings Inc",
+          "price": 18.32,
+          "changePct": 3.33,
           "relVol": 3.2,
-          "rsi": 66.6,
-          "cap": "11.6B"
+          "rsi": 64.1,
+          "cap": "20.5B"
         },
         {
-          "ticker": "FROG",
-          "company": "JFrog Ltd.",
-          "price": 104.03,
-          "changePct": 12.1,
-          "relVol": 2.1,
-          "rsi": 68.2,
-          "cap": "12.8B"
+          "ticker": "SONY",
+          "company": "Sony Group Corporation",
+          "price": 24.85,
+          "changePct": 3.24,
+          "relVol": 1.2,
+          "rsi": 68.7,
+          "cap": "143.8B"
         },
         {
-          "ticker": "TENB",
-          "company": "Tenable Holdings, Inc.",
-          "price": 37.62,
-          "changePct": 11.76,
-          "relVol": 4.1,
-          "rsi": 57.1,
-          "cap": "4.1B"
-        },
-        {
-          "ticker": "MSTR",
-          "company": "Strategy Inc",
-          "price": 137.4,
-          "changePct": 11.54,
-          "relVol": 1.4,
-          "rsi": 72.9,
-          "cap": "52.8B"
-        },
-        {
-          "ticker": "RBRK",
-          "company": "Rubrik, Inc.",
-          "price": 107.02,
-          "changePct": 11.33,
-          "relVol": 2.9,
-          "rsi": 67.6,
-          "cap": "22.0B"
-        },
-        {
-          "ticker": "SRPT",
-          "company": "Sarepta Therapeutics, Inc.",
-          "price": 21.59,
-          "changePct": 10.95,
-          "relVol": 3.5,
-          "rsi": 71.1,
-          "cap": "2.3B"
+          "ticker": "HPQ",
+          "company": "HP Inc.",
+          "price": 30.52,
+          "changePct": 3.0,
+          "relVol": 1.1,
+          "rsi": 59.6,
+          "cap": "27.9B"
         }
       ]
     },
@@ -104,97 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 18,
+      "totalMatches": 13,
       "rows": [
-        {
-          "ticker": "JAZZ",
-          "company": "Jazz Pharmaceuticals plc",
-          "price": 251.1,
-          "changePct": 0.73,
-          "relVol": 6.1,
-          "rsi": 50.2,
-          "cap": "16.3B"
-        },
-        {
-          "ticker": "OKTA",
-          "company": "Okta, Inc.",
-          "price": 172.91,
-          "changePct": 28.63,
-          "relVol": 5.2,
-          "rsi": 70.4,
-          "cap": "30.1B"
-        },
-        {
-          "ticker": "HQY",
-          "company": "HealthEquity, Inc.",
-          "price": 93.39,
-          "changePct": -10.56,
-          "relVol": 4.7,
-          "rsi": 32.3,
-          "cap": "7.8B"
-        },
-        {
-          "ticker": "CRM",
-          "company": "Salesforce, Inc.",
-          "price": 252.05,
-          "changePct": 22.58,
-          "relVol": 4.4,
-          "rsi": 80.0,
-          "cap": "206.4B"
-        },
-        {
-          "ticker": "HRL",
-          "company": "Hormel Foods Corporation",
-          "price": 21.28,
-          "changePct": -10.25,
-          "relVol": 4.2,
-          "rsi": 21.5,
-          "cap": "11.7B"
-        },
-        {
-          "ticker": "VEEV",
-          "company": "Veeva Systems Inc.",
-          "price": 282.13,
-          "changePct": 15.2,
-          "relVol": 4.2,
-          "rsi": 79.6,
-          "cap": "45.8B"
-        },
         {
           "ticker": "TENB",
           "company": "Tenable Holdings, Inc.",
-          "price": 37.62,
-          "changePct": 11.76,
-          "relVol": 4.1,
-          "rsi": 57.1,
+          "price": 37.67,
+          "changePct": 0.13,
+          "relVol": 9.6,
+          "rsi": 57.2,
           "cap": "4.1B"
         },
         {
-          "ticker": "NEO",
-          "company": "NeoGenomics, Inc.",
-          "price": 18.64,
-          "changePct": 7.31,
-          "relVol": 3.9,
-          "rsi": 71.4,
-          "cap": "2.4B"
+          "ticker": "AFRM",
+          "company": "Affirm Holdings, Inc.",
+          "price": 77.76,
+          "changePct": 0.35,
+          "relVol": 8.7,
+          "rsi": 53.4,
+          "cap": "26.0B"
         },
         {
-          "ticker": "BUD",
-          "company": "Anheuser-Busch Inbev SA Sponsored",
-          "price": 79.1,
-          "changePct": 0.85,
-          "relVol": 3.9,
-          "rsi": 44.8,
-          "cap": "156.5B"
+          "ticker": "SOLS",
+          "company": "Solstice Advanced Materials Inc.",
+          "price": 63.53,
+          "changePct": 12.76,
+          "relVol": 7.4,
+          "rsi": 57.2,
+          "cap": "10.1B"
         },
         {
-          "ticker": "GAP",
-          "company": "Gap, Inc. (The)",
-          "price": 20.79,
-          "changePct": -1.7,
+          "ticker": "ESI",
+          "company": "Element Solutions Inc.",
+          "price": 34.93,
+          "changePct": -4.35,
+          "relVol": 6.7,
+          "rsi": 38.6,
+          "cap": "8.5B"
+        },
+        {
+          "ticker": "SUNB",
+          "company": "Sunbelt Rentals Holdings, Inc.",
+          "price": 73.2,
+          "changePct": -0.62,
+          "relVol": 5.2,
+          "rsi": 39.6,
+          "cap": "30.0B"
+        },
+        {
+          "ticker": "PCG",
+          "company": "Pacific Gas & Electric Co.",
+          "price": 16.6,
+          "changePct": -7.52,
+          "relVol": 4.9,
+          "rsi": 38.8,
+          "cap": "36.6B"
+        },
+        {
+          "ticker": "VISN",
+          "company": "Vistance Networks, Inc.",
+          "price": 6.06,
+          "changePct": -47.89,
           "relVol": 3.8,
-          "rsi": 54.8,
-          "cap": "7.5B"
+          "rsi": 20.8,
+          "cap": "2.7B"
+        },
+        {
+          "ticker": "ESTC",
+          "company": "Elastic N.V.",
+          "price": 99.91,
+          "changePct": 19.31,
+          "relVol": 3.7,
+          "rsi": 77.5,
+          "cap": "10.4B"
+        },
+        {
+          "ticker": "ACM",
+          "company": "AECOM",
+          "price": 69.17,
+          "changePct": 4.42,
+          "relVol": 3.5,
+          "rsi": 54.3,
+          "cap": "8.9B"
+        },
+        {
+          "ticker": "PYPL",
+          "company": "PayPal Holdings, Inc.",
+          "price": 53.66,
+          "changePct": -12.71,
+          "relVol": 3.4,
+          "rsi": 35.0,
+          "cap": "45.9B"
         }
       ]
     },
@@ -202,97 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 15,
+      "totalMatches": 23,
       "rows": [
         {
-          "ticker": "WMT",
-          "company": "Walmart Inc.",
-          "price": 102.63,
-          "changePct": -1.64,
-          "relVol": 0.9,
-          "rsi": 31.8,
-          "cap": "816.7B"
+          "ticker": "NEE",
+          "company": "NextEra Energy, Inc.",
+          "price": 81.84,
+          "changePct": -1.95,
+          "relVol": 1.4,
+          "rsi": 26.4,
+          "cap": "170.7B"
         },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 134.22,
-          "changePct": -1.91,
-          "relVol": 0.9,
-          "rsi": 19.9,
-          "cap": "148.3B"
+          "price": 135.12,
+          "changePct": 0.67,
+          "relVol": 0.8,
+          "rsi": 22.7,
+          "cap": "149.3B"
         },
         {
-          "ticker": "HDB",
-          "company": "HDFC Bank Limited",
-          "price": 22.46,
-          "changePct": -3.06,
-          "relVol": 1.4,
-          "rsi": 31.9,
-          "cap": "117.5B"
+          "ticker": "SO",
+          "company": "Southern Company (The)",
+          "price": 88.25,
+          "changePct": -0.9,
+          "relVol": 1.2,
+          "rsi": 29.9,
+          "cap": "101.5B"
+        },
+        {
+          "ticker": "D",
+          "company": "Dominion Energy, Inc.",
+          "price": 65.55,
+          "changePct": -1.43,
+          "relVol": 1.0,
+          "rsi": 31.2,
+          "cap": "57.7B"
         },
         {
           "ticker": "CARR",
           "company": "Carrier Global Corporation",
-          "price": 58.84,
-          "changePct": 0.17,
-          "relVol": 1.1,
-          "rsi": 31.5,
+          "price": 58.79,
+          "changePct": -0.08,
+          "relVol": 1.2,
+          "rsi": 31.4,
           "cap": "48.5B"
-        },
-        {
-          "ticker": "TPR",
-          "company": "Tapestry, Inc.",
-          "price": 123.24,
-          "changePct": -5.38,
-          "relVol": 0.9,
-          "rsi": 30.2,
-          "cap": "24.6B"
         },
         {
           "ticker": "NI",
           "company": "NiSource Inc",
-          "price": 40.96,
-          "changePct": -0.41,
-          "relVol": 0.7,
-          "rsi": 31.8,
-          "cap": "19.6B"
+          "price": 40.57,
+          "changePct": -0.95,
+          "relVol": 0.6,
+          "rsi": 29.6,
+          "cap": "19.5B"
         },
         {
           "ticker": "LUV",
           "company": "Southwest Airlines Company",
-          "price": 39.76,
-          "changePct": -2.24,
-          "relVol": 0.9,
-          "rsi": 30.8,
-          "cap": "19.5B"
+          "price": 39.64,
+          "changePct": -0.3,
+          "relVol": 0.7,
+          "rsi": 30.4,
+          "cap": "19.4B"
         },
         {
           "ticker": "BURL",
           "company": "Burlington Stores, Inc.",
-          "price": 290.0,
-          "changePct": -7.64,
-          "relVol": 3.5,
-          "rsi": 21.6,
-          "cap": "18.3B"
+          "price": 272.95,
+          "changePct": -5.88,
+          "relVol": 1.9,
+          "rsi": 18.0,
+          "cap": "17.2B"
         },
         {
           "ticker": "DKS",
           "company": "Dick's Sporting Goods Inc",
-          "price": 131.77,
-          "changePct": 1.63,
-          "relVol": 1.0,
-          "rsi": 21.3,
-          "cap": "11.8B"
+          "price": 135.09,
+          "changePct": 2.52,
+          "relVol": 0.7,
+          "rsi": 23.9,
+          "cap": "12.1B"
         },
         {
           "ticker": "HRL",
           "company": "Hormel Foods Corporation",
-          "price": 21.28,
-          "changePct": -10.25,
-          "relVol": 4.2,
-          "rsi": 21.5,
-          "cap": "11.7B"
+          "price": 21.57,
+          "changePct": 1.36,
+          "relVol": 1.8,
+          "rsi": 25.7,
+          "cap": "11.9B"
         }
       ]
     }
