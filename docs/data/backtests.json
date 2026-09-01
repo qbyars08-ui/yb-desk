@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T20:04:06.724593+00:00",
+  "updated": "2026-09-01T00:38:27.261040+00:00",
   "period": "2y",
   "universe": "19 book names",
   "engine": "mphinance/momentum-mcp backtest_strategy, walk-forward with 10bps slippage",
@@ -10,14 +10,14 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 121.0,
-        "medianBuyHoldPct": 169.5,
+        "medianBuyHoldPct": 170.0,
         "beatBuyHold": 3,
         "avgWinRatePct": 40.2,
         "avgTrades": 9.0
       },
       "best": {
         "ticker": "NBIS",
-        "strategyPct": 332.4,
+        "strategyPct": 331.6,
         "buyHoldPct": 931.6
       },
       "worst": {
@@ -118,21 +118,21 @@
         },
         {
           "ticker": "NBIS",
-          "strategyPct": 332.4,
+          "strategyPct": 331.6,
           "buyHoldPct": 931.6,
           "winRatePct": 40.0,
           "trades": 10,
           "maxDrawdownPct": -55.2,
-          "profitFactor": 4.26
+          "profitFactor": 4.25
         },
         {
           "ticker": "NOK",
-          "strategyPct": 187.9,
-          "buyHoldPct": 139.2,
+          "strategyPct": 188.2,
+          "buyHoldPct": 139.5,
           "winRatePct": 71.4,
           "trades": 7,
           "maxDrawdownPct": -24.5,
-          "profitFactor": 19.74
+          "profitFactor": 19.99
         },
         {
           "ticker": "OSS",
@@ -182,7 +182,7 @@
         {
           "ticker": "WYY",
           "strategyPct": 138.2,
-          "buyHoldPct": 169.5,
+          "buyHoldPct": 170.0,
           "winRatePct": 40.0,
           "trades": 10,
           "maxDrawdownPct": -49.8,
@@ -205,7 +205,7 @@
       "agg": {
         "names": 18,
         "medianStrategyPct": 0.0,
-        "medianBuyHoldPct": 197.8,
+        "medianBuyHoldPct": 198.1,
         "beatBuyHold": 0,
         "avgWinRatePct": 25.0,
         "avgTrades": 0.4
@@ -322,12 +322,12 @@
         },
         {
           "ticker": "NOK",
-          "strategyPct": 1.4,
-          "buyHoldPct": 139.2,
+          "strategyPct": 1.5,
+          "buyHoldPct": 139.5,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -16.5,
-          "profitFactor": 1.3
+          "profitFactor": 1.32
         },
         {
           "ticker": "OSS",
@@ -377,7 +377,7 @@
         {
           "ticker": "WYY",
           "strategyPct": 22.9,
-          "buyHoldPct": 169.5,
+          "buyHoldPct": 170.0,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -5.5,
@@ -391,7 +391,7 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 0.0,
-        "medianBuyHoldPct": 169.5,
+        "medianBuyHoldPct": 170.0,
         "beatBuyHold": 0,
         "avgWinRatePct": 48.2,
         "avgTrades": 0.9
@@ -509,7 +509,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 35.2,
-          "buyHoldPct": 139.2,
+          "buyHoldPct": 139.5,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -24.4,
@@ -563,7 +563,7 @@
         {
           "ticker": "WYY",
           "strategyPct": -20.2,
-          "buyHoldPct": 169.5,
+          "buyHoldPct": 170.0,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -24.1,
@@ -586,7 +586,7 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 13.3,
-        "medianBuyHoldPct": 169.5,
+        "medianBuyHoldPct": 170.0,
         "beatBuyHold": 1,
         "avgWinRatePct": 73.8,
         "avgTrades": 3.3
@@ -704,7 +704,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 2.0,
-          "buyHoldPct": 139.2,
+          "buyHoldPct": 139.5,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -27.8,
@@ -757,12 +757,12 @@
         },
         {
           "ticker": "WYY",
-          "strategyPct": 42.3,
-          "buyHoldPct": 169.5,
+          "strategyPct": 45.9,
+          "buyHoldPct": 170.0,
           "winRatePct": 85.7,
           "trades": 7,
           "maxDrawdownPct": -31.2,
-          "profitFactor": 4.16
+          "profitFactor": 4.38
         },
         {
           "ticker": "XNDU",
@@ -781,7 +781,7 @@
       "agg": {
         "names": 18,
         "medianStrategyPct": 14.9,
-        "medianBuyHoldPct": 197.8,
+        "medianBuyHoldPct": 198.1,
         "beatBuyHold": 0,
         "avgWinRatePct": 52.8,
         "avgTrades": 1.1
@@ -898,8 +898,8 @@
         },
         {
           "ticker": "NOK",
-          "strategyPct": 57.6,
-          "buyHoldPct": 139.2,
+          "strategyPct": 57.8,
+          "buyHoldPct": 139.5,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -50.1,
@@ -952,12 +952,12 @@
         },
         {
           "ticker": "WYY",
-          "strategyPct": 9.2,
-          "buyHoldPct": 169.5,
+          "strategyPct": 9.4,
+          "buyHoldPct": 170.0,
           "winRatePct": 50.0,
           "trades": 2,
           "maxDrawdownPct": -55.2,
-          "profitFactor": 2.29
+          "profitFactor": 2.32
         }
       ]
     },
@@ -967,7 +967,7 @@
       "agg": {
         "names": 19,
         "medianStrategyPct": 125.5,
-        "medianBuyHoldPct": 169.5,
+        "medianBuyHoldPct": 170.0,
         "beatBuyHold": 1,
         "avgWinRatePct": 46.0,
         "avgTrades": 5.9
@@ -1085,7 +1085,7 @@
         {
           "ticker": "NOK",
           "strategyPct": 131.6,
-          "buyHoldPct": 139.2,
+          "buyHoldPct": 139.5,
           "winRatePct": 50.0,
           "trades": 6,
           "maxDrawdownPct": -25.8,
@@ -1139,7 +1139,7 @@
         {
           "ticker": "WYY",
           "strategyPct": 149.0,
-          "buyHoldPct": 169.5,
+          "buyHoldPct": 170.0,
           "winRatePct": 60.0,
           "trades": 5,
           "maxDrawdownPct": -51.6,
