@@ -1,4 +1,20 @@
 {
-  "updated": "2026-08-31T23:20:29.413Z",
-  "alerts": []
+  "updated": "2026-09-01T17:18:11.839Z",
+  "alerts": [
+    {
+      "ticker": "XNDU",
+      "changePct": -7.9926,
+      "flaggedAt": "2026-09-01T17:18:11.839Z"
+    },
+    {
+      "ticker": "CRDO",
+      "changePct": -6.205,
+      "flaggedAt": "2026-09-01T17:18:11.839Z"
+    },
+    {
+      "ticker": "SILC",
+      "changePct": -5.5633,
+      "flaggedAt": "2026-09-01T17:18:11.839Z"
+    }
+  ]
 }
