@@ -1,102 +1,102 @@
 {
-  "updated": "2026-09-02T17:54:12.820998+00:00",
+  "updated": "2026-09-02T23:18:47.877329+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 111,
+      "totalMatches": 238,
       "rows": [
+        {
+          "ticker": "DELL",
+          "company": "Dell Technologies Inc.",
+          "price": 492.2,
+          "changePct": 15.81,
+          "relVol": 6.2,
+          "rsi": 58.9,
+          "cap": "319.1B"
+        },
+        {
+          "ticker": "VRNS",
+          "company": "Varonis Systems, Inc.",
+          "price": 46.76,
+          "changePct": 10.41,
+          "relVol": 4.6,
+          "rsi": 61.0,
+          "cap": "5.4B"
+        },
         {
           "ticker": "GTLB",
           "company": "GitLab Inc.",
-          "price": 49.75,
-          "changePct": 10.33,
-          "relVol": 4.9,
-          "rsi": 74.3,
+          "price": 49.59,
+          "changePct": 9.98,
+          "relVol": 6.6,
+          "rsi": 74.1,
           "cap": "8.4B"
         },
         {
           "ticker": "SRPT",
           "company": "Sarepta Therapeutics, Inc.",
-          "price": 23.01,
-          "changePct": 7.88,
-          "relVol": 0.7,
-          "rsi": 73.2,
-          "cap": "2.4B"
+          "price": 23.21,
+          "changePct": 8.81,
+          "relVol": 1.5,
+          "rsi": 73.8,
+          "cap": "2.5B"
+        },
+        {
+          "ticker": "CHTR",
+          "company": "Charter Communications, Inc.",
+          "price": 158.97,
+          "changePct": 8.74,
+          "relVol": 0.9,
+          "rsi": 58.3,
+          "cap": "27.8B"
         },
         {
           "ticker": "MGNI",
           "company": "Magnite, Inc.",
-          "price": 24.69,
-          "changePct": 7.84,
-          "relVol": 1.8,
-          "rsi": 64.0,
-          "cap": "3.5B"
+          "price": 24.88,
+          "changePct": 8.69,
+          "relVol": 3.2,
+          "rsi": 65.0,
+          "cap": "3.6B"
+        },
+        {
+          "ticker": "EXK",
+          "company": "Endeavour Silver Corporation",
+          "price": 11.13,
+          "changePct": 8.69,
+          "relVol": 1.1,
+          "rsi": 60.4,
+          "cap": "3.3B"
+        },
+        {
+          "ticker": "HL",
+          "company": "Hecla Mining Company",
+          "price": 20.77,
+          "changePct": 8.69,
+          "relVol": 0.8,
+          "rsi": 61.4,
+          "cap": "14.0B"
         },
         {
           "ticker": "KSS",
           "company": "Kohl's Corporation",
           "price": 19.21,
-          "changePct": 7.83,
-          "relVol": 0.4,
+          "changePct": 7.8,
+          "relVol": 0.7,
           "rsi": 56.5,
           "cap": "2.2B"
         },
         {
-          "ticker": "SWKS",
-          "company": "Skyworks Solutions, Inc.",
-          "price": 72.57,
-          "changePct": 7.65,
-          "relVol": 0.5,
-          "rsi": 65.1,
-          "cap": "10.9B"
-        },
-        {
-          "ticker": "EXK",
-          "company": "Endeavour Silver Corporation",
-          "price": 10.94,
-          "changePct": 6.85,
-          "relVol": 0.8,
-          "rsi": 59.0,
-          "cap": "3.2B"
-        },
-        {
           "ticker": "SBSW",
           "company": "D/B/A Sibanye-Stillwater Limited",
-          "price": 12.46,
-          "changePct": 6.82,
-          "relVol": 0.8,
-          "rsi": 66.5,
-          "cap": "8.3B"
-        },
-        {
-          "ticker": "CNH",
-          "company": "CNH Industrial N.V.",
-          "price": 13.34,
-          "changePct": 6.68,
-          "relVol": 0.8,
-          "rsi": 73.9,
-          "cap": "16.5B"
-        },
-        {
-          "ticker": "HL",
-          "company": "Hecla Mining Company",
-          "price": 20.36,
-          "changePct": 6.51,
-          "relVol": 0.5,
-          "rsi": 59.7,
-          "cap": "13.7B"
-        },
-        {
-          "ticker": "BBY",
-          "company": "Best Buy Co., Inc.",
-          "price": 87.78,
-          "changePct": 6.23,
-          "relVol": 0.9,
-          "rsi": 56.2,
-          "cap": "18.5B"
+          "price": 12.56,
+          "changePct": 7.72,
+          "relVol": 1.4,
+          "rsi": 67.2,
+          "cap": "8.2B"
         }
       ]
     },
@@ -104,52 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 5,
+      "totalMatches": 14,
       "rows": [
         {
           "ticker": "GBTG",
           "company": "Global Business Travel Group, Inc.",
-          "price": 9.46,
-          "changePct": 0.0,
-          "relVol": 10.3,
-          "rsi": 57.3,
-          "cap": "4.9B"
-        },
-        {
-          "ticker": "GTLB",
-          "company": "GitLab Inc.",
-          "price": 49.75,
-          "changePct": 10.33,
-          "relVol": 4.9,
-          "rsi": 74.3,
-          "cap": "8.4B"
+          "price": 9.48,
+          "changePct": 0.21,
+          "relVol": 12.0,
+          "rsi": 62.7,
+          "cap": "5.0B"
         },
         {
           "ticker": "CRDO",
           "company": "Credo Technology Group Holding Ltd",
-          "price": 164.14,
-          "changePct": -20.56,
-          "relVol": 4.7,
-          "rsi": 31.6,
-          "cap": "30.8B"
+          "price": 165.22,
+          "changePct": -20.04,
+          "relVol": 7.2,
+          "rsi": 31.8,
+          "cap": "31.1B"
+        },
+        {
+          "ticker": "GTLB",
+          "company": "GitLab Inc.",
+          "price": 49.59,
+          "changePct": 9.98,
+          "relVol": 6.6,
+          "rsi": 74.1,
+          "cap": "8.4B"
         },
         {
           "ticker": "DELL",
           "company": "Dell Technologies Inc.",
-          "price": 462.81,
-          "changePct": 8.9,
-          "relVol": 3.8,
-          "rsi": 53.7,
-          "cap": "300.0B"
+          "price": 492.2,
+          "changePct": 15.81,
+          "relVol": 6.2,
+          "rsi": 58.9,
+          "cap": "319.1B"
         },
         {
           "ticker": "MDB",
           "company": "MongoDB, Inc.",
-          "price": 377.94,
-          "changePct": -12.96,
-          "relVol": 3.6,
-          "rsi": 43.6,
-          "cap": "30.4B"
+          "price": 375.4,
+          "changePct": -13.54,
+          "relVol": 4.8,
+          "rsi": 43.1,
+          "cap": "30.2B"
+        },
+        {
+          "ticker": "VRNS",
+          "company": "Varonis Systems, Inc.",
+          "price": 46.76,
+          "changePct": 10.41,
+          "relVol": 4.6,
+          "rsi": 61.0,
+          "cap": "5.4B"
+        },
+        {
+          "ticker": "APGE",
+          "company": "Apogee Therapeutics, Inc.",
+          "price": 135.07,
+          "changePct": -0.01,
+          "relVol": 4.4,
+          "rsi": 78.7,
+          "cap": "10.2B"
+        },
+        {
+          "ticker": "HPE",
+          "company": "Hewlett Packard Enterprise Company",
+          "price": 51.83,
+          "changePct": 1.89,
+          "relVol": 4.1,
+          "rsi": 48.5,
+          "cap": "68.6B"
+        },
+        {
+          "ticker": "PCG/PX",
+          "company": "PG&E Corp 6.000% Series A Mandatory Convertible ",
+          "price": 33.83,
+          "changePct": -4.03,
+          "relVol": 3.7,
+          "rsi": 24.9,
+          "cap": "31.0B"
+        },
+        {
+          "ticker": "MGNI",
+          "company": "Magnite, Inc.",
+          "price": 24.88,
+          "changePct": 8.69,
+          "relVol": 3.2,
+          "rsi": 65.0,
+          "cap": "3.6B"
         }
       ]
     },
@@ -157,97 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 12,
+      "totalMatches": 30,
       "rows": [
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 131.85,
-          "changePct": -1.07,
-          "relVol": 0.4,
-          "rsi": 19.8,
-          "cap": "145.0B"
+          "price": 131.31,
+          "changePct": -1.47,
+          "relVol": 0.8,
+          "rsi": 19.3,
+          "cap": "144.4B"
         },
         {
-          "ticker": "CCL",
-          "company": "Carnival Corporation Ltd.",
-          "price": 23.38,
-          "changePct": 0.62,
-          "relVol": 0.5,
-          "rsi": 28.8,
-          "cap": "32.0B"
+          "ticker": "SO",
+          "company": "Southern Company (The)",
+          "price": 88.31,
+          "changePct": 0.25,
+          "relVol": 1.0,
+          "rsi": 31.7,
+          "cap": "101.6B"
         },
         {
-          "ticker": "CRDO",
-          "company": "Credo Technology Group Holding Ltd",
-          "price": 164.14,
-          "changePct": -20.56,
-          "relVol": 4.7,
-          "rsi": 31.6,
-          "cap": "30.8B"
-        },
-        {
-          "ticker": "PCG",
-          "company": "Pacific Gas & Electric Co.",
-          "price": 13.26,
-          "changePct": -5.73,
+          "ticker": "BN",
+          "company": "Brookfield Corporation",
+          "price": 39.71,
+          "changePct": -0.08,
           "relVol": 1.3,
-          "rsi": 26.9,
-          "cap": "29.2B"
+          "rsi": 29.0,
+          "cap": "88.6B"
         },
         {
-          "ticker": "SUNB",
-          "company": "Sunbelt Rentals Holdings, Inc.",
-          "price": 67.27,
-          "changePct": 0.29,
-          "relVol": 0.3,
-          "rsi": 29.8,
-          "cap": "27.6B"
+          "ticker": "AMX",
+          "company": "America Movil, S.A.B. de C.V.",
+          "price": 22.88,
+          "changePct": -0.44,
+          "relVol": 0.6,
+          "rsi": 27.8,
+          "cap": "70.6B"
         },
         {
-          "ticker": "EIX",
-          "company": "Edison International",
-          "price": 55.51,
-          "changePct": -5.6,
+          "ticker": "HON",
+          "company": "Honeywell International Inc.",
+          "price": 206.07,
+          "changePct": -1.86,
+          "relVol": 1.0,
+          "rsi": 29.0,
+          "cap": "65.3B"
+        },
+        {
+          "ticker": "CARR",
+          "company": "Carrier Global Corporation",
+          "price": 57.58,
+          "changePct": 0.58,
+          "relVol": 0.9,
+          "rsi": 29.3,
+          "cap": "47.5B"
+        },
+        {
+          "ticker": "TTWO",
+          "company": "Take-Two Interactive Software, Inc.",
+          "price": 216.14,
+          "changePct": -0.25,
           "relVol": 0.8,
-          "rsi": 29.5,
-          "cap": "21.4B"
+          "rsi": 31.7,
+          "cap": "40.4B"
         },
         {
-          "ticker": "AS",
-          "company": "Amer Sports, Inc.",
-          "price": 28.83,
-          "changePct": -2.14,
-          "relVol": 0.4,
-          "rsi": 28.4,
-          "cap": "16.7B"
+          "ticker": "ODFL",
+          "company": "Old Dominion Freight Line, Inc.",
+          "price": 187.61,
+          "changePct": 0.32,
+          "relVol": 1.6,
+          "rsi": 28.1,
+          "cap": "38.9B"
         },
         {
-          "ticker": "INIO",
-          "company": "INNIO N.V.",
-          "price": 19.64,
-          "changePct": 0.85,
-          "relVol": 0.8,
+          "ticker": "VIK",
+          "company": "Viking Holdings Ltd",
+          "price": 85.76,
+          "changePct": 0.86,
+          "relVol": 0.7,
+          "rsi": 30.9,
+          "cap": "38.3B"
+        },
+        {
+          "ticker": "IRM",
+          "company": "Iron Mountain Incorporated (Delaware)",
+          "price": 111.84,
+          "changePct": -2.08,
+          "relVol": 1.8,
           "rsi": 31.0,
-          "cap": "14.7B"
-        },
-        {
-          "ticker": "ONON",
-          "company": "On Holding AG",
-          "price": 27.79,
-          "changePct": 0.2,
-          "relVol": 0.4,
-          "rsi": 28.2,
-          "cap": "9.2B"
-        },
-        {
-          "ticker": "FPS",
-          "company": "Forgent Power Solutions, Inc.",
-          "price": 28.74,
-          "changePct": -1.81,
-          "relVol": 0.4,
-          "rsi": 28.3,
-          "cap": "8.7B"
+          "cap": "33.3B"
         }
       ]
     }
