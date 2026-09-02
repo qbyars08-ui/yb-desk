@@ -1,20 +1,20 @@
 {
-  "updated": "2026-09-02T20:05:12.606Z",
+  "updated": "2026-09-02T22:37:07.081Z",
   "alerts": [
     {
       "ticker": "CRDO",
       "changePct": -20.0407,
-      "flaggedAt": "2026-09-02T20:05:12.606Z"
+      "flaggedAt": "2026-09-02T22:37:07.081Z"
     },
     {
       "ticker": "ASTS",
       "changePct": 11.828,
-      "flaggedAt": "2026-09-02T20:05:12.606Z"
+      "flaggedAt": "2026-09-02T22:37:07.081Z"
     },
     {
       "ticker": "LUMN",
-      "changePct": 6.6614,
-      "flaggedAt": "2026-09-02T20:05:12.606Z"
+      "changePct": 6.7398,
+      "flaggedAt": "2026-09-02T22:37:07.081Z"
     }
   ]
 }

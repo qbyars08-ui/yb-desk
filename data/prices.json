@@ -1,13 +1,13 @@
 {
-  "updated": "2026-09-02T20:05:12.564Z",
+  "updated": "2026-09-02T22:37:07.029Z",
   "quotes": {
     "ALMU": {
       "price": 12.85,
       "changePct": 3.13
     },
     "ANET": {
-      "price": 186.11,
-      "changePct": -1.6644
+      "price": 186.1,
+      "changePct": -1.6697
     },
     "ARM": {
       "price": 234.86,
@@ -38,8 +38,8 @@
       "changePct": 0.0667
     },
     "LUMN": {
-      "price": 6.805,
-      "changePct": 6.6614
+      "price": 6.81,
+      "changePct": 6.7398
     },
     "MU": {
       "price": 956.08,
@@ -90,8 +90,8 @@
       "changePct": 6.5188
     },
     "WYY": {
-      "price": 10.54,
-      "changePct": 3.0303
+      "price": 10.44,
+      "changePct": 2.0528
     },
     "XNDU": {
       "price": 9.94,
@@ -102,8 +102,8 @@
       "changePct": 4.3893
     },
     "SPY": {
-      "price": 765.2,
-      "changePct": 0.4489
+      "price": 765.16,
+      "changePct": 0.4437
     }
   }
 }
