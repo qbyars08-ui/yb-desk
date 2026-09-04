@@ -1,102 +1,102 @@
 {
-  "updated": "2026-09-03T23:16:32.889109+00:00",
+  "updated": "2026-09-04T17:35:51.513316+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 239,
+      "totalMatches": 86,
       "rows": [
         {
-          "ticker": "MSTR",
-          "company": "Strategy Inc",
-          "price": 144.82,
-          "changePct": 17.56,
-          "relVol": 1.4,
-          "rsi": 67.8,
-          "cap": "55.6B"
+          "ticker": "SNDK",
+          "company": "Sandisk Corporation",
+          "price": 1719.09,
+          "changePct": 10.55,
+          "relVol": 1.0,
+          "rsi": 60.4,
+          "cap": "251.7B"
         },
         {
-          "ticker": "HOOD",
-          "company": "Robinhood Markets, Inc.",
-          "price": 124.72,
-          "changePct": 16.57,
-          "relVol": 2.3,
+          "ticker": "SMCI",
+          "company": "Super Micro Computer, Inc.",
+          "price": 40.53,
+          "changePct": 7.04,
+          "relVol": 0.9,
+          "rsi": 64.6,
+          "cap": "26.6B"
+        },
+        {
+          "ticker": "MU",
+          "company": "Micron Technology, Inc.",
+          "price": 999.26,
+          "changePct": 4.29,
+          "relVol": 1.0,
+          "rsi": 58.4,
+          "cap": "1.13T"
+        },
+        {
+          "ticker": "SLS",
+          "company": "SELLAS Life Sciences Group, Inc.",
+          "price": 14.1,
+          "changePct": 2.92,
+          "relVol": 0.3,
+          "rsi": 55.8,
+          "cap": "2.8B"
+        },
+        {
+          "ticker": "EL",
+          "company": "Estee Lauder Companies, Inc. (The)",
+          "price": 103.58,
+          "changePct": 2.7,
+          "relVol": 0.6,
+          "rsi": 66.3,
+          "cap": "37.5B"
+        },
+        {
+          "ticker": "DOCU",
+          "company": "DocuSign, Inc.",
+          "price": 67.73,
+          "changePct": 2.68,
+          "relVol": 1.4,
+          "rsi": 67.3,
+          "cap": "12.9B"
+        },
+        {
+          "ticker": "TSM",
+          "company": "Taiwan Semiconductor Manufacturing Company Ltd.",
+          "price": 428.08,
+          "changePct": 2.65,
+          "relVol": 0.8,
+          "rsi": 56.3,
+          "cap": "1.95T"
+        },
+        {
+          "ticker": "HPQ",
+          "company": "HP Inc.",
+          "price": 32.76,
+          "changePct": 2.58,
+          "relVol": 0.3,
+          "rsi": 66.8,
+          "cap": "29.5B"
+        },
+        {
+          "ticker": "DHT",
+          "company": "DHT Holdings, Inc.",
+          "price": 20.71,
+          "changePct": 2.58,
+          "relVol": 0.7,
+          "rsi": 65.2,
+          "cap": "3.3B"
+        },
+        {
+          "ticker": "VOD",
+          "company": "Vodafone Group Plc",
+          "price": 16.93,
+          "changePct": 2.13,
+          "relVol": 1.5,
           "rsi": 68.9,
-          "cap": "112.1B"
-        },
-        {
-          "ticker": "SNOW",
-          "company": "Snowflake Inc.",
-          "price": 356.47,
-          "changePct": 16.55,
-          "relVol": 4.8,
-          "rsi": 66.2,
-          "cap": "123.6B"
-        },
-        {
-          "ticker": "CRCL",
-          "company": "Circle Internet Group, Inc.",
-          "price": 103.23,
-          "changePct": 16.46,
-          "relVol": 1.5,
-          "rsi": 68.4,
-          "cap": "26.2B"
-        },
-        {
-          "ticker": "BMNR",
-          "company": "BitMine Immersion Technologies, Inc.",
-          "price": 26.45,
-          "changePct": 14.7,
-          "relVol": 1.3,
-          "rsi": 68.2,
-          "cap": "16.0B"
-        },
-        {
-          "ticker": "PURR",
-          "company": "Hyperliquid Strategies Inc",
-          "price": 12.77,
-          "changePct": 12.81,
-          "relVol": 1.1,
-          "rsi": 70.1,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "XXI",
-          "company": "Twenty One Capital, Inc.",
-          "price": 6.4,
-          "changePct": 11.5,
-          "relVol": 1.4,
-          "rsi": 62.8,
-          "cap": "4.2B"
-        },
-        {
-          "ticker": "BULL",
-          "company": "Webull Corporation",
-          "price": 10.0,
-          "changePct": 11.11,
-          "relVol": 1.5,
-          "rsi": 69.3,
-          "cap": "5.3B"
-        },
-        {
-          "ticker": "BLSH",
-          "company": "Bullish",
-          "price": 36.22,
-          "changePct": 10.97,
-          "relVol": 1.4,
-          "rsi": 72.9,
-          "cap": "5.4B"
-        },
-        {
-          "ticker": "COIN",
-          "company": "Coinbase Global, Inc.",
-          "price": 192.7,
-          "changePct": 10.14,
-          "relVol": 1.2,
-          "rsi": 60.9,
-          "cap": "50.8B"
+          "cap": "38.3B"
         }
       ]
     },
@@ -104,97 +104,25 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 16,
+      "totalMatches": 2,
       "rows": [
-        {
-          "ticker": "CPB",
-          "company": "The Campbell's Company",
-          "price": 22.12,
-          "changePct": -6.96,
-          "relVol": 6.5,
-          "rsi": 40.7,
-          "cap": "6.6B"
-        },
-        {
-          "ticker": "PL",
-          "company": "Planet Labs PBC",
-          "price": 18.35,
-          "changePct": -8.2,
-          "relVol": 5.8,
-          "rsi": 29.3,
-          "cap": "6.5B"
-        },
-        {
-          "ticker": "VSXY",
-          "company": "Victorias Secret & Co.",
-          "price": 73.64,
-          "changePct": -13.17,
-          "relVol": 5.4,
-          "rsi": 31.5,
-          "cap": "5.9B"
-        },
-        {
-          "ticker": "SNOW",
-          "company": "Snowflake Inc.",
-          "price": 356.47,
-          "changePct": 16.55,
-          "relVol": 4.8,
-          "rsi": 66.2,
-          "cap": "123.6B"
-        },
-        {
-          "ticker": "CIEN",
-          "company": "Ciena Corporation",
-          "price": 317.46,
-          "changePct": -10.36,
-          "relVol": 4.6,
-          "rsi": 32.8,
-          "cap": "44.9B"
-        },
-        {
-          "ticker": "APGE",
-          "company": "Apogee Therapeutics, Inc.",
-          "price": 135.07,
-          "changePct": -0.01,
-          "relVol": 4.4,
-          "rsi": 78.7,
-          "cap": "10.2B"
-        },
-        {
-          "ticker": "SU",
-          "company": "Suncor Energy Inc.",
-          "price": 68.24,
-          "changePct": -0.22,
-          "relVol": 4.0,
-          "rsi": 59.6,
-          "cap": "79.8B"
-        },
-        {
-          "ticker": "HPE",
-          "company": "Hewlett Packard Enterprise Company",
-          "price": 54.44,
-          "changePct": 5.04,
-          "relVol": 3.8,
-          "rsi": 55.4,
-          "cap": "72.1B"
-        },
-        {
-          "ticker": "PFG",
-          "company": "Principal Financial Group Inc",
-          "price": 118.51,
-          "changePct": 6.47,
-          "relVol": 3.7,
-          "rsi": 67.1,
-          "cap": "25.4B"
-        },
         {
           "ticker": "LULU",
           "company": "lululemon athletica inc.",
-          "price": 121.77,
-          "changePct": 1.42,
-          "relVol": 3.7,
-          "rsi": 53.4,
-          "cap": "14.5B"
+          "price": 100.77,
+          "changePct": -17.24,
+          "relVol": 4.8,
+          "rsi": 31.9,
+          "cap": "12.0B"
+        },
+        {
+          "ticker": "CNI",
+          "company": "Canadian National Railway Company",
+          "price": 123.53,
+          "changePct": 0.29,
+          "relVol": 4.2,
+          "rsi": 43.7,
+          "cap": "74.8B"
         }
       ]
     },
@@ -202,97 +130,88 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 28,
+      "totalMatches": 9,
       "rows": [
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 132.19,
-          "changePct": 0.67,
-          "relVol": 0.9,
-          "rsi": 22.4,
-          "cap": "145.4B"
+          "price": 132.71,
+          "changePct": 0.39,
+          "relVol": 0.3,
+          "rsi": 24.2,
+          "cap": "146.0B"
         },
         {
-          "ticker": "RCL",
-          "company": "Royal Caribbean Cruises Ltd.",
-          "price": 265.55,
-          "changePct": -0.02,
-          "relVol": 1.4,
-          "rsi": 25.8,
-          "cap": "71.2B"
-        },
-        {
-          "ticker": "HON",
-          "company": "Honeywell International Inc.",
-          "price": 207.63,
-          "changePct": 0.76,
-          "relVol": 0.9,
-          "rsi": 31.4,
-          "cap": "65.8B"
-        },
-        {
-          "ticker": "TTWO",
-          "company": "Take-Two Interactive Software, Inc.",
-          "price": 214.13,
-          "changePct": -0.93,
-          "relVol": 0.9,
-          "rsi": 30.5,
-          "cap": "40.0B"
-        },
-        {
-          "ticker": "ODFL",
-          "company": "Old Dominion Freight Line, Inc.",
-          "price": 185.75,
-          "changePct": -0.99,
-          "relVol": 2.5,
-          "rsi": 26.9,
-          "cap": "38.5B"
-        },
-        {
-          "ticker": "VIK",
-          "company": "Viking Holdings Ltd",
-          "price": 85.58,
-          "changePct": -0.21,
-          "relVol": 0.8,
-          "rsi": 30.7,
-          "cap": "38.2B"
+          "ticker": "CDNS",
+          "company": "Cadence Design Systems, Inc.",
+          "price": 292.68,
+          "changePct": -4.0,
+          "relVol": 1.2,
+          "rsi": 31.0,
+          "cap": "80.6B"
         },
         {
           "ticker": "CCL",
           "company": "Carnival Corporation Ltd.",
-          "price": 23.48,
-          "changePct": -1.1,
-          "relVol": 0.9,
-          "rsi": 31.1,
+          "price": 23.52,
+          "changePct": 0.19,
+          "relVol": 0.4,
+          "rsi": 31.6,
           "cap": "32.2B"
         },
         {
-          "ticker": "CRDO",
-          "company": "Credo Technology Group Holding Ltd",
-          "price": 164.17,
-          "changePct": -0.64,
-          "relVol": 2.1,
+          "ticker": "TSN",
+          "company": "Tyson Foods, Inc.",
+          "price": 51.48,
+          "changePct": -0.54,
+          "relVol": 0.9,
+          "rsi": 26.5,
+          "cap": "17.8B"
+        },
+        {
+          "ticker": "LULU",
+          "company": "lululemon athletica inc.",
+          "price": 100.77,
+          "changePct": -17.24,
+          "relVol": 4.8,
+          "rsi": 31.9,
+          "cap": "12.0B"
+        },
+        {
+          "ticker": "PINS",
+          "company": "Pinterest, Inc.",
+          "price": 20.34,
+          "changePct": -2.42,
+          "relVol": 0.3,
           "rsi": 31.6,
-          "cap": "30.9B"
+          "cap": "11.5B"
         },
         {
-          "ticker": "TCOM",
-          "company": "Trip.com Group Limited",
-          "price": 41.4,
-          "changePct": -5.11,
-          "relVol": 3.5,
-          "rsi": 30.6,
-          "cap": "28.5B"
+          "ticker": "ONON",
+          "company": "On Holding AG",
+          "price": 28.02,
+          "changePct": -1.22,
+          "relVol": 0.5,
+          "rsi": 31.3,
+          "cap": "9.2B"
         },
         {
-          "ticker": "SUNB",
-          "company": "Sunbelt Rentals Holdings, Inc.",
-          "price": 65.99,
-          "changePct": -1.67,
-          "relVol": 0.6,
-          "rsi": 27.7,
-          "cap": "27.1B"
+          "ticker": "NCLH",
+          "company": "Norwegian Cruise Line Holdings Ltd.",
+          "price": 15.69,
+          "changePct": 0.61,
+          "relVol": 0.4,
+          "rsi": 31.6,
+          "cap": "7.2B"
+        },
+        {
+          "ticker": "PL",
+          "company": "Planet Labs PBC",
+          "price": 17.96,
+          "changePct": -2.1,
+          "relVol": 2.5,
+          "rsi": 28.1,
+          "cap": "6.4B"
         }
       ]
     }
