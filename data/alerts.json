@@ -1,10 +1,20 @@
 {
-  "updated": "2026-09-04T19:30:59.557Z",
+  "updated": "2026-09-04T21:46:19.202Z",
   "alerts": [
     {
       "ticker": "NBIS",
-      "changePct": 6.0248,
-      "flaggedAt": "2026-09-04T19:30:59.557Z"
+      "changePct": 7.4823,
+      "flaggedAt": "2026-09-04T21:46:19.202Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 6.4364,
+      "flaggedAt": "2026-09-04T21:46:19.202Z"
+    },
+    {
+      "ticker": "MU",
+      "changePct": 6.0981,
+      "flaggedAt": "2026-09-04T21:46:19.202Z"
     }
   ]
 }
