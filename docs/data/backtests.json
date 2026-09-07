@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T23:04:07.280281+00:00",
+  "updated": "2026-09-07T16:33:15.895883+00:00",
   "period": "2y",
   "universe": "19 book names",
   "engine": "mphinance/momentum-mcp backtest_strategy, walk-forward with 10bps slippage",
@@ -92,7 +92,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 123.8,
-          "buyHoldPct": 67.7,
+          "buyHoldPct": 69.0,
           "winRatePct": 75.0,
           "trades": 4,
           "maxDrawdownPct": -41.6,
@@ -218,7 +218,7 @@
       "worst": {
         "ticker": "LPKFF",
         "strategyPct": -4.0,
-        "buyHoldPct": 67.7
+        "buyHoldPct": 69.0
       },
       "rows": [
         {
@@ -287,7 +287,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": -4.0,
-          "buyHoldPct": 67.7,
+          "buyHoldPct": 69.0,
           "winRatePct": 0.0,
           "trades": 1,
           "maxDrawdownPct": -25.3,
@@ -392,7 +392,7 @@
         "names": 19,
         "medianStrategyPct": 0.0,
         "medianBuyHoldPct": 185.9,
-        "beatBuyHold": 1,
+        "beatBuyHold": 0,
         "avgWinRatePct": 43.0,
         "avgTrades": 0.8
       },
@@ -473,7 +473,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 67.8,
-          "buyHoldPct": 67.7,
+          "buyHoldPct": 69.0,
           "winRatePct": 66.7,
           "trades": 3,
           "maxDrawdownPct": -41.2,
@@ -599,7 +599,7 @@
       "worst": {
         "ticker": "LPKFF",
         "strategyPct": -17.0,
-        "buyHoldPct": 67.7
+        "buyHoldPct": 69.0
       },
       "rows": [
         {
@@ -668,7 +668,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": -17.0,
-          "buyHoldPct": 67.7,
+          "buyHoldPct": 69.0,
           "winRatePct": 25.0,
           "trades": 4,
           "maxDrawdownPct": -17.8,
@@ -862,8 +862,8 @@
         },
         {
           "ticker": "LPKFF",
-          "strategyPct": 30.2,
-          "buyHoldPct": 67.7,
+          "strategyPct": 31.2,
+          "buyHoldPct": 69.0,
           "winRatePct": 100.0,
           "trades": 1,
           "maxDrawdownPct": -55.8,
@@ -1049,7 +1049,7 @@
         {
           "ticker": "LPKFF",
           "strategyPct": 86.9,
-          "buyHoldPct": 67.7,
+          "buyHoldPct": 69.0,
           "winRatePct": 50.0,
           "trades": 4,
           "maxDrawdownPct": -31.7,

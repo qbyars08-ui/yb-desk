@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T23:03:04.112794+00:00",
+  "updated": "2026-09-07T16:32:16.951346+00:00",
   "method": "mphinance/momentum-mcp analyze_technicals (RSI, MACD, EMA 8/21/34/55/89, SMA, ADX+DI, ATR, Bollinger)",
   "signals": {
     "ALMU": {
@@ -9,7 +9,7 @@
       "rsi": 36.27,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 26.09,
+      "adx": 26.05,
       "adxNote": "strong trend",
       "diDir": "bull",
       "atrPct": 8.1,
@@ -122,13 +122,13 @@
       "analysis": "IQMX last traded at 10.800000190734863. RSI(14) is 54.1 \u2014 neutral range. MACD is above the signal line (bullish crossover). Histogram is expanding at 0.0079."
     },
     "LPKFF": {
-      "price": 15.33,
+      "price": 15.45,
       "trend": "mixed",
       "score": 60,
-      "rsi": 42.67,
+      "rsi": 43.56,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 23.79,
+      "adx": 23.61,
       "adxNote": "trend forming",
       "diDir": "bull",
       "atrPct": 5.9,
@@ -136,7 +136,7 @@
       "sma200": 14.61,
       "emaStackBull": false,
       "aboveStack": false,
-      "analysis": "LPKFF last traded at 15.329999923706055. RSI(14) is 42.7 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.9525."
+      "analysis": "LPKFF last traded at 15.449999809265137. RSI(14) is 43.6 \u2014 neutral range. MACD is below the signal line (bearish crossover). Histogram is contracting at -0.9506."
     },
     "LUMN": {
       "price": 6.77,
@@ -196,7 +196,7 @@
       "rsi": 47.18,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 12.56,
+      "adx": 12.55,
       "adxNote": "choppy / no trend",
       "diDir": "bear",
       "atrPct": 4.5,
@@ -315,10 +315,10 @@
       "rsi": 41.19,
       "rsiNote": "neutral",
       "macdDir": "falling",
-      "adx": 8.0,
+      "adx": 7.99,
       "adxNote": "choppy / no trend",
       "diDir": "bear",
-      "atrPct": 6.9,
+      "atrPct": 6.8,
       "sma50": 10.76,
       "sma200": null,
       "emaStackBull": false,
