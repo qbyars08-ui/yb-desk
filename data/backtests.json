@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T18:44:40.515139+00:00",
+  "updated": "2026-09-07T23:30:29.043435+00:00",
   "period": "2y",
   "universe": "19 book names",
   "engine": "mphinance/momentum-mcp backtest_strategy, walk-forward with 10bps slippage",
