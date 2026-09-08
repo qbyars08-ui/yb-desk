@@ -1,25 +1,25 @@
 {
-  "updated": "2026-09-08T20:13:53.270Z",
+  "updated": "2026-09-08T22:57:09.629Z",
   "alerts": [
     {
       "ticker": "NBIS",
       "changePct": 7.7256,
-      "flaggedAt": "2026-09-08T20:13:53.270Z"
-    },
-    {
-      "ticker": "NOK",
-      "changePct": 6.2812,
-      "flaggedAt": "2026-09-08T20:13:53.270Z"
+      "flaggedAt": "2026-09-08T22:57:09.629Z"
     },
     {
       "ticker": "SILC",
       "changePct": 6.1904,
-      "flaggedAt": "2026-09-08T20:13:53.270Z"
+      "flaggedAt": "2026-09-08T22:57:09.629Z"
+    },
+    {
+      "ticker": "NOK",
+      "changePct": 6.1815,
+      "flaggedAt": "2026-09-08T22:57:09.629Z"
     },
     {
       "ticker": "ASTS",
       "changePct": 6.1146,
-      "flaggedAt": "2026-09-08T20:13:53.270Z"
+      "flaggedAt": "2026-09-08T22:57:09.629Z"
     }
   ]
 }
