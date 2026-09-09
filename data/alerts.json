@@ -1,20 +1,20 @@
 {
-  "updated": "2026-09-09T20:00:01.150Z",
+  "updated": "2026-09-09T22:30:19.125Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": -8.8871,
-      "flaggedAt": "2026-09-09T20:00:01.150Z"
+      "changePct": -8.698,
+      "flaggedAt": "2026-09-09T22:30:19.125Z"
     },
     {
       "ticker": "XNDU",
-      "changePct": -5.5787,
-      "flaggedAt": "2026-09-09T20:00:01.150Z"
+      "changePct": -5.6309,
+      "flaggedAt": "2026-09-09T22:30:19.125Z"
     },
     {
       "ticker": "ASTS",
-      "changePct": -5.5581,
-      "flaggedAt": "2026-09-09T20:00:01.150Z"
+      "changePct": -5.5959,
+      "flaggedAt": "2026-09-09T22:30:19.125Z"
     }
   ]
 }
