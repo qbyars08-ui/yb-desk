@@ -1,10 +1,20 @@
 {
-  "updated": "2026-09-09T17:08:08.175Z",
+  "updated": "2026-09-09T20:00:01.150Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": -8.2388,
-      "flaggedAt": "2026-09-09T17:08:08.175Z"
+      "changePct": -8.8871,
+      "flaggedAt": "2026-09-09T20:00:01.150Z"
+    },
+    {
+      "ticker": "XNDU",
+      "changePct": -5.5787,
+      "flaggedAt": "2026-09-09T20:00:01.150Z"
+    },
+    {
+      "ticker": "ASTS",
+      "changePct": -5.5581,
+      "flaggedAt": "2026-09-09T20:00:01.150Z"
     }
   ]
 }
