@@ -1,102 +1,102 @@
 {
-  "updated": "2026-09-08T23:23:31.407596+00:00",
+  "updated": "2026-09-09T17:49:44.733966+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 182,
+      "totalMatches": 98,
       "rows": [
         {
-          "ticker": "ROIV",
-          "company": "Roivant Sciences Ltd.",
-          "price": 41.48,
-          "changePct": 18.75,
-          "relVol": 2.6,
-          "rsi": 72.5,
-          "cap": "30.0B"
+          "ticker": "NET",
+          "company": "Cloudflare, Inc.",
+          "price": 312.87,
+          "changePct": 10.05,
+          "relVol": 0.9,
+          "rsi": 58.2,
+          "cap": "111.4B"
         },
         {
-          "ticker": "LITE",
-          "company": "Lumentum Holdings Inc.",
-          "price": 978.53,
-          "changePct": 11.04,
+          "ticker": "SSL",
+          "company": "Sasol Ltd.",
+          "price": 14.6,
+          "changePct": 9.77,
           "relVol": 2.1,
-          "rsi": 59.3,
-          "cap": "87.8B"
+          "rsi": 74.9,
+          "cap": "8.4B"
         },
         {
-          "ticker": "MLYS",
-          "company": "Mineralys Therapeutics, Inc.",
-          "price": 31.12,
-          "changePct": 10.32,
-          "relVol": 2.8,
-          "rsi": 70.7,
-          "cap": "2.8B"
+          "ticker": "SRPT",
+          "company": "Sarepta Therapeutics, Inc.",
+          "price": 22.15,
+          "changePct": 5.78,
+          "relVol": 0.7,
+          "rsi": 62.2,
+          "cap": "2.3B"
         },
         {
-          "ticker": "SMTC",
-          "company": "Semtech Corporation",
-          "price": 162.62,
-          "changePct": 9.96,
-          "relVol": 1.2,
-          "rsi": 65.0,
-          "cap": "15.2B"
+          "ticker": "CHYM",
+          "company": "Chime Financial, Inc.",
+          "price": 34.01,
+          "changePct": 5.26,
+          "relVol": 1.5,
+          "rsi": 64.7,
+          "cap": "12.9B"
         },
         {
-          "ticker": "ALM",
-          "company": "Almonty Industries Inc.",
-          "price": 19.12,
-          "changePct": 8.82,
-          "relVol": 1.9,
-          "rsi": 64.2,
-          "cap": "5.5B"
+          "ticker": "MRVL",
+          "company": "Marvell Technology, Inc.",
+          "price": 236.23,
+          "changePct": 4.8,
+          "relVol": 0.6,
+          "rsi": 56.0,
+          "cap": "207.2B"
         },
         {
-          "ticker": "ERO",
-          "company": "Ero Copper Corp.",
-          "price": 37.91,
-          "changePct": 8.62,
-          "relVol": 1.3,
-          "rsi": 59.6,
-          "cap": "4.0B"
+          "ticker": "FIGR",
+          "company": "Figure Technology Solutions, Inc.",
+          "price": 40.04,
+          "changePct": 4.64,
+          "relVol": 1.0,
+          "rsi": 62.6,
+          "cap": "9.0B"
         },
         {
-          "ticker": "CHA",
-          "company": "Chagee Holdings Limited",
-          "price": 12.59,
-          "changePct": 7.98,
-          "relVol": 1.9,
-          "rsi": 68.5,
-          "cap": "2.2B"
+          "ticker": "PAAS",
+          "company": "Pan American Silver Corp.",
+          "price": 53.11,
+          "changePct": 4.14,
+          "relVol": 0.8,
+          "rsi": 57.2,
+          "cap": "22.0B"
+        },
+        {
+          "ticker": "PURR",
+          "company": "Hyperliquid Strategies Inc",
+          "price": 12.4,
+          "changePct": 3.9,
+          "relVol": 0.5,
+          "rsi": 65.3,
+          "cap": "2.5B"
+        },
+        {
+          "ticker": "EQNR",
+          "company": "Equinor ASA",
+          "price": 45.03,
+          "changePct": 3.79,
+          "relVol": 1.0,
+          "rsi": 66.3,
+          "cap": "103.2B"
         },
         {
           "ticker": "HPE",
           "company": "Hewlett Packard Enterprise Company",
-          "price": 56.03,
-          "changePct": 7.75,
-          "relVol": 1.0,
-          "rsi": 57.8,
-          "cap": "74.4B"
-        },
-        {
-          "ticker": "NBIS",
-          "company": "Nebius Group N.V.",
-          "price": 243.88,
-          "changePct": 7.73,
-          "relVol": 2.1,
-          "rsi": 58.5,
-          "cap": "66.3B"
-        },
-        {
-          "ticker": "PHVS",
-          "company": "Pharvaris N.V.",
-          "price": 37.84,
-          "changePct": 7.35,
-          "relVol": 11.8,
-          "rsi": 62.2,
-          "cap": "2.6B"
+          "price": 58.12,
+          "changePct": 3.73,
+          "relVol": 0.4,
+          "rsi": 61.5,
+          "cap": "77.2B"
         }
       ]
     },
@@ -104,97 +104,70 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 25,
+      "totalMatches": 7,
       "rows": [
         {
-          "ticker": "ALB/PA",
-          "company": "Albemarle Corporation Depositary Shares each rep",
-          "price": 53.07,
-          "changePct": 2.06,
-          "relVol": 17.7,
-          "rsi": 45.8,
-          "cap": "14.9B"
-        },
-        {
-          "ticker": "ATAI",
-          "company": "AtaiBeckley Inc.",
-          "price": 7.28,
-          "changePct": -1.49,
-          "relVol": 14.8,
-          "rsi": 58.0,
-          "cap": "2.7B"
-        },
-        {
-          "ticker": "PHVS",
-          "company": "Pharvaris N.V.",
-          "price": 37.84,
-          "changePct": 7.35,
-          "relVol": 11.8,
-          "rsi": 62.2,
-          "cap": "2.6B"
-        },
-        {
-          "ticker": "DYN",
-          "company": "Dyne Therapeutics, Inc.",
-          "price": 20.31,
-          "changePct": -16.35,
-          "relVol": 10.6,
-          "rsi": 22.8,
-          "cap": "3.8B"
-        },
-        {
-          "ticker": "WAFD",
-          "company": "WaFd, Inc.",
-          "price": 34.28,
-          "changePct": -5.56,
-          "relVol": 9.3,
-          "rsi": 28.7,
-          "cap": "2.5B"
-        },
-        {
-          "ticker": "SMCIP",
-          "company": "Super Micro Computer, Inc. - Depositary Shares E",
-          "price": 67.54,
-          "changePct": 1.29,
-          "relVol": 6.5,
-          "rsi": 64.6,
-          "cap": "26.0B"
-        },
-        {
-          "ticker": "NVS",
-          "company": "Novartis AG",
-          "price": 137.7,
-          "changePct": -13.93,
-          "relVol": 5.3,
-          "rsi": 31.9,
-          "cap": "283.6B"
+          "ticker": "NEE/PT",
+          "company": "NextEra Energy, Inc. 7.234% Corporate",
+          "price": 48.08,
+          "changePct": -0.76,
+          "relVol": 30.3,
+          "rsi": 42.6,
+          "cap": "174.9B"
         },
         {
           "ticker": "TTAN",
           "company": "ServiceTitan, Inc.",
-          "price": 81.58,
-          "changePct": -7.21,
-          "relVol": 4.8,
-          "rsi": 39.5,
-          "cap": "7.8B"
+          "price": 57.04,
+          "changePct": -30.08,
+          "relVol": 11.8,
+          "rsi": 23.9,
+          "cap": "5.4B"
         },
         {
-          "ticker": "GPCR",
-          "company": "Structure Therapeutics Inc.",
-          "price": 40.38,
-          "changePct": -14.7,
-          "relVol": 4.7,
-          "rsi": 26.8,
-          "cap": "3.4B"
+          "ticker": "INGM",
+          "company": "Ingram Micro Holding Corporation",
+          "price": 26.66,
+          "changePct": -6.06,
+          "relVol": 4.0,
+          "rsi": 39.0,
+          "cap": "6.1B"
         },
         {
-          "ticker": "BEAM",
-          "company": "Beam Therapeutics Inc.",
-          "price": 26.83,
-          "changePct": -9.54,
-          "relVol": 4.6,
-          "rsi": 41.8,
-          "cap": "2.8B"
+          "ticker": "IRT",
+          "company": "Independence Realty Trust, Inc.",
+          "price": 15.15,
+          "changePct": -4.78,
+          "relVol": 3.5,
+          "rsi": 25.9,
+          "cap": "3.7B"
+        },
+        {
+          "ticker": "BKV",
+          "company": "BKV Corporation",
+          "price": 24.17,
+          "changePct": -9.68,
+          "relVol": 3.4,
+          "rsi": 43.6,
+          "cap": "2.6B"
+        },
+        {
+          "ticker": "SIG",
+          "company": "Signet Jewelers Limited",
+          "price": 100.01,
+          "changePct": 20.97,
+          "relVol": 3.3,
+          "rsi": 68.6,
+          "cap": "3.9B"
+        },
+        {
+          "ticker": "XP",
+          "company": "XP Inc.",
+          "price": 19.23,
+          "changePct": -3.8,
+          "relVol": 3.2,
+          "rsi": 64.6,
+          "cap": "9.9B"
         }
       ]
     },
@@ -202,97 +175,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 40,
+      "totalMatches": 27,
       "rows": [
         {
           "ticker": "NVS",
           "company": "Novartis AG",
-          "price": 137.7,
-          "changePct": -13.93,
-          "relVol": 5.3,
+          "price": 137.68,
+          "changePct": -0.01,
+          "relVol": 0.7,
           "rsi": 31.9,
-          "cap": "283.6B"
+          "cap": "252.8B"
         },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 128.92,
-          "changePct": -2.39,
-          "relVol": 1.4,
-          "rsi": 19.3,
-          "cap": "141.8B"
+          "price": 126.1,
+          "changePct": -2.19,
+          "relVol": 0.4,
+          "rsi": 17.0,
+          "cap": "138.7B"
+        },
+        {
+          "ticker": "BKNG",
+          "company": "Booking Holdings Inc. Common Stock",
+          "price": 172.73,
+          "changePct": -4.2,
+          "relVol": 1.2,
+          "rsi": 28.9,
+          "cap": "129.8B"
         },
         {
           "ticker": "SYK",
           "company": "Stryker Corporation",
-          "price": 276.43,
-          "changePct": -8.81,
-          "relVol": 2.9,
-          "rsi": 24.7,
-          "cap": "106.0B"
+          "price": 274.01,
+          "changePct": -0.88,
+          "relVol": 1.1,
+          "rsi": 24.1,
+          "cap": "105.1B"
         },
         {
           "ticker": "HWM",
           "company": "Howmet Aerospace Inc.",
-          "price": 231.53,
-          "changePct": -10.7,
-          "relVol": 3.3,
-          "rsi": 29.5,
-          "cap": "92.3B"
+          "price": 231.91,
+          "changePct": 0.16,
+          "relVol": 0.8,
+          "rsi": 29.8,
+          "cap": "92.5B"
         },
         {
           "ticker": "BN",
           "company": "Brookfield Corporation",
-          "price": 39.27,
-          "changePct": -2.58,
-          "relVol": 1.5,
-          "rsi": 30.5,
-          "cap": "87.7B"
-        },
-        {
-          "ticker": "MAR",
-          "company": "Marriott International",
-          "price": 328.79,
-          "changePct": -2.29,
-          "relVol": 1.5,
-          "rsi": 29.1,
-          "cap": "85.7B"
+          "price": 38.84,
+          "changePct": -1.11,
+          "relVol": 0.6,
+          "rsi": 28.6,
+          "cap": "86.7B"
         },
         {
           "ticker": "MNST",
           "company": "Monster Beverage Corporation",
-          "price": 43.15,
-          "changePct": -1.53,
-          "relVol": 1.0,
-          "rsi": 31.0,
-          "cap": "84.5B"
-        },
-        {
-          "ticker": "CDNS",
-          "company": "Cadence Design Systems, Inc.",
-          "price": 284.11,
-          "changePct": -2.93,
-          "relVol": 1.8,
-          "rsi": 28.3,
-          "cap": "78.2B"
-        },
-        {
-          "ticker": "RCL",
-          "company": "Royal Caribbean Cruises Ltd.",
-          "price": 264.5,
-          "changePct": -0.26,
-          "relVol": 1.7,
-          "rsi": 25.2,
-          "cap": "70.9B"
+          "price": 42.47,
+          "changePct": -1.58,
+          "relVol": 0.5,
+          "rsi": 28.5,
+          "cap": "83.2B"
         },
         {
           "ticker": "HLN",
           "company": "Haleon plc",
-          "price": 9.25,
-          "changePct": -3.65,
-          "relVol": 1.6,
+          "price": 9.23,
+          "changePct": -0.16,
+          "relVol": 1.0,
+          "rsi": 30.3,
+          "cap": "40.1B"
+        },
+        {
+          "ticker": "KVUE",
+          "company": "Kenvue Inc.",
+          "price": 17.73,
+          "changePct": -3.59,
+          "relVol": 0.6,
           "rsi": 30.6,
-          "cap": "40.9B"
+          "cap": "34.1B"
+        },
+        {
+          "ticker": "JD",
+          "company": "JD.com, Inc.",
+          "price": 27.0,
+          "changePct": -2.44,
+          "relVol": 0.8,
+          "rsi": 31.4,
+          "cap": "33.4B"
         }
       ]
     }
