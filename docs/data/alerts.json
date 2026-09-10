@@ -1,15 +1,15 @@
 {
-  "updated": "2026-09-10T16:58:32.435Z",
+  "updated": "2026-09-10T19:36:59.277Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": -5.6213,
-      "flaggedAt": "2026-09-10T16:58:32.435Z"
+      "changePct": -5.2071,
+      "flaggedAt": "2026-09-10T19:36:59.277Z"
     },
     {
-      "ticker": "NBIS",
-      "changePct": -5.3172,
-      "flaggedAt": "2026-09-10T16:58:32.435Z"
+      "ticker": "SILC",
+      "changePct": -5.1163,
+      "flaggedAt": "2026-09-10T19:36:59.277Z"
     }
   ]
 }
