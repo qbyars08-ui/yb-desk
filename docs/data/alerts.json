@@ -1,15 +1,20 @@
 {
-  "updated": "2026-09-11T19:37:58.559Z",
+  "updated": "2026-09-11T22:31:01.021Z",
   "alerts": [
     {
       "ticker": "CIFR",
-      "changePct": 6.7754,
-      "flaggedAt": "2026-09-11T19:37:58.559Z"
+      "changePct": 5.7089,
+      "flaggedAt": "2026-09-11T22:31:01.021Z"
     },
     {
       "ticker": "ANET",
       "changePct": 5.6088,
-      "flaggedAt": "2026-09-11T19:37:58.559Z"
+      "flaggedAt": "2026-09-11T22:31:01.021Z"
+    },
+    {
+      "ticker": "PENG",
+      "changePct": 5.2242,
+      "flaggedAt": "2026-09-11T22:31:01.021Z"
     }
   ]
 }
