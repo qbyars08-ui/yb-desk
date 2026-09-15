@@ -1,102 +1,102 @@
 {
-  "updated": "2026-09-15T18:11:02.190501+00:00",
+  "updated": "2026-09-15T23:31:41.947941+00:00",
   "universe": "NASDAQ/NYSE/AMEX, price > $5, volume > 2M, cap > $2B",
   "scans": [
     {
       "id": "momentum",
       "title": "Momentum leaders",
       "note": "Price above a rising EMA structure, RSI 55-75, sorted by day move",
-      "totalMatches": 86,
+      "totalMatches": 157,
       "rows": [
         {
           "ticker": "SWKS",
           "company": "Skyworks Solutions, Inc.",
-          "price": 89.28,
-          "changePct": 12.64,
-          "relVol": 0.9,
-          "rsi": 70.7,
-          "cap": "13.4B"
-        },
-        {
-          "ticker": "TENB",
-          "company": "Tenable Holdings, Inc.",
-          "price": 38.2,
-          "changePct": 8.89,
-          "relVol": 0.7,
-          "rsi": 58.5,
-          "cap": "4.2B"
-        },
-        {
-          "ticker": "RIG",
-          "company": "Transocean Ltd (Switzerland)",
-          "price": 5.91,
-          "changePct": 8.35,
-          "relVol": 1.0,
-          "rsi": 55.0,
-          "cap": "6.6B"
-        },
-        {
-          "ticker": "PBF",
-          "company": "PBF Energy Inc.",
-          "price": 75.94,
-          "changePct": 7.87,
-          "relVol": 2.0,
-          "rsi": 56.5,
-          "cap": "9.0B"
-        },
-        {
-          "ticker": "CAI",
-          "company": "Caris Life Sciences, Inc.",
-          "price": 27.92,
-          "changePct": 7.18,
-          "relVol": 1.3,
-          "rsi": 70.2,
-          "cap": "7.9B"
-        },
-        {
-          "ticker": "WAY",
-          "company": "Waystar Holding Corp.",
-          "price": 26.64,
-          "changePct": 6.99,
-          "relVol": 2.2,
-          "rsi": 61.6,
-          "cap": "5.1B"
+          "price": 90.0,
+          "changePct": 13.55,
+          "relVol": 1.5,
+          "rsi": 71.1,
+          "cap": "13.5B"
         },
         {
           "ticker": "TEM",
           "company": "Tempus AI, Inc.",
-          "price": 66.3,
-          "changePct": 6.58,
-          "relVol": 0.8,
-          "rsi": 59.1,
-          "cap": "12.0B"
-        },
-        {
-          "ticker": "SM",
-          "company": "SM Energy Company",
-          "price": 41.54,
-          "changePct": 6.43,
-          "relVol": 0.8,
-          "rsi": 73.9,
-          "cap": "9.9B"
-        },
-        {
-          "ticker": "APA",
-          "company": "APA Corporation",
-          "price": 47.4,
-          "changePct": 5.25,
-          "relVol": 0.8,
-          "rsi": 71.6,
-          "cap": "16.6B"
-        },
-        {
-          "ticker": "TALO",
-          "company": "Talos Energy, Inc.",
-          "price": 18.58,
-          "changePct": 5.21,
+          "price": 68.85,
+          "changePct": 10.67,
           "relVol": 1.5,
-          "rsi": 72.3,
-          "cap": "3.1B"
+          "rsi": 62.0,
+          "cap": "12.4B"
+        },
+        {
+          "ticker": "CAI",
+          "company": "Caris Life Sciences, Inc.",
+          "price": 28.5,
+          "changePct": 9.4,
+          "relVol": 2.1,
+          "rsi": 71.7,
+          "cap": "8.1B"
+        },
+        {
+          "ticker": "QRVO",
+          "company": "Qorvo, Inc.",
+          "price": 118.06,
+          "changePct": 9.34,
+          "relVol": 1.6,
+          "rsi": 71.5,
+          "cap": "10.4B"
+        },
+        {
+          "ticker": "RVTY",
+          "company": "Revvity, Inc.",
+          "price": 140.19,
+          "changePct": 9.11,
+          "relVol": 2.1,
+          "rsi": 70.8,
+          "cap": "15.6B"
+        },
+        {
+          "ticker": "RIG",
+          "company": "Transocean Ltd (Switzerland)",
+          "price": 5.94,
+          "changePct": 8.99,
+          "relVol": 1.7,
+          "rsi": 55.8,
+          "cap": "6.6B"
+        },
+        {
+          "ticker": "TENB",
+          "company": "Tenable Holdings, Inc.",
+          "price": 38.09,
+          "changePct": 8.58,
+          "relVol": 1.3,
+          "rsi": 58.3,
+          "cap": "4.2B"
+        },
+        {
+          "ticker": "VAL",
+          "company": "Valaris Limited",
+          "price": 88.23,
+          "changePct": 8.56,
+          "relVol": 1.6,
+          "rsi": 55.9,
+          "cap": "6.1B"
+        },
+        {
+          "ticker": "ADPT",
+          "company": "Adaptive Biotechnologies Corporation",
+          "price": 26.68,
+          "changePct": 7.67,
+          "relVol": 2.7,
+          "rsi": 65.9,
+          "cap": "4.3B"
+        },
+        {
+          "ticker": "WAY",
+          "company": "Waystar Holding Corp.",
+          "price": 26.67,
+          "changePct": 7.11,
+          "relVol": 3.3,
+          "rsi": 61.7,
+          "cap": "5.1B"
         }
       ]
     },
@@ -104,52 +104,97 @@
       "id": "volume",
       "title": "Unusual volume",
       "note": "Trading at 3x-plus their normal volume today",
-      "totalMatches": 5,
+      "totalMatches": 13,
       "rows": [
         {
           "ticker": "TRMD",
           "company": "TORM plc",
-          "price": 34.1,
-          "changePct": -3.51,
-          "relVol": 5.3,
-          "rsi": 58.9,
-          "cap": "3.5B"
-        },
-        {
-          "ticker": "VERA",
-          "company": "Vera Therapeutics, Inc.",
-          "price": 33.19,
-          "changePct": -2.53,
-          "relVol": 4.5,
-          "rsi": 46.2,
-          "cap": "2.4B"
-        },
-        {
-          "ticker": "MEOH",
-          "company": "Methanex Corporation",
-          "price": 64.12,
-          "changePct": 2.25,
-          "relVol": 3.5,
-          "rsi": 68.6,
-          "cap": "5.0B"
-        },
-        {
-          "ticker": "FPS",
-          "company": "Forgent Power Solutions, Inc.",
-          "price": 31.77,
-          "changePct": 10.91,
-          "relVol": 3.5,
-          "rsi": 46.6,
-          "cap": "9.7B"
+          "price": 34.93,
+          "changePct": -1.16,
+          "relVol": 6.9,
+          "rsi": 65.3,
+          "cap": "3.6B"
         },
         {
           "ticker": "ALHC",
           "company": "Alignment Healthcare, Inc.",
-          "price": 10.14,
-          "changePct": -21.6,
-          "relVol": 3.1,
-          "rsi": 21.5,
-          "cap": "2.1B"
+          "price": 10.37,
+          "changePct": -19.86,
+          "relVol": 6.3,
+          "rsi": 22.3,
+          "cap": "2.2B"
+        },
+        {
+          "ticker": "VERA",
+          "company": "Vera Therapeutics, Inc.",
+          "price": 33.67,
+          "changePct": -1.12,
+          "relVol": 5.4,
+          "rsi": 47.9,
+          "cap": "2.4B"
+        },
+        {
+          "ticker": "FPS",
+          "company": "Forgent Power Solutions, Inc.",
+          "price": 31.36,
+          "changePct": 9.5,
+          "relVol": 5.0,
+          "rsi": 45.5,
+          "cap": "9.5B"
+        },
+        {
+          "ticker": "ASND",
+          "company": "Ascendis Pharma A/S",
+          "price": 239.77,
+          "changePct": -9.49,
+          "relVol": 4.7,
+          "rsi": 36.3,
+          "cap": "15.0B"
+        },
+        {
+          "ticker": "SYY",
+          "company": "Sysco Corporation",
+          "price": 79.6,
+          "changePct": -4.72,
+          "relVol": 4.4,
+          "rsi": 39.4,
+          "cap": "38.1B"
+        },
+        {
+          "ticker": "MEOH",
+          "company": "Methanex Corporation",
+          "price": 64.47,
+          "changePct": 2.8,
+          "relVol": 4.4,
+          "rsi": 69.4,
+          "cap": "5.0B"
+        },
+        {
+          "ticker": "BWIN",
+          "company": "The Baldwin Insurance Group, Inc.",
+          "price": 32.49,
+          "changePct": 1.53,
+          "relVol": 3.8,
+          "rsi": 61.9,
+          "cap": "4.5B"
+        },
+        {
+          "ticker": "SRRK",
+          "company": "Scholar Rock Holding Corporation",
+          "price": 50.0,
+          "changePct": -3.57,
+          "relVol": 3.8,
+          "rsi": 37.3,
+          "cap": "6.1B"
+        },
+        {
+          "ticker": "EPRT",
+          "company": "Essential Properties Realty Trust, Inc.",
+          "price": 27.99,
+          "changePct": -2.71,
+          "relVol": 3.4,
+          "rsi": 21.4,
+          "cap": "6.1B"
         }
       ]
     },
@@ -157,97 +202,97 @@
       "id": "oversold",
       "title": "Oversold quality",
       "note": "Large caps with RSI under 32, on the mat, not a signal to buy",
-      "totalMatches": 49,
+      "totalMatches": 106,
       "rows": [
         {
           "ticker": "GE",
           "company": "GE Aerospace",
-          "price": 308.77,
-          "changePct": -2.77,
+          "price": 307.05,
+          "changePct": -3.31,
+          "relVol": 2.1,
+          "rsi": 27.2,
+          "cap": "318.6B"
+        },
+        {
+          "ticker": "HD",
+          "company": "Home Depot, Inc. (The)",
+          "price": 305.48,
+          "changePct": -1.73,
+          "relVol": 1.2,
+          "rsi": 31.5,
+          "cap": "304.8B"
+        },
+        {
+          "ticker": "RTX",
+          "company": "RTX Corporation",
+          "price": 195.5,
+          "changePct": 0.08,
+          "relVol": 1.3,
+          "rsi": 29.8,
+          "cap": "263.5B"
+        },
+        {
+          "ticker": "NEE",
+          "company": "NextEra Energy, Inc.",
+          "price": 81.07,
+          "changePct": -0.69,
           "relVol": 1.0,
-          "rsi": 27.9,
-          "cap": "320.4B"
+          "rsi": 31.0,
+          "cap": "169.1B"
         },
         {
           "ticker": "TJX",
           "company": "TJX Companies, Inc. (The)",
-          "price": 124.28,
-          "changePct": -1.36,
-          "relVol": 0.5,
-          "rsi": 16.3,
-          "cap": "136.7B"
+          "price": 124.6,
+          "changePct": -1.1,
+          "relVol": 1.4,
+          "rsi": 16.5,
+          "cap": "137.1B"
         },
         {
           "ticker": "BKNG",
           "company": "Booking Holdings Inc. Common Stock",
-          "price": 171.47,
-          "changePct": -2.21,
-          "relVol": 0.5,
-          "rsi": 29.6,
-          "cap": "128.8B"
+          "price": 171.32,
+          "changePct": -2.3,
+          "relVol": 1.2,
+          "rsi": 29.5,
+          "cap": "128.7B"
         },
         {
           "ticker": "SBUX",
           "company": "Starbucks Corporation",
-          "price": 96.62,
-          "changePct": -2.47,
-          "relVol": 0.6,
-          "rsi": 28.6,
-          "cap": "110.2B"
+          "price": 96.58,
+          "changePct": -2.51,
+          "relVol": 1.2,
+          "rsi": 28.5,
+          "cap": "110.1B"
         },
         {
           "ticker": "SO",
           "company": "Southern Company (The)",
-          "price": 86.27,
-          "changePct": -0.84,
-          "relVol": 0.5,
-          "rsi": 28.4,
-          "cap": "99.2B"
+          "price": 85.95,
+          "changePct": -1.21,
+          "relVol": 0.9,
+          "rsi": 27.3,
+          "cap": "98.9B"
         },
         {
           "ticker": "HWM",
           "company": "Howmet Aerospace Inc.",
-          "price": 223.84,
-          "changePct": -1.45,
-          "relVol": 0.4,
-          "rsi": 28.0,
-          "cap": "89.3B"
+          "price": 224.67,
+          "changePct": -1.08,
+          "relVol": 0.8,
+          "rsi": 28.3,
+          "cap": "89.6B"
         },
         {
-          "ticker": "BKR",
-          "company": "Baker Hughes Company",
-          "price": 56.79,
-          "changePct": 0.02,
-          "relVol": 0.5,
-          "rsi": 29.7,
-          "cap": "56.4B"
-        },
-        {
-          "ticker": "O",
-          "company": "Realty Income Corporation",
-          "price": 58.74,
-          "changePct": -0.89,
-          "relVol": 0.6,
-          "rsi": 24.5,
-          "cap": "55.6B"
-        },
-        {
-          "ticker": "CARR",
-          "company": "Carrier Global Corporation",
-          "price": 55.54,
-          "changePct": -3.0,
-          "relVol": 1.5,
-          "rsi": 30.8,
-          "cap": "45.8B"
-        },
-        {
-          "ticker": "XEL",
-          "company": "Xcel Energy Inc.",
-          "price": 72.77,
-          "changePct": -1.87,
-          "relVol": 0.5,
-          "rsi": 30.1,
-          "cap": "45.5B"
+          "ticker": "BN",
+          "company": "Brookfield Corporation",
+          "price": 37.13,
+          "changePct": -1.28,
+          "relVol": 0.8,
+          "rsi": 23.2,
+          "cap": "82.9B"
         }
       ]
     }
